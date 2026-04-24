@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="O Eterno MHRP - Manual para ser o homem que ela respeita e precisa. Um método completo de construção masculina, relacionamento sólido e legado familiar." />
+  <meta name="theme-color" content="#1a0a0d" />
+  <meta property="og:title" content="O Eterno MHRP - Manual para ser o homem que ela respeita e precisa" />
+  <meta property="og:description" content="O manual que você precisa para ser o homem que ela respeita e precisa." />
+  <meta property="og:type" content="website" />
+  <title>O Eterno MHRP — Manual para ser o homem que ela respeita e precisa</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
+
+  <link rel="icon" type="image/png" href="./logopequena.PNG" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+
+  <!-- ============== ORNAMENT DEFINITIONS (reused via <use>) ============== -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <!-- Templar cross -->
+      <symbol id="ico-cross" viewBox="0 0 24 24">
+        <path d="M12 2 L14 6 L18 6 L16 9 L22 9 L22 13 L16 13 L18 16 L14 16 L12 22 L10 16 L6 16 L8 13 L2 13 L2 9 L8 9 L6 6 L10 6 Z" fill="none" stroke="currentColor" stroke-width="1" stroke-linejoin="round"/>
+      </symbol>
+      <!-- Sword -->
+      <symbol id="ico-sword" viewBox="0 0 24 48">
+        <path d="M12 2 L14 6 L14 34 L16 36 L16 38 L14 38 L14 40 L12 44 L10 40 L10 38 L8 38 L8 36 L10 34 L10 6 Z" fill="none" stroke="currentColor" stroke-width="1"/>
+        <circle cx="12" cy="4" r="1.5" fill="none" stroke="currentColor" stroke-width="0.8"/>
+      </symbol>
+      <!-- Ornamental divider -->
+      <symbol id="ico-divider" viewBox="0 0 200 10">
+        <line x1="0" y1="5" x2="80" y2="5" stroke="currentColor" stroke-width="0.5"/>
+        <line x1="120" y1="5" x2="200" y2="5" stroke="currentColor" stroke-width="0.5"/>
+        <circle cx="100" cy="5" r="3" fill="none" stroke="currentColor" stroke-width="0.8"/>
+        <circle cx="100" cy="5" r="1" fill="currentColor"/>
+        <path d="M92 5 L96 5 M104 5 L108 5" stroke="currentColor" stroke-width="0.5"/>
+      </symbol>
+      <!-- Rose -->
+      <symbol id="ico-rose" viewBox="0 0 24 24">
+        <path d="M12 4 C9 4 7 6 7 9 C7 11 8 12 10 13 C8 13 7 14 7 16 C7 19 9 21 12 21 C15 21 17 19 17 16 C17 14 16 13 14 13 C16 12 17 11 17 9 C17 6 15 4 12 4 Z M12 8 C13 8 14 9 14 10 C14 11 13 12 12 12 C11 12 10 11 10 10 C10 9 11 8 12 8 Z" fill="none" stroke="currentColor" stroke-width="0.8"/>
+      </symbol>
+      <!-- Shield -->
+      <symbol id="ico-shield" viewBox="0 0 24 24">
+        <path d="M12 2 L20 5 L20 12 C20 17 16 21 12 22 C8 21 4 17 4 12 L4 5 Z" fill="none" stroke="currentColor" stroke-width="1"/>
+      </symbol>
+      <!-- Flame (discipline) -->
+      <symbol id="ico-flame" viewBox="0 0 24 24">
+        <path d="M12 2 C12 6 8 8 8 12 C8 15 10 17 12 17 C14 17 16 15 16 12 C16 10 15 9 14 8 C14 10 13 11 12 11 C13 8 14 6 12 2 Z M12 17 C8 17 6 19 6 21 L18 21 C18 19 16 17 12 17 Z" fill="none" stroke="currentColor" stroke-width="0.9"/>
+      </symbol>
+      <!-- Compass (direction) -->
+      <symbol id="ico-compass" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1"/>
+        <path d="M12 6 L14 12 L12 18 L10 12 Z" fill="currentColor" opacity="0.8"/>
+        <circle cx="12" cy="12" r="0.8" fill="currentColor"/>
+      </symbol>
+      <!-- Crown -->
+      <symbol id="ico-crown" viewBox="0 0 24 24">
+        <path d="M3 9 L7 14 L12 7 L17 14 L21 9 L20 18 L4 18 Z" fill="none" stroke="currentColor" stroke-width="1"/>
+        <circle cx="3" cy="9" r="0.8" fill="currentColor"/>
+        <circle cx="12" cy="7" r="0.8" fill="currentColor"/>
+        <circle cx="21" cy="9" r="0.8" fill="currentColor"/>
+      </symbol>
+      <!-- Chain (union) -->
+      <symbol id="ico-chain" viewBox="0 0 24 24">
+        <rect x="3" y="9" width="8" height="6" rx="3" fill="none" stroke="currentColor" stroke-width="1"/>
+        <rect x="13" y="9" width="8" height="6" rx="3" fill="none" stroke="currentColor" stroke-width="1"/>
+        <line x1="11" y1="12" x2="13" y2="12" stroke="currentColor" stroke-width="1"/>
+      </symbol>
+      <!-- Check mark -->
+      <symbol id="ico-check" viewBox="0 0 24 24">
+        <path d="M4 12 L10 18 L20 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </symbol>
+      <!-- X mark -->
+      <symbol id="ico-x" viewBox="0 0 24 24">
+        <path d="M6 6 L18 18 M18 6 L6 18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+      </symbol>
+      <!-- Plus (for accordions) -->
+      <symbol id="ico-plus" viewBox="0 0 24 24">
+        <line x1="12" y1="5" x2="12" y2="19" stroke="currentColor" stroke-width="1.2"/>
+        <line x1="5" y1="12" x2="19" y2="12" stroke="currentColor" stroke-width="1.2"/>
+      </symbol>
+      <!-- Arrow -->
+      <symbol id="ico-arrow" viewBox="0 0 24 24">
+        <line x1="4" y1="12" x2="20" y2="12" stroke="currentColor" stroke-width="1.2"/>
+        <path d="M14 6 L20 12 L14 18" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+      </symbol>
+      <!-- Ornamental corner -->
+      <symbol id="ico-corner" viewBox="0 0 40 40">
+        <path d="M2 2 L20 2 M2 2 L2 20 M2 2 Q12 4 14 14 Q24 12 26 22" fill="none" stroke="currentColor" stroke-width="0.6"/>
+        <circle cx="14" cy="14" r="1.5" fill="none" stroke="currentColor" stroke-width="0.5"/>
+      </symbol>
+    </defs>
+  </svg>
+
+  <!-- ============== GRAIN OVERLAY ============== -->
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- ============== NAVBAR ============== -->
+  <header class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#top" class="nav-logo" aria-label="O Eterno MHRP - ir ao topo">
+        <img src="./logopequena.PNG" alt="O Eterno MHRP" />
+      </a>
+
+      <nav class="nav-links" aria-label="Navegação principal">
+        <a href="#manifesto">Manifesto</a>
+        <a href="#pilares">Pilares</a>
+        <a href="#sobre">Sobre nós</a>
+        <a href="#transformacao">Transformação</a>
+        <a href="#oferta">Oferta</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+
+      <a href="https://www.hotmart.com" target="_blank" rel="noopener" class="btn btn-sm">
+        <span>Adquirir o manual</span>
+        <svg class="ico" width="16" height="16"><use href="#ico-arrow"/></svg>
+      </a>
+
+      <button class="nav-burger" aria-label="Abrir menu" aria-expanded="false" id="burger">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <!-- Mobile menu -->
+    <div class="nav-mobile" id="navMobile" aria-hidden="true">
+      <a href="#manifesto">Manifesto</a>
+      <a href="#pilares">Pilares</a>
+      <a href="#sobre">Sobre nós</a>
+      <a href="#transformacao">Transformação</a>
+      <a href="#oferta">Oferta</a>
+      <a href="#faq">FAQ</a>
+      <a href="https://www.hotmart.com" target="_blank" rel="noopener" class="btn btn-full">Quero adquirir o manual</a>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- ============== HERO ============== -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-bg" aria-hidden="true">
+        <div class="hero-vignette"></div>
+        <div class="hero-rays"></div>
+      </div>
+
+      <svg class="corner corner-tl" aria-hidden="true"><use href="#ico-corner"/></svg>
+      <svg class="corner corner-tr" aria-hidden="true"><use href="#ico-corner"/></svg>
+      <svg class="corner corner-bl" aria-hidden="true"><use href="#ico-corner"/></svg>
+      <svg class="corner corner-br" aria-hidden="true"><use href="#ico-corner"/></svg>
+
+      <div class="hero-inner">
+        <div class="hero-kicker reveal">
+          <svg width="14" height="14"><use href="#ico-cross"/></svg>
+          <span>Um manual. Uma construção. Um legado.</span>
+          <svg width="14" height="14"><use href="#ico-cross"/></svg>
+        </div>
+
+        <div class="hero-mark reveal" aria-hidden="true">
+          <img src="./logogrande.PNG" alt="" />
+        </div>
+
+        <h1 id="hero-title" class="hero-title reveal">
+          <span class="hero-cursive">O Eterno</span>
+          <span class="hero-display">M.H.R.P.</span>
+        </h1>
+
+        <div class="hero-divider reveal" aria-hidden="true">
+          <svg width="220" height="10"><use href="#ico-divider"/></svg>
+        </div>
+
+        <p class="hero-sub reveal">
+          O manual que você precisa para ser <em>o homem que ela respeita e precisa.</em>
+        </p>
+
+        <p class="hero-lede reveal">
+          Um método completo de construção masculina, relacionamento sólido e formação de um legado familiar estruturado sobre princípios, valores e propósito.
+        </p>
+
+        <div class="hero-cta reveal">
+          <a href="https://www.hotmart.com" target="_blank" rel="noopener" class="btn btn-primary btn-lg">
+            <span>Quero ser o homem que ela precisa e respeita</span>
+            <svg class="ico" width="18" height="18"><use href="#ico-arrow"/></svg>
+          </a>
+          <a href="#manifesto" class="btn-ghost">
+            <span>Descer ao manifesto</span>
+          </a>
+        </div>
+
+        <div class="hero-seals reveal" aria-label="Selos do método">
+          <div class="seal"><svg width="18" height="18"><use href="#ico-shield"/></svg><span>Construção individual</span></div>
+          <div class="seal"><svg width="18" height="18"><use href="#ico-crown"/></svg><span>Liderança respeitosa</span></div>
+          <div class="seal"><svg width="18" height="18"><use href="#ico-chain"/></svg><span>União duradoura</span></div>
+          <div class="seal"><svg width="18" height="18"><use href="#ico-cross"/></svg><span>Legado familiar</span></div>
+        </div>
+      </div>
+
+      <a href="#manifesto" class="hero-scroll" aria-label="Rolar para continuar">
+        <span></span>
+        <small>scroll</small>
+      </a>
+    </section>
+
+    <!-- ============== MANIFESTO / O QUE É ============== -->
+    <section class="section section-manifesto" id="manifesto">
+      <div class="container narrow">
+        <div class="eyebrow reveal">
+          <svg width="12" height="12"><use href="#ico-cross"/></svg>
+          <span>O Manifesto</span>
+        </div>
+        <h2 class="heading reveal">
+          Isto não é um curso de relacionamento.<br/>
+          <em>É um manual de construção.</em>
+        </h2>
+        <div class="heading-rule reveal" aria-hidden="true"><svg width="180" height="10"><use href="#ico-divider"/></svg></div>
+
+        <div class="manifesto-grid">
+          <p class="manifesto-lede reveal">
+            O Eterno MHRP parte de uma verdade simples, e por isso rara: um relacionamento sólido não nasce de técnicas, truques ou performances. Ele nasce de um homem construído. E é exatamente aqui que começamos.
+          </p>
+
+          <div class="manifesto-cols">
+            <div class="manifesto-col reveal">
+              <div class="ornament-num">I</div>
+              <h3>Primeiro, o homem.</h3>
+              <p>Antes de conduzir qualquer relação, você é conduzido de volta a você mesmo. Estabilidade emocional, disciplina, direção, responsabilidade. A fundação.</p>
+            </div>
+            <div class="manifesto-col reveal">
+              <div class="ornament-num">II</div>
+              <h3>Depois, a escolha.</h3>
+              <p>Aprender a enxergar, ler e reconhecer uma parceira com valores reais, maturidade e capacidade legítima de construção a longo prazo.</p>
+            </div>
+            <div class="manifesto-col reveal">
+              <div class="ornament-num">III</div>
+              <h3>Enfim, o legado.</h3>
+              <p>Acordos claros, visão de longo prazo, condução madura, família estruturada e uma vida construída com Deus no centro das decisões.</p>
+            </div>
+          </div>
+
+          <blockquote class="manifesto-quote reveal">
+            <svg class="quote-mark" width="40" height="40"><use href="#ico-cross"/></svg>
+            <p>O problema nunca foi a mulher certa. O problema sempre foi a ausência de estrutura, princípios e direção que torna o homem invisível ao respeito dela.</p>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============== PILARES ============== -->
+    <section class="section section-pilares" id="pilares">
+      <div class="container">
+        <header class="section-head">
+          <div class="eyebrow reveal">
+            <svg width="12" height="12"><use href="#ico-sword"/></svg>
+            <span>Os Cinco Pilares &amp; o Pilar Extra</span>
+          </div>
+          <h2 class="heading reveal">A jornada, dividida em <em>seis estágios</em> de construção.</h2>
+          <div class="heading-rule reveal"><svg width="180" height="10"><use href="#ico-divider"/></svg></div>
+          <p class="section-lede reveal">
+            Cada pilar é uma camada que se apoia sobre a anterior. Clique para abrir cada estágio e revelar as partes que o compõem.
+          </p>
+        </header>
+
+        <ol class="pilares" role="list">
+
+          <li class="pilar reveal" data-pilar="1">
+            <button class="pilar-head" aria-expanded="false" aria-controls="pilar-1">
+              <span class="pilar-num" aria-hidden="true">
+                <span class="pilar-num-roman">I</span>
+                <svg class="pilar-ico" width="24" height="24"><use href="#ico-shield"/></svg>
+              </span>
+              <span class="pilar-titles">
+                <em class="pilar-kicker">Pilar I</em>
+                <span class="pilar-title">A Estrutura</span>
+                <span class="pilar-desc">Construir o homem individualmente. Fundação.</span>
+              </span>
+              <span class="pilar-toggle" aria-hidden="true">
+                <svg width="18" height="18"><use href="#ico-plus"/></svg>
+              </span>
+            </button>
+            <div class="pilar-body" id="pilar-1" role="region">
+              <div class="pilar-body-inner">
+                <p>O alicerce. Antes da escolha, antes do relacionamento, antes do legado: você. Desenvolvimento de estabilidade emocional, disciplina, direção e responsabilidade. Tudo o que vem depois depende deste estágio.</p>
+                <ul class="parts">
+                  <li><span>01</span>Estrutura masculina</li>
+                  <li><span>02</span>Segurança emocional</li>
+                  <li><span>03</span>Decisão e liderança</li>
+                  <li><span>04</span>Disciplina e direção</li>
+                  <li><span>05</span>Exercício prático + PDF de aplicação</li>
+                </ul>
+              </div>
+            </div>
+          </li>
+
+          <li class="pilar reveal" data-pilar="2">
+            <button class="pilar-head" aria-expanded="false" aria-controls="pilar-2">
+              <span class="pilar-num" aria-hidden="true">
+                <span class="pilar-num-roman">II</span>
+                <svg class="pilar-ico" width="24" height="24"><use href="#ico-compass"/></svg>
+              </span>
+              <span class="pilar-titles">
+                <em class="pilar-kicker">Pilar II</em>
+                <span class="pilar-title">A Escolha</span>
+                <span class="pilar-desc">Reconhecer uma mulher com valores e capacidade real de construção.</span>
+              </span>
+              <span class="pilar-toggle" aria-hidden="true"><svg width="18" height="18"><use href="#ico-plus"/></svg></span>
+            </button>
+            <div class="pilar-body" id="pilar-2" role="region">
+              <div class="pilar-body-inner">
+                <p>Nenhuma estrutura se sustenta sobre a escolha errada. Aqui você aprende a ler comportamento, compatibilidade de valores, maturidade e potencial concreto de construção a longo prazo.</p>
+                <ul class="parts">
+                  <li><span>06</span>A escolha da mulher</li>
+                  <li><span>07</span>Avaliação de comportamento</li>
+                  <li><span>08</span>Compatibilidade de valores</li>
+                  <li><span>09</span>Potencial de construção</li>
+                  <li><span>10</span>Exercício prático + PDF de aplicação</li>
+                </ul>
+              </div>
+            </div>
+          </li>
+
+          <li class="pilar reveal" data-pilar="3">
+            <button class="pilar-head" aria-expanded="false" aria-controls="pilar-3">
+              <span class="pilar-num" aria-hidden="true">
+                <span class="pilar-num-roman">III</span>
+                <svg class="pilar-ico" width="24" height="24"><use href="#ico-chain"/></svg>
+              </span>
+              <span class="pilar-titles">
+                <em class="pilar-kicker">Pilar III</em>
+                <span class="pilar-title">O Alinhamento</span>
+                <span class="pilar-desc">Limites, expectativas, rotina e visão de futuro estabelecidos com clareza.</span>
+              </span>
+              <span class="pilar-toggle" aria-hidden="true"><svg width="18" height="18"><use href="#ico-plus"/></svg></span>
+            </button>
+            <div class="pilar-body" id="pilar-3" role="region">
+              <div class="pilar-body-inner">
+                <p>A comunicação levada ao extremo. Aqui se define, em palavras claras, o que cada um espera, o que cada um se compromete a oferecer e como o casal neutraliza conflitos estruturais antes que eles nasçam.</p>
+                <ul class="parts">
+                  <li><span>11</span>Limite versus controle</li>
+                  <li><span>12</span>Alinhamento de compromisso</li>
+                  <li><span>13</span>Influência externa</li>
+                  <li><span>14</span>Comportamento social</li>
+                  <li><span>15</span>Linguagem de amor</li>
+                  <li><span>16</span>Exercício prático + PDF de aplicação</li>
+                </ul>
+              </div>
+            </div>
+          </li>
+
+          <li class="pilar reveal" data-pilar="4">
+            <button class="pilar-head" aria-expanded="false" aria-controls="pilar-4">
+              <span class="pilar-num" aria-hidden="true">
+                <span class="pilar-num-roman">IV</span>
+                <svg class="pilar-ico" width="24" height="24"><use href="#ico-flame"/></svg>
+              </span>
+              <span class="pilar-titles">
+                <em class="pilar-kicker">Pilar IV</em>
+                <span class="pilar-title">A Condução</span>
+                <span class="pilar-desc">Manter o relacionamento forte através das fases, conflitos e desgastes.</span>
+              </span>
+              <span class="pilar-toggle" aria-hidden="true"><svg width="18" height="18"><use href="#ico-plus"/></svg></span>
+            </button>
+            <div class="pilar-body" id="pilar-4" role="region">
+              <div class="pilar-body-inner">
+                <p>Relacionamento não se conquista, se conduz. Este pilar trata de como você lidera com consistência ao longo do tempo — preservando confiança, admiração e atração mesmo diante da rotina e do conflito.</p>
+                <ul class="parts">
+                  <li><span>17</span>Fases do relacionamento</li>
+                  <li><span>18</span>Conflitos e reparação</li>
+                  <li><span>19</span>Confiança e transparência</li>
+                  <li><span>20</span>Rotina e convivência</li>
+                  <li><span>21</span>Manutenção da atração</li>
+                  <li><span>22</span>Exercício prático + PDF de aplicação</li>
+                </ul>
+              </div>
+            </div>
+          </li>
+
+          <li class="pilar reveal" data-pilar="5">
+            <button class="pilar-head" aria-expanded="false" aria-controls="pilar-5">
+              <span class="pilar-num" aria-hidden="true">
+                <span class="pilar-num-roman">V</span>
+                <svg class="pilar-ico" width="24" height="24"><use href="#ico-crown"/></svg>
+              </span>
+              <span class="pilar-titles">
+                <em class="pilar-kicker">Pilar V</em>
+                <span class="pilar-title">A Consolidação</span>
+                <span class="pilar-desc">As decisões que tornam a relação sólida e preparada para o longo prazo.</span>
+              </span>
+              <span class="pilar-toggle" aria-hidden="true"><svg width="18" height="18"><use href="#ico-plus"/></svg></span>
+            </button>
+            <div class="pilar-body" id="pilar-5" role="region">
+              <div class="pilar-body-inner">
+                <p>Morar junto, casamento, organização patrimonial, rotina do casal, formação de família. Aqui o relacionamento deixa de ser provisório e se transforma em arquitetura de vida.</p>
+                <ul class="parts">
+                  <li><span>23</span>Morar junto</li>
+                  <li><span>24</span>Casamento</li>
+                  <li><span>25</span>Alinhamento inicial da vida a dois</li>
+                  <li><span>26</span>Organização da rotina</li>
+                  <li><span>27</span>Estrutura financeira do casal</li>
+                  <li><span>28</span>Exercício prático + PDF de aplicação</li>
+                </ul>
+              </div>
+            </div>
+          </li>
+
+          <li class="pilar pilar-extra reveal" data-pilar="6">
+            <button class="pilar-head" aria-expanded="false" aria-controls="pilar-6">
+              <span class="pilar-num" aria-hidden="true">
+                <span class="pilar-num-roman">+</span>
+                <svg class="pilar-ico" width="24" height="24"><use href="#ico-rose"/></svg>
+              </span>
+              <span class="pilar-titles">
+                <em class="pilar-kicker">Pilar extra</em>
+                <span class="pilar-title">Pílulas de Construção</span>
+                <span class="pilar-desc">Aulas independentes para dores específicas e situações reais.</span>
+              </span>
+              <span class="pilar-toggle" aria-hidden="true"><svg width="18" height="18"><use href="#ico-plus"/></svg></span>
+            </button>
+            <div class="pilar-body" id="pilar-6" role="region">
+              <div class="pilar-body-inner">
+                <p>Aproximadamente doze aulas independentes, cada uma resolvendo um tema sensível com orientação prática e direta. Você acessa na ordem que quiser, conforme a necessidade da sua vida.</p>
+                <ul class="parts parts-grid">
+                  <li><span>·</span>Ciúmes</li>
+                  <li><span>·</span>Término</li>
+                  <li><span>·</span>Traição</li>
+                  <li><span>·</span>Escolha da parceira</li>
+                  <li><span>·</span>Afastamento</li>
+                  <li><span>·</span>Desrespeito</li>
+                  <li><span>·</span>Tomada de decisão</li>
+                  <li><span>·</span>E mais.</li>
+                </ul>
+              </div>
+            </div>
+          </li>
+
+        </ol>
+
+        <div class="pilares-cta reveal">
+          <a href="https://www.hotmart.com" target="_blank" rel="noopener" class="btn btn-primary btn-lg">
+            <span>Quero ser o homem que ela precisa e respeita</span>
+            <svg class="ico" width="18" height="18"><use href="#ico-arrow"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============== PARA QUEM / NÃO PARA QUEM ============== -->
+    <section class="section section-audience">
+      <div class="container">
+        <header class="section-head center">
+          <div class="eyebrow reveal"><svg width="12" height="12"><use href="#ico-cross"/></svg><span>A quem este manual serve</span></div>
+          <h2 class="heading reveal">Nem todo homem entra <em>nesta jornada.</em></h2>
+          <div class="heading-rule reveal"><svg width="180" height="10"><use href="#ico-divider"/></svg></div>
+        </header>
+
+        <div class="audience-grid">
+          <article class="audience-card audience-yes reveal">
+            <div class="audience-head">
+              <span class="audience-chip"><svg width="14" height="14"><use href="#ico-check"/></svg>Para você, se…</span>
+              <h3>O homem em construção.</h3>
+            </div>
+            <p class="audience-lede">Indicado para homens prontos para iniciar a jornada de construir um relacionamento sólido — entendendo que primeiro precisam se construir. Voltado principalmente a jovens e adultos entre 16 e 34 anos com fome de estrutura, clareza e maturidade.</p>
+            <ul class="audience-list">
+              <li><svg width="14" height="14"><use href="#ico-check"/></svg><span>Você está cansado de relacionamentos sem direção, sem profundidade e sem propósito.</span></li>
+              <li><svg width="14" height="14"><use href="#ico-check"/></svg><span>Você quer abandonar impulsividade, insegurança e superficialidade de uma vez por todas.</span></li>
+              <li><svg width="14" height="14"><use href="#ico-check"/></svg><span>Você deseja construir algo sério: compromisso, família, legado.</span></li>
+              <li><svg width="14" height="14"><use href="#ico-check"/></svg><span>Você está disposto a assumir responsabilidade sobre a própria postura e desenvolver liderança.</span></li>
+              <li><svg width="14" height="14"><use href="#ico-check"/></svg><span>Você entende que respeito não se exige — se conquista pela coerência.</span></li>
+            </ul>
+          </article>
+
+          <article class="audience-card audience-no reveal">
+            <div class="audience-head">
+              <span class="audience-chip chip-no"><svg width="14" height="14"><use href="#ico-x"/></svg>Não é para você, se…</span>
+              <h3>O manual não acomoda todos.</h3>
+            </div>
+            <p class="audience-lede">Este não é um espaço para quem procura atalhos ou validação para um estilo de vida que rejeita compromisso. Seja honesto consigo mesmo antes de entrar.</p>
+            <ul class="audience-list">
+              <li><svg width="14" height="14"><use href="#ico-x"/></svg><span>Você busca relacionamentos abertos, poligâmicos ou sem compromisso.</span></li>
+              <li><svg width="14" height="14"><use href="#ico-x"/></svg><span>Você rejeita princípios, valores ou responsabilidade dentro de uma relação.</span></li>
+              <li><svg width="14" height="14"><use href="#ico-x"/></svg><span>Você não tem interesse em construir família ou deixar um legado.</span></li>
+              <li><svg width="14" height="14"><use href="#ico-x"/></svg><span>Você prefere manter um estilo de vida focado apenas em prazeres momentâneos.</span></li>
+              <li><svg width="14" height="14"><use href="#ico-x"/></svg><span>Você quer uma fórmula mágica em lugar de um processo de construção real.</span></li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============== SOBRE NÓS ============== -->
+    <section class="section section-sobre" id="sobre">
+      <div class="container">
+        <header class="section-head">
+          <div class="eyebrow reveal"><svg width="12" height="12"><use href="#ico-chain"/></svg><span>Sobre nós</span></div>
+          <h2 class="heading reveal">Uma construção feita a dois, <em>validada pela prática.</em></h2>
+          <div class="heading-rule reveal"><svg width="180" height="10"><use href="#ico-divider"/></svg></div>
+        </header>
+
+        <div class="sobre-grid">
+          <div class="sobre-image reveal">
+            <div class="sobre-frame">
+              <svg class="frame-corner tl" aria-hidden="true"><use href="#ico-corner"/></svg>
+              <svg class="frame-corner tr" aria-hidden="true"><use href="#ico-corner"/></svg>
+              <svg class="frame-corner bl" aria-hidden="true"><use href="#ico-corner"/></svg>
+              <svg class="frame-corner br" aria-hidden="true"><use href="#ico-corner"/></svg>
+
+              <picture>
+                <source srcset="./casal.webp" type="image/webp" />
+                <img src="./casal.jpg" alt="Thiago e Giovana, autores de O Eterno MHRP" loading="lazy" />
+              </picture>
+
+              <div class="sobre-badge" aria-hidden="true">
+                <svg width="28" height="28"><use href="#ico-cross"/></svg>
+              </div>
+            </div>
+            <p class="sobre-caption">Thiago &amp; Giovana</p>
+          </div>
+
+          <div class="sobre-text">
+            <p class="sobre-p reveal">Thiago e Giovana não começaram como o casal que hoje inspira centenas de milhares de pessoas. Muito cedo, por volta dos quatorze anos, estavam inseridos em um estilo de vida comum — focado em prazeres momentâneos, festas e decisões sem direção de longo prazo.</p>
+
+            <p class="sobre-p reveal">O ponto de virada veio de um desejo silencioso, mas obstinado: construir algo maior. Uma família sólida. Um legado coerente. A partir dali, ainda na juventude, iniciou-se uma mudança intencional de comportamento, ancorada em valores, princípios e propósito.</p>
+
+            <p class="sobre-p reveal">Quando começaram o relacionamento, estabeleceram um padrão incomum de comunicação — definindo limites, sonhos e objetivos com clareza desde o primeiro dia. Esse modelo, compartilhado nas redes sociais, alcançou centenas de milhares de pessoas, com dezenas de milhões de visualizações mensais e milhares de relatos reais de relacionamentos transformados.</p>
+
+            <p class="sobre-p reveal">A autoridade deles não vem de teoria isolada. Ela nasce da aplicação prática, contínua, validada no próprio casamento e na vida de quem escuta e replica esses princípios.</p>
+
+            <div class="sobre-pillars reveal">
+              <div class="sobre-pillar">
+                <svg width="20" height="20"><use href="#ico-rose"/></svg>
+                <h4>Giovana</h4>
+                <p>Estudante de medicina, mantém rigor absoluto na formação profissional. Teve a primeira filha, planejada, aos 23 anos — evidenciando prioridade clara em família sem abrir mão da evolução individual.</p>
+              </div>
+              <div class="sobre-pillar">
+                <svg width="20" height="20"><use href="#ico-sword"/></svg>
+                <h4>Thiago</h4>
+                <p>Executivo no mercado financeiro, com foco direto em construção de patrimônio e provisão. Desde os 15 anos, carrega o objetivo de ser pai — e direcionou cada decisão para esse fim.</p>
+              </div>
+              <div class="sobre-pillar">
+                <svg width="20" height="20"><use href="#ico-chain"/></svg>
+                <h4>Juntos</h4>
+                <p>Uma vivência pautada em sacrifício, planejamento, proximidade com Deus e visão de longo prazo. A coerência entre discurso e prática é o que sustenta o que ensinam.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============== TRANSFORMAÇÃO ============== -->
+    <section class="section section-transformation" id="transformacao">
+      <div class="container">
+        <header class="section-head center">
+          <div class="eyebrow reveal"><svg width="12" height="12"><use href="#ico-flame"/></svg><span>A transformação</span></div>
+          <h2 class="heading reveal">Quem você será <em>do outro lado</em> deste manual.</h2>
+          <div class="heading-rule reveal"><svg width="180" height="10"><use href="#ico-divider"/></svg></div>
+          <p class="section-lede reveal">Duas versões do mesmo homem. A diferença está em tudo o que ele aprendeu a conduzir.</p>
+        </header>
+
+        <div class="transformation-compare">
+
+          <article class="tcard tcard-before reveal">
+            <header class="tcard-head">
+              <span class="tcard-label">Antes</span>
+              <h3>O homem sem estrutura</h3>
+            </header>
+            <ul>
+              <li>Age por impulso e por medo de perder.</li>
+              <li>Confunde carência com amor e ciúmes com cuidado.</li>
+              <li>Aceita desrespeito em troca de presença.</li>
+              <li>Escolhe parceiras apenas pela atração.</li>
+              <li>Não tem direção, nem de si nem do casal.</li>
+              <li>Terceiriza responsabilidade emocional e financeira.</li>
+              <li>Busca prazeres momentâneos no lugar de propósito.</li>
+            </ul>
+          </article>
+
+          <div class="tcard-arrow reveal" aria-hidden="true">
+            <svg width="40" height="40"><use href="#ico-arrow"/></svg>
+            <span>construção</span>
+          </div>
+
+          <article class="tcard tcard-after reveal">
+            <header class="tcard-head">
+              <span class="tcard-label">Depois</span>
+              <h3>O homem que ela respeita</h3>
+            </header>
+            <ul>
+              <li>Decide com firmeza e conduz com clareza.</li>
+              <li>Sente com profundidade, sem depender emocionalmente.</li>
+              <li>Estabelece limites e preserva a própria integridade.</li>
+              <li>Escolhe por valores, maturidade e capacidade de construção.</li>
+              <li>Tem direção de si, do casal e do legado.</li>
+              <li>Assume liderança financeira, emocional e espiritual.</li>
+              <li>Constrói para o longo prazo — casamento, filhos, família.</li>
+            </ul>
+          </article>
+
+        </div>
+
+        <div class="transformation-cta reveal">
+          <a href="https://www.hotmart.com" target="_blank" rel="noopener" class="btn btn-primary btn-lg">
+            <span>Quero adquirir o manual</span>
+            <svg class="ico" width="18" height="18"><use href="#ico-arrow"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============== COMPORTAMENTOS DESENVOLVIDOS ============== -->
+    <section class="section section-habits">
+      <div class="container">
+        <header class="section-head">
+          <div class="eyebrow reveal"><svg width="12" height="12"><use href="#ico-shield"/></svg><span>Comportamentos desenvolvidos</span></div>
+          <h2 class="heading reveal">Os hábitos que <em>sustentam</em> um homem respeitado.</h2>
+          <div class="heading-rule reveal"><svg width="180" height="10"><use href="#ico-divider"/></svg></div>
+        </header>
+
+        <div class="habits-grid">
+          <article class="habit reveal"><svg width="22" height="22"><use href="#ico-shield"/></svg><h4>Disciplina</h4><p>Rotina construída com propósito e mantida nos dias em que não há motivação.</p></article>
+          <article class="habit reveal"><svg width="22" height="22"><use href="#ico-flame"/></svg><h4>Autocontrole</h4><p>Gerir emoções difíceis sem terceirizar o peso delas para a parceira ou o casal.</p></article>
+          <article class="habit reveal"><svg width="22" height="22"><use href="#ico-compass"/></svg><h4>Clareza de decisão</h4><p>Escolher com critérios, não com pressa. Dizer sim ao que importa, não a tudo.</p></article>
+          <article class="habit reveal"><svg width="22" height="22"><use href="#ico-crown"/></svg><h4>Liderança respeitosa</h4><p>Conduzir sem dominar. Ser firme sem ser ríspido. Decidir e sustentar a decisão.</p></article>
+          <article class="habit reveal"><svg width="22" height="22"><use href="#ico-sword"/></svg><h4>Responsabilidade emocional</h4><p>Responder em vez de reagir. Honrar o que fala e entregar o que promete.</p></article>
+          <article class="habit reveal"><svg width="22" height="22"><use href="#ico-chain"/></svg><h4>Comunicação direta</h4><p>Dizer o que precisa ser dito, no momento certo, com respeito e sem rodeios.</p></article>
+          <article class="habit reveal"><svg width="22" height="22"><use href="#ico-rose"/></svg><h4>Organização financeira</h4><p>Construção patrimonial consciente para sustentar estabilidade e futuro familiar.</p></article>
+          <article class="habit reveal"><svg width="22" height="22"><use href="#ico-cross"/></svg><h4>Vida espiritual</h4><p>Deus no centro das decisões. Uma base que resiste ao que não se controla.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============== COMPORTAMENTOS ABANDONADOS ============== -->
+    <section class="section section-shed">
+      <div class="container narrow">
+        <header class="section-head center">
+          <div class="eyebrow reveal"><svg width="12" height="12"><use href="#ico-x"/></svg><span>O que se deixa para trás</span></div>
+          <h2 class="heading reveal">Padrões que <em>deixam de fazer sentido.</em></h2>
+          <div class="heading-rule reveal"><svg width="180" height="10"><use href="#ico-divider"/></svg></div>
+          <p class="section-lede reveal">A maturidade não chega pelo que você adiciona. Chega pelo que você para de carregar.</p>
+        </header>
+
+        <ul class="shed-list">
+          <li class="reveal"><span>Insegurança permanente</span><span>clareza e estabilidade</span></li>
+          <li class="reveal"><span>Ciúmes descontrolado</span><span>confiança construída</span></li>
+          <li class="reveal"><span>Medo de perder</span><span>presença de quem escolhe</span></li>
+          <li class="reveal"><span>Indecisão crônica</span><span>decisão com direção</span></li>
+          <li class="reveal"><span>Dependência emocional</span><span>autonomia afetiva</span></li>
+          <li class="reveal"><span>Busca por prazeres momentâneos</span><span>construção de longo prazo</span></li>
+          <li class="reveal"><span>Permissividade diante de desrespeito</span><span>limites sustentados</span></li>
+          <li class="reveal"><span>Escolhas guiadas apenas por atração</span><span>escolhas guiadas por valores</span></li>
+          <li class="reveal"><span>Terceirização de responsabilidade</span><span>liderança assumida</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============== O QUE VOCÊ RECEBE ============== -->
+    <section class="section section-delivers">
+      <div class="container">
+        <header class="section-head center">
+          <div class="eyebrow reveal"><svg width="12" height="12"><use href="#ico-sword"/></svg><span>O que está incluído</span></div>
+          <h2 class="heading reveal">Um manual inteiro, <em>entregue em detalhes.</em></h2>
+          <div class="heading-rule reveal"><svg width="180" height="10"><use href="#ico-divider"/></svg></div>
+        </header>
+
+        <div class="numbers-grid">
+          <div class="numstat reveal">
+            <div class="numstat-num" data-count="42">42</div>
+            <div class="numstat-label">partes ao todo</div>
+            <div class="numstat-desc">Dividas entre os cinco pilares principais e o pilar extra.</div>
+          </div>
+          <div class="numstat reveal">
+            <div class="numstat-num" data-count="6">6</div>
+            <div class="numstat-label">pilares estruturados</div>
+            <div class="numstat-desc">Cinco principais mais o pilar extra de pílulas de construção.</div>
+          </div>
+          <div class="numstat reveal">
+            <div class="numstat-num" data-count="14">14</div>
+            <div class="numstat-label">horas de conteúdo</div>
+            <div class="numstat-desc">Cerca de 840 minutos de aulas gravadas, diretas ao ponto.</div>
+          </div>
+          <div class="numstat reveal">
+            <div class="numstat-num" data-count="5">5</div>
+            <div class="numstat-label">PDFs de aplicação</div>
+            <div class="numstat-desc">Um exercício prático ao fim de cada pilar principal.</div>
+          </div>
+        </div>
+
+        <div class="delivers-list">
+          <div class="deliver-item reveal"><svg width="18" height="18"><use href="#ico-check"/></svg><span>Acesso 100% gravado, assista no seu ritmo.</span></div>
+          <div class="deliver-item reveal"><svg width="18" height="18"><use href="#ico-check"/></svg><span>Disponível no computador e no celular.</span></div>
+          <div class="deliver-item reveal"><svg width="18" height="18"><use href="#ico-check"/></svg><span>Certificado de conclusão.</span></div>
+          <div class="deliver-item reveal"><svg width="18" height="18"><use href="#ico-check"/></svg><span>Comunidade fechada de alunos (prevista).</span></div>
+          <div class="deliver-item reveal"><svg width="18" height="18"><use href="#ico-check"/></svg><span>Acesso com duração prevista de um ano.</span></div>
+          <div class="deliver-item reveal"><svg width="18" height="18"><use href="#ico-check"/></svg><span>Exercícios práticos com PDF estruturado.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============== OFERTA ============== -->
+    <section class="section section-offer" id="oferta">
+      <div class="container">
+        <div class="offer-card reveal">
+          <svg class="frame-corner tl" aria-hidden="true"><use href="#ico-corner"/></svg>
+          <svg class="frame-corner tr" aria-hidden="true"><use href="#ico-corner"/></svg>
+          <svg class="frame-corner bl" aria-hidden="true"><use href="#ico-corner"/></svg>
+          <svg class="frame-corner br" aria-hidden="true"><use href="#ico-corner"/></svg>
+
+          <div class="offer-eyebrow">
+            <svg width="14" height="14"><use href="#ico-cross"/></svg>
+            <span>Investimento</span>
+            <svg width="14" height="14"><use href="#ico-cross"/></svg>
+          </div>
+
+          <h2 class="offer-title">O Eterno <em>M.H.R.P.</em></h2>
+          <p class="offer-sub">Acesso integral ao manual completo, aos seis pilares e a todos os materiais práticos.</p>
+
+          <div class="offer-price">
+            <div class="price-installment">
+              <span class="price-prefix">12x de</span>
+              <span class="price-currency">R$</span>
+              <span class="price-main" data-price-installment>16</span><span class="price-cents">,50</span>
+            </div>
+            <div class="price-total">
+              ou <strong><span data-price-total>R$ 198</span>,00</strong> à vista
+            </div>
+          </div>
+
+          <div class="offer-methods">
+            <span>Cartão</span><span>Pix</span><span>Boleto</span><span>Boleto parcelado</span><span>PayPal</span>
+          </div>
+
+          <a href="https://www.hotmart.com" target="_blank" rel="noopener" class="btn btn-primary btn-xl">
+            <span>Quero ser o homem que ela precisa e respeita</span>
+            <svg class="ico" width="18" height="18"><use href="#ico-arrow"/></svg>
+          </a>
+
+          <div class="offer-guarantee">
+            <svg width="20" height="20"><use href="#ico-shield"/></svg>
+            <div>
+              <strong>Garantia incondicional de 7 dias.</strong>
+              <span>Se dentro desse prazo o manual não for para você, a Hotmart devolve 100% do valor.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============== FAQ ============== -->
+    <section class="section section-faq" id="faq">
+      <div class="container narrow">
+        <header class="section-head center">
+          <div class="eyebrow reveal"><svg width="12" height="12"><use href="#ico-cross"/></svg><span>Perguntas frequentes</span></div>
+          <h2 class="heading reveal">Respostas <em>diretas,</em> para decisões firmes.</h2>
+          <div class="heading-rule reveal"><svg width="180" height="10"><use href="#ico-divider"/></svg></div>
+        </header>
+
+        <ul class="faq-list">
+          <li class="faq-item reveal">
+            <button class="faq-q" aria-expanded="false">
+              <span>Para quem é o manual?</span>
+              <svg width="18" height="18"><use href="#ico-plus"/></svg>
+            </button>
+            <div class="faq-a"><p>Para homens, principalmente entre 16 e 34 anos, prontos para se construir individualmente e iniciar a jornada de um relacionamento sólido, orientado ao longo prazo, à família e ao legado.</p></div>
+          </li>
+          <li class="faq-item reveal">
+            <button class="faq-q" aria-expanded="false">
+              <span>Para quem o manual não é indicado?</span>
+              <svg width="18" height="18"><use href="#ico-plus"/></svg>
+            </button>
+            <div class="faq-a"><p>Para quem busca relacionamentos abertos, poligâmicos ou sem compromisso; para quem rejeita princípios e responsabilidade; ou para quem não tem interesse em construir família ou legado.</p></div>
+          </li>
+          <li class="faq-item reveal">
+            <button class="faq-q" aria-expanded="false">
+              <span>As aulas são ao vivo ou gravadas?</span>
+              <svg width="18" height="18"><use href="#ico-plus"/></svg>
+            </button>
+            <div class="faq-a"><p>100% gravadas. Você assiste no seu ritmo, quantas vezes precisar, dentro do período de acesso.</p></div>
+          </li>
+          <li class="faq-item reveal">
+            <button class="faq-q" aria-expanded="false">
+              <span>Qual a duração total do conteúdo?</span>
+              <svg width="18" height="18"><use href="#ico-plus"/></svg>
+            </button>
+            <div class="faq-a"><p>Aproximadamente 14 horas, distribuídas em cerca de 42 partes de aproximadamente 20 minutos cada.</p></div>
+          </li>
+          <li class="faq-item reveal">
+            <button class="faq-q" aria-expanded="false">
+              <span>Existe material complementar?</span>
+              <svg width="18" height="18"><use href="#ico-plus"/></svg>
+            </button>
+            <div class="faq-a"><p>Sim. Ao fim de cada pilar principal há um exercício prático com PDF estruturado, para que o conteúdo se transforme em aplicação concreta na sua vida.</p></div>
+          </li>
+          <li class="faq-item reveal">
+            <button class="faq-q" aria-expanded="false">
+              <span>Posso assistir pelo celular?</span>
+              <svg width="18" height="18"><use href="#ico-plus"/></svg>
+            </button>
+            <div class="faq-a"><p>Sim. Todo o manual é acessível tanto no computador quanto no celular.</p></div>
+          </li>
+          <li class="faq-item reveal">
+            <button class="faq-q" aria-expanded="false">
+              <span>Existe certificado?</span>
+              <svg width="18" height="18"><use href="#ico-plus"/></svg>
+            </button>
+            <div class="faq-a"><p>Sim, ao concluir o manual você recebe o certificado de conclusão.</p></div>
+          </li>
+          <li class="faq-item reveal">
+            <button class="faq-q" aria-expanded="false">
+              <span>Existe garantia?</span>
+              <svg width="18" height="18"><use href="#ico-plus"/></svg>
+            </button>
+            <div class="faq-a"><p>Sim. Garantia incondicional de 7 dias. Caso entenda que o manual não é para você dentro desse prazo, a Hotmart realiza o reembolso integral.</p></div>
+          </li>
+          <li class="faq-item reveal">
+            <button class="faq-q" aria-expanded="false">
+              <span>Quais são as formas de pagamento?</span>
+              <svg width="18" height="18"><use href="#ico-plus"/></svg>
+            </button>
+            <div class="faq-a"><p>Cartão à vista ou parcelado, Pix à vista, boleto à vista, boleto parcelado via Hotmart ou Parcelex, e PayPal.</p></div>
+          </li>
+          <li class="faq-item reveal">
+            <button class="faq-q" aria-expanded="false">
+              <span>Serve para quem ainda não está em um relacionamento?</span>
+              <svg width="18" height="18"><use href="#ico-plus"/></svg>
+            </button>
+            <div class="faq-a"><p>Sim, e talvez seja o melhor momento. O primeiro pilar inteiro é dedicado à construção individual. A jornada começa no homem.</p></div>
+          </li>
+          <li class="faq-item reveal">
+            <button class="faq-q" aria-expanded="false">
+              <span>O manual é indicado para quem busca algo sério?</span>
+              <svg width="18" height="18"><use href="#ico-plus"/></svg>
+            </button>
+            <div class="faq-a"><p>Sim. Todo o método é construído para quem deseja relacionamento duradouro, casamento, família e legado. Se não é o que você busca, este não é o seu manual.</p></div>
+          </li>
+          <li class="faq-item reveal">
+            <button class="faq-q" aria-expanded="false">
+              <span>O acesso é por tempo limitado?</span>
+              <svg width="18" height="18"><use href="#ico-plus"/></svg>
+            </button>
+            <div class="faq-a"><p>Sim. A previsão atual é de um ano de acesso a partir da compra, tempo mais do que suficiente para percorrer todos os pilares com calma.</p></div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============== FINAL CTA ============== -->
+    <section class="section section-final">
+      <div class="container narrow center">
+        <svg class="final-mark reveal" aria-hidden="true"><use href="#ico-sword"/></svg>
+        <h2 class="final-title reveal">Há um homem sendo construído <em>dentro de você.</em></h2>
+        <p class="final-lede reveal">Este manual não promete transformar sua vida. Ele entrega a estrutura. O resto é escolha sua, todos os dias.</p>
+        <a href="https://www.hotmart.com" target="_blank" rel="noopener" class="btn btn-primary btn-xl reveal">
+          <span>Quero ser o homem que ela precisa e respeita</span>
+          <svg class="ico" width="18" height="18"><use href="#ico-arrow"/></svg>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============== FOOTER ============== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img src="./logopequena.PNG" alt="O Eterno MHRP" />
+          <p>Construção. Respeito. Legado.<br/>Um homem se faz pelos princípios que sustenta.</p>
+        </div>
+        <nav class="footer-links" aria-label="Rodapé">
+          <span class="footer-title">Navegação</span>
+          <a href="#manifesto">Manifesto</a>
+          <a href="#pilares">Pilares</a>
+          <a href="#sobre">Sobre nós</a>
+          <a href="#transformacao">Transformação</a>
+          <a href="#oferta">Oferta</a>
+          <a href="#faq">FAQ</a>
+        </nav>
+        <div class="footer-cta">
+          <span class="footer-title">Dê o primeiro passo</span>
+          <a href="https://www.hotmart.com" target="_blank" rel="noopener" class="btn btn-primary">
+            <span>Adquirir o manual</span>
+            <svg class="ico" width="16" height="16"><use href="#ico-arrow"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-divider" aria-hidden="true"><svg width="240" height="10"><use href="#ico-divider"/></svg></div>
+      <div class="footer-bottom">
+        <small>&copy; <span id="year"></span> O Eterno M.H.R.P. Todos os direitos reservados.</small>
+        <small>Este site não pertence à Meta, Google ou Hotmart.</small>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./script.js" defer></script>
+</body>
+</html>
