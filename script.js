@@ -69,13 +69,18 @@
   });
 
   // --------------------- FAQ accordion (multi-open) ---------------------
-  document.querySelectorAll('.faq-item').forEach(item => {
+  const faqItems = document.querySelectorAll('.faq-item');
+  faqItems.forEach((item, idx) => {
     const btn = item.querySelector('.faq-q');
     if (!btn) return;
     btn.addEventListener('click', () => {
       const open = item.classList.toggle('open');
       btn.setAttribute('aria-expanded', String(open));
     });
+    if (idx === 0) {
+      item.classList.add('open');
+      btn.setAttribute('aria-expanded', 'true');
+    }
   });
 
   // --------------------- Reveal on scroll ---------------------
