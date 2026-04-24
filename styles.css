@@ -1183,7 +1183,7 @@ ul,ol { list-style: none; }
 }
 .shed-list li > span:first-child {
   text-align: right;
-  color: var(--c-ink-faint);
+  color: var(--c-ink-mute);
   font-family: var(--f-display);
   font-size: 1.1rem;
   font-style: italic;
