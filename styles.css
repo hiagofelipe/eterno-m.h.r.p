@@ -1589,7 +1589,7 @@ ul,ol { list-style: none; }
   .nav-links { display: none; }
   .nav-inner > .btn-sm { display: none; }
   .nav-burger { display: flex; }
-  .nav-logo img { height: 44px; }
+  .nav-logo img { height: 56px; }
   .nav { padding: 0.5rem 0; }
   .nav.scrolled { padding: 0.3rem 0; }
 
