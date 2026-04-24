@@ -442,6 +442,18 @@ ul,ol { list-style: none; }
   text-shadow: 0 2px 30px rgba(201,169,97,0.2);
 }
 
+.hero-fullname {
+  font-family: var(--f-inscription);
+  font-size: clamp(0.6rem, 1.1vw, 0.78rem);
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--c-gold);
+  opacity: 0.75;
+  text-align: center;
+  margin: 0 auto var(--s-sm);
+  max-width: 44ch;
+}
+
 .hero-divider { color: var(--c-gold); opacity: 0.8; margin: 0.4rem auto var(--s-md); }
 
 .hero-sub {
@@ -932,14 +944,32 @@ ul,ol { list-style: none; }
   color: var(--c-gold);
 }
 
-.sobre-caption {
-  text-align: center;
-  font-family: var(--f-display);
-  font-size: 1.2rem;
-  font-style: italic;
+.sobre-autores {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+  margin-top: 1.6rem;
+}
+.autor-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.55rem 1.2rem;
+  border: 1px solid var(--c-gold-deep);
+  border-radius: 2px;
+  background: transparent;
   color: var(--c-gold);
-  margin-top: 2.2rem;
-  letter-spacing: 0.05em;
+  font-family: var(--f-inscription);
+  font-size: 0.65rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: background var(--d-fast) var(--ease), border-color var(--d-fast) var(--ease), color var(--d-fast) var(--ease);
+}
+.autor-btn:hover {
+  background: rgba(201,169,97,0.1);
+  border-color: var(--c-gold);
+  color: var(--c-ink);
 }
 
 .sobre-text { display: flex; flex-direction: column; gap: 1.2rem; }
