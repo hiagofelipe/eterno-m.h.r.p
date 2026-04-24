@@ -255,6 +255,36 @@ ul,ol { list-style: none; }
   justify-content: space-between;
   gap: 1.5rem;
 }
+
+/* ---- Nav items slide inward at top, back to edges on scroll ---- */
+.nav-logo {
+  transition: transform var(--d-slow) var(--ease);
+}
+.nav-burger {
+  transition: transform var(--d-slow) var(--ease),
+              background var(--d-fast) var(--ease),
+              border-color var(--d-fast) var(--ease);
+}
+.nav-links {
+  transition: transform var(--d-slow) var(--ease);
+}
+.nav-inner > .btn-sm {
+  transition: transform var(--d-slow) var(--ease),
+              all var(--d-fast) var(--ease);
+}
+
+/* At top: push logo and controls inward to clear corner ornaments */
+.nav:not(.scrolled) .nav-logo        { transform: translateX(2.8rem); }
+.nav:not(.scrolled) .nav-burger      { transform: translateX(-2.8rem); }
+.nav:not(.scrolled) .nav-links       { transform: translateX(-2rem); }
+.nav:not(.scrolled) .nav-inner > .btn-sm { transform: translateX(-2.8rem); }
+
+/* Scrolled: elements return to edge positions (transform: none) */
+.nav.scrolled .nav-logo        { transform: translateX(0); }
+.nav.scrolled .nav-burger      { transform: translateX(0); }
+.nav.scrolled .nav-links       { transform: translateX(0); }
+.nav.scrolled .nav-inner > .btn-sm { transform: translateX(0); }
+
 .nav-logo img {
   height: 72px;
   width: auto;
@@ -1559,6 +1589,9 @@ ul,ol { list-style: none; }
   .nav-links { display: none; }
   .nav-inner > .btn-sm { display: none; }
   .nav-burger { display: flex; }
+  .nav-logo img { height: 44px; }
+  .nav { padding: 0.5rem 0; }
+  .nav.scrolled { padding: 0.3rem 0; }
 
   .manifesto-cols { grid-template-columns: 1fr; gap: 2.5rem; }
   .audience-grid { grid-template-columns: 1fr; }
