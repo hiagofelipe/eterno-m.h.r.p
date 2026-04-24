@@ -25,16 +25,25 @@
 
   const closeMenu = () => {
     if (!burger || !navMobile) return;
+    if (!navMobile.classList.contains('open')) return;
     burger.setAttribute('aria-expanded', 'false');
-    navMobile.classList.remove('open');
-    navMobile.setAttribute('aria-hidden', 'true');
+    navMobile.classList.add('closing');
+    setTimeout(() => {
+      navMobile.classList.remove('open', 'closing');
+      navMobile.setAttribute('aria-hidden', 'true');
+    }, 340);
   };
   const toggleMenu = () => {
     if (!burger || !navMobile) return;
     const open = burger.getAttribute('aria-expanded') === 'true';
-    burger.setAttribute('aria-expanded', String(!open));
-    navMobile.classList.toggle('open', !open);
-    navMobile.setAttribute('aria-hidden', String(open));
+    if (open) {
+      closeMenu();
+    } else {
+      navMobile.classList.remove('closing');
+      burger.setAttribute('aria-expanded', 'true');
+      navMobile.classList.add('open');
+      navMobile.setAttribute('aria-hidden', 'false');
+    }
   };
 
   if (burger) burger.addEventListener('click', toggleMenu);
