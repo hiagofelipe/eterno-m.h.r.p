@@ -433,16 +433,10 @@ ul,ol { list-style: none; }
   position: absolute;
   inset: 0;
   z-index: -2;
-  /* Vinho à esquerda (texto) → preto à direita (atrás do cavaleiro transparente) */
   background:
-    linear-gradient(to right,
-      #1c0709 0%,
-      #150507 38%,
-      #080102 60%,
-      #020001 100%
-    ),
-    linear-gradient(180deg, #1a0608 0%, #0a0203 100%);
-  background-blend-mode: multiply;
+    radial-gradient(ellipse at 50% 45%, rgba(139,10,26,0.28) 0%, transparent 55%),
+    radial-gradient(ellipse at 20% 80%, rgba(58,14,22,0.6) 0%, transparent 60%),
+    linear-gradient(180deg, #200a0e 0%, #0b0305 100%);
 }
 .hero-vignette {
   position: absolute; inset: 0;
@@ -491,10 +485,8 @@ ul,ol { list-style: none; }
   max-width: 58%;
   pointer-events: none;
   user-select: none;
-  z-index: 0;
-  filter:
-    drop-shadow(-50px 0 70px rgba(0,0,0,1))
-    drop-shadow(0 -30px 50px rgba(0,0,0,0.95));
+  z-index: 10; /* acima de tudo no hero — nada fica na frente */
+  filter: drop-shadow(-60px 0 80px rgba(0,0,0,0.98));
 }
 
 .hero-kicker {
@@ -1753,7 +1745,9 @@ ul,ol { list-style: none; }
 
   /* Floating figures: smaller on tablet */
   .hero-bg {
-    background: linear-gradient(to right, #1c0709 0%, #150507 30%, #080102 55%, #020001 100%);
+    background:
+      radial-gradient(ellipse at 50% 45%, rgba(139,10,26,0.22) 0%, transparent 55%),
+      linear-gradient(180deg, #200a0e 0%, #0b0305 100%);
   }
   .hero-figure {
     max-width: 50%;
@@ -1823,9 +1817,11 @@ ul,ol { list-style: none; }
 
   /* Hero mobile fixes */
   .hero-inner { width: 100%; }
-  /* Mobile: fundo escuro uniforme (cavaleiro ocupa quase tudo) */
+  /* Mobile: mesma cor da página */
   .hero-bg {
-    background: linear-gradient(180deg, #100304 0%, #050102 100%);
+    background:
+      radial-gradient(ellipse at 50% 45%, rgba(139,10,26,0.2) 0%, transparent 55%),
+      linear-gradient(180deg, #200a0e 0%, #0b0305 100%);
   }
   /* Cavaleiro sem máscara para mostrar rosa e espada completos */
   .hero-figure {
