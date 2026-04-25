@@ -2062,9 +2062,9 @@ ul,ol { list-style: none; }
     right: -6%;
     bottom: 0;
     z-index: 0;
-    opacity: 0.48;
-    -webkit-mask-image: linear-gradient(to top, black 55%, transparent 92%);
-    mask-image: linear-gradient(to top, black 55%, transparent 92%);
+    opacity: 0.38;
+    -webkit-mask-image: none;
+    mask-image: none;
     filter: drop-shadow(-6px 0 40px rgba(0,0,0,0.98));
   }
   .hero-inner {
