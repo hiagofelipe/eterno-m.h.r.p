@@ -1691,17 +1691,6 @@ ul,ol { list-style: none; }
   position: relative;
   overflow: hidden;
 }
-.section-final::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background:
-    conic-gradient(from 0deg at 50% 50%,
-      transparent 0deg, rgba(201,169,97,0.04) 45deg, transparent 90deg,
-      transparent 180deg, rgba(201,169,97,0.04) 225deg, transparent 270deg);
-  pointer-events: none;
-  animation: hero-rays-spin 120s linear infinite;
-}
 .final-mark {
   display: block;
   height: 200px;
@@ -1961,7 +1950,7 @@ ul,ol { list-style: none; }
 
 @media (prefers-reduced-motion: reduce) {
   .reveal { opacity: 1; transform: none; transition: none; }
-  .hero-rays, .section-final::before, .tcard-arrow svg, .hero-scroll span { animation: none; }
+  .hero-rays, .tcard-arrow svg, .hero-scroll span { animation: none; }
   html { scroll-behavior: auto; }
 }
 
