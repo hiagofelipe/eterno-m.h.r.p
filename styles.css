@@ -2036,54 +2036,83 @@ ul,ol { list-style: none; }
 }
 
 @media (max-width: 640px) {
-  .section { padding: 4.5rem 0; }
-  .hero { padding: 6rem 1rem 3rem; }
-  .corner { width: 32px; height: 32px; }
-  .corner-tl,.corner-tr { top: 18px; }
-  .corner-bl,.corner-br { bottom: 18px; }
-  .corner-tl,.corner-bl { left: 18px; }
-  .corner-tr,.corner-br { right: 18px; }
+  /* ---- Geral ---- */
+  .section { padding: 4rem 0; }
+  .corner { width: 28px; height: 28px; }
+  .corner-tl,.corner-tr { top: 16px; }
+  .corner-bl,.corner-br { bottom: 16px; }
+  .corner-tl,.corner-bl { left: 16px; }
+  .corner-tr,.corner-br { right: 16px; }
 
-  /* Hero mobile fixes */
-  .hero-inner { width: 100%; }
-  /* Mobile: mesma cor da página */
+  /* ---- Hero ---- */
+  /* Cavaleiro atrás do texto — elemento atmosférico, não sobrepõe */
+  .hero {
+    padding: 5.5rem 1.5rem 4rem;
+    min-height: 100svh;
+  }
   .hero-bg {
     background:
-      radial-gradient(ellipse at 50% 45%, rgba(139,10,26,0.2) 0%, transparent 55%),
+      radial-gradient(ellipse at 50% 60%, rgba(139,10,26,0.25) 0%, transparent 60%),
       linear-gradient(180deg, #200a0e 0%, #0b0305 100%);
   }
-  /* Cavaleiro sem máscara para mostrar rosa e espada completos */
   .hero-figure {
-    max-width: 78%;
-    right: -4%;
-    opacity: 0.88;
-    -webkit-mask-image: none;
-    mask-image: none;
-    filter: drop-shadow(0 0 20px rgba(4,0,1,0.95));
+    height: auto;
+    width: 82%;
+    max-width: none;
+    right: -6%;
+    bottom: 0;
+    z-index: 0;
+    opacity: 0.28;
+    -webkit-mask-image: linear-gradient(to top,
+      black 0%, rgba(0,0,0,0.7) 30%, rgba(0,0,0,0.2) 55%, transparent 72%);
+    mask-image: linear-gradient(to top,
+      black 0%, rgba(0,0,0,0.7) 30%, rgba(0,0,0,0.2) 55%, transparent 72%);
+    filter: drop-shadow(-6px 0 40px rgba(0,0,0,0.98));
   }
-  .manifesto-figure { display: none; }
-  .final-figure { display: none; }
-  .audience-figure { display: none; }
-  .shed-figure { width: 96%; opacity: 0.12; }
-  .hero-kicker { letter-spacing: 0.15em; font-size: 0.6rem; gap: 0.5rem; flex-wrap: wrap; justify-content: center; }
-  .hero-kicker svg { display: none; }
-  .hero-display { font-size: clamp(2.4rem, 13vw, 3.5rem); letter-spacing: 0.05em; }
-  .hero-cursive { font-size: clamp(1.1rem, 5vw, 1.6rem); }
-  .hero-fullname { font-size: 0.6rem; letter-spacing: 0.12em; padding: 0 0.5rem; }
-  .hero-lede { font-size: 0.92rem; padding: 0 0.5rem; }
+  .hero-inner {
+    width: 100%;
+    position: relative;
+    z-index: 1;
+  }
+  .hero-mark { max-width: 260px; margin: 0 auto var(--s-md); }
+  .hero-lede { font-size: 0.9rem; padding: 0 0.25rem; }
 
-  /* Button text wrap on mobile */
+  /* ---- Figuras: todas viram fundo discreto ou somem ---- */
+  .manifesto-figure { display: none; }
+  .audience-figure  { display: none; }
+  .final-figure     { display: none; }
+  .transformation-figure { display: none; }
+  .shed-figure {
+    width: 90%;
+    max-width: none;
+    opacity: 0.10;
+    -webkit-mask-image: radial-gradient(ellipse 80% 75% at 50% 52%, black 15%, rgba(0,0,0,0.5) 50%, transparent 75%);
+    mask-image: radial-gradient(ellipse 80% 75% at 50% 52%, black 15%, rgba(0,0,0,0.5) 50%, transparent 75%);
+  }
+
+  /* ---- Hero tipografia ---- */
+  .hero-kicker { letter-spacing: 0.12em; font-size: 0.6rem; gap: 0.4rem; flex-wrap: wrap; justify-content: center; }
+  .hero-kicker svg { display: none; }
+  .hero-display { font-size: clamp(2.4rem, 12vw, 3.2rem); letter-spacing: 0.04em; }
+  .hero-cursive { font-size: clamp(1rem, 5vw, 1.5rem); }
+  .hero-fullname { font-size: 0.58rem; letter-spacing: 0.1em; padding: 0 0.5rem; }
+
+  /* ---- Botões ---- */
   .btn { white-space: normal; text-align: center; }
-  .hero-seals { grid-template-columns: 1fr 1fr; font-size: 0.58rem; }
-  .seal { gap: 0.4rem; }
   .hero-cta { flex-direction: column; width: 100%; }
   .hero-cta .btn { width: 100%; }
 
+  /* ---- Selos ---- */
+  .hero-seals { grid-template-columns: 1fr 1fr; font-size: 0.58rem; gap: 0.6rem; }
+  .seal { gap: 0.35rem; }
+
+  /* ---- Shed / O que se deixa para trás ---- */
   .shed-list li { grid-template-columns: auto 1fr; gap: 0.6rem 1rem; padding-left: 0.5rem; text-align: left; }
   .shed-list li > span:first-child { grid-column: 2; text-align: left; }
   .shed-list li > i { grid-column: 1; grid-row: 1 / 3; align-self: center; }
   .shed-list li > span:last-child { grid-column: 2; }
 
+  /* ---- Oferta ---- */
   .offer-card { padding: 0; }
   .offer-card-header { padding: 2rem 1.5rem 1.5rem; }
   .offer-card-body { grid-template-columns: 1fr; }
@@ -2091,13 +2120,18 @@ ul,ol { list-style: none; }
   .offer-price-col { padding: 2rem 1.5rem; }
   .offer-includes-col { padding: 1.5rem 1.5rem 2rem; }
   .offer-card-cta { padding: 1.5rem 1.5rem 2rem; }
+
+  /* ---- Grids ---- */
   .habits-grid { grid-template-columns: 1fr; }
   .numbers-grid { grid-template-columns: 1fr 1fr; padding: 2rem 0.5rem; gap: 2rem 1rem; }
 
-  .faq-q { padding: 1.1rem 1.2rem; font-size: 1.02rem; }
-  .faq-a p { padding: 0 1.2rem 1.1rem; font-size: 0.94rem; }
+  /* ---- FAQ ---- */
+  .faq-q { padding: 1.1rem 1.2rem; font-size: 0.95rem; }
+  .faq-a p { padding: 0 1.2rem 1.1rem; font-size: 0.9rem; }
 
+  /* ---- Rodapé ---- */
   .footer-bottom { flex-direction: column; text-align: center; }
 
+  /* ---- Sobre ---- */
   .sobre-p:first-of-type::first-letter { font-size: 3rem; padding: 0.1rem 0.5rem 0 0; }
 }
