@@ -433,9 +433,7 @@ ul,ol { list-style: none; }
   position: absolute;
   inset: 0;
   z-index: -2;
-  background:
-    radial-gradient(ellipse at 15% 90%, rgba(35,6,12,0.65) 0%, transparent 55%),
-    linear-gradient(180deg, #1c070b 0%, #070102 100%);
+  background: linear-gradient(180deg, #0c0103 0%, #030001 100%);
 }
 .hero-vignette {
   position: absolute; inset: 0;
@@ -486,22 +484,8 @@ ul,ol { list-style: none; }
   user-select: none;
   z-index: 0;
   filter:
-    drop-shadow(-40px 0 60px rgba(4,0,1,0.98))
-    drop-shadow(0 -30px 50px rgba(4,0,1,0.92));
-  -webkit-mask-image: linear-gradient(
-    to left,
-    black 45%,
-    rgba(0,0,0,0.8) 62%,
-    rgba(0,0,0,0.35) 76%,
-    transparent 90%
-  );
-  mask-image: linear-gradient(
-    to left,
-    black 45%,
-    rgba(0,0,0,0.8) 62%,
-    rgba(0,0,0,0.35) 76%,
-    transparent 90%
-  );
+    drop-shadow(-50px 0 70px rgba(0,0,0,1))
+    drop-shadow(0 -30px 50px rgba(0,0,0,0.95));
 }
 
 .hero-kicker {
@@ -1760,25 +1744,11 @@ ul,ol { list-style: none; }
 
   /* Floating figures: smaller on tablet */
   .hero-bg {
-    background:
-      radial-gradient(ellipse at 78% 72%, rgba(100,5,15,0.16) 0%, transparent 45%),
-      linear-gradient(180deg, #1a060a 0%, #060101 100%);
+    background: linear-gradient(180deg, #0c0103 0%, #030001 100%);
   }
   .hero-figure {
     max-width: 50%;
-    opacity: 0.85;
-    -webkit-mask-image: linear-gradient(
-      to left,
-      black 55%,
-      rgba(0,0,0,0.6) 72%,
-      transparent 95%
-    );
-    mask-image: linear-gradient(
-      to left,
-      black 55%,
-      rgba(0,0,0,0.6) 72%,
-      transparent 95%
-    );
+    opacity: 0.9;
   }
   .manifesto-figure { opacity: 0.16; height: 70%; }
   .transformation-figure { opacity: 0.04; }
