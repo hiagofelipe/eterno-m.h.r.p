@@ -744,7 +744,8 @@ ul,ol { list-style: none; }
     radial-gradient(ellipse at 10% 80%, rgba(58,14,22,0.3), transparent 50%);
   padding-top: 0;
 }
-.section-pilares .heading { font-size: clamp(1rem, 1.5vw, 1.5rem); }
+.section-pilares .heading { font-size: clamp(1.15rem, 1.8vw, 1.85rem); }
+.section-pilares .eyebrow { font-size: 0.82rem; }
 .section-pilares .section-lede { font-size: clamp(0.88rem, 1vw, 1rem); }
 
 .pilares {
