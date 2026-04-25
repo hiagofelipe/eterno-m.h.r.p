@@ -433,7 +433,16 @@ ul,ol { list-style: none; }
   position: absolute;
   inset: 0;
   z-index: -2;
-  background: linear-gradient(180deg, #0c0103 0%, #030001 100%);
+  /* Vinho à esquerda (texto) → preto à direita (atrás do cavaleiro transparente) */
+  background:
+    linear-gradient(to right,
+      #1c0709 0%,
+      #150507 38%,
+      #080102 60%,
+      #020001 100%
+    ),
+    linear-gradient(180deg, #1a0608 0%, #0a0203 100%);
+  background-blend-mode: multiply;
 }
 .hero-vignette {
   position: absolute; inset: 0;
@@ -1744,7 +1753,7 @@ ul,ol { list-style: none; }
 
   /* Floating figures: smaller on tablet */
   .hero-bg {
-    background: linear-gradient(180deg, #0c0103 0%, #030001 100%);
+    background: linear-gradient(to right, #1c0709 0%, #150507 30%, #080102 55%, #020001 100%);
   }
   .hero-figure {
     max-width: 50%;
@@ -1814,9 +1823,9 @@ ul,ol { list-style: none; }
 
   /* Hero mobile fixes */
   .hero-inner { width: 100%; }
-  /* Remove crimson glow on mobile — fica visível atrás do cavaleiro transparente */
+  /* Mobile: fundo escuro uniforme (cavaleiro ocupa quase tudo) */
   .hero-bg {
-    background: linear-gradient(180deg, #1a060a 0%, #060101 100%);
+    background: linear-gradient(180deg, #100304 0%, #050102 100%);
   }
   /* Cavaleiro sem máscara para mostrar rosa e espada completos */
   .hero-figure {
