@@ -668,10 +668,12 @@ ul,ol { list-style: none; }
   background: linear-gradient(180deg, transparent 0%, rgba(58,14,22,0.3) 100%);
   padding-bottom: 0;
 }
+.section-manifesto .heading { font-size: clamp(1.15rem, 1.8vw, 1.85rem); }
+.section-manifesto .eyebrow { font-size: 0.82rem; }
 .manifesto-grid { display: flex; flex-direction: column; gap: 3rem; }
 .manifesto-lede {
   font-family: var(--f-body);
-  font-size: clamp(1.25rem, 2vw, 1.6rem);
+  font-size: clamp(1rem, 1.4vw, 1.2rem);
   line-height: 1.55;
   color: var(--c-ink);
   max-width: 60ch;
