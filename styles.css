@@ -2062,7 +2062,7 @@ ul,ol { list-style: none; }
     right: -6%;
     bottom: 0;
     z-index: 0;
-    opacity: 0.38;
+    opacity: 0.28;
     -webkit-mask-image: none;
     mask-image: none;
     filter: drop-shadow(-6px 0 40px rgba(0,0,0,0.98));
@@ -2115,9 +2115,19 @@ ul,ol { list-style: none; }
   .offer-card-header { padding: 2rem 1.5rem 1.5rem; }
   .offer-card-body { grid-template-columns: 1fr; }
   .offer-col-divider { width: auto; height: 1px; margin: 0 1.5rem; }
-  .offer-price-col { padding: 2rem 1.5rem; }
-  .offer-includes-col { padding: 1.5rem 1.5rem 2rem; }
-  .offer-card-cta { padding: 1.5rem 1.5rem 2rem; }
+  /* Reordenamento mobile: preço → botão → métodos → inclusos → garantia */
+  .offer-card         { display: flex; flex-direction: column; }
+  .offer-card-body    { display: contents; }
+  .offer-price-col    { display: contents; }
+  .offer-card-cta     { display: contents; }
+
+  .offer-card-header  { order: 1; }
+  .offer-price        { order: 2; padding: 2rem 1.5rem 0; text-align: center; }
+  .offer-card-cta .btn { order: 3; margin: 1.2rem 1.5rem 0; }
+  .offer-methods      { order: 4; padding: 1rem 1.5rem 1.5rem; justify-content: center; }
+  .offer-col-divider  { order: 5; width: auto; height: 1px; margin: 0 1.5rem; }
+  .offer-includes-col { order: 6; padding: 1.5rem 1.5rem 1rem; }
+  .offer-guarantee    { order: 7; padding: 1rem 1.5rem 2rem; border-top: 1px solid var(--c-line); margin-top: 0.5rem; }
 
   /* ---- Grids ---- */
   .habits-grid { grid-template-columns: 1fr; }
