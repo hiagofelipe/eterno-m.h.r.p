@@ -1232,39 +1232,86 @@ ul,ol { list-style: none; }
   border: 1px solid var(--c-line);
   border-radius: var(--radius);
   background: rgba(20,6,9,0.4);
-  transition: border-color var(--d-med) var(--ease), transform var(--d-med) var(--ease), background var(--d-med) var(--ease);
   position: relative;
   overflow: hidden;
+  transition:
+    border-color 420ms var(--ease),
+    transform 420ms var(--ease),
+    background 420ms var(--ease),
+    box-shadow 420ms var(--ease);
 }
+
+/* Linha dourada que desliza da esquerda ao passar o mouse */
 .habit::before {
   content: "";
   position: absolute;
-  top: 0; left: 0; right: 0;
+  top: 0;
+  left: -100%;
+  width: 100%;
   height: 1px;
-  background: linear-gradient(90deg, transparent, var(--c-gold), transparent);
-  opacity: 0;
-  transition: opacity var(--d-med) var(--ease);
+  background: linear-gradient(90deg, transparent, var(--c-gold-soft), transparent);
+  transition: left 520ms var(--ease);
 }
-.habit:hover {
-  border-color: var(--c-line-strong);
-  transform: translateY(-4px);
-  background: rgba(58,14,22,0.3);
-}
-.habit:hover::before { opacity: 1; }
 
-.habit svg { color: var(--c-gold); margin-bottom: 1rem; }
+/* Shimmer diagonal — reflexo de luz atravessando o card */
+.habit::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 55%;
+  height: 100%;
+  background: linear-gradient(
+    108deg,
+    transparent 0%,
+    rgba(201,169,97,0.03) 35%,
+    rgba(201,169,97,0.09) 50%,
+    rgba(201,169,97,0.03) 65%,
+    transparent 100%
+  );
+  pointer-events: none;
+  transition: left 680ms var(--ease);
+}
+
+.habit:hover {
+  border-color: var(--c-gold-deep);
+  transform: translateY(-7px);
+  background: rgba(58,14,22,0.5);
+  box-shadow:
+    0 22px 44px -12px rgba(0,0,0,0.65),
+    0 0 0 1px rgba(201,169,97,0.1) inset,
+    0 8px 20px -8px rgba(139,10,26,0.3);
+}
+.habit:hover::before { left: 0; }
+.habit:hover::after  { left: 160%; }
+
+.habit svg {
+  color: var(--c-gold);
+  margin-bottom: 1rem;
+  transition: transform 420ms var(--ease), filter 420ms var(--ease);
+}
+.habit:hover svg {
+  transform: scale(1.18) translateY(-3px);
+  filter: drop-shadow(0 0 10px rgba(201,169,97,0.55));
+}
+
 .habit h4 {
   font-family: var(--f-inscription);
   font-size: 0.9rem;
   font-weight: 500;
   color: var(--c-ink);
   margin-bottom: 0.4rem;
+  transition: color 320ms var(--ease);
 }
+.habit:hover h4 { color: var(--c-gold-soft); }
+
 .habit p {
   font-size: 0.9rem;
   line-height: 1.5;
   color: var(--c-ink-mute);
+  transition: color 320ms var(--ease);
 }
+.habit:hover p { color: var(--c-ink-soft); }
 
 /* ----------------------- SHED ----------------------- */
 .shed-list {
@@ -1315,6 +1362,7 @@ ul,ol { list-style: none; }
 /* ----------------------- NUMBERS / DELIVERS ----------------------- */
 .section-delivers {
   background: radial-gradient(ellipse at center, rgba(58,14,22,0.3), transparent 60%);
+  padding-bottom: 0;
 }
 .numbers-grid {
   display: grid;
@@ -1373,7 +1421,7 @@ ul,ol { list-style: none; }
 .deliver-item svg { color: var(--c-gold); }
 
 /* ----------------------- OFERTA ----------------------- */
-.section-offer { position: relative; padding-bottom: 0; }
+.section-offer { position: relative; }
 .offer-card {
   position: relative;
   max-width: 680px;
@@ -1649,33 +1697,35 @@ ul,ol { list-style: none; }
   pointer-events: none;
   user-select: none;
   z-index: 0;
-  opacity: 0.055;
-  filter: blur(0.5px);
+  opacity: 0.15;
+  filter: drop-shadow(0 0 40px rgba(0,0,0,0.6));
 }
 
-/* Final CTA: rosa com máscara radial que funde com o fundo */
+/* Final CTA: rosa colada na parede direita, emerge da escuridão */
 .final-figure {
   position: absolute;
-  right: 3%;
+  right: 0;
   bottom: 0;
-  width: 32%;
-  max-width: 460px;
+  width: 38%;
+  max-width: 520px;
   pointer-events: none;
   user-select: none;
   z-index: 0;
+  opacity: 0.82;
   -webkit-mask-image: radial-gradient(
-    ellipse 82% 88% at 58% 62%,
-    black 30%,
-    rgba(0,0,0,0.55) 52%,
-    transparent 72%
+    ellipse 100% 85% at 78% 72%,
+    black 22%,
+    rgba(0,0,0,0.65) 48%,
+    rgba(0,0,0,0.15) 68%,
+    transparent 84%
   );
   mask-image: radial-gradient(
-    ellipse 82% 88% at 58% 62%,
-    black 30%,
-    rgba(0,0,0,0.55) 52%,
-    transparent 72%
+    ellipse 100% 85% at 78% 72%,
+    black 22%,
+    rgba(0,0,0,0.65) 48%,
+    rgba(0,0,0,0.15) 68%,
+    transparent 84%
   );
-  opacity: 0.65;
 }
 
 /* Audience: armadura ornamentada emerge da esquerda */
@@ -1727,8 +1777,8 @@ ul,ol { list-style: none; }
   pointer-events: none;
   user-select: none;
   z-index: 0;
-  opacity: 0.11;
-  filter: invert(1) hue-rotate(180deg) blur(0.4px);
+  mix-blend-mode: multiply;
+  opacity: 1;
 }
 
 /* ----------------------- FOOTER ----------------------- */
@@ -1772,11 +1822,17 @@ ul,ol { list-style: none; }
 .footer-divider { display: flex; justify-content: center; color: var(--c-gold); opacity: 0.5; margin: 2rem 0; }
 .footer-bottom {
   display: flex;
+  align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 1rem;
   color: var(--c-ink-faint);
   font-size: 0.78rem;
+}
+.footer-social {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
 }
 
 /* ==========================================================================
@@ -1829,10 +1885,10 @@ ul,ol { list-style: none; }
     opacity: 0.9;
   }
   .manifesto-figure { opacity: 0.16; height: 70%; }
-  .transformation-figure { opacity: 0.04; }
-  .final-figure { width: 38%; opacity: 0.5; }
+  .transformation-figure { opacity: 0.10; }
+  .final-figure { width: 46%; opacity: 0.55; }
   .audience-figure { height: 80%; opacity: 0.2; }
-  .shed-figure { width: 88%; opacity: 0.09; }
+  .shed-figure { width: 88%; }
 
   /* Hero: centralizar para tablet */
   .hero-inner {
@@ -1912,7 +1968,7 @@ ul,ol { list-style: none; }
   .manifesto-figure { display: none; }
   .final-figure { display: none; }
   .audience-figure { display: none; }
-  .shed-figure { width: 95%; opacity: 0.07; }
+  .shed-figure { width: 95%; }
   .hero-kicker { letter-spacing: 0.15em; font-size: 0.6rem; gap: 0.5rem; flex-wrap: wrap; justify-content: center; }
   .hero-kicker svg { display: none; }
   .hero-display { font-size: clamp(2.4rem, 13vw, 3.5rem); letter-spacing: 0.05em; }
