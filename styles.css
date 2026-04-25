@@ -97,15 +97,32 @@ ul,ol { list-style: none; }
 /* ----------------------- LOGO DIVIDER ----------------------- */
 .logo-divider {
   display: flex;
+  align-items: center;
   justify-content: center;
-  padding: 1rem 0;
+  gap: 2rem;
+  padding: clamp(2.5rem, 5vw, 4rem) clamp(2rem, 8vw, 6rem);
+  margin: 0;
+  background: transparent;
+}
+.logo-divider::before,
+.logo-divider::after {
+  content: '';
+  flex: 1;
+  max-width: 340px;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--c-line-strong), transparent);
+}
+.logo-divider::after {
+  background: linear-gradient(to left, transparent, var(--c-line-strong), transparent);
 }
 .logo-divider img {
-  height: 72px;
+  height: clamp(90px, 11vw, 150px);
   width: auto;
-  opacity: 0.35;
-  filter: grayscale(0.2);
+  opacity: 0.5;
+  filter: grayscale(0.15);
+  flex-shrink: 0;
 }
+
 
 /* ----------------------- TYPE UTILITIES ----------------------- */
 .heading {
@@ -649,6 +666,7 @@ ul,ol { list-style: none; }
 /* ----------------------- MANIFESTO ----------------------- */
 .section-manifesto {
   background: linear-gradient(180deg, transparent 0%, rgba(58,14,22,0.3) 100%);
+  padding-bottom: 0;
 }
 .manifesto-grid { display: flex; flex-direction: column; gap: 3rem; }
 .manifesto-lede {
@@ -724,6 +742,7 @@ ul,ol { list-style: none; }
   background:
     radial-gradient(ellipse at 90% 20%, rgba(139,10,26,0.12), transparent 50%),
     radial-gradient(ellipse at 10% 80%, rgba(58,14,22,0.3), transparent 50%);
+  padding-top: 0;
 }
 
 .pilares {
@@ -1354,7 +1373,7 @@ ul,ol { list-style: none; }
 .deliver-item svg { color: var(--c-gold); }
 
 /* ----------------------- OFERTA ----------------------- */
-.section-offer { position: relative; }
+.section-offer { position: relative; padding-bottom: 0; }
 .offer-card {
   position: relative;
   max-width: 680px;
@@ -1478,6 +1497,7 @@ ul,ol { list-style: none; }
 .offer-guarantee span { font-size: 0.85rem; color: var(--c-ink-mute); line-height: 1.5; }
 
 /* ----------------------- FAQ ----------------------- */
+.section-faq { padding-top: 0; }
 .faq-list {
   display: flex;
   flex-direction: column;
