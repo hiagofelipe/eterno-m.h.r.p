@@ -332,7 +332,7 @@ ul,ol { list-style: none; }
 }
 .nav-links a {
   font-family: var(--f-inscription);
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   letter-spacing: 0.22em;
   text-transform: uppercase;
   color: var(--c-ink-mute);
@@ -744,6 +744,8 @@ ul,ol { list-style: none; }
     radial-gradient(ellipse at 10% 80%, rgba(58,14,22,0.3), transparent 50%);
   padding-top: 0;
 }
+.section-pilares .heading { font-size: clamp(1rem, 1.5vw, 1.5rem); }
+.section-pilares .section-lede { font-size: clamp(0.88rem, 1vw, 1rem); }
 
 .pilares {
   display: flex;
@@ -878,7 +880,7 @@ ul,ol { list-style: none; }
 .pilar-body-inner > *:last-child { padding-bottom: 2rem; }
 .pilar-body-inner > p {
   font-family: var(--f-body);
-  font-size: 1.1rem;
+  font-size: 0.95rem;
   line-height: 1.6;
   color: var(--c-ink);
   margin-bottom: 1.5rem;
