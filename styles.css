@@ -2229,6 +2229,8 @@ ul,ol { list-style: none; }
     letter-spacing: 0.01em;
     font-size: 0.95rem;
     padding: 1.1rem 1rem;
+    flex-direction: column;
+    gap: 0;
   }
 
   /* ---- Selos ---- */
