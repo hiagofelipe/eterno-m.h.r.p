@@ -520,7 +520,7 @@ ul,ol { list-style: none; }
 }
 
 .hero-mark {
-  margin: 0 auto 2.5rem;
+  margin: 0 auto 1.8rem;
   max-width: 500px;
 }
 .hero-mark img {
@@ -566,7 +566,7 @@ ul,ol { list-style: none; }
   max-width: 44ch;
 }
 
-.hero-divider { color: var(--c-gold); opacity: 0.8; margin: 0 0 2.5rem; display: flex; justify-content: center; width: 100%; }
+.hero-divider { color: var(--c-gold); opacity: 0.8; margin: 0 0 3rem; display: flex; justify-content: center; width: 100%; }
 
 .hero-sub {
   font-family: var(--f-display);
@@ -580,7 +580,7 @@ ul,ol { list-style: none; }
 .hero-sub em { color: var(--c-gold); font-style: italic; }
 
 .hero-lede {
-  font-size: 1.45rem;
+  font-size: 1.28rem;
   color: var(--c-ink-mute);
   max-width: 46ch;
   margin: 0 auto var(--s-xl);
