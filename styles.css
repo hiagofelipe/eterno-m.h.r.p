@@ -520,8 +520,8 @@ ul,ol { list-style: none; }
 }
 
 .hero-mark {
-  margin: 0 auto 1.8rem;
-  max-width: 500px;
+  margin: 0 auto 0.8rem;
+  max-width: 420px;
 }
 .hero-mark img {
   width: 100%;
@@ -566,7 +566,7 @@ ul,ol { list-style: none; }
   max-width: 44ch;
 }
 
-.hero-divider { color: var(--c-gold); opacity: 0.8; margin: 0 0 3rem; display: flex; justify-content: center; width: 100%; }
+.hero-divider { color: var(--c-gold); opacity: 0.8; margin: 0 0 2.8rem; display: flex; justify-content: center; width: 100%; }
 
 .hero-sub {
   font-family: var(--f-display);
