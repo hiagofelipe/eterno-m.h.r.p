@@ -2169,7 +2169,7 @@ ul,ol { list-style: none; }
   /* ---- Hero ---- */
   /* Cavaleiro atrás do texto — elemento atmosférico, não sobrepõe */
   .hero {
-    padding: 5.5rem 1.5rem 4rem;
+    padding: 4.5rem 1.5rem 3rem;
     min-height: 100svh;
   }
   .hero-bg {
@@ -2194,8 +2194,9 @@ ul,ol { list-style: none; }
     position: relative;
     z-index: 1;
   }
-  .hero-mark { max-width: 260px; margin: 0 auto var(--s-md); }
-  .hero-lede { font-size: 0.9rem; padding: 0 0.25rem; }
+  .hero-mark { max-width: 210px; margin: 0 auto 0.6rem; }
+  .hero-divider { margin: 0 0 1.8rem; }
+  .hero-lede { font-size: 0.88rem; padding: 0 0.25rem; margin-bottom: 1.6rem; }
 
   /* ---- Figuras: todas viram fundo discreto ou somem ---- */
   .manifesto-figure { display: none; }
@@ -2220,7 +2221,12 @@ ul,ol { list-style: none; }
   /* ---- Botões ---- */
   .btn { white-space: normal; text-align: center; }
   .hero-cta { flex-direction: column; width: 100%; }
-  .hero-cta .btn { width: 100%; }
+  .hero-cta .btn {
+    width: 100%;
+    letter-spacing: 0.14em;
+    font-size: 0.78rem;
+    padding: 1.1rem 1.2rem;
+  }
 
   /* ---- Selos ---- */
   .hero-seals { grid-template-columns: 1fr 1fr; font-size: 0.58rem; gap: 0.6rem; }
