@@ -244,7 +244,7 @@ ul,ol { list-style: none; }
 }
 .btn-primary:hover::before { opacity: 1; }
 
-.btn-lg { padding: 1.05rem 1.8rem; font-size: 0.8rem; }
+.btn-lg { padding: 1.2rem 2.2rem; font-size: 0.88rem; }
 .btn-xl { padding: 1.25rem 2.2rem; font-size: 0.85rem; }
 .btn-full { width: 100%; }
 
@@ -520,8 +520,8 @@ ul,ol { list-style: none; }
 }
 
 .hero-mark {
-  margin: 0 auto var(--s-md);
-  max-width: 360px;
+  margin: 0 auto var(--s-xl);
+  max-width: 420px;
 }
 .hero-mark img {
   width: 100%;
@@ -566,7 +566,7 @@ ul,ol { list-style: none; }
   max-width: 44ch;
 }
 
-.hero-divider { color: var(--c-gold); opacity: 0.8; margin: 0.4rem 0 var(--s-md); display: flex; justify-content: center; width: 100%; }
+.hero-divider { color: var(--c-gold); opacity: 0.8; margin: 0 0 var(--s-lg); display: flex; justify-content: center; width: 100%; }
 
 .hero-sub {
   font-family: var(--f-display);
@@ -580,11 +580,11 @@ ul,ol { list-style: none; }
 .hero-sub em { color: var(--c-gold); font-style: italic; }
 
 .hero-lede {
-  font-size: 0.98rem;
+  font-size: 1.18rem;
   color: var(--c-ink-mute);
   max-width: 46ch;
   margin: 0 auto var(--s-xl);
-  line-height: 1.6;
+  line-height: 1.65;
 }
 
 .hero-cta {
