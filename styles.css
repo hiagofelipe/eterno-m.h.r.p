@@ -485,10 +485,10 @@ ul,ol { list-style: none; }
 .hero-inner {
   max-width: 580px;
   width: 100%;
-  text-align: left;
+  text-align: center;
   position: relative;
   z-index: 1;
-  margin-left: clamp(1.2rem, 7vw, 10rem);
+  margin-left: auto;
   margin-right: auto;
 }
 
@@ -520,7 +520,7 @@ ul,ol { list-style: none; }
 }
 
 .hero-mark {
-  margin: 0 0 var(--s-md);
+  margin: 0 auto var(--s-md);
   max-width: 360px;
 }
 .hero-mark img {
@@ -583,14 +583,14 @@ ul,ol { list-style: none; }
   font-size: 0.98rem;
   color: var(--c-ink-mute);
   max-width: 46ch;
-  margin: 0 0 var(--s-xl);
+  margin: 0 auto var(--s-xl);
   line-height: 1.6;
 }
 
 .hero-cta {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   gap: 1.5rem;
   flex-wrap: wrap;
   margin-bottom: var(--s-xl);
@@ -601,7 +601,7 @@ ul,ol { list-style: none; }
   grid-template-columns: repeat(2, 1fr);
   gap: 0.75rem 2rem;
   max-width: 420px;
-  margin: 0;
+  margin: 0 auto;
   padding-top: var(--s-md);
   border-top: 1px solid var(--c-line);
 }
