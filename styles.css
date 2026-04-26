@@ -2224,7 +2224,7 @@ ul,ol { list-style: none; }
   .hero-cta { flex-direction: column; width: 100%; }
   .hero-cta .btn {
     width: 100%;
-    letter-spacing: 0.04em;
+    letter-spacing: 0.01em;
     font-size: 0.95rem;
     padding: 1.1rem 1rem;
   }
