@@ -261,6 +261,7 @@ ul,ol { list-style: none; }
   transition: color var(--d-fast) var(--ease), border-color var(--d-fast) var(--ease);
 }
 .btn-ghost:hover { color: var(--c-gold); border-color: var(--c-gold); }
+.m-br { display: none; }
 
 /* ----------------------- NAVBAR ----------------------- */
 .nav {
@@ -2232,6 +2233,7 @@ ul,ol { list-style: none; }
   .hero-seals { grid-template-columns: 1fr 1fr; font-size: 0.58rem; gap: 0.6rem; }
   .seal { gap: 0.35rem; }
   .hero-cta .btn-ghost { border-bottom: none; }
+  .m-br { display: inline; }
 
   /* ---- Shed / O que se deixa para trás ---- */
   .shed-list li { grid-template-columns: auto 1fr; gap: 0.6rem 1rem; padding-left: 0.5rem; text-align: left; }
