@@ -2152,7 +2152,7 @@ ul,ol { list-style: none; }
   .pilar-head { padding: 1.2rem 1.3rem; gap: 1rem; grid-template-columns: auto 1fr auto; }
   .pilar-num { width: 52px; height: 52px; }
   .pilar-num-roman { font-size: 1.1rem; }
-  .pilar-title { font-size: 0.95rem; }
+  .pilar-title { font-size: 1.08rem; }
   .pilar-desc { font-size: 0.85rem; }
   .pilar-body-inner { padding: 0 1.3rem 0 1.3rem; }
   .pilar-body-inner > *:last-child { padding-bottom: 1.8rem; }
