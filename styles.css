@@ -262,6 +262,7 @@ ul,ol { list-style: none; }
 }
 .btn-ghost:hover { color: var(--c-gold); border-color: var(--c-gold); }
 .m-br { display: none; }
+.nowrap { white-space: nowrap; }
 
 /* ----------------------- NAVBAR ----------------------- */
 .nav {
