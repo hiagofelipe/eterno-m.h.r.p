@@ -2227,7 +2227,7 @@ ul,ol { list-style: none; }
   .hero-cta .btn {
     width: 100%;
     letter-spacing: 0.01em;
-    font-size: 0.95rem;
+    font-size: 0.8rem;
     padding: 1.1rem 1rem;
     flex-direction: column;
     gap: 0;
@@ -2238,7 +2238,8 @@ ul,ol { list-style: none; }
   .seal { gap: 0.35rem; }
   .hero-cta .btn-ghost { border-bottom: none; }
   .m-br { display: inline; }
-  .btn-l1, .btn-l2 { display: block; }
+  .btn-l1 { display: block; white-space: nowrap; }
+  .btn-l2 { display: block; }
 
   /* ---- Shed / O que se deixa para trás ---- */
   .shed-list li { grid-template-columns: auto 1fr; gap: 0.6rem 1rem; padding-left: 0.5rem; text-align: left; }
