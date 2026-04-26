@@ -566,7 +566,7 @@ ul,ol { list-style: none; }
   max-width: 44ch;
 }
 
-.hero-divider { color: var(--c-gold); opacity: 0.8; margin: 0.4rem 0 var(--s-md); }
+.hero-divider { color: var(--c-gold); opacity: 0.8; margin: 0.4rem auto var(--s-md); text-align: center; }
 
 .hero-sub {
   font-family: var(--f-display);
