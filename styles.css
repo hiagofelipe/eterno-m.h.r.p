@@ -2203,7 +2203,7 @@ ul,ol { list-style: none; }
     position: relative;
     z-index: 1;
   }
-  .hero-mark { width: 88%; max-width: 88%; margin: 0 auto 0.6rem; }
+  .hero-mark { width: 125%; max-width: none; margin: 0 -12.5% 0.6rem; }
   .hero-divider { margin: 0 0 1.8rem; }
   .hero-lede { font-size: 1.00rem; max-width: none; padding: 0; margin-bottom: 1.6rem; line-height: 1.55; }
 
