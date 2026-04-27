@@ -244,7 +244,7 @@ ul,ol { list-style: none; }
 }
 .btn-primary:hover::before { opacity: 1; }
 
-.btn-lg { padding: 1.35rem 2.6rem; font-size: 0.92rem; }
+.btn-lg { padding: 1.55rem 3.2rem; font-size: 1.05rem; }
 .btn-xl { padding: 1.25rem 2.2rem; font-size: 0.85rem; }
 .btn-full { width: 100%; }
 
@@ -583,9 +583,9 @@ ul,ol { list-style: none; }
 .hero-sub em { color: var(--c-gold); font-style: italic; }
 
 .hero-lede {
-  font-size: 1.28rem;
+  font-size: 1.45rem;
   color: var(--c-ink-mute);
-  max-width: 46ch;
+  max-width: 68ch;
   margin: 0 auto var(--s-xl);
   line-height: 1.65;
 }
