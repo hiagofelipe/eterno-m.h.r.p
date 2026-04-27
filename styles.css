@@ -486,7 +486,7 @@ ul,ol { list-style: none; }
 }
 
 .hero-inner {
-  max-width: 580px;
+  max-width: 900px;
   width: 100%;
   text-align: center;
   position: relative;
@@ -585,7 +585,7 @@ ul,ol { list-style: none; }
 .hero-lede {
   font-size: 1.45rem;
   color: var(--c-ink-mute);
-  max-width: 68ch;
+  max-width: 86ch;
   margin: 0 auto var(--s-xl);
   line-height: 1.65;
 }
