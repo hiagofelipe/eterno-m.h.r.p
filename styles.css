@@ -592,7 +592,7 @@ ul,ol { list-style: none; }
   font-size: clamp(0.92rem, 1.05vw, 1.18rem);
   color: #ddd0be;
   max-width: 72ch;
-  margin: 0 auto var(--s-xl);
+  margin: var(--s-lg) auto var(--s-xl);
   line-height: 1.65;
 }
 
