@@ -559,10 +559,9 @@ ul,ol { list-style: none; }
 
 .hero-fullname {
   font-family: var(--f-inscription);
-  font-size: clamp(0.72rem, 0.95vw, 0.9rem);
+  font-size: clamp(0.78rem, 1vw, 0.96rem);
   font-weight: 400;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
+  letter-spacing: 0.1em;
   color: var(--c-ink-mute);
   text-align: center;
   margin: 0 auto 1.4rem;
@@ -571,8 +570,9 @@ ul,ol { list-style: none; }
 }
 .hero-fullname span {
   font-weight: 700;
-  font-size: 1.1em;
+  font-size: 1.08em;
   color: var(--c-gold);
+  letter-spacing: 0.14em;
 }
 
 .hero-divider { color: var(--c-gold); opacity: 0.8; margin: 0 0 1rem; display: flex; justify-content: center; width: 100%; }
@@ -2203,7 +2203,7 @@ ul,ol { list-style: none; }
     position: relative;
     z-index: 1;
   }
-  .hero-mark { width: 160%; max-width: none; margin-left: -30%; margin-right: -30%; margin-bottom: 0.6rem; }
+  .hero-mark { width: 88%; max-width: 88%; margin: 0 auto 0.6rem; }
   .hero-divider { margin: 0 0 1.8rem; }
   .hero-lede { font-size: 1.00rem; max-width: none; padding: 0; margin-bottom: 1.6rem; line-height: 1.55; }
 
