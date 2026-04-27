@@ -624,6 +624,7 @@ ul,ol { list-style: none; }
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--c-ink-mute);
+  white-space: nowrap;
 }
 .seal svg { color: var(--c-gold); opacity: 0.8; flex-shrink: 0; }
 
