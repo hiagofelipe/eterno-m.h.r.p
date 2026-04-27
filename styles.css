@@ -1702,6 +1702,14 @@ ul,ol { list-style: none; }
 
 /* ---- Price ---- */
 .offer-price { text-align: center; }
+.price-original {
+  font-family: var(--f-inscription);
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  color: var(--c-ink-mute);
+  margin-bottom: 0.5rem;
+}
+.price-original s { opacity: 0.6; }
 .price-installment {
   display: inline-flex;
   align-items: flex-start;
