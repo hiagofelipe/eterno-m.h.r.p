@@ -559,7 +559,7 @@ ul,ol { list-style: none; }
 
 .hero-fullname {
   font-family: var(--f-inscription);
-  font-size: clamp(0.78rem, 1vw, 0.96rem);
+  font-size: clamp(0.96rem, 1.35vw, 1.22rem);
   font-weight: 400;
   letter-spacing: 0.1em;
   color: var(--c-ink-mute);
