@@ -583,8 +583,8 @@ ul,ol { list-style: none; }
 .hero-sub em { color: var(--c-gold); font-style: italic; }
 
 .hero-lede {
-  font-size: clamp(1.05rem, 1.4vw, 1.45rem);
-  color: var(--c-ink-mute);
+  font-size: clamp(0.92rem, 1.05vw, 1.18rem);
+  color: #ddd0be;
   max-width: 72ch;
   margin: 0 auto var(--s-xl);
   line-height: 1.65;
