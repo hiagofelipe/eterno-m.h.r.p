@@ -2252,7 +2252,7 @@ ul,ol { list-style: none; }
 
   /* ---- Selos ---- */
   .hero-seals { grid-template-columns: 1fr 1fr; font-size: 0.58rem; gap: 0.6rem; }
-  .seal { gap: 0.35rem; }
+  .seal { gap: 0.35rem; white-space: normal; font-size: 0.52rem; }
   .hero-cta .btn-ghost { border-bottom: none; }
   .m-br { display: inline; }
   .btn-l1 { display: block; white-space: nowrap; }
