@@ -611,7 +611,7 @@ ul,ol { list-style: none; }
   gap: 0.75rem 2rem;
   max-width: 420px;
   margin: 0 auto;
-  padding-top: 1.15rem;
+  padding-top: 1.05rem;
   border-top: 1px solid var(--c-line);
 }
 .seal {
