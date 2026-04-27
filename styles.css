@@ -244,7 +244,7 @@ ul,ol { list-style: none; }
 }
 .btn-primary:hover::before { opacity: 1; }
 
-.btn-lg { padding: 1.55rem 3.2rem; font-size: 1.05rem; }
+.btn-lg { padding: clamp(1.1rem, 1.2vw, 1.55rem) clamp(2rem, 2.8vw, 3.2rem); font-size: clamp(0.88rem, 0.9vw, 1.05rem); }
 .btn-xl { padding: 1.25rem 2.2rem; font-size: 0.85rem; }
 .btn-full { width: 100%; }
 
@@ -486,7 +486,7 @@ ul,ol { list-style: none; }
 }
 
 .hero-inner {
-  max-width: 900px;
+  max-width: min(900px, 65vw);
   width: 100%;
   text-align: center;
   position: relative;
@@ -524,7 +524,7 @@ ul,ol { list-style: none; }
 
 .hero-mark {
   margin: 0 auto 0.2rem;
-  max-width: 672px;
+  max-width: min(672px, 50vw);
 }
 .hero-mark img {
   width: 100%;
@@ -583,7 +583,7 @@ ul,ol { list-style: none; }
 .hero-sub em { color: var(--c-gold); font-style: italic; }
 
 .hero-lede {
-  font-size: 1.45rem;
+  font-size: clamp(1.05rem, 1.4vw, 1.45rem);
   color: var(--c-ink-mute);
   max-width: 86ch;
   margin: 0 auto var(--s-xl);
