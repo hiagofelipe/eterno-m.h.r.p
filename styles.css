@@ -1052,36 +1052,6 @@ ul,ol { list-style: none; }
 .audience-no .audience-list svg { color: var(--c-bronze); opacity: 0.7; }
 
 /* ----------------------- SOBRE NÓS ----------------------- */
-.section-sobre { position: relative; overflow: hidden; }
-
-.sobre-deco-figure {
-  position: absolute;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  width: 38%;
-  pointer-events: none;
-  user-select: none;
-  z-index: 0;
-}
-.sobre-deco-figure::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  background:
-    linear-gradient(to right, var(--c-bg) 0%, transparent 45%),
-    linear-gradient(to top, var(--c-bg) 0%, transparent 20%);
-}
-.sobre-deco-figure img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: top center;
-  opacity: 0.28;
-  display: block;
-}
-.section-sobre .container { position: relative; z-index: 1; }
 
 .sobre-grid {
   display: grid;
@@ -2207,7 +2177,6 @@ ul,ol { list-style: none; }
 }
 
 @media (max-width: 640px) {
-  .sobre-deco-figure { display: none; }
   /* ---- Geral ---- */
   .section { padding: 4rem 0; }
   .corner { width: 28px; height: 28px; }
@@ -2274,7 +2243,7 @@ ul,ol { list-style: none; }
   .hero-cta .btn {
     width: 100%;
     letter-spacing: 0.01em;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     font-weight: 700;
     padding: 1.1rem 1rem;
     flex-direction: column;
