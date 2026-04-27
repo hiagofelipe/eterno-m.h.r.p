@@ -486,7 +486,7 @@ ul,ol { list-style: none; }
 }
 
 .hero-inner {
-  max-width: min(900px, 65vw);
+  max-width: min(720px, 50vw);
   width: 100%;
   text-align: center;
   position: relative;
@@ -524,7 +524,7 @@ ul,ol { list-style: none; }
 
 .hero-mark {
   margin: 0 auto 0.2rem;
-  max-width: min(672px, 50vw);
+  max-width: min(672px, 44vw);
 }
 .hero-mark img {
   width: 100%;
@@ -585,7 +585,7 @@ ul,ol { list-style: none; }
 .hero-lede {
   font-size: clamp(1.05rem, 1.4vw, 1.45rem);
   color: var(--c-ink-mute);
-  max-width: 86ch;
+  max-width: 72ch;
   margin: 0 auto var(--s-xl);
   line-height: 1.65;
 }
