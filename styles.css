@@ -558,15 +558,24 @@ ul,ol { list-style: none; }
 }
 
 .hero-fullname {
-  font-family: var(--f-inscription);
-  font-size: clamp(0.6rem, 1.1vw, 0.78rem);
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: var(--c-gold);
-  opacity: 0.75;
+  font-family: var(--f-display);
+  font-size: clamp(0.92rem, 1.2vw, 1.15rem);
+  font-style: italic;
+  font-weight: 300;
+  letter-spacing: 0.06em;
+  color: var(--c-ink-mute);
   text-align: center;
-  margin: 0 auto var(--s-sm);
-  max-width: 44ch;
+  margin: 0 auto 1.4rem;
+  max-width: 56ch;
+  line-height: 1.5;
+}
+.hero-fullname span {
+  font-family: var(--f-inscription);
+  font-style: normal;
+  font-size: 1.15em;
+  font-weight: 600;
+  color: var(--c-gold);
+  letter-spacing: 0.08em;
 }
 
 .hero-divider { color: var(--c-gold); opacity: 0.8; margin: 0 0 1rem; display: flex; justify-content: center; width: 100%; }
