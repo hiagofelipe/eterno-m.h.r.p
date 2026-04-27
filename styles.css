@@ -524,7 +524,7 @@ ul,ol { list-style: none; }
 
 .hero-mark {
   margin: 0 auto 0.2rem;
-  max-width: min(672px, 44vw);
+  max-width: min(460px, 34vw);
 }
 .hero-mark img {
   width: 100%;
