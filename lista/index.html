@@ -87,18 +87,27 @@
     }
 
     /* ========================================================
-       NAV
+       FLOATING LOGO
     ======================================================== */
-    .wl-nav {
-      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-      padding: 1.1rem 2rem;
-      display: flex; align-items: center; justify-content: space-between;
-      background: linear-gradient(to bottom, rgba(21,6,8,0.96) 0%, transparent 100%);
-      backdrop-filter: blur(6px);
-      -webkit-backdrop-filter: blur(6px);
+    .wl-float-logo {
+      position: fixed; top: 1.4rem; left: 2rem; z-index: 100;
+      pointer-events: auto;
+      opacity: 1;
+      transform: translateY(0);
+      transition: opacity 700ms cubic-bezier(0.22, 1, 0.36, 1),
+                  transform 700ms cubic-bezier(0.22, 1, 0.36, 1);
     }
-    .wl-nav-logo img { height: 62px; width: auto; opacity: 0.88; transition: opacity var(--d-fast) var(--ease); }
-    .wl-nav-logo:hover img { opacity: 1; }
+    .wl-float-logo.is-hidden {
+      opacity: 0;
+      transform: translateY(-10px);
+      pointer-events: none;
+    }
+    .wl-float-logo img {
+      height: 52px; width: auto;
+      opacity: 0.82;
+      transition: opacity var(--d-fast) var(--ease);
+    }
+    .wl-float-logo:hover img { opacity: 1; }
 
     /* ========================================================
        HERO
@@ -107,7 +116,7 @@
       min-height: 100svh;
       display: flex; align-items: flex-start;
       position: relative; overflow: hidden;
-      padding: 6.5rem 2rem 4rem;
+      padding: 5rem 2rem 4rem;
     }
 
     .wl-figure {
@@ -662,15 +671,15 @@
     }
 
     @media (max-width: 580px) {
-      .wl-nav { padding: 0.9rem 1.2rem; }
-      .wl-nav-logo img { height: 50px; }
+      .wl-float-logo { top: 1rem; left: 1.2rem; }
+      .wl-float-logo img { height: 44px; }
 
-      .wl-hero { padding: 6.5rem 1.2rem 3.5rem; }
+      .wl-hero { padding: 4.5rem 1.2rem 3.5rem; }
       .wl-figure { display: none; }
 
       .wl-hero-mark { margin: 0 auto; }
       .wl-fullname { text-align: center; }
-      .wl-eyebrow { justify-content: center; }
+      .wl-eyebrow { display: flex; width: fit-content; margin-left: auto; margin-right: auto; }
       .wl-heading { text-align: center; }
       .wl-sub { text-align: center; max-width: none; }
       .wl-trust { justify-content: center; }
@@ -695,14 +704,10 @@
 
   <div class="grain" aria-hidden="true"></div>
 
-  <!-- ======================================================
-       NAV
-  ====================================================== -->
-  <nav class="wl-nav" aria-label="Navegação principal">
-    <a href="#wl-title" class="wl-nav-logo" aria-label="Voltar ao topo">
-      <img src="../logopequena.PNG" alt="O Eterno MHRP" />
-    </a>
-  </nav>
+  <!-- Floating logo — fades on scroll -->
+  <a href="#wl-title" class="wl-float-logo" id="wl-float-logo" aria-label="Voltar ao topo">
+    <img src="../logopequena.PNG" alt="O Eterno MHRP" />
+  </a>
 
   <!-- ======================================================
        HERO
@@ -950,6 +955,33 @@
        de seguir o passo a passo de integração
     ------------------------------------------------------------------ */
     const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbx3ZbqCJqrj7H_oJkaBjtko3ifcBFvr0IQ6PgADyCRqEUspz-m3H9V2-RxM9Ll9Oe33Og/exec';
+
+    /* ---- Floating logo — fade on scroll ---- */
+    (function () {
+      const logo = document.getElementById('wl-float-logo');
+      if (!logo) return;
+      let lastY = 0;
+      let ticking = false;
+      const THRESHOLD = 80;
+
+      function update() {
+        const y = window.scrollY;
+        if (y > THRESHOLD) {
+          logo.classList.add('is-hidden');
+        } else {
+          logo.classList.remove('is-hidden');
+        }
+        lastY = y;
+        ticking = false;
+      }
+
+      window.addEventListener('scroll', () => {
+        if (!ticking) {
+          requestAnimationFrame(update);
+          ticking = true;
+        }
+      }, { passive: true });
+    })();
 
     /* ---- Reveal on scroll ---- */
     const revealEls = document.querySelectorAll('.reveal');
