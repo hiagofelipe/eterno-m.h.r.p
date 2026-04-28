@@ -505,7 +505,7 @@ ul,ol { list-style: none; }
   max-width: 58%;
   pointer-events: none;
   user-select: none;
-  z-index: 10; /* acima de tudo no hero — nada fica na frente */
+  z-index: 0;
   filter: drop-shadow(-60px 0 80px rgba(0,0,0,0.98));
 }
 
@@ -2103,6 +2103,45 @@ ul,ol { list-style: none; }
 /* ==========================================================================
    RESPONSIVE
    ========================================================================== */
+
+/* ---- Nest Hub Max (1280×800) ---- */
+@media (min-width: 961px) and (max-width: 1300px) {
+  .nav-links { gap: 1.3rem; }
+  .nav-links a { font-size: 0.82rem; letter-spacing: 0.14em; }
+  .nav-inner > .btn-sm { font-size: 0.75rem; padding: 0.52rem 1rem; }
+  .nav:not(.scrolled) .nav-links       { transform: translateX(-1rem); }
+  .nav:not(.scrolled) .nav-inner > .btn-sm { transform: translateX(-1.4rem); }
+
+  .hero-figure { max-width: 46%; opacity: 0.65; }
+  .hero-bg {
+    background:
+      radial-gradient(ellipse 75% 70% at 44% 50%, rgba(58,14,22,0.92) 0%, rgba(58,14,22,0.5) 42%, transparent 68%),
+      radial-gradient(ellipse at 50% 45%, rgba(139,10,26,0.28) 0%, transparent 60%),
+      linear-gradient(180deg, #200a0e 0%, #0b0305 100%);
+  }
+  .hero-inner { max-width: min(660px, 52vw); }
+}
+
+/* ---- Nest Hub (1024×600) — nav não cabe, usa burger ---- */
+@media (min-width: 961px) and (max-width: 1080px) {
+  .nav-links { display: none; }
+  .nav-inner > .btn-sm { display: none; }
+  .nav-burger { display: flex; }
+  .nav-logo img { height: 56px; }
+  .nav { padding: 0.5rem 0; }
+  .nav:not(.scrolled) .nav-links       { transform: none; }
+  .nav:not(.scrolled) .nav-inner > .btn-sm { transform: none; }
+
+  .hero-figure { max-width: 50%; opacity: 0.55; }
+  .hero-bg {
+    background:
+      radial-gradient(ellipse 80% 65% at 50% 48%, rgba(58,14,22,0.90) 0%, rgba(58,14,22,0.48) 45%, transparent 72%),
+      radial-gradient(ellipse at 50% 45%, rgba(139,10,26,0.28) 0%, transparent 60%),
+      linear-gradient(180deg, #200a0e 0%, #0b0305 100%);
+  }
+  .hero-inner { max-width: min(580px, 56vw); }
+}
+
 @media (max-width: 960px) {
   .nav-links { display: none; }
   .nav-inner > .btn-sm { display: none; }
@@ -2163,6 +2202,10 @@ ul,ol { list-style: none; }
   .hero-seals { grid-template-columns: repeat(2, 1fr); gap: 0.8rem 1rem; }
 
   .btn { white-space: normal; text-align: center; }
+  .hero-cta { flex-direction: column; width: 100%; align-items: stretch; }
+  .hero-cta .btn { width: 100%; flex-direction: column; gap: 0; font-size: 0.85rem; padding: 1rem; }
+  .hero-figure { z-index: 0; }
+  .hero-inner { position: relative; z-index: 1; }
 
   .footer-top { grid-template-columns: 1fr; gap: 2rem; }
 
@@ -2294,7 +2337,7 @@ ul,ol { list-style: none; }
     .hero-cta .btn-primary::before { animation: none; opacity: 0; }
   }
   .m-br { display: inline; }
-  .btn-l1 { display: block; white-space: nowrap; }
+  .btn-l1 { display: block; white-space: normal; }
   .btn-l2 { display: block; }
 
   /* ---- Shed / O que se deixa para trás ---- */
