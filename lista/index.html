@@ -136,7 +136,7 @@
       position: absolute;
       right: -2%; bottom: -2%;
       width: clamp(220px, 28vw, 380px); height: auto;
-      opacity: 0.18;
+      opacity: 0.45;
       pointer-events: none; user-select: none;
       mask-image:
         linear-gradient(to left,  black 0%, transparent 60%),
@@ -746,15 +746,15 @@
         <div class="wl-trust reveal" role="list">
           <div class="wl-trust-item" role="listitem">
             <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-            Inscrição gratuita
+            Para homens de propósito
           </div>
           <div class="wl-trust-item" role="listitem">
             <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-            Sem spam
+            Entrada prioritária
           </div>
           <div class="wl-trust-item" role="listitem">
             <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-            Vagas limitadas
+            Privado
           </div>
         </div>
 
@@ -942,7 +942,7 @@
       <img src="../logopequena.PNG" alt="O Eterno MHRP" />
     </a>
     <p class="wl-footer-copy">
-      &copy; 2025 O Eterno MHRP.<br>Todos os direitos reservados.
+      &copy; <span id="year"></span> O Eterno M.H.R.P. Todos os direitos reservados.
     </p>
   </footer>
 
@@ -955,6 +955,8 @@
        de seguir o passo a passo de integração
     ------------------------------------------------------------------ */
     const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbx3ZbqCJqrj7H_oJkaBjtko3ifcBFvr0IQ6PgADyCRqEUspz-m3H9V2-RxM9Ll9Oe33Og/exec';
+
+    document.getElementById('year').textContent = new Date().getFullYear();
 
     /* ---- Floating logo — fade on scroll ---- */
     (function () {
