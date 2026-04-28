@@ -2104,6 +2104,17 @@ ul,ol { list-style: none; }
    RESPONSIVE
    ========================================================================== */
 
+/* ---- iPad Pro landscape / telas intermediárias (1301–1500px) ---- */
+@media (min-width: 1301px) and (max-width: 1500px) {
+  .hero-figure { max-width: 50%; opacity: 0.55; }
+  .hero-bg {
+    background:
+      radial-gradient(ellipse 72% 72% at 46% 50%, rgba(58,14,22,0.94) 0%, rgba(58,14,22,0.55) 40%, transparent 68%),
+      radial-gradient(ellipse at 50% 45%, rgba(139,10,26,0.28) 0%, transparent 60%),
+      linear-gradient(180deg, #200a0e 0%, #0b0305 100%);
+  }
+}
+
 /* ---- Nest Hub Max (1280×800) ---- */
 @media (min-width: 961px) and (max-width: 1300px) {
   .nav-links { gap: 1.3rem; }
