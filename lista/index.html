@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lista de Espera — O Eterno MHRP</title>
+  <meta name="description" content="Reserve seu lugar na lista de espera de O Eterno MHRP — o manual completo de construção masculina, relacionamento sólido e legado familiar." />
+  <meta name="robots" content="noindex, nofollow" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Cormorant+Garamond:ital@1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ==========================================================================
+       O ETERNO MHRP — Lista de Espera
+    ========================================================================== */
+
+    :root {
+      --c-bg:        #150608;
+      --c-bg-soft:   #1d0a0d;
+      --c-bg-elev:   #220c10;
+      --c-wine:      #3a0e16;
+      --c-wine-deep: #270a11;
+      --c-red:       #8b0a1a;
+
+      --c-gold:      #c9a961;
+      --c-gold-soft: #d4b574;
+      --c-gold-deep: #8a6d3b;
+      --c-bronze:    #a47e4a;
+
+      --c-ink:       #f4e8d4;
+      --c-ink-soft:  #d9c9ab;
+      --c-ink-mute:  #a89475;
+      --c-ink-faint: #7a6a55;
+
+      --c-line:        rgba(201,169,97,0.18);
+      --c-line-soft:   rgba(201,169,97,0.08);
+      --c-line-strong: rgba(201,169,97,0.35);
+
+      --f-display:     "Cormorant Garamond", "Times New Roman", serif;
+      --f-inscription: "Cinzel", "Trajan Pro", serif;
+      --f-body:        "Inter", system-ui, -apple-system, sans-serif;
+
+      --ease:   cubic-bezier(0.22, 1, 0.36, 1);
+      --d-fast: 250ms;
+      --d-med:  500ms;
+
+      --radius:    4px;
+      --radius-lg: 10px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; overflow-x: hidden; -webkit-text-size-adjust: 100%; }
+
+    body {
+      margin: 0;
+      font-family: var(--f-body);
+      font-size: 16px;
+      line-height: 1.7;
+      color: var(--c-ink-soft);
+      background: var(--c-bg);
+      background-image:
+        radial-gradient(ellipse at 18% 0%,   rgba(139,10,26,0.18), transparent 55%),
+        radial-gradient(ellipse at 82% 100%, rgba(58,14,22,0.55),  transparent 60%),
+        linear-gradient(180deg, #150608 0%, #0e0406 100%);
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    img, svg { display: block; max-width: 100%; }
+    button { font: inherit; color: inherit; background: none; border: none; cursor: pointer; padding: 0; }
+    a { color: inherit; text-decoration: none; }
+    h1, h2, h3, h4, p, ul, ol, blockquote { margin: 0; padding: 0; }
+    ul { list-style: none; }
+
+    ::selection { background: var(--c-gold); color: var(--c-bg); }
+
+    /* ---- Grain ---- */
+    .grain {
+      position: fixed; inset: 0;
+      pointer-events: none; z-index: 200;
+      opacity: 0.08; mix-blend-mode: overlay;
+      background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.6 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+    }
+
+    /* ========================================================
+       NAV
+    ======================================================== */
+    .wl-nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      padding: 1.1rem 2rem;
+      display: flex; align-items: center; justify-content: space-between;
+      background: linear-gradient(to bottom, rgba(21,6,8,0.96) 0%, transparent 100%);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+    }
+    .wl-nav-logo img { height: 40px; width: auto; opacity: 0.85; transition: opacity var(--d-fast) var(--ease); }
+    .wl-nav-logo:hover img { opacity: 1; }
+
+    .wl-nav-back {
+      display: inline-flex; align-items: center; gap: 0.4rem;
+      font-family: var(--f-inscription);
+      font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--c-ink-mute);
+      transition: color var(--d-fast) var(--ease);
+    }
+    .wl-nav-back:hover { color: var(--c-gold); }
+
+    /* ========================================================
+       HERO
+    ======================================================== */
+    .wl-hero {
+      min-height: 100svh;
+      display: flex; align-items: center;
+      position: relative; overflow: hidden;
+      padding: 7.5rem 2rem 5rem;
+    }
+
+    .wl-figure {
+      position: absolute;
+      right: -2%; bottom: 0;
+      height: 90%; width: auto;
+      opacity: 0.11;
+      pointer-events: none; user-select: none;
+      mask-image: linear-gradient(to left, black 0%, transparent 50%);
+      -webkit-mask-image: linear-gradient(to left, black 0%, transparent 50%);
+      filter: grayscale(0.2);
+    }
+
+    .wl-hero-inner {
+      width: 100%; max-width: 1140px; margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 460px;
+      gap: 5rem;
+      align-items: center;
+      position: relative; z-index: 1;
+    }
+
+    /* --- Content side --- */
+    .wl-eyebrow {
+      display: inline-flex; align-items: center; gap: 0.7rem;
+      font-family: var(--f-inscription);
+      font-size: 0.65rem; letter-spacing: 0.3em; text-transform: uppercase;
+      color: var(--c-gold);
+      margin-bottom: 1.5rem;
+    }
+    .wl-eyebrow::before {
+      content: '';
+      width: 24px; height: 1px;
+      background: var(--c-gold); opacity: 0.55;
+      flex-shrink: 0;
+    }
+
+    .wl-heading {
+      font-family: var(--f-inscription);
+      font-size: clamp(1.9rem, 3.2vw, 3.1rem);
+      font-weight: 400; letter-spacing: 0.04em;
+      color: var(--c-ink); line-height: 1.2;
+      margin-bottom: 1.5rem;
+    }
+    .wl-heading em {
+      font-family: var(--f-display);
+      font-style: italic;
+      color: var(--c-gold); font-size: 1.07em;
+    }
+
+    .wl-sub {
+      font-size: 1rem; color: var(--c-ink-mute);
+      max-width: 46ch; line-height: 1.75;
+      margin-bottom: 2.2rem;
+    }
+
+    .wl-trust {
+      display: flex; flex-wrap: wrap; gap: 1rem 1.6rem;
+    }
+    .wl-trust-item {
+      display: inline-flex; align-items: center; gap: 0.45rem;
+      font-family: var(--f-inscription);
+      font-size: 0.6rem; letter-spacing: 0.18em; text-transform: uppercase;
+      color: var(--c-ink-faint);
+    }
+    .wl-trust-item svg { color: var(--c-gold); opacity: 0.65; flex-shrink: 0; }
+
+    /* ========================================================
+       FORM CARD
+    ======================================================== */
+    .wl-form-card {
+      background: var(--c-wine-deep);
+      border: 1px solid var(--c-gold-deep);
+      border-radius: var(--radius-lg);
+      padding: 2.4rem 2rem 2rem;
+      position: relative;
+      box-shadow:
+        inset 0 0 0 1px rgba(201,169,97,0.06),
+        0 30px 70px rgba(0,0,0,0.65),
+        0 2px 8px rgba(0,0,0,0.5);
+    }
+
+    /* Corner ornaments */
+    .wl-form-card::before,
+    .wl-form-card::after {
+      content: '';
+      position: absolute;
+      width: 16px; height: 16px;
+      border-color: var(--c-gold);
+      border-style: solid;
+      opacity: 0.35;
+    }
+    .wl-form-card::before { top: 14px; left: 14px; border-width: 1px 0 0 1px; }
+    .wl-form-card::after  { bottom: 14px; right: 14px; border-width: 0 1px 1px 0; }
+
+    .wl-form-head {
+      text-align: center;
+      padding-bottom: 1.5rem;
+      margin-bottom: 1.6rem;
+      border-bottom: 1px solid var(--c-line);
+    }
+    .wl-form-ornament {
+      color: var(--c-gold); opacity: 0.7;
+      font-size: 1rem; margin-bottom: 0.75rem;
+    }
+    .wl-form-head h2 {
+      font-family: var(--f-inscription);
+      font-size: 1rem; font-weight: 400;
+      letter-spacing: 0.14em; color: var(--c-ink);
+      margin-bottom: 0.45rem;
+    }
+    .wl-form-head p {
+      font-size: 0.82rem; color: var(--c-ink-faint); line-height: 1.55;
+    }
+
+    /* Fields */
+    .wl-field { margin-bottom: 1rem; }
+
+    .wl-field-label {
+      display: block;
+      font-family: var(--f-inscription);
+      font-size: 0.58rem; letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--c-ink-mute);
+      margin-bottom: 0.42rem;
+    }
+
+    .wl-input {
+      width: 100%;
+      background: rgba(0,0,0,0.32);
+      border: 1px solid rgba(201,169,97,0.18);
+      border-radius: var(--radius);
+      padding: 0.8rem 1rem;
+      font-family: var(--f-body);
+      font-size: 0.88rem;
+      color: var(--c-ink-soft);
+      outline: none;
+      transition: border-color var(--d-fast) var(--ease),
+                  box-shadow var(--d-fast) var(--ease);
+      -webkit-appearance: none;
+    }
+    .wl-input::placeholder { color: var(--c-ink-faint); }
+    .wl-input:focus {
+      border-color: rgba(201,169,97,0.5);
+      box-shadow: 0 0 0 3px rgba(201,169,97,0.07);
+    }
+
+    /* Profile cards */
+    .wl-profiles-label {
+      display: block;
+      font-family: var(--f-inscription);
+      font-size: 0.58rem; letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--c-ink-mute);
+      margin-bottom: 0.6rem;
+    }
+    .wl-profiles { display: flex; flex-direction: column; gap: 0.55rem; }
+
+    .wl-profile-card { cursor: pointer; display: block; }
+    .wl-profile-card input[type="radio"] { position: absolute; opacity: 0; pointer-events: none; }
+
+    .wl-profile-inner {
+      display: flex; align-items: flex-start; gap: 0.85rem;
+      background: rgba(0,0,0,0.22);
+      border: 1px solid rgba(201,169,97,0.12);
+      border-radius: var(--radius);
+      padding: 0.85rem 1rem;
+      transition: border-color var(--d-fast) var(--ease),
+                  background   var(--d-fast) var(--ease);
+    }
+    .wl-profile-inner svg {
+      flex-shrink: 0; margin-top: 2px;
+      color: var(--c-gold); opacity: 0.45;
+      transition: opacity var(--d-fast) var(--ease);
+    }
+    .wl-profile-text strong {
+      display: block;
+      font-family: var(--f-inscription);
+      font-size: 0.68rem; letter-spacing: 0.1em;
+      color: var(--c-ink-soft);
+      margin-bottom: 0.22rem;
+    }
+    .wl-profile-text span {
+      font-size: 0.76rem; color: var(--c-ink-faint); line-height: 1.5;
+    }
+
+    .wl-profile-card:hover .wl-profile-inner {
+      border-color: rgba(201,169,97,0.28);
+    }
+    .wl-profile-card input[type="radio"]:checked + .wl-profile-inner {
+      border-color: rgba(201,169,97,0.5);
+      background: rgba(201,169,97,0.055);
+    }
+    .wl-profile-card input[type="radio"]:checked + .wl-profile-inner svg {
+      opacity: 1;
+    }
+
+    .wl-error {
+      display: none;
+      font-size: 0.73rem; color: #c47070;
+      margin-top: 0.45rem; line-height: 1.4;
+    }
+    .wl-error.visible { display: block; }
+
+    /* Submit button */
+    .wl-btn {
+      width: 100%;
+      margin-top: 1.4rem;
+      display: flex; align-items: center; justify-content: center; gap: 0.65rem;
+      padding: 1.05rem 1.5rem;
+      background: linear-gradient(135deg, var(--c-red) 0%, var(--c-wine) 100%);
+      border: 1px solid var(--c-gold-deep);
+      border-radius: var(--radius);
+      box-shadow:
+        inset 0 1px 0 rgba(255,255,255,0.04),
+        0 4px 22px rgba(139,10,26,0.4);
+      font-family: var(--f-inscription);
+      font-size: 0.75rem; font-weight: 700;
+      letter-spacing: 0.22em; text-transform: uppercase;
+      color: var(--c-gold-soft);
+      cursor: pointer;
+      transition: filter var(--d-fast) var(--ease),
+                  box-shadow var(--d-fast) var(--ease);
+      text-decoration: none;
+    }
+    .wl-btn:hover:not(:disabled) {
+      filter: brightness(1.1);
+      box-shadow:
+        inset 0 1px 0 rgba(255,255,255,0.06),
+        0 6px 32px rgba(139,10,26,0.55);
+    }
+    .wl-btn:disabled { opacity: 0.6; cursor: not-allowed; }
+
+    .wl-privacy {
+      text-align: center;
+      font-size: 0.7rem; color: var(--c-ink-faint);
+      margin-top: 0.85rem; line-height: 1.55;
+    }
+
+    /* Success */
+    .wl-success {
+      text-align: center;
+      padding: 2rem 0.5rem;
+      animation: fadeIn 0.5s var(--ease) both;
+    }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+    .wl-success-icon {
+      width: 54px; height: 54px;
+      border: 1px solid var(--c-gold-deep);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      color: var(--c-gold);
+      margin: 0 auto 1.5rem;
+    }
+    .wl-success h3 {
+      font-family: var(--f-inscription);
+      font-size: 1rem; font-weight: 400;
+      letter-spacing: 0.1em; color: var(--c-ink);
+      margin-bottom: 0.8rem;
+    }
+    .wl-success p {
+      font-size: 0.86rem; color: var(--c-ink-mute);
+      line-height: 1.7; max-width: 30ch; margin: 0 auto;
+    }
+
+    /* ========================================================
+       ABOUT SECTION
+    ======================================================== */
+    .wl-about {
+      padding: 6rem 2rem;
+      position: relative;
+    }
+    .wl-about::before {
+      content: '';
+      position: absolute; top: 0; left: 10%; right: 10%;
+      height: 1px;
+      background: linear-gradient(to right, transparent, var(--c-line-strong), transparent);
+    }
+    .wl-about-inner { max-width: 940px; margin: 0 auto; }
+
+    .wl-section-eyebrow {
+      text-align: center;
+      font-family: var(--f-inscription);
+      font-size: 0.62rem; letter-spacing: 0.3em; text-transform: uppercase;
+      color: var(--c-gold); margin-bottom: 1rem;
+    }
+    .wl-section-head {
+      text-align: center;
+      font-family: var(--f-inscription);
+      font-size: clamp(1.4rem, 2.4vw, 2.1rem);
+      font-weight: 400; letter-spacing: 0.05em;
+      color: var(--c-ink); line-height: 1.3;
+      margin-bottom: 0.7rem;
+    }
+    .wl-section-head em {
+      font-family: var(--f-display);
+      font-style: italic; color: var(--c-gold); font-size: 1.06em;
+    }
+
+    .wl-rule {
+      display: flex; justify-content: center;
+      color: var(--c-gold); opacity: 0.45;
+      margin: 1rem 0 3.5rem;
+    }
+
+    /* Three pillars */
+    .wl-pillars {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.4rem;
+      margin-bottom: 3.5rem;
+    }
+    .wl-pillar {
+      text-align: center;
+      padding: 2rem 1.4rem;
+      background: var(--c-bg-soft);
+      border: 1px solid var(--c-line);
+      border-radius: var(--radius);
+      transition: border-color var(--d-fast) var(--ease),
+                  transform var(--d-med) var(--ease);
+    }
+    .wl-pillar:hover {
+      border-color: var(--c-line-strong);
+      transform: translateY(-3px);
+    }
+    .wl-pillar-num {
+      font-family: var(--f-display);
+      font-style: italic; font-size: 2.2rem;
+      color: var(--c-gold); opacity: 0.55;
+      margin-bottom: 0.9rem; line-height: 1;
+    }
+    .wl-pillar h3 {
+      font-family: var(--f-inscription);
+      font-size: 0.78rem; font-weight: 400;
+      letter-spacing: 0.14em; text-transform: uppercase;
+      color: var(--c-ink); margin-bottom: 0.65rem;
+    }
+    .wl-pillar p { font-size: 0.86rem; color: var(--c-ink-mute); line-height: 1.65; }
+
+    /* Quote */
+    .wl-quote {
+      text-align: center;
+      max-width: 600px; margin: 0 auto 3.5rem;
+      padding: 2rem 1.5rem;
+      border-top: 1px solid var(--c-line);
+      border-bottom: 1px solid var(--c-line);
+    }
+    .wl-quote-mark {
+      font-family: var(--f-display);
+      font-style: italic; font-size: 2.4rem;
+      color: var(--c-gold); opacity: 0.35;
+      line-height: 1; margin-bottom: 1rem;
+    }
+    .wl-quote p {
+      font-family: var(--f-display);
+      font-style: italic;
+      font-size: clamp(1rem, 1.7vw, 1.18rem);
+      color: var(--c-ink-soft); line-height: 1.75;
+    }
+
+    /* For whom */
+    .wl-forwhom {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.8rem; margin-bottom: 3.5rem;
+    }
+    .wl-fw-item {
+      display: flex; align-items: flex-start; gap: 0.75rem;
+      padding: 1rem 1.2rem;
+      background: var(--c-bg-soft);
+      border: 1px solid var(--c-line-soft);
+      border-radius: var(--radius);
+    }
+    .wl-fw-item svg { flex-shrink: 0; margin-top: 3px; color: var(--c-gold); opacity: 0.65; }
+    .wl-fw-item p { font-size: 0.86rem; color: var(--c-ink-mute); line-height: 1.55; }
+
+    /* Bottom CTA */
+    .wl-bottom-cta { text-align: center; padding-top: 1rem; }
+    .wl-bottom-cta > p {
+      font-size: 0.86rem; color: var(--c-ink-faint);
+      margin-bottom: 1.4rem;
+    }
+    .wl-btn-center {
+      display: inline-flex; width: auto; min-width: 280px; max-width: 360px;
+    }
+
+    /* ========================================================
+       FOOTER
+    ======================================================== */
+    .wl-footer {
+      padding: 2rem;
+      border-top: 1px solid var(--c-line-soft);
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 1rem;
+    }
+    .wl-footer img { height: 34px; width: auto; opacity: 0.4; }
+    .wl-footer-copy {
+      font-family: var(--f-inscription);
+      font-size: 0.6rem; letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--c-ink-faint); text-align: right;
+    }
+
+    /* ========================================================
+       REVEAL ANIMATION
+    ======================================================== */
+    .reveal {
+      opacity: 0; transform: translateY(16px);
+      transition: opacity 0.65s var(--ease), transform 0.65s var(--ease);
+    }
+    .reveal.is-visible { opacity: 1; transform: none; }
+
+    /* ========================================================
+       RESPONSIVE
+    ======================================================== */
+    @media (max-width: 900px) {
+      .wl-hero-inner {
+        grid-template-columns: 1fr;
+        gap: 3.5rem;
+      }
+      .wl-sub { max-width: none; }
+      .wl-figure { opacity: 0.07; right: -8%; }
+      .wl-pillars { grid-template-columns: 1fr; gap: 1rem; }
+      .wl-forwhom { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 580px) {
+      .wl-nav { padding: 1rem 1.2rem; }
+      .wl-nav-logo img { height: 34px; }
+      .wl-nav-back { font-size: 0.58rem; }
+
+      .wl-hero { padding: 6.5rem 1.2rem 3.5rem; }
+      .wl-figure { display: none; }
+
+      .wl-form-card { padding: 1.8rem 1.2rem 1.6rem; }
+
+      .wl-about { padding: 4rem 1.2rem; }
+      .wl-quote { padding: 1.6rem 0.5rem; }
+
+      .wl-footer { flex-direction: column; text-align: center; }
+      .wl-footer-copy { text-align: center; }
+      .wl-btn-center { max-width: 100%; width: 100%; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .reveal { opacity: 1; transform: none; transition: none; }
+      .wl-pillar { transition: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- ======================================================
+       NAV
+  ====================================================== -->
+  <nav class="wl-nav" aria-label="Navegação principal">
+    <a href="../" class="wl-nav-logo" aria-label="O Eterno MHRP — página principal">
+      <img src="../logopequena.PNG" alt="O Eterno MHRP" />
+    </a>
+    <a href="../" class="wl-nav-back">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+      Ver o manual completo
+    </a>
+  </nav>
+
+  <!-- ======================================================
+       HERO
+  ====================================================== -->
+  <section class="wl-hero" aria-labelledby="wl-title">
+
+    <img src="../cavaleiro-olhando-para-a-rosa-e-para-a-espada.png"
+         class="wl-figure" alt="" aria-hidden="true" loading="eager" />
+
+    <div class="wl-hero-inner">
+
+      <!-- Conteúdo -->
+      <div class="wl-hero-content">
+
+        <div class="wl-eyebrow reveal">Lista de Espera</div>
+
+        <h1 class="wl-heading reveal" id="wl-title">
+          As vagas para<br>
+          <em>O Eterno MHRP</em><br>
+          abrem em breve.
+        </h1>
+
+        <p class="wl-sub reveal">
+          Este não é um produto para todos. É para o homem que decidiu construir.
+          Reserve seu lugar agora e seja notificado com prioridade assim que as inscrições abrirem.
+        </p>
+
+        <div class="wl-trust reveal" role="list">
+          <div class="wl-trust-item" role="listitem">
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            Inscrição gratuita
+          </div>
+          <div class="wl-trust-item" role="listitem">
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            Sem spam
+          </div>
+          <div class="wl-trust-item" role="listitem">
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            Vagas limitadas
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Formulário -->
+      <div class="wl-form-wrap reveal">
+        <div class="wl-form-card" role="region" aria-label="Formulário de inscrição">
+
+          <div class="wl-form-head">
+            <div class="wl-form-ornament" aria-hidden="true">✦</div>
+            <h2>Reserve seu lugar</h2>
+            <p>Preencha os dados abaixo para garantir<br>prioridade no acesso.</p>
+          </div>
+
+          <form id="wl-form" novalidate>
+
+            <div class="wl-field">
+              <label class="wl-field-label" for="nome">Nome completo</label>
+              <input class="wl-input" type="text" id="nome" name="nome"
+                     required autocomplete="name"
+                     placeholder="Seu nome completo" />
+            </div>
+
+            <div class="wl-field">
+              <label class="wl-field-label" for="email">E-mail</label>
+              <input class="wl-input" type="email" id="email" name="email"
+                     required autocomplete="email"
+                     placeholder="seu@email.com" />
+            </div>
+
+            <div class="wl-field">
+              <label class="wl-field-label" for="telefone">Telefone (WhatsApp)</label>
+              <input class="wl-input" type="tel" id="telefone" name="telefone"
+                     required autocomplete="tel"
+                     placeholder="(00) 00000-0000" inputmode="numeric" />
+            </div>
+
+            <div class="wl-field">
+              <span class="wl-profiles-label">Qual é o seu momento?</span>
+              <div class="wl-profiles" role="radiogroup" aria-required="true">
+
+                <label class="wl-profile-card">
+                  <input type="radio" name="perfil" value="Estou em um relacionamento" />
+                  <div class="wl-profile-inner">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true">
+                      <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/>
+                      <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
+                    </svg>
+                    <div class="wl-profile-text">
+                      <strong>Estou em um relacionamento</strong>
+                      <span>Quero edificar os pilares com minha parceira e construir algo verdadeiramente sólido.</span>
+                    </div>
+                  </div>
+                </label>
+
+                <label class="wl-profile-card">
+                  <input type="radio" name="perfil" value="Ainda não estou em um relacionamento" />
+                  <div class="wl-profile-inner">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true">
+                      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                    </svg>
+                    <div class="wl-profile-text">
+                      <strong>Ainda não estou em um relacionamento</strong>
+                      <span>Quero me preparar e me tornar o homem certo para encontrar a parceira certa.</span>
+                    </div>
+                  </div>
+                </label>
+
+              </div>
+              <span class="wl-error" id="perfil-error" role="alert">
+                Selecione uma das opções acima para continuar.
+              </span>
+            </div>
+
+            <button type="submit" class="wl-btn" id="submit-btn">
+              <span class="btn-text">Garantir minha vaga</span>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+
+            <p class="wl-privacy">
+              Seus dados são tratados com privacidade absoluta.<br>Nada de spam, jamais.
+            </p>
+
+          </form>
+
+          <!-- Mensagem de sucesso -->
+          <div class="wl-success" id="success-msg" style="display:none" role="status" aria-live="polite">
+            <div class="wl-success-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+            </div>
+            <h3>Seu lugar está reservado.</h3>
+            <p>Assim que as vagas abrirem, você será o primeiro a saber. Até lá, continue construindo.</p>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ======================================================
+       SOBRE O PROJETO
+  ====================================================== -->
+  <section class="wl-about" aria-labelledby="about-heading">
+    <div class="wl-about-inner">
+
+      <p class="wl-section-eyebrow reveal">O que é</p>
+
+      <h2 class="wl-section-head reveal" id="about-heading">
+        Um manual de construção.<br>
+        <em>Não um curso de relacionamento.</em>
+      </h2>
+
+      <div class="wl-rule reveal" aria-hidden="true">
+        <svg width="180" height="10" viewBox="0 0 180 10">
+          <line x1="0" y1="5" x2="76" y2="5" stroke="currentColor" stroke-width="0.5" opacity="0.6"/>
+          <circle cx="90" cy="5" r="2.5" fill="none" stroke="currentColor" stroke-width="0.8"/>
+          <circle cx="90" cy="5" r="1" fill="currentColor"/>
+          <line x1="104" y1="5" x2="180" y2="5" stroke="currentColor" stroke-width="0.5" opacity="0.6"/>
+        </svg>
+      </div>
+
+      <div class="wl-pillars">
+        <div class="wl-pillar reveal">
+          <div class="wl-pillar-num" aria-hidden="true">I</div>
+          <h3>Primeiro, o homem.</h3>
+          <p>Antes do relacionamento, antes da escolha. Estabilidade emocional, disciplina, direção e responsabilidade. A fundação de tudo que vem depois.</p>
+        </div>
+        <div class="wl-pillar reveal">
+          <div class="wl-pillar-num" aria-hidden="true">II</div>
+          <h3>Depois, a escolha.</h3>
+          <p>Reconhecer uma mulher com valores reais, maturidade e capacidade legítima de construção. A clareza que evita décadas de erro.</p>
+        </div>
+        <div class="wl-pillar reveal">
+          <div class="wl-pillar-num" aria-hidden="true">III</div>
+          <h3>Enfim, o legado.</h3>
+          <p>Família estruturada, acordos claros, visão de longo prazo e uma vida construída com Deus no centro das decisões.</p>
+        </div>
+      </div>
+
+      <blockquote class="wl-quote reveal">
+        <div class="wl-quote-mark" aria-hidden="true">❝</div>
+        <p>O problema nunca foi a mulher certa. O problema sempre foi a ausência de estrutura, princípios e direção que torna o homem invisível ao respeito dela.</p>
+      </blockquote>
+
+      <div class="wl-forwhom" role="list">
+        <div class="wl-fw-item reveal" role="listitem">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          <p>Para o homem que quer construir, não apenas conquistar.</p>
+        </div>
+        <div class="wl-fw-item reveal" role="listitem">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          <p>Para o homem em um relacionamento que quer edificar pilares sólidos com a parceira.</p>
+        </div>
+        <div class="wl-fw-item reveal" role="listitem">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          <p>Para o homem que ainda não está em um relacionamento e quer se preparar com seriedade.</p>
+        </div>
+        <div class="wl-fw-item reveal" role="listitem">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          <p>Para o homem que leva família, valores e propósito de longo prazo a sério.</p>
+        </div>
+      </div>
+
+      <div class="wl-bottom-cta reveal">
+        <p>As vagas são limitadas. Reserve seu lugar antes da abertura.</p>
+        <a href="#nome" class="wl-btn wl-btn-center">
+          <span>Quero reservar minha vaga</span>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ======================================================
+       FOOTER
+  ====================================================== -->
+  <footer class="wl-footer">
+    <a href="../" aria-label="Ir para o site principal">
+      <img src="../logopequena.PNG" alt="O Eterno MHRP" />
+    </a>
+    <p class="wl-footer-copy">
+      &copy; 2025 O Eterno MHRP.<br>Todos os direitos reservados.
+    </p>
+  </footer>
+
+  <!-- ======================================================
+       JAVASCRIPT
+  ====================================================== -->
+  <script>
+    /* ------------------------------------------------------------------
+       CONFIGURAÇÃO — cole aqui a URL do seu Google Apps Script depois
+       de seguir o passo a passo de integração
+    ------------------------------------------------------------------ */
+    const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbx3ZbqCJqrj7H_oJkaBjtko3ifcBFvr0IQ6PgADyCRqEUspz-m3H9V2-RxM9Ll9Oe33Og/exec';
+
+    /* ---- Reveal on scroll ---- */
+    const revealEls = document.querySelectorAll('.reveal');
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((entry, i) => {
+        if (!entry.isIntersecting) return;
+        setTimeout(() => entry.target.classList.add('is-visible'), i * 55);
+        io.unobserve(entry.target);
+      });
+    }, { threshold: 0.1 });
+    revealEls.forEach(el => io.observe(el));
+
+    /* ---- Máscara de telefone ---- */
+    const telInput = document.getElementById('telefone');
+    telInput.addEventListener('input', function () {
+      let v = this.value.replace(/\D/g, '').slice(0, 11);
+      if      (v.length > 7)  v = '(' + v.slice(0,2) + ') ' + v.slice(2,7) + '-' + v.slice(7);
+      else if (v.length > 2)  v = '(' + v.slice(0,2) + ') ' + v.slice(2);
+      else if (v.length > 0)  v = '(' + v;
+      this.value = v;
+    });
+
+    /* ---- Formulário ---- */
+    const form      = document.getElementById('wl-form');
+    const submitBtn = document.getElementById('submit-btn');
+    const btnText   = submitBtn.querySelector('.btn-text');
+    const successEl = document.getElementById('success-msg');
+    const perfilErr = document.getElementById('perfil-error');
+
+    // Limpa erro de perfil ao selecionar
+    document.querySelectorAll('input[name="perfil"]').forEach(el => {
+      el.addEventListener('change', () => perfilErr.classList.remove('visible'));
+    });
+
+    form.addEventListener('submit', async function (e) {
+      e.preventDefault();
+
+      // Valida perfil
+      const perfil = document.querySelector('input[name="perfil"]:checked');
+      if (!perfil) {
+        perfilErr.classList.add('visible');
+        perfilErr.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        return;
+      }
+
+      // Valida campos obrigatórios
+      const nome     = form.nome.value.trim();
+      const email    = form.email.value.trim();
+      const telefone = form.telefone.value.trim();
+      if (!nome || !email || !telefone) {
+        form.reportValidity();
+        return;
+      }
+
+      // Estado de carregamento
+      submitBtn.disabled = true;
+      btnText.textContent = 'Enviando…';
+
+      const payload = {
+        data:      new Date().toLocaleString('pt-BR', { timeZone: 'America/Sao_Paulo' }),
+        nome,
+        email,
+        telefone,
+        perfil:    perfil.value
+      };
+
+      try {
+        await fetch(APPS_SCRIPT_URL, {
+          method:  'POST',
+          mode:    'no-cors',
+          headers: { 'Content-Type': 'application/json' },
+          body:    JSON.stringify(payload)
+        });
+        // Sucesso (resposta opaca com no-cors — assume enviado)
+        form.style.display = 'none';
+        successEl.style.display = 'block';
+      } catch (err) {
+        submitBtn.disabled = false;
+        btnText.textContent = 'Garantir minha vaga';
+        alert('Erro ao enviar. Verifique sua conexão e tente novamente.');
+      }
+    });
+  </script>
+</body>
+</html>
