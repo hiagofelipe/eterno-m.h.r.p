@@ -96,17 +96,8 @@
       backdrop-filter: blur(6px);
       -webkit-backdrop-filter: blur(6px);
     }
-    .wl-nav-logo img { height: 40px; width: auto; opacity: 0.85; transition: opacity var(--d-fast) var(--ease); }
+    .wl-nav-logo img { height: 62px; width: auto; opacity: 0.88; transition: opacity var(--d-fast) var(--ease); }
     .wl-nav-logo:hover img { opacity: 1; }
-
-    .wl-nav-back {
-      display: inline-flex; align-items: center; gap: 0.4rem;
-      font-family: var(--f-inscription);
-      font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase;
-      color: var(--c-ink-mute);
-      transition: color var(--d-fast) var(--ease);
-    }
-    .wl-nav-back:hover { color: var(--c-gold); }
 
     /* ========================================================
        HERO
@@ -120,13 +111,32 @@
 
     .wl-figure {
       position: absolute;
-      right: -2%; bottom: 0;
-      height: 90%; width: auto;
-      opacity: 0.11;
+      left: -2%; bottom: 0;
+      height: 92%; width: auto;
+      opacity: 0.13;
       pointer-events: none; user-select: none;
-      mask-image: linear-gradient(to left, black 0%, transparent 50%);
-      -webkit-mask-image: linear-gradient(to left, black 0%, transparent 50%);
-      filter: grayscale(0.2);
+      mask-image: linear-gradient(to right, black 0%, transparent 55%);
+      -webkit-mask-image: linear-gradient(to right, black 0%, transparent 55%);
+      filter: grayscale(0.15);
+    }
+
+    /* Rosa decorativa na última dobra */
+    .wl-about { overflow: hidden; }
+    .wl-rosa {
+      position: absolute;
+      right: -2%; bottom: -2%;
+      width: clamp(220px, 28vw, 380px); height: auto;
+      opacity: 0.18;
+      pointer-events: none; user-select: none;
+      mask-image:
+        linear-gradient(to left,  black 0%, transparent 60%),
+        linear-gradient(to top,   black 0%, transparent 40%);
+      mask-composite: intersect;
+      -webkit-mask-image:
+        linear-gradient(to left,  black 0%, transparent 60%),
+        linear-gradient(to top,   black 0%, transparent 40%);
+      -webkit-mask-composite: destination-in;
+      filter: grayscale(0.1);
     }
 
     .wl-hero-inner {
@@ -167,7 +177,7 @@
     }
 
     .wl-sub {
-      font-size: 1rem; color: var(--c-ink-mute);
+      font-size: 1.05rem; color: var(--c-ink-soft);
       max-width: 46ch; line-height: 1.75;
       margin-bottom: 2.2rem;
     }
@@ -228,7 +238,7 @@
       margin-bottom: 0.45rem;
     }
     .wl-form-head p {
-      font-size: 0.82rem; color: var(--c-ink-faint); line-height: 1.55;
+      font-size: 0.88rem; color: var(--c-ink-mute); line-height: 1.6;
     }
 
     /* Fields */
@@ -297,7 +307,7 @@
       margin-bottom: 0.22rem;
     }
     .wl-profile-text span {
-      font-size: 0.76rem; color: var(--c-ink-faint); line-height: 1.5;
+      font-size: 0.82rem; color: var(--c-ink-mute); line-height: 1.55;
     }
 
     .wl-profile-card:hover .wl-profile-inner {
@@ -451,7 +461,7 @@
       letter-spacing: 0.14em; text-transform: uppercase;
       color: var(--c-ink); margin-bottom: 0.65rem;
     }
-    .wl-pillar p { font-size: 0.86rem; color: var(--c-ink-mute); line-height: 1.65; }
+    .wl-pillar p { font-size: 0.92rem; color: var(--c-ink-soft); line-height: 1.65; }
 
     /* Quote */
     .wl-quote {
@@ -488,12 +498,12 @@
       border-radius: var(--radius);
     }
     .wl-fw-item svg { flex-shrink: 0; margin-top: 3px; color: var(--c-gold); opacity: 0.65; }
-    .wl-fw-item p { font-size: 0.86rem; color: var(--c-ink-mute); line-height: 1.55; }
+    .wl-fw-item p { font-size: 0.92rem; color: var(--c-ink-soft); line-height: 1.6; }
 
     /* Bottom CTA */
     .wl-bottom-cta { text-align: center; padding-top: 1rem; }
     .wl-bottom-cta > p {
-      font-size: 0.86rem; color: var(--c-ink-faint);
+      font-size: 0.94rem; color: var(--c-ink-mute);
       margin-bottom: 1.4rem;
     }
     .wl-btn-center {
@@ -540,9 +550,8 @@
     }
 
     @media (max-width: 580px) {
-      .wl-nav { padding: 1rem 1.2rem; }
-      .wl-nav-logo img { height: 34px; }
-      .wl-nav-back { font-size: 0.58rem; }
+      .wl-nav { padding: 0.9rem 1.2rem; }
+      .wl-nav-logo img { height: 50px; }
 
       .wl-hero { padding: 6.5rem 1.2rem 3.5rem; }
       .wl-figure { display: none; }
@@ -574,10 +583,6 @@
     <a href="../" class="wl-nav-logo" aria-label="O Eterno MHRP — página principal">
       <img src="../logopequena.PNG" alt="O Eterno MHRP" />
     </a>
-    <a href="../" class="wl-nav-back">
-      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
-      Ver o manual completo
-    </a>
   </nav>
 
   <!-- ======================================================
@@ -585,7 +590,7 @@
   ====================================================== -->
   <section class="wl-hero" aria-labelledby="wl-title">
 
-    <img src="../cavaleiro-olhando-para-a-rosa-e-para-a-espada.png"
+    <img src="../cavaleiro-de-lado-cortado-esquerda.png"
          class="wl-figure" alt="" aria-hidden="true" loading="eager" />
 
     <div class="wl-hero-inner">
@@ -724,7 +729,8 @@
   <!-- ======================================================
        SOBRE O PROJETO
   ====================================================== -->
-  <section class="wl-about" aria-labelledby="about-heading">
+  <section class="wl-about" aria-labelledby="about-heading" style="position:relative;">
+    <img src="../rosa-vermelha-no-chao.png" class="wl-rosa" alt="" aria-hidden="true" loading="lazy" />
     <div class="wl-about-inner">
 
       <p class="wl-section-eyebrow reveal">O que é</p>
