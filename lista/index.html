@@ -812,21 +812,42 @@
     .pilar-head:hover { background: rgba(201,169,97,0.03); }
 
     .pilar-num {
-      position: relative; width: 64px; height: 64px;
+      position: relative; width: 72px; height: 72px;
       display: flex; align-items: center; justify-content: center;
-      border: 1px solid var(--c-line); border-radius: 50%; flex-shrink: 0;
-      background: rgba(139,10,26,0.12);
-      transition: transform var(--d-med) var(--ease), border-color var(--d-med) var(--ease);
+      border: 1.5px solid rgba(201,169,97,0.22); border-radius: 50%; flex-shrink: 0;
+      overflow: hidden;
+      background: rgba(20,6,9,0.95);
+      box-shadow: 0 0 0 3px rgba(201,169,97,0.05), 0 4px 24px rgba(0,0,0,0.55);
+      transition: transform var(--d-med) var(--ease), border-color var(--d-med) var(--ease), box-shadow var(--d-med) var(--ease);
     }
-    .pilar.open .pilar-num, .pilar:hover .pilar-num { border-color: var(--c-gold); transform: rotate(10deg) scale(1.05); }
-
+    .pilar.open .pilar-num, .pilar:hover .pilar-num {
+      border-color: var(--c-gold);
+      box-shadow: 0 0 0 4px rgba(201,169,97,0.13), 0 0 28px rgba(201,169,97,0.22), 0 4px 24px rgba(0,0,0,0.55);
+      transform: scale(1.07);
+    }
+    .pilar-num-img {
+      position: absolute; inset: 0;
+      width: 100%; height: 100%;
+      object-fit: cover; object-position: center 10%;
+      display: block; z-index: 0;
+      filter: brightness(0.2) saturate(0.3) contrast(0.9);
+      transform: scale(1.12);
+      transition: filter 0.75s var(--ease), transform 0.9s var(--ease);
+    }
+    .pilar:hover .pilar-num-img, .pilar.open .pilar-num-img {
+      filter: brightness(0.7) saturate(0.82) contrast(1.06);
+      transform: scale(1.0);
+    }
     .pilar-num-roman {
-      position: absolute; font-family: var(--f-inscription); font-weight: 500;
+      position: absolute; z-index: 2;
+      font-family: var(--f-inscription); font-weight: 500;
       font-size: 1.2rem; color: var(--c-gold); letter-spacing: 0.02em;
+      text-shadow: 0 1px 10px rgba(0,0,0,1), 0 0 20px rgba(0,0,0,0.7);
       transition: opacity var(--d-med) var(--ease), transform var(--d-med) var(--ease);
     }
     .pilar-ico {
       color: var(--c-gold); opacity: 0; transform: scale(0.7);
+      z-index: 2; filter: drop-shadow(0 1px 6px rgba(0,0,0,1));
       transition: opacity var(--d-med) var(--ease), transform var(--d-med) var(--ease);
     }
     .pilar.open .pilar-num-roman, .pilar:hover .pilar-num-roman { opacity: 0; transform: scale(0.7); }
@@ -880,54 +901,15 @@
 
     .pilares-cta { text-align: center; margin-top: 3rem; }
 
-    /* ---- Pilar thumbnail (lesson preview) ---- */
-    .pilar-thumb {
-      float: right;
-      width: 190px; height: 127px;
-      overflow: hidden; position: relative;
-      border: 1px solid var(--c-gold-deep);
-      border-radius: 3px;
-      margin: 0.3rem 0 1.4rem 1.8rem;
-      box-shadow: 0 8px 28px rgba(0,0,0,0.6), inset 0 0 0 1px rgba(201,169,97,0.08);
-      opacity: 0; transform: translateY(10px);
-      transition: opacity 0.5s 0.2s var(--ease), transform 0.5s 0.2s var(--ease);
-    }
-    .pilar.open .pilar-thumb { opacity: 1; transform: translateY(0); }
-    .pilar-thumb img {
-      width: 100%; height: 100%;
-      object-fit: cover; object-position: center 15%;
-      display: block;
-      filter: brightness(0.84) saturate(0.78) contrast(1.05);
-    }
-    .pilar-thumb::after {
-      content: ""; position: absolute; inset: 0;
-      background: linear-gradient(to bottom, transparent 50%, rgba(20,6,9,0.8) 100%);
-      pointer-events: none;
-    }
-    .pilar-thumb-label {
-      position: absolute; bottom: 0.6rem; left: 0.75rem;
-      font-family: var(--f-inscription); font-size: 0.5rem;
-      letter-spacing: 0.3em; text-transform: uppercase;
-      color: var(--c-gold); opacity: 0.9; pointer-events: none;
-    }
-
     @media (max-width: 900px) {
       .pilar-head { padding: 1.2rem 1.3rem; gap: 1rem; }
-      .pilar-num { width: 52px; height: 52px; }
+      .pilar-num { width: 56px; height: 56px; }
       .pilar-num-roman { font-size: 1.1rem; }
       .pilar-title { font-size: 1.08rem; }
       .pilar-desc { font-size: 0.85rem; }
       .pilar-body-inner { padding: 0 1.3rem; }
       .pilar-body-inner > *:last-child { padding-bottom: 1.8rem; }
       .parts.parts-grid { grid-template-columns: 1fr; }
-      .pilar-thumb {
-        float: none;
-        width: calc(100% + 2.6rem);
-        height: 155px;
-        margin: 0 -1.3rem 1.5rem -1.3rem;
-        border-left: none; border-right: none; border-radius: 0;
-        opacity: 1; transform: none; transition: none;
-      }
     }
 
     /* ========================================================
@@ -1297,6 +1279,7 @@
         <li class="pilar reveal" data-pilar="1">
           <button class="pilar-head" aria-expanded="false" aria-controls="pilar-1">
             <span class="pilar-num" aria-hidden="true">
+              <img class="pilar-num-img" src="../Pilar 1 Thumb.png" alt="" loading="lazy" />
               <span class="pilar-num-roman">I</span>
               <svg class="pilar-ico" width="24" height="24"><use href="#ico-shield"/></svg>
             </span>
@@ -1311,10 +1294,6 @@
           </button>
           <div class="pilar-body" id="pilar-1" role="region">
             <div class="pilar-body-inner">
-              <div class="pilar-thumb">
-                <img src="../Pilar 1 Thumb.png" alt="" loading="lazy" />
-                <span class="pilar-thumb-label">Prévia · Pilar I</span>
-              </div>
               <p>O alicerce. Antes da escolha, antes do relacionamento, antes do legado: você. Desenvolvimento de estabilidade emocional, disciplina, direção e responsabilidade. Tudo o que vem depois depende deste estágio.</p>
               <ul class="parts">
                 <li><span>01</span>Estrutura masculina</li>
@@ -1330,6 +1309,7 @@
         <li class="pilar reveal" data-pilar="2">
           <button class="pilar-head" aria-expanded="false" aria-controls="pilar-2">
             <span class="pilar-num" aria-hidden="true">
+              <img class="pilar-num-img" src="../Pilar 2 Thumb.png" alt="" loading="lazy" />
               <span class="pilar-num-roman">II</span>
               <svg class="pilar-ico" width="24" height="24"><use href="#ico-compass"/></svg>
             </span>
@@ -1342,10 +1322,6 @@
           </button>
           <div class="pilar-body" id="pilar-2" role="region">
             <div class="pilar-body-inner">
-              <div class="pilar-thumb">
-                <img src="../Pilar 2 Thumb.png" alt="" loading="lazy" />
-                <span class="pilar-thumb-label">Prévia · Pilar II</span>
-              </div>
               <p>Nenhuma estrutura se sustenta sobre a escolha errada. Aqui você aprende a ler comportamento, compatibilidade de valores, maturidade e potencial concreto de construção a longo prazo.</p>
               <ul class="parts">
                 <li><span>06</span>A escolha da mulher</li>
@@ -1361,6 +1337,7 @@
         <li class="pilar reveal" data-pilar="3">
           <button class="pilar-head" aria-expanded="false" aria-controls="pilar-3">
             <span class="pilar-num" aria-hidden="true">
+              <img class="pilar-num-img" src="../Pilar 3 Thumb.png" alt="" loading="lazy" />
               <span class="pilar-num-roman">III</span>
               <svg class="pilar-ico" width="24" height="24"><use href="#ico-chain"/></svg>
             </span>
@@ -1373,10 +1350,6 @@
           </button>
           <div class="pilar-body" id="pilar-3" role="region">
             <div class="pilar-body-inner">
-              <div class="pilar-thumb">
-                <img src="../Pilar 3 Thumb.png" alt="" loading="lazy" />
-                <span class="pilar-thumb-label">Prévia · Pilar III</span>
-              </div>
               <p>A comunicação levada ao extremo. Aqui se define, em palavras claras, o que cada um espera, o que cada um se compromete a oferecer e como o casal neutraliza conflitos estruturais antes que eles nasçam.</p>
               <ul class="parts">
                 <li><span>11</span>Limite versus controle</li>
@@ -1393,6 +1366,7 @@
         <li class="pilar reveal" data-pilar="4">
           <button class="pilar-head" aria-expanded="false" aria-controls="pilar-4">
             <span class="pilar-num" aria-hidden="true">
+              <img class="pilar-num-img" src="../Pilar 4 Thumb.png" alt="" loading="lazy" />
               <span class="pilar-num-roman">IV</span>
               <svg class="pilar-ico" width="24" height="24"><use href="#ico-flame"/></svg>
             </span>
@@ -1405,10 +1379,6 @@
           </button>
           <div class="pilar-body" id="pilar-4" role="region">
             <div class="pilar-body-inner">
-              <div class="pilar-thumb">
-                <img src="../Pilar 4 Thumb.png" alt="" loading="lazy" />
-                <span class="pilar-thumb-label">Prévia · Pilar IV</span>
-              </div>
               <p>Relacionamento não se conquista, se conduz. Este pilar trata de como você lidera com consistência ao longo do tempo, preservando confiança, admiração e atração mesmo diante da rotina e do conflito.</p>
               <ul class="parts">
                 <li><span>17</span>Fases do relacionamento</li>
@@ -1425,6 +1395,7 @@
         <li class="pilar reveal" data-pilar="5">
           <button class="pilar-head" aria-expanded="false" aria-controls="pilar-5">
             <span class="pilar-num" aria-hidden="true">
+              <img class="pilar-num-img" src="../Pilar 5 Thumb.png" alt="" loading="lazy" />
               <span class="pilar-num-roman">V</span>
               <svg class="pilar-ico" width="24" height="24"><use href="#ico-crown"/></svg>
             </span>
@@ -1437,10 +1408,6 @@
           </button>
           <div class="pilar-body" id="pilar-5" role="region">
             <div class="pilar-body-inner">
-              <div class="pilar-thumb">
-                <img src="../Pilar 5 Thumb.png" alt="" loading="lazy" />
-                <span class="pilar-thumb-label">Prévia · Pilar V</span>
-              </div>
               <p>Morar junto, casamento, organização patrimonial, rotina do casal, formação de família. Aqui o relacionamento deixa de ser provisório e se transforma em arquitetura de vida.</p>
               <ul class="parts">
                 <li><span>23</span>Morar junto</li>
@@ -1457,6 +1424,7 @@
         <li class="pilar pilar-extra reveal" data-pilar="6">
           <button class="pilar-head" aria-expanded="false" aria-controls="pilar-6">
             <span class="pilar-num" aria-hidden="true">
+              <img class="pilar-num-img" src="../Pilulas de Construção thumb.png" alt="" loading="lazy" />
               <span class="pilar-num-roman">+</span>
               <svg class="pilar-ico" width="24" height="24"><use href="#ico-rose"/></svg>
             </span>
@@ -1469,10 +1437,6 @@
           </button>
           <div class="pilar-body" id="pilar-6" role="region">
             <div class="pilar-body-inner">
-              <div class="pilar-thumb">
-                <img src="../Pilulas de Construção thumb.png" alt="" loading="lazy" />
-                <span class="pilar-thumb-label">Prévia · Pílulas de Construção</span>
-              </div>
               <p>Aproximadamente doze aulas independentes, cada uma resolvendo um tema sensível com orientação prática e direta. Você acessa na ordem que quiser, conforme a necessidade da sua vida.</p>
               <ul class="parts parts-grid">
                 <li><span>·</span>Ciúmes</li>

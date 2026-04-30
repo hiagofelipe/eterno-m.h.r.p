@@ -811,33 +811,60 @@ ul,ol { list-style: none; }
 
 .pilar-num {
   position: relative;
-  width: 64px;
-  height: 64px;
+  width: 72px;
+  height: 72px;
   flex-shrink: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid var(--c-line);
+  border: 1.5px solid rgba(201,169,97,0.22);
   border-radius: 50%;
-  background: rgba(139,10,26,0.12);
-  transition: transform var(--d-med) var(--ease), border-color var(--d-med) var(--ease);
+  overflow: hidden;
+  background: rgba(20,6,9,0.95);
+  box-shadow: 0 0 0 3px rgba(201,169,97,0.05), 0 4px 24px rgba(0,0,0,0.55);
+  transition: transform var(--d-med) var(--ease), border-color var(--d-med) var(--ease), box-shadow var(--d-med) var(--ease);
 }
 .pilar.open .pilar-num,
-.pilar:hover .pilar-num { border-color: var(--c-gold); transform: rotate(10deg) scale(1.05); }
+.pilar:hover .pilar-num {
+  border-color: var(--c-gold);
+  box-shadow: 0 0 0 4px rgba(201,169,97,0.13), 0 0 28px rgba(201,169,97,0.22), 0 4px 24px rgba(0,0,0,0.55);
+  transform: scale(1.07);
+}
+.pilar-num-img {
+  position: absolute;
+  inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  object-position: center 10%;
+  display: block;
+  z-index: 0;
+  filter: brightness(0.2) saturate(0.3) contrast(0.9);
+  transform: scale(1.12);
+  transition: filter 0.75s var(--ease), transform 0.9s var(--ease);
+}
+.pilar:hover .pilar-num-img,
+.pilar.open .pilar-num-img {
+  filter: brightness(0.7) saturate(0.82) contrast(1.06);
+  transform: scale(1.0);
+}
 
 .pilar-num-roman {
   position: absolute;
+  z-index: 2;
   font-family: var(--f-inscription);
   font-weight: 500;
   font-size: 1.3rem;
   color: var(--c-gold);
   letter-spacing: 0.02em;
+  text-shadow: 0 1px 10px rgba(0,0,0,1), 0 0 20px rgba(0,0,0,0.7);
   transition: opacity var(--d-med) var(--ease), transform var(--d-med) var(--ease);
 }
 .pilar-ico {
   color: var(--c-gold);
   opacity: 0;
   transform: scale(0.7);
+  z-index: 2;
+  filter: drop-shadow(0 1px 6px rgba(0,0,0,1));
   transition: opacity var(--d-med) var(--ease), transform var(--d-med) var(--ease);
 }
 .pilar.open .pilar-num-roman,
@@ -936,57 +963,6 @@ ul,ol { list-style: none; }
 }
 
 .pilares-cta { text-align: center; margin-top: 3rem; }
-
-/* ---- Pilar thumbnail (lesson preview) ---- */
-.pilar-thumb {
-  float: right;
-  width: 230px;
-  height: 154px;
-  overflow: hidden;
-  position: relative;
-  border: 1px solid var(--c-gold-deep);
-  border-radius: 3px;
-  margin: 0.3rem 0 1.6rem 2.2rem;
-  box-shadow: 0 8px 32px rgba(0,0,0,0.6), inset 0 0 0 1px rgba(201,169,97,0.08);
-  opacity: 0;
-  transform: translateY(10px);
-  transition: opacity 0.5s 0.2s var(--ease), transform 0.5s 0.2s var(--ease);
-}
-.pilar.open .pilar-thumb { opacity: 1; transform: translateY(0); }
-.pilar-thumb img {
-  width: 100%; height: 100%;
-  object-fit: cover;
-  object-position: center 15%;
-  display: block;
-  filter: brightness(0.84) saturate(0.78) contrast(1.05);
-}
-.pilar-thumb::after {
-  content: "";
-  position: absolute; inset: 0;
-  background: linear-gradient(to bottom, transparent 50%, rgba(20,6,9,0.8) 100%);
-  pointer-events: none;
-}
-.pilar-thumb-label {
-  position: absolute;
-  bottom: 0.6rem; left: 0.75rem;
-  font-family: var(--f-inscription);
-  font-size: 0.5rem;
-  letter-spacing: 0.3em;
-  text-transform: uppercase;
-  color: var(--c-gold);
-  opacity: 0.9;
-  pointer-events: none;
-}
-@media (max-width: 768px) {
-  .pilar-thumb {
-    float: none;
-    width: calc(100% + 2.6rem);
-    height: 160px;
-    margin: 0 -1.3rem 1.6rem -1.3rem;
-    border-left: none; border-right: none; border-radius: 0;
-    opacity: 1; transform: none; transition: none;
-  }
-}
 
 /* ----------------------- AUDIENCE ----------------------- */
 .section-audience {
