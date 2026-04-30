@@ -1636,6 +1636,21 @@
       }
     });
 
+    /* ---- CTA mobile → rola até o form e foca no nome ---- */
+    (function () {
+      const cta = document.querySelector('.wl-hero-cta-mobile');
+      if (!cta) return;
+      cta.addEventListener('click', function (e) {
+        e.preventDefault();
+        const formCard = document.querySelector('.wl-form-card');
+        const nomeInput = document.getElementById('nome');
+        if (!formCard) return;
+        const top = formCard.getBoundingClientRect().top + window.scrollY - 16;
+        window.scrollTo({ top, behavior: 'smooth' });
+        if (nomeInput) setTimeout(() => nomeInput.focus(), 650);
+      });
+    })();
+
     /* ---- Pilares accordion (single-open, smooth) ---- */
     (function () {
       const pilares = document.querySelectorAll('.pilar');
