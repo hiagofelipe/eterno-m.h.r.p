@@ -807,9 +807,10 @@
       width: 100%; display: grid; grid-template-columns: auto 1fr auto;
       align-items: center; gap: 1.5rem; padding: 1.4rem 1.8rem;
       background: none; border: none; cursor: pointer; text-align: left;
-      color: var(--c-ink); transition: background var(--d-fast) var(--ease);
+      color: var(--c-ink); transition: background var(--d-fast) var(--ease), gap 0.85s cubic-bezier(0.16, 1, 0.3, 1);
     }
     .pilar-head:hover { background: rgba(201,169,97,0.03); }
+    .pilar.open .pilar-head { gap: 2.4rem; }
 
     .pilar-num {
       position: relative; width: 72px; height: 72px;
@@ -828,11 +829,10 @@
     .pilar.open .pilar-num {
       border-color: var(--c-gold);
       box-shadow: 0 0 0 5px rgba(201,169,97,0.15), 0 0 36px rgba(201,169,97,0.3), 0 4px 24px rgba(0,0,0,0.55);
-      animation: pilar-num-pop 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+      animation: pilar-num-grow 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
     }
-    @keyframes pilar-num-pop {
+    @keyframes pilar-num-grow {
       0%   { transform: scale(1); }
-      42%  { transform: scale(1.65); }
       100% { transform: scale(1.42); }
     }
     .pilar-num-img {
