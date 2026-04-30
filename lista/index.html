@@ -778,6 +778,120 @@
     }
 
     /* ========================================================
+       PILARES ACCORDION
+    ======================================================== */
+    .pilares {
+      display: flex; flex-direction: column; gap: 1rem;
+      list-style: none; padding: 0; margin: 0;
+      counter-reset: pilar;
+    }
+    .pilar {
+      border: 1px solid var(--c-line);
+      border-radius: var(--radius);
+      background: linear-gradient(180deg, rgba(29,10,13,0.6) 0%, rgba(20,6,9,0.8) 100%);
+      transition: border-color var(--d-med) var(--ease), background var(--d-med) var(--ease);
+      overflow: hidden; position: relative;
+    }
+    .pilar::before {
+      content: ""; position: absolute;
+      left: 0; top: 0; bottom: 0; width: 2px;
+      background: var(--c-gold); opacity: 0;
+      transition: opacity var(--d-med) var(--ease);
+    }
+    .pilar:hover { border-color: var(--c-line-strong); background: linear-gradient(180deg, rgba(58,14,22,0.4) 0%, rgba(29,10,13,0.8) 100%); }
+    .pilar:hover::before { opacity: 1; }
+    .pilar.open { border-color: var(--c-gold-deep); background: linear-gradient(180deg, rgba(58,14,22,0.5) 0%, rgba(29,10,13,0.85) 100%); }
+    .pilar.open::before { opacity: 1; }
+
+    .pilar-head {
+      width: 100%; display: grid; grid-template-columns: auto 1fr auto;
+      align-items: center; gap: 1.5rem; padding: 1.4rem 1.8rem;
+      background: none; border: none; cursor: pointer; text-align: left;
+      color: var(--c-ink); transition: background var(--d-fast) var(--ease);
+    }
+    .pilar-head:hover { background: rgba(201,169,97,0.03); }
+
+    .pilar-num {
+      position: relative; width: 64px; height: 64px;
+      display: flex; align-items: center; justify-content: center;
+      border: 1px solid var(--c-line); border-radius: 50%; flex-shrink: 0;
+      background: rgba(139,10,26,0.12);
+      transition: transform var(--d-med) var(--ease), border-color var(--d-med) var(--ease);
+    }
+    .pilar.open .pilar-num, .pilar:hover .pilar-num { border-color: var(--c-gold); transform: rotate(10deg) scale(1.05); }
+
+    .pilar-num-roman {
+      position: absolute; font-family: var(--f-inscription); font-weight: 500;
+      font-size: 1.2rem; color: var(--c-gold); letter-spacing: 0.02em;
+      transition: opacity var(--d-med) var(--ease), transform var(--d-med) var(--ease);
+    }
+    .pilar-ico {
+      color: var(--c-gold); opacity: 0; transform: scale(0.7);
+      transition: opacity var(--d-med) var(--ease), transform var(--d-med) var(--ease);
+    }
+    .pilar.open .pilar-num-roman, .pilar:hover .pilar-num-roman { opacity: 0; transform: scale(0.7); }
+    .pilar.open .pilar-ico, .pilar:hover .pilar-ico { opacity: 1; transform: scale(1); }
+
+    .pilar-titles { display: flex; flex-direction: column; gap: 0.15rem; }
+    .pilar-kicker {
+      font-family: var(--f-inscription); font-size: 0.62rem; letter-spacing: 0.3em;
+      text-transform: uppercase; color: var(--c-gold); font-style: normal; opacity: 0.8;
+    }
+    .pilar-title {
+      font-family: var(--f-inscription); font-size: clamp(0.95rem, 1.5vw, 1.3rem);
+      font-weight: 500; color: var(--c-ink); line-height: 1.15;
+    }
+    .pilar-desc { font-size: 0.9rem; color: var(--c-ink-mute); line-height: 1.4; }
+
+    .pilar-toggle {
+      width: 42px; height: 42px; display: flex; align-items: center; justify-content: center;
+      border: 1px solid var(--c-line); border-radius: 50%; color: var(--c-gold);
+      transition: transform var(--d-med) var(--ease), border-color var(--d-med) var(--ease);
+      flex-shrink: 0;
+    }
+    .pilar.open .pilar-toggle { transform: rotate(45deg); border-color: var(--c-gold); background: rgba(201,169,97,0.08); }
+
+    .pilar-body {
+      display: grid; grid-template-rows: 0fr;
+      transition: grid-template-rows var(--d-med) var(--ease);
+    }
+    .pilar.open .pilar-body { grid-template-rows: 1fr; }
+    .pilar-body > div { overflow: hidden; }
+
+    .pilar-body-inner { padding: 0 2rem 0 6rem; max-width: 900px; }
+    .pilar-body-inner > *:last-child { padding-bottom: 2rem; }
+    .pilar-body-inner > p {
+      font-family: var(--f-body); font-size: 0.95rem; line-height: 1.6;
+      color: var(--c-ink-soft); padding-left: 1.2rem;
+    }
+
+    .parts { display: flex; flex-direction: column; gap: 0.15rem; margin-top: 1rem; }
+    .parts li {
+      display: grid; grid-template-columns: 3rem 1fr; align-items: center;
+      font-size: 0.9rem; padding: 0.4rem 0; color: var(--c-ink-soft);
+      transition: color var(--d-fast) var(--ease), padding-left var(--d-fast) var(--ease);
+    }
+    .parts li:hover { color: var(--c-gold); padding-left: 0.5rem; }
+    .parts li span {
+      font-family: var(--f-inscription); font-size: 0.72rem;
+      letter-spacing: 0.2em; color: var(--c-gold); opacity: 0.6;
+    }
+    .parts.parts-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0 2rem; }
+
+    .pilares-cta { text-align: center; margin-top: 3rem; }
+
+    @media (max-width: 900px) {
+      .pilar-head { padding: 1.2rem 1.3rem; gap: 1rem; }
+      .pilar-num { width: 52px; height: 52px; }
+      .pilar-num-roman { font-size: 1.1rem; }
+      .pilar-title { font-size: 1.08rem; }
+      .pilar-desc { font-size: 0.85rem; }
+      .pilar-body-inner { padding: 0 1.3rem; }
+      .pilar-body-inner > *:last-child { padding-bottom: 1.8rem; }
+      .parts.parts-grid { grid-template-columns: 1fr; }
+    }
+
+    /* ========================================================
        REVEAL ANIMATION
     ======================================================== */
     .reveal {
@@ -882,6 +996,45 @@
 <body>
 
   <div class="grain" aria-hidden="true"></div>
+
+  <!-- SVG icon sprite (used by pilares accordion) -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <symbol id="ico-shield" viewBox="0 0 24 24">
+        <path d="M12 2 L20 5 L20 12 C20 17 16 21 12 22 C8 21 4 17 4 12 L4 5 Z" fill="none" stroke="currentColor" stroke-width="1"/>
+      </symbol>
+      <symbol id="ico-compass" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1"/>
+        <path d="M12 6 L14 12 L12 18 L10 12 Z" fill="currentColor" opacity="0.8"/>
+        <circle cx="12" cy="12" r="0.8" fill="currentColor"/>
+      </symbol>
+      <symbol id="ico-chain" viewBox="0 0 24 24">
+        <rect x="3" y="9" width="8" height="6" rx="3" fill="none" stroke="currentColor" stroke-width="1"/>
+        <rect x="13" y="9" width="8" height="6" rx="3" fill="none" stroke="currentColor" stroke-width="1"/>
+        <line x1="11" y1="12" x2="13" y2="12" stroke="currentColor" stroke-width="1"/>
+      </symbol>
+      <symbol id="ico-flame" viewBox="0 0 24 24">
+        <path d="M12 2 C12 6 8 8 8 12 C8 15 10 17 12 17 C14 17 16 15 16 12 C16 10 15 9 14 8 C14 10 13 11 12 11 C13 8 14 6 12 2 Z M12 17 C8 17 6 19 6 21 L18 21 C18 19 16 17 12 17 Z" fill="none" stroke="currentColor" stroke-width="0.9"/>
+      </symbol>
+      <symbol id="ico-crown" viewBox="0 0 24 24">
+        <path d="M3 9 L7 14 L12 7 L17 14 L21 9 L20 18 L4 18 Z" fill="none" stroke="currentColor" stroke-width="1"/>
+        <circle cx="3" cy="9" r="0.8" fill="currentColor"/>
+        <circle cx="12" cy="7" r="0.8" fill="currentColor"/>
+        <circle cx="21" cy="9" r="0.8" fill="currentColor"/>
+      </symbol>
+      <symbol id="ico-rose" viewBox="0 0 24 24">
+        <path d="M12 4 C9 4 7 6 7 9 C7 11 8 12 10 13 C8 13 7 14 7 16 C7 19 9 21 12 21 C15 21 17 19 17 16 C17 14 16 13 14 13 C16 12 17 11 17 9 C17 6 15 4 12 4 Z M12 8 C13 8 14 9 14 10 C14 11 13 12 12 12 C11 12 10 11 10 10 C10 9 11 8 12 8 Z" fill="none" stroke="currentColor" stroke-width="0.8"/>
+      </symbol>
+      <symbol id="ico-plus" viewBox="0 0 24 24">
+        <line x1="12" y1="5" x2="12" y2="19" stroke="currentColor" stroke-width="1.2"/>
+        <line x1="5" y1="12" x2="19" y2="12" stroke="currentColor" stroke-width="1.2"/>
+      </symbol>
+      <symbol id="ico-arrow" viewBox="0 0 24 24">
+        <line x1="4" y1="12" x2="20" y2="12" stroke="currentColor" stroke-width="1.2"/>
+        <path d="M14 6 L20 12 L14 18" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+      </symbol>
+    </defs>
+  </svg>
 
   <!-- Floating logo — fades on scroll -->
   <a href="#wl-title" class="wl-float-logo" id="wl-float-logo" aria-label="Voltar ao topo">
@@ -1100,36 +1253,179 @@
         </svg>
       </div>
 
-      <div class="wl-pillars">
-        <div class="wl-pillar reveal">
-          <div class="wl-pillar-num" aria-hidden="true">I</div>
-          <h3>Primeiro, o homem.</h3>
-          <p>Antes do relacionamento, antes da escolha. Estabilidade emocional, disciplina, direção e responsabilidade. A fundação de tudo que vem depois.</p>
-        </div>
-        <div class="wl-pillar reveal">
-          <div class="wl-pillar-num" aria-hidden="true">II</div>
-          <h3>A disciplina e o propósito.</h3>
-          <p>Um homem sem direção não atrai respeito. Aqui se constrói foco, identidade e a clareza do que se quer e de quem se é.</p>
-        </div>
-        <div class="wl-pillar reveal">
-          <div class="wl-pillar-num" aria-hidden="true">III</div>
-          <h3>A escolha certa.</h3>
-          <p>Reconhecer uma mulher com valores reais, maturidade e capacidade legítima de construção. A clareza que evita décadas de erro.</p>
-        </div>
-      </div>
+      <ol class="pilares" role="list">
 
-      <div class="wl-pillars-row2">
-        <div class="wl-pillar reveal">
-          <div class="wl-pillar-num" aria-hidden="true">IV</div>
-          <h3>A arquitetura do relacionamento.</h3>
-          <p>Fundamentos sólidos, acordos claros, respeito mútuo e liderança com firmeza e gentileza. O que sustenta um relacionamento de longo prazo.</p>
-        </div>
-        <div class="wl-pillar reveal">
-          <div class="wl-pillar-num" aria-hidden="true">V</div>
-          <h3>Enfim, o legado.</h3>
-          <p>Família estruturada, visão de longo prazo e uma vida construída com Deus no centro das decisões. O que permanece quando tudo passa.</p>
-        </div>
-      </div>
+        <li class="pilar reveal" data-pilar="1">
+          <button class="pilar-head" aria-expanded="false" aria-controls="pilar-1">
+            <span class="pilar-num" aria-hidden="true">
+              <span class="pilar-num-roman">I</span>
+              <svg class="pilar-ico" width="24" height="24"><use href="#ico-shield"/></svg>
+            </span>
+            <span class="pilar-titles">
+              <em class="pilar-kicker">Pilar I</em>
+              <span class="pilar-title">A Estrutura</span>
+              <span class="pilar-desc">Construir o homem individualmente. Fundação.</span>
+            </span>
+            <span class="pilar-toggle" aria-hidden="true">
+              <svg width="18" height="18"><use href="#ico-plus"/></svg>
+            </span>
+          </button>
+          <div class="pilar-body" id="pilar-1" role="region">
+            <div class="pilar-body-inner">
+              <p>O alicerce. Antes da escolha, antes do relacionamento, antes do legado: você. Desenvolvimento de estabilidade emocional, disciplina, direção e responsabilidade. Tudo o que vem depois depende deste estágio.</p>
+              <ul class="parts">
+                <li><span>01</span>Estrutura masculina</li>
+                <li><span>02</span>Segurança emocional</li>
+                <li><span>03</span>Decisão e liderança</li>
+                <li><span>04</span>Disciplina e direção</li>
+                <li><span>05</span>Exercício prático + PDF de aplicação</li>
+              </ul>
+            </div>
+          </div>
+        </li>
+
+        <li class="pilar reveal" data-pilar="2">
+          <button class="pilar-head" aria-expanded="false" aria-controls="pilar-2">
+            <span class="pilar-num" aria-hidden="true">
+              <span class="pilar-num-roman">II</span>
+              <svg class="pilar-ico" width="24" height="24"><use href="#ico-compass"/></svg>
+            </span>
+            <span class="pilar-titles">
+              <em class="pilar-kicker">Pilar II</em>
+              <span class="pilar-title">A Escolha</span>
+              <span class="pilar-desc">Reconhecer uma mulher com valores e capacidade real de construção.</span>
+            </span>
+            <span class="pilar-toggle" aria-hidden="true"><svg width="18" height="18"><use href="#ico-plus"/></svg></span>
+          </button>
+          <div class="pilar-body" id="pilar-2" role="region">
+            <div class="pilar-body-inner">
+              <p>Nenhuma estrutura se sustenta sobre a escolha errada. Aqui você aprende a ler comportamento, compatibilidade de valores, maturidade e potencial concreto de construção a longo prazo.</p>
+              <ul class="parts">
+                <li><span>06</span>A escolha da mulher</li>
+                <li><span>07</span>Avaliação de comportamento</li>
+                <li><span>08</span>Compatibilidade de valores</li>
+                <li><span>09</span>Potencial de construção</li>
+                <li><span>10</span>Exercício prático + PDF de aplicação</li>
+              </ul>
+            </div>
+          </div>
+        </li>
+
+        <li class="pilar reveal" data-pilar="3">
+          <button class="pilar-head" aria-expanded="false" aria-controls="pilar-3">
+            <span class="pilar-num" aria-hidden="true">
+              <span class="pilar-num-roman">III</span>
+              <svg class="pilar-ico" width="24" height="24"><use href="#ico-chain"/></svg>
+            </span>
+            <span class="pilar-titles">
+              <em class="pilar-kicker">Pilar III</em>
+              <span class="pilar-title">O Alinhamento</span>
+              <span class="pilar-desc">Limites, expectativas, rotina e visão de futuro estabelecidos com clareza.</span>
+            </span>
+            <span class="pilar-toggle" aria-hidden="true"><svg width="18" height="18"><use href="#ico-plus"/></svg></span>
+          </button>
+          <div class="pilar-body" id="pilar-3" role="region">
+            <div class="pilar-body-inner">
+              <p>A comunicação levada ao extremo. Aqui se define, em palavras claras, o que cada um espera, o que cada um se compromete a oferecer e como o casal neutraliza conflitos estruturais antes que eles nasçam.</p>
+              <ul class="parts">
+                <li><span>11</span>Limite versus controle</li>
+                <li><span>12</span>Alinhamento de compromisso</li>
+                <li><span>13</span>Influência externa</li>
+                <li><span>14</span>Comportamento social</li>
+                <li><span>15</span>Linguagem de amor</li>
+                <li><span>16</span>Exercício prático + PDF de aplicação</li>
+              </ul>
+            </div>
+          </div>
+        </li>
+
+        <li class="pilar reveal" data-pilar="4">
+          <button class="pilar-head" aria-expanded="false" aria-controls="pilar-4">
+            <span class="pilar-num" aria-hidden="true">
+              <span class="pilar-num-roman">IV</span>
+              <svg class="pilar-ico" width="24" height="24"><use href="#ico-flame"/></svg>
+            </span>
+            <span class="pilar-titles">
+              <em class="pilar-kicker">Pilar IV</em>
+              <span class="pilar-title">A Condução</span>
+              <span class="pilar-desc">Manter o relacionamento forte através das fases, conflitos e desgastes.</span>
+            </span>
+            <span class="pilar-toggle" aria-hidden="true"><svg width="18" height="18"><use href="#ico-plus"/></svg></span>
+          </button>
+          <div class="pilar-body" id="pilar-4" role="region">
+            <div class="pilar-body-inner">
+              <p>Relacionamento não se conquista, se conduz. Este pilar trata de como você lidera com consistência ao longo do tempo, preservando confiança, admiração e atração mesmo diante da rotina e do conflito.</p>
+              <ul class="parts">
+                <li><span>17</span>Fases do relacionamento</li>
+                <li><span>18</span>Conflitos e reparação</li>
+                <li><span>19</span>Confiança e transparência</li>
+                <li><span>20</span>Rotina e convivência</li>
+                <li><span>21</span>Manutenção da atração</li>
+                <li><span>22</span>Exercício prático + PDF de aplicação</li>
+              </ul>
+            </div>
+          </div>
+        </li>
+
+        <li class="pilar reveal" data-pilar="5">
+          <button class="pilar-head" aria-expanded="false" aria-controls="pilar-5">
+            <span class="pilar-num" aria-hidden="true">
+              <span class="pilar-num-roman">V</span>
+              <svg class="pilar-ico" width="24" height="24"><use href="#ico-crown"/></svg>
+            </span>
+            <span class="pilar-titles">
+              <em class="pilar-kicker">Pilar V</em>
+              <span class="pilar-title">A Consolidação</span>
+              <span class="pilar-desc">As decisões que tornam a relação sólida e preparada para o longo prazo.</span>
+            </span>
+            <span class="pilar-toggle" aria-hidden="true"><svg width="18" height="18"><use href="#ico-plus"/></svg></span>
+          </button>
+          <div class="pilar-body" id="pilar-5" role="region">
+            <div class="pilar-body-inner">
+              <p>Morar junto, casamento, organização patrimonial, rotina do casal, formação de família. Aqui o relacionamento deixa de ser provisório e se transforma em arquitetura de vida.</p>
+              <ul class="parts">
+                <li><span>23</span>Morar junto</li>
+                <li><span>24</span>Casamento</li>
+                <li><span>25</span>Alinhamento inicial da vida a dois</li>
+                <li><span>26</span>Organização da rotina</li>
+                <li><span>27</span>Estrutura financeira do casal</li>
+                <li><span>28</span>Exercício prático + PDF de aplicação</li>
+              </ul>
+            </div>
+          </div>
+        </li>
+
+        <li class="pilar pilar-extra reveal" data-pilar="6">
+          <button class="pilar-head" aria-expanded="false" aria-controls="pilar-6">
+            <span class="pilar-num" aria-hidden="true">
+              <span class="pilar-num-roman">+</span>
+              <svg class="pilar-ico" width="24" height="24"><use href="#ico-rose"/></svg>
+            </span>
+            <span class="pilar-titles">
+              <em class="pilar-kicker">Pilar extra</em>
+              <span class="pilar-title">Pílulas de Construção</span>
+              <span class="pilar-desc">Aulas independentes para dores específicas e situações reais.</span>
+            </span>
+            <span class="pilar-toggle" aria-hidden="true"><svg width="18" height="18"><use href="#ico-plus"/></svg></span>
+          </button>
+          <div class="pilar-body" id="pilar-6" role="region">
+            <div class="pilar-body-inner">
+              <p>Aproximadamente doze aulas independentes, cada uma resolvendo um tema sensível com orientação prática e direta. Você acessa na ordem que quiser, conforme a necessidade da sua vida.</p>
+              <ul class="parts parts-grid">
+                <li><span>·</span>Ciúmes</li>
+                <li><span>·</span>Término</li>
+                <li><span>·</span>Traição</li>
+                <li><span>·</span>Escolha da parceira</li>
+                <li><span>·</span>Afastamento</li>
+                <li><span>·</span>Desrespeito</li>
+                <li><span>·</span>Tomada de decisão</li>
+                <li><span>·</span>E mais.</li>
+              </ul>
+            </div>
+          </div>
+        </li>
+
+      </ol>
 
 
       <blockquote class="wl-quote reveal">
@@ -1303,6 +1599,31 @@
         alert('Erro ao enviar. Verifique sua conexão e tente novamente.');
       }
     });
+
+    /* ---- Pilares accordion (single-open, smooth) ---- */
+    (function () {
+      const pilares = document.querySelectorAll('.pilar');
+      pilares.forEach((pilar, idx) => {
+        const head = pilar.querySelector('.pilar-head');
+        if (!head) return;
+        head.addEventListener('click', () => {
+          const isOpen = pilar.classList.contains('open');
+          pilares.forEach(p => {
+            p.classList.remove('open');
+            const h = p.querySelector('.pilar-head');
+            if (h) h.setAttribute('aria-expanded', 'false');
+          });
+          if (!isOpen) {
+            pilar.classList.add('open');
+            head.setAttribute('aria-expanded', 'true');
+          }
+        });
+        if (idx === 0 && window.matchMedia('(min-width: 961px)').matches) {
+          pilar.classList.add('open');
+          head.setAttribute('aria-expanded', 'true');
+        }
+      });
+    })();
   </script>
 </body>
 </html>
