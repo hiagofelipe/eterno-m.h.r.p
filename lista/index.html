@@ -923,15 +923,16 @@
       /* Hero — compacto no mobile, form aparece mais cedo */
       .wl-hero { padding: 4rem 1.2rem 2.5rem; min-height: 0; }
 
-      /* Cavaleiro como fundo no mobile */
+      /* Cavaleiro como fundo no mobile — colado na esquerda */
       .wl-figure {
         display: block;
-        left: auto; right: -8%; top: 0;
-        width: 72%; height: auto;
-        opacity: 0.22;
-        mask-image: radial-gradient(ellipse 85% 90% at 75% 55%, black 25%, transparent 72%);
-        -webkit-mask-image: radial-gradient(ellipse 85% 90% at 75% 55%, black 25%, transparent 72%);
-        filter: grayscale(0.2) drop-shadow(-10px 0 30px rgba(0,0,0,0.95));
+        left: -4%; right: auto; top: 0;
+        width: 75%; height: auto;
+        opacity: 0.28;
+        transform: scaleX(-1);
+        mask-image: linear-gradient(to bottom, black 48%, transparent 88%);
+        -webkit-mask-image: linear-gradient(to bottom, black 48%, transparent 88%);
+        filter: grayscale(0.15) drop-shadow(10px 0 28px rgba(0,0,0,0.95));
         z-index: 0;
       }
 
