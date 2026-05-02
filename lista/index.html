@@ -1059,6 +1059,39 @@
         80% { transform: translateX(200%); }
       }
 
+      /* Banda de destaque mobile */
+      .wl-vantagem-band {
+        margin: 0.8rem -1.2rem 0;
+        padding: 1.8rem 1.4rem 2.2rem;
+        background: linear-gradient(to bottom, #150608 0%, #f5ede0 32%, #f5ede0 100%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+      }
+
+      /* Price badge — adapta para fundo claro */
+      .wl-vantagem-band .wl-price-badge {
+        max-width: 100%;
+        margin: 0;
+        padding-left: 0;
+        text-align: center;
+      }
+      .wl-vantagem-band .wl-price-badge::before { display: none; }
+      .wl-vantagem-band .wl-price-badge-eyebrow { color: rgba(120, 82, 18, 0.72); }
+      .wl-vantagem-band .wl-price-badge-heading {
+        color: #1a0608;
+        text-shadow: none;
+      }
+      .wl-vantagem-band .wl-price-badge-heading strong { color: #1a0608; }
+      .wl-vantagem-band .wl-price-badge-divider {
+        background: linear-gradient(to right, transparent, rgba(120,82,18,0.4), transparent);
+        width: 70%;
+        margin: 0 auto;
+      }
+      .wl-vantagem-band .wl-price-badge-text { color: #3a1810; }
+      .wl-vantagem-band .wl-price-badge-text strong { color: #1a0608; }
+
       .wl-form-card { padding: 1.6rem 1rem 1.4rem; }
 
       .wl-about { padding: 4rem 1.2rem; }
@@ -1162,20 +1195,25 @@
           Este não é um manual para todos. É para o homem que busca uma mulher de valores e para aquele que já a encontrou, mas deseja conquistar e manter o respeito dela, construindo pilares sólidos dentro do relacionamento.
         </p>
 
-        <!-- Aside editorial — vantagem de preço para inscritos -->
-        <div class="wl-price-badge reveal" role="note" aria-label="Vantagem exclusiva para inscritos na lista">
-          <span class="wl-price-badge-eyebrow">Vantagem exclusiva</span>
-          <p class="wl-price-badge-heading">Quem chega antes, paga menos.</p>
-          <div class="wl-price-badge-divider" aria-hidden="true"></div>
-          <p class="wl-price-badge-text">
-            Entre para a lista de espera para garantir uma <strong>condição especial de preço</strong> e ser o primeiro a saber quando as vagas abrirem.
-          </p>
-        </div>
+        <!-- Banda mobile: CTA + vantagem, fundo claro -->
+        <div class="wl-vantagem-band">
 
-        <!-- CTA exclusivo mobile -->
-        <a href="#nome" class="wl-hero-cta-mobile reveal" aria-label="Ir para o formulário de inscrição">
-          Entrar na lista de espera
-        </a>
+          <!-- CTA exclusivo mobile -->
+          <a href="#nome" class="wl-hero-cta-mobile reveal" aria-label="Ir para o formulário de inscrição">
+            Entrar na lista de espera
+          </a>
+
+          <!-- Aside editorial — vantagem de preço para inscritos -->
+          <div class="wl-price-badge reveal" role="note" aria-label="Vantagem exclusiva para inscritos na lista">
+            <span class="wl-price-badge-eyebrow">Vantagem exclusiva</span>
+            <p class="wl-price-badge-heading">Quem chega antes, paga <strong>menos</strong>.</p>
+            <div class="wl-price-badge-divider" aria-hidden="true"></div>
+            <p class="wl-price-badge-text">
+              Entre para a lista de espera para garantir uma <strong>condição especial de preço</strong> e ser o primeiro a saber quando as vagas abrirem.
+            </p>
+          </div>
+
+        </div>
 
         <div class="wl-trust reveal" role="list">
           <div class="wl-trust-item" role="listitem">
