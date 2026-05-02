@@ -230,71 +230,87 @@
     /* ========================================================
        PRICE ADVANTAGE BADGE — hero content
     ======================================================== */
+    /* ========================================================
+       PRICE ADVANTAGE — card de exclusividade
+    ======================================================== */
     .wl-price-badge {
-      display: flex; align-items: stretch;
-      border: 1px solid rgba(201,169,97,0.32);
-      border-radius: var(--radius);
-      overflow: hidden;
-      margin: 1.8rem 0 2rem;
-      background: linear-gradient(135deg, rgba(58,14,22,0.55) 0%, rgba(39,10,17,0.7) 100%);
-      box-shadow:
-        0 8px 32px rgba(0,0,0,0.35),
-        inset 0 1px 0 rgba(201,169,97,0.08);
+      display: grid;
+      grid-template-columns: 72px 1fr;
+      gap: 1.4rem;
+      align-items: center;
+      padding: 1.4rem 1.6rem 1.4rem 1.4rem;
+      margin: 2rem 0 2.2rem;
       max-width: 480px;
-    }
-    .wl-price-badge-col {
-      flex: 1; padding: 1.1rem 1.3rem;
-      display: flex; flex-direction: column;
-      justify-content: center; gap: 0.28rem;
-    }
-    .wl-price-badge-col + .wl-price-badge-col {
-      border-left: 1px solid rgba(201,169,97,0.18);
+      background: linear-gradient(135deg, rgba(34,12,16,0.98) 0%, rgba(22,7,11,1) 100%);
+      border: 1px solid rgba(201,169,97,0.38);
+      border-radius: var(--radius);
       position: relative;
+      overflow: hidden;
+      box-shadow:
+        0 24px 56px rgba(0,0,0,0.6),
+        0 0 0 1px rgba(201,169,97,0.05) inset,
+        0 8px 24px rgba(139,10,26,0.25);
     }
-    /* Barra dourada vertical na coluna direita */
-    .wl-price-badge-col + .wl-price-badge-col::before {
+    /* Cantos ornamentais */
+    .wl-price-badge::before,
+    .wl-price-badge::after {
       content: '';
       position: absolute;
-      left: 0; top: 14px; bottom: 14px;
-      width: 2px;
-      background: linear-gradient(180deg, transparent, var(--c-gold) 40%, var(--c-gold) 60%, transparent);
-      border-radius: 1px;
+      width: 14px; height: 14px;
+      border-color: rgba(201,169,97,0.5);
+      border-style: solid;
     }
-    .wl-price-badge-label {
-      font-family: var(--f-inscription);
-      font-size: 0.52rem; letter-spacing: 0.3em; text-transform: uppercase;
-      color: var(--c-ink-faint); line-height: 1;
+    .wl-price-badge::before { top: 10px; left: 10px; border-width: 1px 0 0 1px; }
+    .wl-price-badge::after  { bottom: 10px; right: 10px; border-width: 0 1px 1px 0; }
+    /* Shimmer dourado no topo */
+    .wl-price-badge-shimmer {
+      position: absolute;
+      top: 0; left: 8%; right: 8%; height: 1px;
+      background: linear-gradient(to right, transparent, rgba(201,169,97,0.7), transparent);
+      pointer-events: none;
     }
-    .wl-price-badge-value {
-      font-family: var(--f-inscription);
-      font-size: 1.15rem; letter-spacing: -0.01em;
-      line-height: 1.1;
-    }
-    /* Coluna esquerda — preço riscado */
-    .wl-price-badge-col:first-child .wl-price-badge-value {
-      color: var(--c-ink-mute);
-      text-decoration: line-through;
-      text-decoration-color: rgba(201,169,97,0.45);
-    }
-    /* Coluna direita — condição exclusiva */
-    .wl-price-badge-col:last-child .wl-price-badge-label {
-      color: rgba(201,169,97,0.7);
-    }
-    .wl-price-badge-col:last-child .wl-price-badge-value {
-      font-family: var(--f-display);
-      font-style: italic;
-      font-size: 1.25rem;
-      color: var(--c-gold-soft);
-    }
-    .wl-price-badge-note {
-      font-size: 0.68rem; color: var(--c-ink-faint);
-      line-height: 1.4;
-    }
-    .wl-price-badge-arrow {
+    /* Círculo com ícone — "selo" de exclusividade */
+    .wl-price-badge-seal {
+      width: 68px; height: 68px;
+      border-radius: 50%;
+      border: 1px solid rgba(201,169,97,0.38);
       display: flex; align-items: center; justify-content: center;
-      padding: 0 0.7rem; flex-shrink: 0;
-      color: var(--c-gold); opacity: 0.5; font-size: 0.8rem;
+      color: var(--c-gold);
+      flex-shrink: 0;
+      background: radial-gradient(circle at center,
+        rgba(201,169,97,0.1) 0%,
+        rgba(139,10,26,0.12) 55%,
+        transparent 100%);
+      box-shadow:
+        0 0 0 5px rgba(201,169,97,0.04),
+        0 0 26px rgba(201,169,97,0.12),
+        inset 0 1px 0 rgba(201,169,97,0.1);
+      position: relative;
+      z-index: 1;
     }
+    /* Corpo de texto */
+    .wl-price-badge-body {
+      display: flex; flex-direction: column; gap: 0.35rem;
+    }
+    .wl-price-badge-eyebrow {
+      font-family: var(--f-inscription);
+      font-size: 0.52rem; letter-spacing: 0.34em; text-transform: uppercase;
+      color: var(--c-gold-deep); line-height: 1;
+    }
+    .wl-price-badge-heading {
+      font-family: var(--f-inscription);
+      font-size: 0.9rem; font-weight: 400; letter-spacing: 0.07em;
+      color: var(--c-gold-soft); line-height: 1.3;
+      text-shadow: 0 0 24px rgba(201,169,97,0.2);
+    }
+    .wl-price-badge-divider {
+      width: 70%; height: 1px;
+      background: linear-gradient(to right, rgba(201,169,97,0.35), transparent);
+    }
+    .wl-price-badge-text {
+      font-size: 0.84rem; color: var(--c-ink-mute); line-height: 1.65;
+    }
+    .wl-price-badge-text strong { color: var(--c-ink-soft); font-weight: 500; }
 
     /* Hero CTA mobile button (hidden on desktop) */
     .wl-hero-cta-mobile {
@@ -1043,12 +1059,10 @@
       .wl-fullname { display: none; }
       .wl-trust { display: none; }
 
-      /* Badge de preço — centraliza e ocupa largura total no mobile */
-      .wl-price-badge { max-width: 100%; margin: 1.4rem 0 1.6rem; }
-      .wl-price-badge-col { padding: 0.9rem 1rem; }
-      .wl-price-badge-value { font-size: 1rem; }
-      .wl-price-badge-col:last-child .wl-price-badge-value { font-size: 1.08rem; }
-      .wl-price-badge-note { font-size: 0.62rem; }
+      /* Badge de preço — ocupa largura total no mobile */
+      .wl-price-badge { max-width: 100%; margin: 1.4rem 0 1.6rem; grid-template-columns: 56px 1fr; gap: 1rem; }
+      .wl-price-badge-seal { width: 54px; height: 54px; }
+      .wl-price-badge-heading { font-size: 0.85rem; }
 
       /* Centralizar hero content */
       .wl-hero-mark { margin: 0 auto 0.6rem; }
@@ -1185,18 +1199,25 @@
           Este não é um manual para todos. É para o homem que busca uma mulher de valores e para aquele que já a encontrou, mas deseja conquistar e manter o respeito dela, construindo pilares sólidos dentro do relacionamento.
         </p>
 
-        <!-- Bloco de vantagem financeira — âncora visual do benefício de preço -->
-        <div class="wl-price-badge reveal" aria-label="Vantagem de preço para inscritos na lista">
-          <div class="wl-price-badge-col">
-            <span class="wl-price-badge-label">Público geral</span>
-            <span class="wl-price-badge-value">Acesso padrão</span>
-            <span class="wl-price-badge-note">Sem condição especial</span>
+        <!-- Card de exclusividade — vantagem de preço para inscritos -->
+        <div class="wl-price-badge reveal" role="note" aria-label="Vantagem exclusiva para inscritos na lista">
+          <div class="wl-price-badge-shimmer" aria-hidden="true"></div>
+
+          <div class="wl-price-badge-seal" aria-hidden="true">
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="none"
+                 stroke="currentColor" stroke-width="1">
+              <path d="M12 2 L20 5 L20 12 C20 17 16 21 12 22 C8 21 4 17 4 12 L4 5 Z"/>
+            </svg>
           </div>
-          <div class="wl-price-badge-arrow" aria-hidden="true">→</div>
-          <div class="wl-price-badge-col">
-            <span class="wl-price-badge-label">Inscritos na lista</span>
-            <span class="wl-price-badge-value">Condição especial</span>
-            <span class="wl-price-badge-note">Exclusiva para quem se inscreve agora</span>
+
+          <div class="wl-price-badge-body">
+            <span class="wl-price-badge-eyebrow">Vantagem exclusiva da lista</span>
+            <p class="wl-price-badge-heading">Condição especial de preço garantida</p>
+            <div class="wl-price-badge-divider" aria-hidden="true"></div>
+            <p class="wl-price-badge-text">
+              Inscritos têm <strong>prioridade de acesso</strong> e uma condição
+              de preço que o público geral não terá no lançamento.
+            </p>
           </div>
         </div>
 
