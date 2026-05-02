@@ -989,8 +989,8 @@
         border: 1px solid var(--c-gold-deep);
         border-radius: var(--radius);
         font-family: var(--f-inscription);
-        font-size: 0.72rem; font-weight: 700;
-        letter-spacing: 0.18em; text-transform: uppercase;
+        font-size: 0.88rem; font-weight: 800;
+        letter-spacing: 0.12em; text-transform: uppercase;
         color: var(--c-gold-soft);
         text-align: center;
         text-decoration: none;
@@ -1111,7 +1111,7 @@
 
         <!-- CTA exclusivo mobile -->
         <a href="#nome" class="wl-hero-cta-mobile reveal" aria-label="Ir para o formulário de inscrição">
-          Reservar minha vaga na lista de espera
+          Entrar na lista de espera
         </a>
 
         <div class="wl-trust reveal" role="list">
@@ -1197,7 +1197,7 @@
             </div>
 
             <button type="submit" class="wl-btn" id="submit-btn">
-              <span class="btn-text">Garantir minha vaga</span>
+              <span class="btn-text">Entrar na lista de espera</span>
               <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </button>
 
@@ -1636,7 +1636,7 @@
         successEl.style.display = 'block';
       } catch (err) {
         submitBtn.disabled = false;
-        btnText.textContent = 'Garantir minha vaga';
+        btnText.textContent = 'Entrar na lista de espera';
         alert('Erro ao enviar. Verifique sua conexão e tente novamente.');
       }
     });
