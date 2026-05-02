@@ -847,13 +847,13 @@ ul,ol { list-style: none; }
   object-position: center 10%;
   display: block;
   z-index: 0;
-  filter: brightness(0.55) saturate(0.6) contrast(0.92);
+  filter: none;
   transform: scale(1.1);
   transition: filter 0.75s var(--ease), transform 0.9s var(--ease);
 }
 .pilar:hover .pilar-num-img,
 .pilar.open .pilar-num-img {
-  filter: brightness(0.82) saturate(0.9) contrast(1.05);
+  filter: none;
   transform: scale(1.0);
 }
 
