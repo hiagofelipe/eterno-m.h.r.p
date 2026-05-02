@@ -1,0 +1,1809 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lista de Espera — O Eterno MHRP</title>
+  <meta name="description" content="Reserve seu lugar na lista de espera de O Eterno MHRP — o manual completo de construção masculina, relacionamento sólido e legado familiar." />
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="icon" type="image/png" href="logopequena.PNG" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Cormorant+Garamond:ital,wght@1,400;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ==========================================================================
+       O ETERNO MHRP — Lista de Espera
+    ========================================================================== */
+
+    :root {
+      --c-bg:        #150608;
+      --c-bg-soft:   #1d0a0d;
+      --c-bg-elev:   #220c10;
+      --c-wine:      #3a0e16;
+      --c-wine-deep: #270a11;
+      --c-red:       #8b0a1a;
+
+      --c-gold:      #c9a961;
+      --c-gold-soft: #d4b574;
+      --c-gold-deep: #8a6d3b;
+      --c-bronze:    #a47e4a;
+
+      --c-ink:       #f4e8d4;
+      --c-ink-soft:  #d9c9ab;
+      --c-ink-mute:  #a89475;
+      --c-ink-faint: #7a6a55;
+
+      --c-line:        rgba(201,169,97,0.18);
+      --c-line-soft:   rgba(201,169,97,0.08);
+      --c-line-strong: rgba(201,169,97,0.35);
+
+      --f-display:     "Cormorant Garamond", "Times New Roman", serif;
+      --f-inscription: "Cinzel", "Trajan Pro", serif;
+      --f-body:        "Inter", system-ui, -apple-system, sans-serif;
+
+      --ease:   cubic-bezier(0.22, 1, 0.36, 1);
+      --d-fast: 250ms;
+      --d-med:  500ms;
+
+      --radius:    4px;
+      --radius-lg: 10px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; overflow-x: hidden; -webkit-text-size-adjust: 100%; }
+
+    body {
+      margin: 0;
+      font-family: var(--f-body);
+      font-size: 16px;
+      line-height: 1.7;
+      color: var(--c-ink-soft);
+      background: var(--c-bg);
+      background-image:
+        radial-gradient(ellipse at 18% 0%,   rgba(139,10,26,0.18), transparent 55%),
+        radial-gradient(ellipse at 82% 100%, rgba(58,14,22,0.55),  transparent 60%),
+        linear-gradient(180deg, #150608 0%, #0e0406 100%);
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    img, svg { display: block; max-width: 100%; }
+    button { font: inherit; color: inherit; background: none; border: none; cursor: pointer; padding: 0; }
+    a { color: inherit; text-decoration: none; }
+    h1, h2, h3, h4, p, ul, ol, blockquote { margin: 0; padding: 0; }
+    ul { list-style: none; }
+
+    ::selection { background: var(--c-gold); color: var(--c-bg); }
+
+    /* ---- Grain ---- */
+    .grain {
+      position: fixed; inset: 0;
+      pointer-events: none; z-index: 200;
+      opacity: 0.08; mix-blend-mode: overlay;
+      background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.6 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+    }
+
+    /* ========================================================
+       FLOATING LOGO
+    ======================================================== */
+    .wl-float-logo {
+      position: fixed; top: 1.4rem; left: 2rem; z-index: 100;
+      pointer-events: auto;
+      opacity: 1;
+      transform: translateY(0);
+      transition: opacity 700ms cubic-bezier(0.22, 1, 0.36, 1),
+                  transform 700ms cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .wl-float-logo.is-hidden {
+      opacity: 0;
+      transform: translateY(-10px);
+      pointer-events: none;
+    }
+    .wl-float-logo img {
+      height: 52px; width: auto;
+      opacity: 0.82;
+      transition: opacity var(--d-fast) var(--ease);
+    }
+    .wl-float-logo:hover img { opacity: 1; }
+
+    /* ========================================================
+       HERO
+    ======================================================== */
+    .wl-hero {
+      min-height: 100svh;
+      display: flex; align-items: flex-start;
+      position: relative; overflow: hidden;
+      padding: 5rem 2rem 4rem;
+    }
+
+    .wl-figure {
+      position: absolute;
+      left: -2%; bottom: 0;
+      height: 92%; width: auto;
+      opacity: 0.22;
+      pointer-events: none; user-select: none;
+      mask-image:
+        linear-gradient(to right, black 0%, transparent 55%),
+        linear-gradient(to bottom, black 55%, transparent 94%);
+      -webkit-mask-image:
+        linear-gradient(to right, black 0%, transparent 55%),
+        linear-gradient(to bottom, black 55%, transparent 94%);
+      mask-composite: intersect;
+      -webkit-mask-composite: source-in;
+      filter: grayscale(0.15);
+      z-index: 0;
+    }
+
+    /* Rosa decorativa na última dobra */
+    .wl-about { overflow: hidden; }
+    .wl-rosa {
+      position: absolute;
+      right: -2%; bottom: -2%;
+      width: clamp(280px, 42vw, 560px); height: auto;
+      opacity: 0.75;
+      pointer-events: none; user-select: none;
+      filter: grayscale(0.1);
+      mask-image: radial-gradient(ellipse 80% 75% at 70% 65%, black 25%, transparent 75%);
+      -webkit-mask-image: radial-gradient(ellipse 80% 75% at 70% 65%, black 25%, transparent 75%);
+    }
+
+    .wl-hero-inner {
+      width: 100%; max-width: 1140px; margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 460px;
+      gap: 5rem;
+      align-items: center;
+      position: relative; z-index: 1;
+    }
+
+    /* --- Content side --- */
+    .wl-hero-mark {
+      max-width: min(380px, 80%);
+      margin-bottom: 0.5rem;
+    }
+    .wl-hero-mark img { width: 100%; height: auto; }
+
+    .wl-fullname {
+      font-family: var(--f-inscription);
+      font-size: clamp(0.82rem, 1.1vw, 1rem);
+      font-weight: 400;
+      letter-spacing: 0.1em;
+      color: var(--c-ink-mute);
+      line-height: 1.7;
+      margin-bottom: 1.4rem;
+      max-width: 52ch;
+    }
+    .wl-fullname span {
+      font-weight: 700;
+      font-size: 1.08em;
+      color: var(--c-gold);
+      letter-spacing: 0.14em;
+    }
+
+    .wl-eyebrow {
+      display: inline-flex; align-items: center; gap: 0.7rem;
+      font-family: var(--f-inscription);
+      font-size: 0.65rem; letter-spacing: 0.3em; text-transform: uppercase;
+      color: var(--c-gold);
+      margin-bottom: 1.5rem;
+    }
+    .wl-eyebrow::before {
+      content: '';
+      width: 24px; height: 1px;
+      background: var(--c-gold); opacity: 0.55;
+      flex-shrink: 0;
+    }
+
+    .wl-heading {
+      font-family: var(--f-inscription);
+      font-size: clamp(1.9rem, 3.2vw, 3.1rem);
+      font-weight: 400; letter-spacing: 0.04em;
+      color: var(--c-ink); line-height: 1.2;
+      margin-bottom: 1.5rem;
+    }
+    .wl-heading em {
+      font-family: var(--f-display);
+      font-style: italic;
+      color: var(--c-gold); font-size: 1.07em;
+    }
+
+    .wl-sub {
+      font-size: 1.05rem; color: var(--c-ink-soft);
+      max-width: 46ch; line-height: 1.75;
+      margin-bottom: 2.2rem;
+    }
+
+    .wl-trust {
+      display: flex; flex-wrap: wrap; gap: 1rem 1.6rem;
+    }
+    .wl-trust-item {
+      display: inline-flex; align-items: center; gap: 0.45rem;
+      font-family: var(--f-inscription);
+      font-size: 0.6rem; letter-spacing: 0.18em; text-transform: uppercase;
+      color: var(--c-ink-faint);
+    }
+    .wl-trust-item svg { color: var(--c-gold); opacity: 0.65; flex-shrink: 0; }
+
+    /* ========================================================
+       PRICE ADVANTAGE BADGE — hero content
+    ======================================================== */
+    /* ========================================================
+       PRICE ADVANTAGE — aside editorial com barra dourada
+    ======================================================== */
+    .wl-price-badge {
+      position: relative;
+      padding: 0.2rem 0 0.2rem 1.2rem;
+      margin: 1.8rem 0 2rem;
+      max-width: 420px;
+    }
+    .wl-price-badge::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 0; bottom: 0; width: 2px;
+      background: linear-gradient(180deg, var(--c-gold) 0%, rgba(201,169,97,0.12) 100%);
+      border-radius: 1px;
+    }
+    .wl-price-badge-eyebrow {
+      display: block;
+      font-family: var(--f-inscription);
+      font-size: 0.74rem; letter-spacing: 0.34em; text-transform: uppercase;
+      color: rgba(201, 169, 97, 0.6); margin-bottom: 0.32rem;
+    }
+    .wl-price-badge-heading {
+      font-family: var(--f-inscription);
+      font-size: 1.18rem; font-weight: 400; letter-spacing: 0.06em;
+      color: var(--c-gold-soft); line-height: 1.28; margin-bottom: 0.45rem;
+      text-shadow: 0 0 20px rgba(201,169,97,0.18);
+    }
+    .wl-price-badge-divider {
+      width: 60%; height: 1px; margin-bottom: 0.45rem;
+      background: linear-gradient(to right, rgba(201,169,97,0.3), transparent);
+    }
+    .wl-price-badge-text {
+      font-size: 0.9rem; color: var(--c-ink-soft); line-height: 1.75;
+      font-family: var(--f-body);
+    }
+    .wl-price-badge-text strong { font-weight: 600; color: var(--c-ink); }
+
+    /* Hero CTA mobile button (hidden on desktop) */
+    .wl-hero-cta-mobile {
+      display: none;
+    }
+
+    /* ========================================================
+       FORM CARD
+    ======================================================== */
+    .wl-form-card {
+      background: var(--c-wine-deep);
+      border: 1px solid var(--c-gold-deep);
+      border-radius: var(--radius-lg);
+      padding: 2.4rem 2rem 2rem;
+      position: relative;
+      overflow: hidden;
+      box-shadow:
+        inset 0 0 0 1px rgba(201,169,97,0.06),
+        0 30px 70px rgba(0,0,0,0.65),
+        0 2px 8px rgba(0,0,0,0.5);
+      transition: border-color var(--d-fast) var(--ease),
+                  transform var(--d-med) var(--ease),
+                  box-shadow var(--d-med) var(--ease);
+    }
+    .wl-form-card:hover {
+      border-color: var(--c-gold);
+      transform: translateY(-5px);
+      box-shadow:
+        0 28px 54px -14px rgba(0,0,0,0.75),
+        0 0 0 1px rgba(201,169,97,0.15) inset,
+        0 8px 28px -8px rgba(139,10,26,0.35);
+    }
+
+    /* Corner ornaments */
+    .wl-form-card::before,
+    .wl-form-card::after {
+      content: '';
+      position: absolute;
+      width: 16px; height: 16px;
+      border-color: var(--c-gold);
+      border-style: solid;
+      opacity: 0.35;
+    }
+    .wl-form-card::before { top: 14px; left: 14px; border-width: 1px 0 0 1px; }
+    .wl-form-card::after  { bottom: 14px; right: 14px; border-width: 0 1px 1px 0; }
+
+    .wl-form-head {
+      text-align: center;
+      padding-bottom: 1.5rem;
+      margin-bottom: 1.6rem;
+      border-bottom: 1px solid var(--c-line);
+    }
+    .wl-form-ornament {
+      color: var(--c-gold); opacity: 0.7;
+      font-size: 1rem; margin-bottom: 0.75rem;
+    }
+    .wl-form-head h2 {
+      font-family: var(--f-inscription);
+      font-size: 1.05rem; font-weight: 700;
+      letter-spacing: 0.14em; color: var(--c-ink);
+      margin-bottom: 0.5rem;
+    }
+    .wl-form-head p {
+      font-size: 0.92rem;
+      font-weight: 500;
+      color: var(--c-ink-soft);
+      line-height: 1.6;
+    }
+
+    /* Fields */
+    .wl-field { margin-bottom: 1rem; }
+
+    .wl-field-label {
+      display: block;
+      font-family: var(--f-body);
+      font-size: 0.94rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--c-ink);
+      margin-bottom: 0.5rem;
+    }
+
+    .wl-input {
+      width: 100%;
+      background: rgba(0,0,0,0.38);
+      border: 1px solid rgba(201,169,97,0.25);
+      border-radius: var(--radius);
+      padding: 0.85rem 1rem;
+      font-family: var(--f-body);
+      font-size: 0.95rem;
+      font-weight: 400;
+      color: var(--c-ink);
+      outline: none;
+      transition: border-color var(--d-fast) var(--ease),
+                  box-shadow var(--d-fast) var(--ease);
+      -webkit-appearance: none;
+    }
+    .wl-input::placeholder { color: rgba(201,169,97,0.3); }
+    .wl-input:focus {
+      border-color: rgba(201,169,97,0.6);
+      box-shadow: 0 0 0 3px rgba(201,169,97,0.08);
+    }
+
+    /* Profile cards — redesigned to look clearly interactive */
+    .wl-profiles-label {
+      display: block;
+      font-family: var(--f-body);
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--c-ink);
+      margin-bottom: 0.75rem;
+    }
+    .wl-profiles { display: flex; flex-direction: column; gap: 0.65rem; }
+
+    .wl-profile-card { cursor: pointer; display: block; }
+    .wl-profile-card input[type="radio"] { position: absolute; opacity: 0; pointer-events: none; }
+
+    .wl-profile-inner {
+      display: flex; align-items: center; gap: 0.9rem;
+      background: rgba(255,255,255,0.04);
+      border: 1.5px solid rgba(201,169,97,0.2);
+      border-radius: 6px;
+      padding: 0.9rem 1rem;
+      transition: border-color var(--d-fast) var(--ease),
+                  background   var(--d-fast) var(--ease),
+                  box-shadow   var(--d-fast) var(--ease);
+      position: relative;
+    }
+
+    /* Radio indicator circle */
+    .wl-profile-radio {
+      flex-shrink: 0;
+      width: 20px; height: 20px;
+      border-radius: 50%;
+      border: 2px solid rgba(201,169,97,0.4);
+      background: transparent;
+      display: flex; align-items: center; justify-content: center;
+      transition: border-color var(--d-fast) var(--ease),
+                  background   var(--d-fast) var(--ease);
+    }
+    .wl-profile-radio::after {
+      content: '';
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: var(--c-gold);
+      opacity: 0;
+      transform: scale(0);
+      transition: opacity var(--d-fast) var(--ease),
+                  transform var(--d-fast) var(--ease);
+    }
+
+    .wl-profile-text strong {
+      display: block;
+      font-family: var(--f-body);
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--c-ink);
+      margin-bottom: 0.15rem;
+      line-height: 1.3;
+    }
+    .wl-profile-text span {
+      font-size: 0.78rem; color: var(--c-ink-mute); line-height: 1.5;
+    }
+
+    .wl-profile-card:hover .wl-profile-inner {
+      border-color: rgba(201,169,97,0.45);
+      background: rgba(255,255,255,0.06);
+      box-shadow: 0 2px 12px rgba(0,0,0,0.3);
+    }
+    .wl-profile-card:hover .wl-profile-radio {
+      border-color: rgba(201,169,97,0.7);
+    }
+    .wl-profile-card input[type="radio"]:checked + .wl-profile-inner {
+      border-color: var(--c-gold);
+      background: rgba(201,169,97,0.08);
+      box-shadow: 0 0 0 1px rgba(201,169,97,0.15), 0 4px 16px rgba(0,0,0,0.4);
+    }
+    .wl-profile-card input[type="radio"]:checked + .wl-profile-inner .wl-profile-radio {
+      border-color: var(--c-gold);
+      background: rgba(201,169,97,0.15);
+    }
+    .wl-profile-card input[type="radio"]:checked + .wl-profile-inner .wl-profile-radio::after {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    .wl-error {
+      display: none;
+      font-size: 0.73rem; color: #c47070;
+      margin-top: 0.45rem; line-height: 1.4;
+    }
+    .wl-error.visible { display: block; }
+
+    /* Submit button */
+    .wl-btn {
+      width: 100%;
+      margin-top: 1.4rem;
+      display: flex; align-items: center; justify-content: center; gap: 0.65rem;
+      padding: 1.1rem 1.5rem;
+      background: linear-gradient(135deg, var(--c-red) 0%, var(--c-wine) 100%);
+      border: 1px solid var(--c-gold-deep);
+      border-radius: var(--radius);
+      box-shadow:
+        inset 0 1px 0 rgba(255,255,255,0.04),
+        0 4px 22px rgba(139,10,26,0.4);
+      font-family: var(--f-inscription);
+      font-size: 0.92rem; font-weight: 700;
+      letter-spacing: 0.18em; text-transform: uppercase;
+      white-space: nowrap;
+      color: #ffffff;
+      cursor: pointer;
+      transition: filter var(--d-fast) var(--ease),
+                  box-shadow var(--d-fast) var(--ease);
+      text-decoration: none;
+    }
+    .wl-btn:hover:not(:disabled) {
+      filter: brightness(1.12);
+      box-shadow:
+        inset 0 1px 0 rgba(255,255,255,0.06),
+        0 6px 32px rgba(139,10,26,0.55);
+    }
+    .wl-btn:disabled { opacity: 0.6; cursor: not-allowed; }
+
+    .wl-privacy {
+      text-align: center;
+      font-size: 0.7rem; color: var(--c-ink-faint);
+      margin-top: 0.85rem; line-height: 1.55;
+    }
+
+    /* Success */
+    .wl-success {
+      text-align: center;
+      padding: 2rem 0.5rem;
+      animation: fadeIn 0.5s var(--ease) both;
+    }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+    .wl-success-icon {
+      width: 54px; height: 54px;
+      border: 1px solid var(--c-gold-deep);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      color: var(--c-gold);
+      margin: 0 auto 1.5rem;
+    }
+    .wl-success h3 {
+      font-family: var(--f-inscription);
+      font-size: 1rem; font-weight: 400;
+      letter-spacing: 0.1em; color: var(--c-ink);
+      margin-bottom: 0.8rem;
+    }
+    .wl-success p {
+      font-size: 0.86rem; color: var(--c-ink-mute);
+      line-height: 1.7; max-width: 30ch; margin: 0 auto;
+    }
+
+    /* ========================================================
+       STATS SECTION
+    ======================================================== */
+    .wl-stats {
+      padding: 2rem 2rem;
+    }
+    .wl-stats-inner {
+      max-width: 900px; margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+      text-align: center;
+      padding: 3rem 2rem;
+      border-top: 1px solid var(--c-line);
+    }
+    .wl-stat-item { text-align: center; }
+    .wl-stat-num {
+      font-family: var(--f-inscription);
+      font-size: clamp(3rem, 6vw, 4.5rem);
+      font-weight: 500;
+      color: var(--c-gold);
+      line-height: 1;
+      letter-spacing: -0.01em;
+      margin-bottom: 0.5rem;
+      text-shadow: 0 0 30px rgba(201,169,97,0.2);
+    }
+    .wl-stat-suffix {
+      font-family: var(--f-inscription);
+      font-size: 0.55em;
+      font-weight: 400;
+      color: var(--c-gold-soft);
+      letter-spacing: 0.05em;
+    }
+    .wl-stat-label {
+      font-family: var(--f-inscription);
+      font-size: 0.7rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--c-ink);
+      margin-bottom: 0.5rem;
+      line-height: 1.4;
+    }
+    .wl-stat-desc {
+      font-size: 0.85rem;
+      color: var(--c-ink-mute);
+      line-height: 1.4;
+      max-width: 22ch;
+      margin: 0 auto;
+    }
+
+    /* ========================================================
+       ABOUT SECTION
+    ======================================================== */
+    .wl-about {
+      padding: 6rem 2rem;
+      position: relative;
+    }
+    .wl-about::before {
+      content: '';
+      position: absolute; top: 0; left: 10%; right: 10%;
+      height: 1px;
+      background: linear-gradient(to right, transparent, var(--c-line-strong), transparent);
+    }
+    .wl-about-inner { max-width: 940px; margin: 0 auto; }
+
+    .wl-section-eyebrow {
+      text-align: center;
+      font-family: var(--f-inscription);
+      font-size: 0.62rem; letter-spacing: 0.3em; text-transform: uppercase;
+      color: var(--c-gold); margin-bottom: 1rem;
+    }
+    .wl-section-head {
+      text-align: center;
+      font-family: var(--f-inscription);
+      font-size: clamp(1.4rem, 2.4vw, 2.1rem);
+      font-weight: 400; letter-spacing: 0.05em;
+      color: var(--c-ink); line-height: 1.3;
+      margin-bottom: 0.7rem;
+    }
+    .wl-section-head em {
+      font-family: var(--f-display);
+      font-style: italic; color: var(--c-gold); font-size: 1.06em;
+    }
+
+    .wl-rule {
+      display: flex; justify-content: center;
+      color: var(--c-gold); opacity: 0.45;
+      margin: 1rem 0 3.5rem;
+    }
+
+    /* Five pillars */
+    .wl-pillars {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.4rem;
+      margin-bottom: 1.4rem;
+    }
+    .wl-pillars-row2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.4rem;
+      max-width: calc(66.66% + 0.94rem);
+      margin: 0 auto 3.5rem;
+    }
+    .wl-pillar {
+      text-align: center;
+      padding: 2rem 1.4rem;
+      background: var(--c-bg-soft);
+      border: 1px solid var(--c-line);
+      border-radius: var(--radius);
+      position: relative;
+      overflow: hidden;
+      transition: border-color var(--d-fast) var(--ease),
+                  transform var(--d-med) var(--ease),
+                  box-shadow var(--d-med) var(--ease),
+                  background var(--d-med) var(--ease);
+    }
+    .wl-pillar::before {
+      content: "";
+      position: absolute;
+      top: 0; left: -100%;
+      width: 100%; height: 1px;
+      background: linear-gradient(90deg, transparent, var(--c-gold-soft), transparent);
+      transition: left 520ms var(--ease);
+    }
+    .wl-pillar::after {
+      content: "";
+      position: absolute;
+      top: 0; left: -120%;
+      width: 55%; height: 100%;
+      background: linear-gradient(
+        108deg,
+        transparent 0%,
+        rgba(201,169,97,0.03) 35%,
+        rgba(201,169,97,0.09) 50%,
+        rgba(201,169,97,0.03) 65%,
+        transparent 100%
+      );
+      pointer-events: none;
+      transition: left 680ms var(--ease);
+    }
+    .wl-pillar:hover {
+      border-color: var(--c-gold-deep);
+      transform: translateY(-7px);
+      background: rgba(58,14,22,0.5);
+      box-shadow:
+        0 22px 44px -12px rgba(0,0,0,0.65),
+        0 0 0 1px rgba(201,169,97,0.1) inset,
+        0 8px 20px -8px rgba(139,10,26,0.3);
+    }
+    .wl-pillar:hover::before { left: 0; }
+    .wl-pillar:hover::after  { left: 160%; }
+    .wl-pillar-num {
+      font-family: var(--f-display);
+      font-style: italic; font-size: 2.2rem;
+      color: var(--c-gold); opacity: 0.55;
+      margin-bottom: 0.9rem; line-height: 1;
+    }
+    .wl-pillar h3 {
+      font-family: var(--f-inscription);
+      font-size: 0.78rem; font-weight: 400;
+      letter-spacing: 0.14em; text-transform: uppercase;
+      color: var(--c-ink); margin-bottom: 0.65rem;
+    }
+    .wl-pillar p { font-size: 0.92rem; color: var(--c-ink-soft); line-height: 1.65; }
+
+    /* Pílulas de construção */
+    .wl-pills-head {
+      text-align: center;
+      font-family: var(--f-inscription);
+      font-size: 0.62rem; letter-spacing: 0.28em; text-transform: uppercase;
+      color: var(--c-gold-deep); margin-bottom: 1.2rem;
+    }
+    .wl-pills {
+      display: flex; flex-wrap: wrap; justify-content: center;
+      gap: 0.55rem; margin-bottom: 3.5rem;
+    }
+    .wl-pill {
+      display: inline-flex; align-items: center; gap: 0.4rem;
+      padding: 0.42rem 0.85rem;
+      background: var(--c-bg-soft);
+      border: 1px solid var(--c-line);
+      border-radius: 100px;
+      font-family: var(--f-inscription);
+      font-size: 0.58rem; letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--c-ink-mute);
+      transition: border-color var(--d-fast) var(--ease),
+                  color var(--d-fast) var(--ease);
+    }
+    .wl-pill:hover { border-color: var(--c-line-strong); color: var(--c-ink-soft); }
+    .wl-pill-dot {
+      width: 4px; height: 4px; border-radius: 50%;
+      background: var(--c-gold); opacity: 0.6; flex-shrink: 0;
+    }
+
+    /* Quote */
+    .wl-quote {
+      text-align: center;
+      max-width: 600px; margin: 0 auto 3.5rem;
+      padding: 2rem 1.5rem;
+      border-top: 1px solid var(--c-line);
+      border-bottom: 1px solid var(--c-line);
+    }
+    .wl-quote-mark {
+      font-family: var(--f-display);
+      font-style: italic; font-size: 2.4rem;
+      color: var(--c-gold); opacity: 0.35;
+      line-height: 1; margin-bottom: 1rem;
+    }
+    .wl-quote p {
+      font-family: var(--f-display);
+      font-style: italic;
+      font-size: clamp(1rem, 1.7vw, 1.18rem);
+      color: var(--c-ink-soft); line-height: 1.75;
+    }
+
+    /* For whom */
+    .wl-forwhom {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.8rem; margin-bottom: 3.5rem;
+    }
+    .wl-fw-item {
+      display: flex; align-items: flex-start; gap: 0.75rem;
+      padding: 1rem 1.2rem;
+      background: var(--c-bg-soft);
+      border: 1px solid var(--c-line-soft);
+      border-radius: var(--radius);
+      position: relative;
+      overflow: hidden;
+      transition: border-color var(--d-fast) var(--ease),
+                  transform var(--d-med) var(--ease),
+                  box-shadow var(--d-med) var(--ease),
+                  background var(--d-med) var(--ease);
+    }
+    .wl-fw-item::before {
+      content: "";
+      position: absolute;
+      top: 0; left: -100%;
+      width: 100%; height: 1px;
+      background: linear-gradient(90deg, transparent, var(--c-gold-soft), transparent);
+      transition: left 520ms var(--ease);
+    }
+    .wl-fw-item::after {
+      content: "";
+      position: absolute;
+      top: 0; left: -120%;
+      width: 55%; height: 100%;
+      background: linear-gradient(
+        108deg,
+        transparent 0%,
+        rgba(201,169,97,0.03) 35%,
+        rgba(201,169,97,0.09) 50%,
+        rgba(201,169,97,0.03) 65%,
+        transparent 100%
+      );
+      pointer-events: none;
+      transition: left 680ms var(--ease);
+    }
+    .wl-fw-item:hover {
+      border-color: var(--c-gold-deep);
+      transform: translateY(-5px);
+      background: rgba(58,14,22,0.45);
+      box-shadow:
+        0 18px 36px -10px rgba(0,0,0,0.6),
+        0 0 0 1px rgba(201,169,97,0.1) inset,
+        0 6px 16px -6px rgba(139,10,26,0.25);
+    }
+    .wl-fw-item:hover::before { left: 0; }
+    .wl-fw-item:hover::after  { left: 160%; }
+    .wl-fw-item svg { flex-shrink: 0; margin-top: 3px; color: var(--c-gold); opacity: 0.65; }
+    .wl-fw-item p { font-size: 0.92rem; color: var(--c-ink-soft); line-height: 1.6; }
+
+    /* Bottom CTA */
+    .wl-bottom-cta { text-align: center; padding-top: 1rem; }
+    .wl-bottom-cta > p {
+      font-size: 0.94rem; color: var(--c-ink-mute);
+      margin-bottom: 1.4rem;
+    }
+    .wl-btn-center {
+      display: inline-flex; width: auto; min-width: 280px; max-width: 360px;
+    }
+
+    /* ========================================================
+       FOOTER
+    ======================================================== */
+    .wl-footer {
+      padding: 2rem;
+      border-top: 1px solid var(--c-line-soft);
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 1rem;
+    }
+    .wl-footer img { height: 34px; width: auto; opacity: 0.4; }
+    .wl-footer-copy {
+      font-family: var(--f-inscription);
+      font-size: 0.6rem; letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--c-ink-faint); text-align: right;
+    }
+
+    /* ========================================================
+       PILARES ACCORDION
+    ======================================================== */
+    .pilares {
+      display: flex; flex-direction: column; gap: 1rem;
+      list-style: none; padding: 0; margin: 0;
+      counter-reset: pilar;
+    }
+    .pilar {
+      border: 1px solid var(--c-line);
+      border-radius: var(--radius);
+      background: linear-gradient(180deg, rgba(29,10,13,0.6) 0%, rgba(20,6,9,0.8) 100%);
+      transition: border-color var(--d-med) var(--ease), background var(--d-med) var(--ease);
+      overflow: hidden; position: relative;
+    }
+    .pilar::before {
+      content: ""; position: absolute;
+      left: 0; top: 0; bottom: 0; width: 2px;
+      background: var(--c-gold); opacity: 0;
+      transition: opacity var(--d-med) var(--ease);
+    }
+    .pilar:hover { border-color: var(--c-line-strong); background: linear-gradient(180deg, rgba(58,14,22,0.4) 0%, rgba(29,10,13,0.8) 100%); }
+    .pilar:hover::before { opacity: 1; }
+    .pilar.open { border-color: var(--c-gold-deep); background: linear-gradient(180deg, rgba(58,14,22,0.5) 0%, rgba(29,10,13,0.85) 100%); }
+    .pilar.open::before { opacity: 1; }
+
+    .pilar-head {
+      width: 100%; display: grid; grid-template-columns: auto 1fr auto;
+      align-items: center; gap: 1.8rem; padding: 1.4rem 1.8rem;
+      background: none; border: none; cursor: pointer; text-align: left;
+      color: var(--c-ink); transition: background var(--d-fast) var(--ease), gap 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .pilar-head:hover { background: rgba(201,169,97,0.03); }
+    .pilar.open .pilar-head { gap: 2.8rem; }
+
+    .pilar-num {
+      position: relative; width: 120px; height: 120px;
+      display: flex; align-items: center; justify-content: center;
+      border: 1.5px solid rgba(201,169,97,0.28); border-radius: 50%; flex-shrink: 0;
+      overflow: hidden;
+      background: rgba(20,6,9,0.95);
+      box-shadow: 0 0 0 4px rgba(201,169,97,0.06), 0 6px 32px rgba(0,0,0,0.6);
+      transition: transform var(--d-med) var(--ease), border-color var(--d-med) var(--ease), box-shadow var(--d-med) var(--ease);
+    }
+    .pilar:hover .pilar-num {
+      border-color: var(--c-gold);
+      box-shadow: 0 0 0 4px rgba(201,169,97,0.1), 0 0 20px rgba(201,169,97,0.18), 0 4px 24px rgba(0,0,0,0.55);
+      transform: scale(1.07);
+    }
+    .pilar.open .pilar-num {
+      border-color: var(--c-gold);
+      box-shadow: 0 0 0 5px rgba(201,169,97,0.15), 0 0 36px rgba(201,169,97,0.3), 0 4px 24px rgba(0,0,0,0.55);
+      animation: pilar-num-grow 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+    @keyframes pilar-num-grow {
+      0%   { transform: scale(1); }
+      100% { transform: scale(1.18); }
+    }
+    .pilar-num-img {
+      position: absolute; inset: 0;
+      width: 100%; height: 100%;
+      object-fit: cover; object-position: center 10%;
+      display: block; z-index: 0;
+      filter: none;
+      transform: scale(1.1);
+      transition: filter 0.75s var(--ease), transform 0.9s var(--ease);
+    }
+    .pilar:hover .pilar-num-img, .pilar.open .pilar-num-img {
+      filter: none;
+      transform: scale(1.0);
+    }
+    .pilar-num-roman {
+      display: none;
+    }
+    .pilar-ico {
+      color: var(--c-gold); opacity: 0; transform: scale(0.7);
+      z-index: 2; filter: drop-shadow(0 1px 6px rgba(0,0,0,1));
+      transition: opacity var(--d-med) var(--ease), transform var(--d-med) var(--ease);
+    }
+    .pilar.open .pilar-num-roman, .pilar:hover .pilar-num-roman { opacity: 0; transform: scale(0.7); }
+
+    .pilar-titles { display: flex; flex-direction: column; gap: 0.25rem; }
+    .pilar-kicker {
+      font-family: var(--f-inscription); font-size: 0.72rem; letter-spacing: 0.3em;
+      text-transform: uppercase; color: var(--c-gold); font-style: normal; opacity: 0.85;
+    }
+    .pilar-title {
+      font-family: var(--f-inscription); font-size: clamp(1.1rem, 1.8vw, 1.5rem);
+      font-weight: 500; color: var(--c-ink); line-height: 1.2;
+    }
+    .pilar-desc { font-size: 1rem; color: var(--c-ink-mute); line-height: 1.5; }
+
+    .pilar-toggle {
+      width: 42px; height: 42px; display: flex; align-items: center; justify-content: center;
+      border: 1px solid var(--c-line); border-radius: 50%; color: var(--c-gold);
+      transition: transform var(--d-med) var(--ease), border-color var(--d-med) var(--ease);
+      flex-shrink: 0;
+    }
+    .pilar.open .pilar-toggle { transform: rotate(45deg); border-color: var(--c-gold); background: rgba(201,169,97,0.08); }
+
+    .pilar-body {
+      display: grid; grid-template-rows: 0fr;
+      transition: grid-template-rows var(--d-med) var(--ease);
+    }
+    .pilar.open .pilar-body { grid-template-rows: 1fr; }
+    .pilar-body > div { overflow: hidden; }
+
+    .pilar-body-inner { padding: 0 2rem 0 9.5rem; max-width: 900px; }
+    .pilar-body-inner > *:last-child { padding-bottom: 2rem; }
+    .pilar-body-inner > p {
+      font-family: var(--f-body); font-size: 0.95rem; line-height: 1.6;
+      color: var(--c-ink-soft); padding-left: 1.2rem;
+    }
+
+    .parts { display: flex; flex-direction: column; gap: 0.15rem; margin-top: 1rem; }
+    .parts li {
+      display: grid; grid-template-columns: 3rem 1fr; align-items: center;
+      font-size: 0.9rem; padding: 0.4rem 0; color: var(--c-ink-soft);
+      transition: color var(--d-fast) var(--ease), padding-left var(--d-fast) var(--ease);
+    }
+    .parts li:hover { color: var(--c-gold); padding-left: 0.5rem; }
+    .parts li span {
+      font-family: var(--f-inscription); font-size: 0.72rem;
+      letter-spacing: 0.2em; color: var(--c-gold); opacity: 0.6;
+    }
+    .parts.parts-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0 2rem; }
+
+    .pilares-cta { text-align: center; margin-top: 3rem; }
+
+    @media (max-width: 900px) {
+      .pilar-head { padding: 1.1rem 1.2rem; gap: 1.2rem; }
+      .pilar-num { width: 80px; height: 80px; }
+      .pilar-title { font-size: 1.15rem; }
+      .pilar-desc { font-size: 0.9rem; }
+      .pilar-body-inner { padding: 0 1.2rem; }
+      .pilar-body-inner > *:last-child { padding-bottom: 1.8rem; }
+      .parts.parts-grid { grid-template-columns: 1fr; }
+    }
+
+    /* ========================================================
+       REVEAL ANIMATION
+    ======================================================== */
+    .reveal {
+      opacity: 0; transform: translateY(16px);
+      transition: opacity 0.65s var(--ease), transform 0.65s var(--ease);
+    }
+    .reveal.is-visible { opacity: 1; transform: none; }
+
+    /* ========================================================
+       RESPONSIVE
+    ======================================================== */
+    @media (max-width: 900px) {
+      .wl-hero-inner {
+        grid-template-columns: 1fr;
+        gap: 3.5rem;
+      }
+      .wl-sub { max-width: none; }
+      .wl-figure { opacity: 0.07; right: -8%; }
+      .wl-pillars { grid-template-columns: 1fr; gap: 1rem; }
+      .wl-pillars-row2 { grid-template-columns: 1fr; max-width: 100%; }
+      .wl-forwhom { grid-template-columns: 1fr; }
+      .wl-stats-inner { grid-template-columns: repeat(2, 1fr); gap: 2.5rem 1rem; padding: 2.5rem 1rem; }
+    }
+
+    @media (max-width: 580px) {
+      .wl-float-logo { top: 1rem; left: auto; right: 1.2rem; }
+      .wl-float-logo img { height: 44px; }
+
+      /* Hero — compacto no mobile, form aparece mais cedo */
+      .wl-hero { padding: 4rem 1.2rem 0; min-height: 0; }
+
+      /* Cavaleiro como fundo no mobile — colado na esquerda */
+      .wl-figure {
+        display: block;
+        left: -4%; right: auto; top: 0;
+        width: 75%; height: auto;
+        opacity: 0.28;
+        mask-image: linear-gradient(to bottom, black 48%, transparent 88%);
+        -webkit-mask-image: linear-gradient(to bottom, black 48%, transparent 88%);
+        filter: grayscale(0.15) drop-shadow(10px 0 28px rgba(0,0,0,0.95));
+        z-index: 0;
+      }
+
+      /* Ocultar elementos que geram poluição visual no mobile */
+      .wl-fullname { display: none; }
+      .wl-trust { display: none; }
+
+      /* Badge de preço — ocupa largura total no mobile */
+      .wl-price-badge { max-width: 100%; margin: 1.2rem 0 1.4rem; }
+
+      /* Centralizar hero content */
+      .wl-hero-mark { margin: 0 auto 0.6rem; }
+      .wl-eyebrow { display: flex; width: fit-content; margin-left: auto; margin-right: auto; }
+      .wl-heading { text-align: center; }
+      .wl-sub { text-align: center; max-width: none; font-size: 0.98rem; margin-bottom: 0.5rem; }
+
+      /* CTA mobile na hero */
+      .wl-hero-cta-mobile {
+        display: block;
+        width: 100%;
+        padding: 1.1rem 1.4rem;
+        background: linear-gradient(135deg, var(--c-red) 0%, #6b0815 100%);
+        border: 1px solid rgba(201, 169, 97, 0.35);
+        border-radius: var(--radius);
+        font-family: var(--f-inscription);
+        font-size: 1rem; font-weight: 800;
+        letter-spacing: 0.12em; text-transform: uppercase;
+        color: var(--c-gold-soft);
+        text-align: center;
+        text-decoration: none;
+        box-shadow:
+          0 4px 24px rgba(139,10,26,0.5),
+          inset 0 1px 0 rgba(255,255,255,0.05);
+        position: relative;
+        overflow: hidden;
+      }
+      .wl-hero-cta-mobile::after {
+        content: '';
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        background: linear-gradient(
+          105deg,
+          transparent 25%,
+          rgba(201, 169, 97, 0.18) 50%,
+          transparent 75%
+        );
+        transform: translateX(-100%);
+        animation: cta-shimmer 2.5s ease-in-out infinite;
+        pointer-events: none;
+      }
+      @keyframes cta-shimmer {
+        0%, 55%, 100% { transform: translateX(-100%); }
+        80% { transform: translateX(200%); }
+      }
+
+      /* Banda de destaque mobile */
+      .wl-vantagem-band {
+        margin: 0.4rem -1.2rem 0;
+        padding: 3rem 2rem;
+        background: var(--c-bg-elev);
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        -webkit-mask-image: radial-gradient(ellipse 90% 78% at 50% 50%, black 42%, transparent 72%);
+        mask-image: radial-gradient(ellipse 90% 78% at 50% 50%, black 42%, transparent 72%);
+      }
+      .wl-vantagem-band::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(ellipse 85% 90% at 50% 50%,
+          rgba(201, 169, 97, 0.22) 0%,
+          rgba(201, 169, 97, 0.08) 45%,
+          transparent 68%
+        );
+        pointer-events: none;
+      }
+      .wl-vantagem-band .wl-price-badge {
+        max-width: 100%;
+        margin: 0;
+        padding-left: 0;
+        text-align: center;
+      }
+      .wl-vantagem-band .wl-price-badge::before { display: none; }
+      .wl-vantagem-band .wl-price-badge-divider {
+        background: linear-gradient(to right, transparent, rgba(201,169,97,0.3), transparent);
+        width: 60%;
+        margin: 0 auto;
+      }
+
+      .wl-form-card { padding: 1.1rem 0.9rem 1.1rem; }
+      .wl-form-head { padding-bottom: 0.75rem; margin-bottom: 0.75rem; }
+      .wl-form-ornament { margin-bottom: 0.3rem; font-size: 0.85rem; }
+      .wl-form-head h2 { font-size: 0.9rem; margin-bottom: 0.25rem; }
+      .wl-form-head p { font-size: 0.8rem; }
+      .wl-field { margin-bottom: 0.6rem; }
+      .wl-field-label { font-size: 0.82rem; margin-bottom: 0.25rem; }
+      .wl-input { padding: 0.6rem 0.85rem; font-size: 0.88rem; }
+      .wl-profiles-label { margin-bottom: 0.4rem; }
+      .wl-profiles { gap: 0.4rem; }
+      .wl-profile-inner { padding: 0.6rem 0.8rem; }
+      .wl-profile-text strong { font-size: 0.82rem; }
+      .wl-profile-text span { font-size: 0.72rem; }
+      .wl-btn { margin-top: 0.75rem; padding: 0.85rem 1.2rem; }
+
+      .wl-about { padding: 4rem 1.2rem; }
+      .wl-rosa { width: clamp(160px, 55vw, 220px); bottom: -2%; right: -2%; z-index: 0; }
+      .wl-about-inner { position: relative; z-index: 1; }
+      .wl-quote { padding: 1.6rem 0.5rem; }
+
+      .wl-stats { padding: 1.5rem 1.2rem; }
+      .wl-stats-inner { grid-template-columns: repeat(2, 1fr); gap: 2rem 1rem; padding: 2.5rem 1rem; }
+
+      .wl-footer { flex-direction: column; text-align: center; }
+      .wl-footer-copy { text-align: center; }
+      .wl-btn-center { max-width: 100%; width: 100%; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .reveal { opacity: 1; transform: none; transition: none; }
+      .wl-pillar, .wl-fw-item, .wl-form-card { transition: none; }
+      .wl-hero-cta-mobile { animation: none; }
+    }
+  </style>
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "wkzx1hrrsw");
+  </script>
+</head>
+<body>
+
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- SVG icon sprite (used by pilares accordion) -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <symbol id="ico-shield" viewBox="0 0 24 24">
+        <path d="M12 2 L20 5 L20 12 C20 17 16 21 12 22 C8 21 4 17 4 12 L4 5 Z" fill="none" stroke="currentColor" stroke-width="1"/>
+      </symbol>
+      <symbol id="ico-compass" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1"/>
+        <path d="M12 6 L14 12 L12 18 L10 12 Z" fill="currentColor" opacity="0.8"/>
+        <circle cx="12" cy="12" r="0.8" fill="currentColor"/>
+      </symbol>
+      <symbol id="ico-chain" viewBox="0 0 24 24">
+        <rect x="3" y="9" width="8" height="6" rx="3" fill="none" stroke="currentColor" stroke-width="1"/>
+        <rect x="13" y="9" width="8" height="6" rx="3" fill="none" stroke="currentColor" stroke-width="1"/>
+        <line x1="11" y1="12" x2="13" y2="12" stroke="currentColor" stroke-width="1"/>
+      </symbol>
+      <symbol id="ico-flame" viewBox="0 0 24 24">
+        <path d="M12 2 C12 6 8 8 8 12 C8 15 10 17 12 17 C14 17 16 15 16 12 C16 10 15 9 14 8 C14 10 13 11 12 11 C13 8 14 6 12 2 Z M12 17 C8 17 6 19 6 21 L18 21 C18 19 16 17 12 17 Z" fill="none" stroke="currentColor" stroke-width="0.9"/>
+      </symbol>
+      <symbol id="ico-crown" viewBox="0 0 24 24">
+        <path d="M3 9 L7 14 L12 7 L17 14 L21 9 L20 18 L4 18 Z" fill="none" stroke="currentColor" stroke-width="1"/>
+        <circle cx="3" cy="9" r="0.8" fill="currentColor"/>
+        <circle cx="12" cy="7" r="0.8" fill="currentColor"/>
+        <circle cx="21" cy="9" r="0.8" fill="currentColor"/>
+      </symbol>
+      <symbol id="ico-rose" viewBox="0 0 24 24">
+        <path d="M12 4 C9 4 7 6 7 9 C7 11 8 12 10 13 C8 13 7 14 7 16 C7 19 9 21 12 21 C15 21 17 19 17 16 C17 14 16 13 14 13 C16 12 17 11 17 9 C17 6 15 4 12 4 Z M12 8 C13 8 14 9 14 10 C14 11 13 12 12 12 C11 12 10 11 10 10 C10 9 11 8 12 8 Z" fill="none" stroke="currentColor" stroke-width="0.8"/>
+      </symbol>
+      <symbol id="ico-plus" viewBox="0 0 24 24">
+        <line x1="12" y1="5" x2="12" y2="19" stroke="currentColor" stroke-width="1.2"/>
+        <line x1="5" y1="12" x2="19" y2="12" stroke="currentColor" stroke-width="1.2"/>
+      </symbol>
+      <symbol id="ico-arrow" viewBox="0 0 24 24">
+        <line x1="4" y1="12" x2="20" y2="12" stroke="currentColor" stroke-width="1.2"/>
+        <path d="M14 6 L20 12 L14 18" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+      </symbol>
+    </defs>
+  </svg>
+
+  <!-- Floating logo — fades on scroll -->
+  <a href="#wl-title" class="wl-float-logo" id="wl-float-logo" aria-label="Voltar ao topo">
+    <img src="logopequena.PNG" alt="O Eterno MHRP" />
+  </a>
+
+  <!-- ======================================================
+       HERO
+  ====================================================== -->
+  <section class="wl-hero" aria-labelledby="wl-title">
+
+    <img src="cavaleiro-de-lado-cortado-esquerda.png"
+         class="wl-figure" alt="" aria-hidden="true" loading="eager" />
+
+    <div class="wl-hero-inner">
+
+      <!-- Conteúdo -->
+      <div class="wl-hero-content">
+
+        <div class="wl-hero-mark reveal">
+          <img src="logogrande.PNG" alt="O Eterno M.H.R.P." />
+        </div>
+
+        <p class="wl-fullname reveal">
+          O Eterno <span>M</span>anual para ser o <span>H</span>omem que ela <span>R</span>espeita e <span>P</span>recisa
+        </p>
+
+        <div class="wl-eyebrow reveal">Lista de Espera</div>
+
+        <h1 class="wl-heading reveal" id="wl-title">
+          As vagas para<br>
+          <em>O Eterno MHRP</em><br>
+          abrem em breve.
+        </h1>
+
+        <p class="wl-sub reveal">
+          Este não é um manual para todos. É para o homem que busca uma mulher de valores e para aquele que já a encontrou, mas deseja conquistar e manter o respeito dela, construindo pilares sólidos dentro do relacionamento.
+        </p>
+
+        <!-- CTA exclusivo mobile -->
+        <a href="#nome" class="wl-hero-cta-mobile reveal" aria-label="Ir para o formulário de inscrição">
+          Entrar na lista de espera
+        </a>
+
+        <!-- Banda mobile: só vantagem exclusiva, fundo claro -->
+        <div class="wl-vantagem-band reveal">
+          <div class="wl-price-badge" role="note" aria-label="Vantagem exclusiva para inscritos na lista">
+            <span class="wl-price-badge-eyebrow">Vantagem exclusiva</span>
+            <p class="wl-price-badge-heading">Quem chega antes, <strong>paga menos</strong>.</p>
+            <div class="wl-price-badge-divider" aria-hidden="true"></div>
+            <p class="wl-price-badge-text">
+              Entre para a lista de espera para garantir uma <strong>condição especial de preço</strong> e ser o primeiro a saber quando as vagas abrirem.
+            </p>
+          </div>
+        </div>
+
+        <div class="wl-trust reveal" role="list">
+          <div class="wl-trust-item" role="listitem">
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            Primeiro a saber
+          </div>
+          <div class="wl-trust-item" role="listitem">
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            Preço especial de lançamento
+          </div>
+          <div class="wl-trust-item" role="listitem">
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            Exclusivo para inscritos
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Formulário -->
+      <div class="wl-form-wrap reveal">
+        <div class="wl-form-card" role="region" aria-label="Formulário de inscrição">
+
+          <div class="wl-form-head">
+            <div class="wl-form-ornament" aria-hidden="true">✦</div>
+            <h2>Reserve sua vaga com condições exclusivas.</h2>
+            <p>Quem está na lista garante um <strong>preço menor que o preço cheio</strong> e será avisado antes de qualquer um quando as vagas abrirem.</p>
+          </div>
+
+          <form id="wl-form" novalidate>
+
+            <div class="wl-field">
+              <label class="wl-field-label" for="nome">Nome completo</label>
+              <input class="wl-input" type="text" id="nome" name="nome"
+                     required autocomplete="name"
+                     placeholder="Seu nome completo" />
+            </div>
+
+            <div class="wl-field">
+              <label class="wl-field-label" for="email">E-mail</label>
+              <input class="wl-input" type="email" id="email" name="email"
+                     required autocomplete="email"
+                     placeholder="seu@email.com" />
+            </div>
+
+            <div class="wl-field">
+              <label class="wl-field-label" for="telefone">WhatsApp</label>
+              <input class="wl-input" type="tel" id="telefone" name="telefone"
+                     required autocomplete="tel"
+                     placeholder="(00) 00000-0000" inputmode="numeric" />
+            </div>
+
+            <div class="wl-field">
+              <span class="wl-profiles-label">Qual é o seu momento?</span>
+              <div class="wl-profiles" role="radiogroup" aria-required="true">
+
+                <label class="wl-profile-card">
+                  <input type="radio" name="perfil" value="Estou em um relacionamento" />
+                  <div class="wl-profile-inner">
+                    <div class="wl-profile-radio" aria-hidden="true"></div>
+                    <div class="wl-profile-text">
+                      <strong>Estou em um relacionamento</strong>
+                      <span>Quero edificar pilares sólidos com minha parceira.</span>
+                    </div>
+                  </div>
+                </label>
+
+                <label class="wl-profile-card">
+                  <input type="radio" name="perfil" value="Ainda não estou em um relacionamento" />
+                  <div class="wl-profile-inner">
+                    <div class="wl-profile-radio" aria-hidden="true"></div>
+                    <div class="wl-profile-text">
+                      <strong>Ainda não estou em um relacionamento</strong>
+                      <span>Quero me preparar para encontrar a parceira certa.</span>
+                    </div>
+                  </div>
+                </label>
+
+              </div>
+              <span class="wl-error" id="perfil-error" role="alert">
+                Selecione uma das opções acima para continuar.
+              </span>
+            </div>
+
+            <button type="submit" class="wl-btn" id="submit-btn">
+              <span class="btn-text">Entrar na lista de espera</span>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+
+            <p class="wl-privacy">
+              Seus dados são tratados com privacidade absoluta.<br>Nada de spam, jamais.
+            </p>
+
+          </form>
+
+          <!-- Mensagem de sucesso -->
+          <div class="wl-success" id="success-msg" style="display:none" role="status" aria-live="polite">
+            <div class="wl-success-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+            </div>
+            <h3>Seu lugar está reservado.</h3>
+            <p>Assim que as vagas abrirem, você será o primeiro a saber. Até lá, continue construindo.</p>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ======================================================
+       STATS — O que está incluído
+  ====================================================== -->
+  <section class="wl-stats" aria-label="O que está incluído">
+    <div class="wl-stats-inner">
+
+      <div class="wl-stat-item reveal">
+        <div class="wl-stat-num">
+          <span class="wl-counter" data-target="42">0</span>
+        </div>
+        <div class="wl-stat-label">Partes ao todo</div>
+        <p class="wl-stat-desc">Divididas entre os cinco pilares principais e o pilar extra.</p>
+      </div>
+
+      <div class="wl-stat-item reveal">
+        <div class="wl-stat-num">
+          <span class="wl-counter" data-target="6">0</span>
+        </div>
+        <div class="wl-stat-label">Pilares estruturados</div>
+        <p class="wl-stat-desc">Cinco principais mais o pilar extra de pílulas de construção.</p>
+      </div>
+
+      <div class="wl-stat-item reveal">
+        <div class="wl-stat-num">
+          <span class="wl-counter" data-target="760">0</span>
+        </div>
+        <div class="wl-stat-label">Minutos de conteúdo</div>
+        <p class="wl-stat-desc">Mais de 12 horas de aulas gravadas, diretas ao ponto.</p>
+      </div>
+
+      <div class="wl-stat-item reveal">
+        <div class="wl-stat-num">
+          <span class="wl-counter" data-target="4">0</span>
+        </div>
+        <div class="wl-stat-label">PDF's de aplicação</div>
+        <p class="wl-stat-desc">Um exercício prático ao fim de cada pilar principal.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ======================================================
+       SOBRE O PROJETO
+  ====================================================== -->
+  <section class="wl-about" aria-labelledby="about-heading" style="position:relative;">
+    <img src="rosa-vermelha-no-chao.png" class="wl-rosa" alt="" aria-hidden="true" loading="lazy" />
+    <div class="wl-about-inner">
+
+      <p class="wl-section-eyebrow reveal">Os pilares</p>
+
+      <h2 class="wl-section-head reveal" id="about-heading">
+        Um manual de construção.<br>
+        <em>Não um curso de relacionamento.</em>
+      </h2>
+
+      <div class="wl-rule reveal" aria-hidden="true">
+        <svg width="180" height="10" viewBox="0 0 180 10">
+          <line x1="0" y1="5" x2="76" y2="5" stroke="currentColor" stroke-width="0.5" opacity="0.6"/>
+          <circle cx="90" cy="5" r="2.5" fill="none" stroke="currentColor" stroke-width="0.8"/>
+          <circle cx="90" cy="5" r="1" fill="currentColor"/>
+          <line x1="104" y1="5" x2="180" y2="5" stroke="currentColor" stroke-width="0.5" opacity="0.6"/>
+        </svg>
+      </div>
+
+      <ol class="pilares" role="list">
+
+        <li class="pilar reveal" data-pilar="1">
+          <button class="pilar-head" aria-expanded="false" aria-controls="pilar-1">
+            <span class="pilar-num" aria-hidden="true">
+              <img class="pilar-num-img" src="Pilar 1 Thumb.png" alt="" loading="lazy" />
+              <span class="pilar-num-roman">I</span>
+              <svg class="pilar-ico" width="24" height="24"><use href="#ico-shield"/></svg>
+            </span>
+            <span class="pilar-titles">
+              <em class="pilar-kicker">Pilar I</em>
+              <span class="pilar-title">A Estrutura</span>
+              <span class="pilar-desc">Construir o homem individualmente. Fundação.</span>
+            </span>
+            <span class="pilar-toggle" aria-hidden="true">
+              <svg width="18" height="18"><use href="#ico-plus"/></svg>
+            </span>
+          </button>
+          <div class="pilar-body" id="pilar-1" role="region">
+            <div class="pilar-body-inner">
+              <p>O alicerce. Antes da escolha, antes do relacionamento, antes do legado: você. Desenvolvimento de estabilidade emocional, disciplina, direção e responsabilidade. Tudo o que vem depois depende deste estágio.</p>
+              <ul class="parts">
+                <li><span>01</span>Estrutura masculina</li>
+                <li><span>02</span>Segurança emocional</li>
+                <li><span>03</span>Decisão e liderança</li>
+                <li><span>04</span>Disciplina e direção</li>
+                <li><span>05</span>Exercício prático + PDF de aplicação</li>
+              </ul>
+            </div>
+          </div>
+        </li>
+
+        <li class="pilar reveal" data-pilar="2">
+          <button class="pilar-head" aria-expanded="false" aria-controls="pilar-2">
+            <span class="pilar-num" aria-hidden="true">
+              <img class="pilar-num-img" src="Pilar 2 Thumb.png" alt="" loading="lazy" />
+              <span class="pilar-num-roman">II</span>
+              <svg class="pilar-ico" width="24" height="24"><use href="#ico-compass"/></svg>
+            </span>
+            <span class="pilar-titles">
+              <em class="pilar-kicker">Pilar II</em>
+              <span class="pilar-title">A Escolha</span>
+              <span class="pilar-desc">Reconhecer uma mulher com valores e capacidade real de construção.</span>
+            </span>
+            <span class="pilar-toggle" aria-hidden="true"><svg width="18" height="18"><use href="#ico-plus"/></svg></span>
+          </button>
+          <div class="pilar-body" id="pilar-2" role="region">
+            <div class="pilar-body-inner">
+              <p>Nenhuma estrutura se sustenta sobre a escolha errada. Aqui você aprende a ler comportamento, compatibilidade de valores, maturidade e potencial concreto de construção a longo prazo.</p>
+              <ul class="parts">
+                <li><span>06</span>A escolha da mulher</li>
+                <li><span>07</span>Avaliação de comportamento</li>
+                <li><span>08</span>Compatibilidade de valores</li>
+                <li><span>09</span>Potencial de construção</li>
+                <li><span>10</span>Exercício prático + PDF de aplicação</li>
+              </ul>
+            </div>
+          </div>
+        </li>
+
+        <li class="pilar reveal" data-pilar="3">
+          <button class="pilar-head" aria-expanded="false" aria-controls="pilar-3">
+            <span class="pilar-num" aria-hidden="true">
+              <img class="pilar-num-img" src="Pilar 3 Thumb.png" alt="" loading="lazy" />
+              <span class="pilar-num-roman">III</span>
+              <svg class="pilar-ico" width="24" height="24"><use href="#ico-chain"/></svg>
+            </span>
+            <span class="pilar-titles">
+              <em class="pilar-kicker">Pilar III</em>
+              <span class="pilar-title">O Alinhamento</span>
+              <span class="pilar-desc">Limites, expectativas, rotina e visão de futuro estabelecidos com clareza.</span>
+            </span>
+            <span class="pilar-toggle" aria-hidden="true"><svg width="18" height="18"><use href="#ico-plus"/></svg></span>
+          </button>
+          <div class="pilar-body" id="pilar-3" role="region">
+            <div class="pilar-body-inner">
+              <p>A comunicação levada ao extremo. Aqui se define, em palavras claras, o que cada um espera, o que cada um se compromete a oferecer e como o casal neutraliza conflitos estruturais antes que eles nasçam.</p>
+              <ul class="parts">
+                <li><span>11</span>Limite versus controle</li>
+                <li><span>12</span>Alinhamento de compromisso</li>
+                <li><span>13</span>Influência externa</li>
+                <li><span>14</span>Comportamento social</li>
+                <li><span>15</span>Linguagem de amor</li>
+                <li><span>16</span>Exercício prático + PDF de aplicação</li>
+              </ul>
+            </div>
+          </div>
+        </li>
+
+        <li class="pilar reveal" data-pilar="4">
+          <button class="pilar-head" aria-expanded="false" aria-controls="pilar-4">
+            <span class="pilar-num" aria-hidden="true">
+              <img class="pilar-num-img" src="Pilar 4 Thumb.png" alt="" loading="lazy" />
+              <span class="pilar-num-roman">IV</span>
+              <svg class="pilar-ico" width="24" height="24"><use href="#ico-flame"/></svg>
+            </span>
+            <span class="pilar-titles">
+              <em class="pilar-kicker">Pilar IV</em>
+              <span class="pilar-title">A Condução</span>
+              <span class="pilar-desc">Manter o relacionamento forte através das fases, conflitos e desgastes.</span>
+            </span>
+            <span class="pilar-toggle" aria-hidden="true"><svg width="18" height="18"><use href="#ico-plus"/></svg></span>
+          </button>
+          <div class="pilar-body" id="pilar-4" role="region">
+            <div class="pilar-body-inner">
+              <p>Relacionamento não se conquista, se conduz. Este pilar trata de como você lidera com consistência ao longo do tempo, preservando confiança, admiração e atração mesmo diante da rotina e do conflito.</p>
+              <ul class="parts">
+                <li><span>17</span>Fases do relacionamento</li>
+                <li><span>18</span>Conflitos e reparação</li>
+                <li><span>19</span>Confiança e transparência</li>
+                <li><span>20</span>Rotina e convivência</li>
+                <li><span>21</span>Manutenção da atração</li>
+                <li><span>22</span>Exercício prático + PDF de aplicação</li>
+              </ul>
+            </div>
+          </div>
+        </li>
+
+        <li class="pilar reveal" data-pilar="5">
+          <button class="pilar-head" aria-expanded="false" aria-controls="pilar-5">
+            <span class="pilar-num" aria-hidden="true">
+              <img class="pilar-num-img" src="Pilar 5 Thumb.png" alt="" loading="lazy" />
+              <span class="pilar-num-roman">V</span>
+              <svg class="pilar-ico" width="24" height="24"><use href="#ico-crown"/></svg>
+            </span>
+            <span class="pilar-titles">
+              <em class="pilar-kicker">Pilar V</em>
+              <span class="pilar-title">A Consolidação</span>
+              <span class="pilar-desc">As decisões que tornam a relação sólida e preparada para o longo prazo.</span>
+            </span>
+            <span class="pilar-toggle" aria-hidden="true"><svg width="18" height="18"><use href="#ico-plus"/></svg></span>
+          </button>
+          <div class="pilar-body" id="pilar-5" role="region">
+            <div class="pilar-body-inner">
+              <p>Morar junto, casamento, organização patrimonial, rotina do casal, formação de família. Aqui o relacionamento deixa de ser provisório e se transforma em arquitetura de vida.</p>
+              <ul class="parts">
+                <li><span>23</span>Morar junto</li>
+                <li><span>24</span>Casamento</li>
+                <li><span>25</span>Alinhamento inicial da vida a dois</li>
+                <li><span>26</span>Organização da rotina</li>
+                <li><span>27</span>Estrutura financeira do casal</li>
+                <li><span>28</span>Exercício prático + PDF de aplicação</li>
+              </ul>
+            </div>
+          </div>
+        </li>
+
+        <li class="pilar pilar-extra reveal" data-pilar="6">
+          <button class="pilar-head" aria-expanded="false" aria-controls="pilar-6">
+            <span class="pilar-num" aria-hidden="true">
+              <img class="pilar-num-img" src="Pilulas de Construção thumb.png" alt="" loading="lazy" />
+              <span class="pilar-num-roman">+</span>
+              <svg class="pilar-ico" width="24" height="24"><use href="#ico-rose"/></svg>
+            </span>
+            <span class="pilar-titles">
+              <em class="pilar-kicker">Pilar extra</em>
+              <span class="pilar-title">Pílulas de Construção</span>
+              <span class="pilar-desc">Aulas independentes para dores específicas e situações reais.</span>
+            </span>
+            <span class="pilar-toggle" aria-hidden="true"><svg width="18" height="18"><use href="#ico-plus"/></svg></span>
+          </button>
+          <div class="pilar-body" id="pilar-6" role="region">
+            <div class="pilar-body-inner">
+              <p>Aproximadamente doze aulas independentes, cada uma resolvendo um tema sensível com orientação prática e direta. Você acessa na ordem que quiser, conforme a necessidade da sua vida.</p>
+              <ul class="parts parts-grid">
+                <li><span>·</span>Ciúmes</li>
+                <li><span>·</span>Término</li>
+                <li><span>·</span>Traição</li>
+                <li><span>·</span>Escolha da parceira</li>
+                <li><span>·</span>Afastamento</li>
+                <li><span>·</span>Desrespeito</li>
+                <li><span>·</span>Tomada de decisão</li>
+                <li><span>·</span>E mais.</li>
+              </ul>
+            </div>
+          </div>
+        </li>
+
+      </ol>
+
+
+      <blockquote class="wl-quote reveal">
+        <div class="wl-quote-mark" aria-hidden="true">❝</div>
+        <p>O problema nunca foi a mulher certa. O problema sempre foi a ausência de estrutura, princípios e direção que torna o homem invisível ao respeito dela.</p>
+      </blockquote>
+
+      <div class="wl-forwhom" role="list">
+        <div class="wl-fw-item reveal" role="listitem">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          <p>Para o homem que quer construir, não apenas conquistar.</p>
+        </div>
+        <div class="wl-fw-item reveal" role="listitem">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          <p>Para o homem em um relacionamento que quer edificar pilares sólidos com a parceira.</p>
+        </div>
+        <div class="wl-fw-item reveal" role="listitem">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          <p>Para o homem que ainda não está em um relacionamento e quer se preparar com seriedade.</p>
+        </div>
+        <div class="wl-fw-item reveal" role="listitem">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          <p>Para o homem que leva família, valores e propósito de longo prazo a sério.</p>
+        </div>
+      </div>
+
+      <div class="wl-bottom-cta reveal">
+        <p>As vagas são limitadas. Reserve seu lugar antes da abertura.</p>
+        <a href="#nome" class="wl-btn wl-btn-center">
+          <span>Quero reservar minha vaga</span>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ======================================================
+       FOOTER
+  ====================================================== -->
+  <footer class="wl-footer">
+    <a href="#wl-title" aria-label="Voltar ao topo">
+      <img src="logopequena.PNG" alt="O Eterno MHRP" />
+    </a>
+    <p class="wl-footer-copy">
+      &copy; <span id="year"></span> O Eterno M.H.R.P. Todos os direitos reservados.
+    </p>
+  </footer>
+
+  <!-- ======================================================
+       JAVASCRIPT
+  ====================================================== -->
+  <script>
+    const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbx3ZbqCJqrj7H_oJkaBjtko3ifcBFvr0IQ6PgADyCRqEUspz-m3H9V2-RxM9Ll9Oe33Og/exec';
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    /* ---- Floating logo — fade on scroll ---- */
+    (function () {
+      const logo = document.getElementById('wl-float-logo');
+      if (!logo) return;
+      let ticking = false;
+      const THRESHOLD = 80;
+      function update() {
+        logo.classList.toggle('is-hidden', window.scrollY > THRESHOLD);
+        ticking = false;
+      }
+      window.addEventListener('scroll', () => {
+        if (!ticking) { requestAnimationFrame(update); ticking = true; }
+      }, { passive: true });
+    })();
+
+    /* ---- Reveal on scroll ---- */
+    const revealEls = document.querySelectorAll('.reveal');
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((entry, i) => {
+        if (!entry.isIntersecting) return;
+        setTimeout(() => entry.target.classList.add('is-visible'), i * 55);
+        io.unobserve(entry.target);
+      });
+    }, { threshold: 0.1 });
+    revealEls.forEach(el => io.observe(el));
+
+    /* ---- Animated counters ---- */
+    function animateCounter(el) {
+      const target = parseInt(el.dataset.target, 10);
+      const duration = 1400;
+      const start = performance.now();
+      function step(now) {
+        const elapsed = now - start;
+        const progress = Math.min(elapsed / duration, 1);
+        const ease = 1 - Math.pow(1 - progress, 3);
+        el.textContent = Math.round(ease * target);
+        if (progress < 1) requestAnimationFrame(step);
+        else el.textContent = target;
+      }
+      requestAnimationFrame(step);
+    }
+
+    const counterObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        animateCounter(entry.target);
+        counterObserver.unobserve(entry.target);
+      });
+    }, { threshold: 0.5 });
+    document.querySelectorAll('.wl-counter').forEach(el => counterObserver.observe(el));
+
+    /* ---- Máscara de telefone ---- */
+    const telInput = document.getElementById('telefone');
+    telInput.addEventListener('input', function () {
+      let v = this.value.replace(/\D/g, '').slice(0, 11);
+      if      (v.length > 7)  v = '(' + v.slice(0,2) + ') ' + v.slice(2,7) + '-' + v.slice(7);
+      else if (v.length > 2)  v = '(' + v.slice(0,2) + ') ' + v.slice(2);
+      else if (v.length > 0)  v = '(' + v;
+      this.value = v;
+    });
+
+    /* ---- Formulário ---- */
+    const form      = document.getElementById('wl-form');
+    const submitBtn = document.getElementById('submit-btn');
+    const btnText   = submitBtn.querySelector('.btn-text');
+    const successEl = document.getElementById('success-msg');
+    const perfilErr = document.getElementById('perfil-error');
+
+    document.querySelectorAll('input[name="perfil"]').forEach(el => {
+      el.addEventListener('change', () => perfilErr.classList.remove('visible'));
+    });
+
+    form.addEventListener('submit', async function (e) {
+      e.preventDefault();
+
+      const perfil = document.querySelector('input[name="perfil"]:checked');
+      if (!perfil) {
+        perfilErr.classList.add('visible');
+        perfilErr.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        return;
+      }
+
+      const nome     = form.nome.value.trim();
+      const email    = form.email.value.trim();
+      const telefone = form.telefone.value.trim();
+      if (!nome || !email || !telefone) {
+        form.reportValidity();
+        return;
+      }
+
+      submitBtn.disabled = true;
+      btnText.textContent = 'Enviando…';
+
+      const payload = {
+        data:      new Date().toLocaleString('pt-BR', { timeZone: 'America/Sao_Paulo' }),
+        nome,
+        email,
+        telefone,
+        perfil:    perfil.value
+      };
+
+      try {
+        await fetch(APPS_SCRIPT_URL, {
+          method:  'POST',
+          mode:    'no-cors',
+          headers: { 'Content-Type': 'application/json' },
+          body:    JSON.stringify(payload)
+        });
+        form.style.display = 'none';
+        successEl.style.display = 'block';
+      } catch (err) {
+        submitBtn.disabled = false;
+        btnText.textContent = 'Entrar na lista de espera';
+        alert('Erro ao enviar. Verifique sua conexão e tente novamente.');
+      }
+    });
+
+    /* ---- CTA mobile → rola até o form e foca no nome ---- */
+    (function () {
+      const cta = document.querySelector('.wl-hero-cta-mobile');
+      if (!cta) return;
+      cta.addEventListener('click', function (e) {
+        e.preventDefault();
+        const formCard = document.querySelector('.wl-form-card');
+        const nomeInput = document.getElementById('nome');
+        if (!formCard) return;
+        const top = formCard.getBoundingClientRect().top + window.scrollY - 16;
+        window.scrollTo({ top, behavior: 'smooth' });
+        if (nomeInput) setTimeout(() => nomeInput.focus(), 650);
+      });
+    })();
+
+    /* ---- Pilares accordion (single-open, smooth) ---- */
+    (function () {
+      const pilares = document.querySelectorAll('.pilar');
+      pilares.forEach((pilar, idx) => {
+        const head = pilar.querySelector('.pilar-head');
+        if (!head) return;
+        head.addEventListener('click', () => {
+          const isOpen = pilar.classList.contains('open');
+          pilares.forEach(p => {
+            p.classList.remove('open');
+            const h = p.querySelector('.pilar-head');
+            if (h) h.setAttribute('aria-expanded', 'false');
+          });
+          if (!isOpen) {
+            pilar.classList.add('open');
+            head.setAttribute('aria-expanded', 'true');
+          }
+        });
+        if (idx === 0) {
+          pilar.classList.add('open');
+          head.setAttribute('aria-expanded', 'true');
+        }
+      });
+    })();
+  </script>
+</body>
+</html>
