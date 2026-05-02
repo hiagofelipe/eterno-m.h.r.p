@@ -1062,18 +1062,27 @@
       /* Banda de destaque mobile */
       .wl-vantagem-band {
         margin: 0.8rem -1.2rem 0;
-        padding: 3rem 1.6rem 3.2rem;
-        background: radial-gradient(ellipse 60% 55% at 50% 50%,
-          rgba(245, 237, 220, 0.94) 0%,
-          rgba(245, 237, 220, 0.52) 32%,
-          rgba(245, 237, 220, 0) 60%
-        );
+        padding: 2.4rem 1.6rem;
+        background: var(--c-bg-elev);
+        border-top: 1px solid var(--c-line);
+        border-bottom: 1px solid var(--c-line);
+        position: relative;
+        overflow: hidden;
         display: flex;
         flex-direction: column;
         align-items: center;
+        text-align: center;
       }
-
-      /* Price badge — adapta para fundo claro */
+      .wl-vantagem-band::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(ellipse 85% 100% at 50% 50%,
+          rgba(201, 169, 97, 0.10) 0%,
+          transparent 68%
+        );
+        pointer-events: none;
+      }
       .wl-vantagem-band .wl-price-badge {
         max-width: 100%;
         margin: 0;
@@ -1081,19 +1090,11 @@
         text-align: center;
       }
       .wl-vantagem-band .wl-price-badge::before { display: none; }
-      .wl-vantagem-band .wl-price-badge-eyebrow { color: rgba(120, 82, 18, 0.72); }
-      .wl-vantagem-band .wl-price-badge-heading {
-        color: #1a0608;
-        text-shadow: none;
-      }
-      .wl-vantagem-band .wl-price-badge-heading strong { color: #1a0608; }
       .wl-vantagem-band .wl-price-badge-divider {
-        background: linear-gradient(to right, transparent, rgba(120,82,18,0.4), transparent);
-        width: 70%;
+        background: linear-gradient(to right, transparent, rgba(201,169,97,0.3), transparent);
+        width: 60%;
         margin: 0 auto;
       }
-      .wl-vantagem-band .wl-price-badge-text { color: #3a1810; }
-      .wl-vantagem-band .wl-price-badge-text strong { color: #1a0608; }
 
       .wl-form-card { padding: 1.6rem 1rem 1.4rem; }
 
