@@ -227,6 +227,75 @@
     }
     .wl-trust-item svg { color: var(--c-gold); opacity: 0.65; flex-shrink: 0; }
 
+    /* ========================================================
+       PRICE ADVANTAGE BADGE — hero content
+    ======================================================== */
+    .wl-price-badge {
+      display: flex; align-items: stretch;
+      border: 1px solid rgba(201,169,97,0.32);
+      border-radius: var(--radius);
+      overflow: hidden;
+      margin: 1.8rem 0 2rem;
+      background: linear-gradient(135deg, rgba(58,14,22,0.55) 0%, rgba(39,10,17,0.7) 100%);
+      box-shadow:
+        0 8px 32px rgba(0,0,0,0.35),
+        inset 0 1px 0 rgba(201,169,97,0.08);
+      max-width: 480px;
+    }
+    .wl-price-badge-col {
+      flex: 1; padding: 1.1rem 1.3rem;
+      display: flex; flex-direction: column;
+      justify-content: center; gap: 0.28rem;
+    }
+    .wl-price-badge-col + .wl-price-badge-col {
+      border-left: 1px solid rgba(201,169,97,0.18);
+      position: relative;
+    }
+    /* Barra dourada vertical na coluna direita */
+    .wl-price-badge-col + .wl-price-badge-col::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 14px; bottom: 14px;
+      width: 2px;
+      background: linear-gradient(180deg, transparent, var(--c-gold) 40%, var(--c-gold) 60%, transparent);
+      border-radius: 1px;
+    }
+    .wl-price-badge-label {
+      font-family: var(--f-inscription);
+      font-size: 0.52rem; letter-spacing: 0.3em; text-transform: uppercase;
+      color: var(--c-ink-faint); line-height: 1;
+    }
+    .wl-price-badge-value {
+      font-family: var(--f-inscription);
+      font-size: 1.15rem; letter-spacing: -0.01em;
+      line-height: 1.1;
+    }
+    /* Coluna esquerda — preço riscado */
+    .wl-price-badge-col:first-child .wl-price-badge-value {
+      color: var(--c-ink-mute);
+      text-decoration: line-through;
+      text-decoration-color: rgba(201,169,97,0.45);
+    }
+    /* Coluna direita — condição exclusiva */
+    .wl-price-badge-col:last-child .wl-price-badge-label {
+      color: rgba(201,169,97,0.7);
+    }
+    .wl-price-badge-col:last-child .wl-price-badge-value {
+      font-family: var(--f-display);
+      font-style: italic;
+      font-size: 1.25rem;
+      color: var(--c-gold-soft);
+    }
+    .wl-price-badge-note {
+      font-size: 0.68rem; color: var(--c-ink-faint);
+      line-height: 1.4;
+    }
+    .wl-price-badge-arrow {
+      display: flex; align-items: center; justify-content: center;
+      padding: 0 0.7rem; flex-shrink: 0;
+      color: var(--c-gold); opacity: 0.5; font-size: 0.8rem;
+    }
+
     /* Hero CTA mobile button (hidden on desktop) */
     .wl-hero-cta-mobile {
       display: none;
@@ -974,11 +1043,18 @@
       .wl-fullname { display: none; }
       .wl-trust { display: none; }
 
+      /* Badge de preço — centraliza e ocupa largura total no mobile */
+      .wl-price-badge { max-width: 100%; margin: 1.4rem 0 1.6rem; }
+      .wl-price-badge-col { padding: 0.9rem 1rem; }
+      .wl-price-badge-value { font-size: 1rem; }
+      .wl-price-badge-col:last-child .wl-price-badge-value { font-size: 1.08rem; }
+      .wl-price-badge-note { font-size: 0.62rem; }
+
       /* Centralizar hero content */
       .wl-hero-mark { margin: 0 auto 0.6rem; }
       .wl-eyebrow { display: flex; width: fit-content; margin-left: auto; margin-right: auto; }
       .wl-heading { text-align: center; }
-      .wl-sub { text-align: center; max-width: none; font-size: 0.98rem; margin-bottom: 1.8rem; }
+      .wl-sub { text-align: center; max-width: none; font-size: 0.98rem; margin-bottom: 0.5rem; }
 
       /* CTA mobile na hero */
       .wl-hero-cta-mobile {
@@ -1109,6 +1185,21 @@
           Este não é um manual para todos. É para o homem que busca uma mulher de valores e para aquele que já a encontrou, mas deseja conquistar e manter o respeito dela, construindo pilares sólidos dentro do relacionamento.
         </p>
 
+        <!-- Bloco de vantagem financeira — âncora visual do benefício de preço -->
+        <div class="wl-price-badge reveal" aria-label="Vantagem de preço para inscritos na lista">
+          <div class="wl-price-badge-col">
+            <span class="wl-price-badge-label">Preço ao público</span>
+            <span class="wl-price-badge-value">R$ 389,90</span>
+            <span class="wl-price-badge-note">Acesso padrão no lançamento</span>
+          </div>
+          <div class="wl-price-badge-arrow" aria-hidden="true">→</div>
+          <div class="wl-price-badge-col">
+            <span class="wl-price-badge-label">Condição de lista</span>
+            <span class="wl-price-badge-value">Preço especial</span>
+            <span class="wl-price-badge-note">Garantido ao se inscrever aqui</span>
+          </div>
+        </div>
+
         <!-- CTA exclusivo mobile -->
         <a href="#nome" class="wl-hero-cta-mobile reveal" aria-label="Ir para o formulário de inscrição">
           Entrar na lista de espera
@@ -1117,15 +1208,15 @@
         <div class="wl-trust reveal" role="list">
           <div class="wl-trust-item" role="listitem">
             <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-            Para homens de propósito
+            Prioridade no acesso
           </div>
           <div class="wl-trust-item" role="listitem">
             <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-            Entrada prioritária
+            Preço especial de lançamento
           </div>
           <div class="wl-trust-item" role="listitem">
             <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-            Privado
+            Exclusivo para inscritos
           </div>
         </div>
 
@@ -1137,8 +1228,8 @@
 
           <div class="wl-form-head">
             <div class="wl-form-ornament" aria-hidden="true">✦</div>
-            <h2>Reserve seu lugar</h2>
-            <p>Preencha os dados abaixo para garantir prioridade no acesso.</p>
+            <h2>Reserve sua vaga com vantagem</h2>
+            <p>Inscritos garantem <strong>prioridade de acesso</strong> e o <strong>preço especial de lançamento</strong> — condição exclusiva para quem está nesta lista.</p>
           </div>
 
           <form id="wl-form" novalidate>
