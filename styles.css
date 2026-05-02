@@ -847,7 +847,7 @@ ul,ol { list-style: none; }
   object-position: center 10%;
   display: block;
   z-index: 0;
-  filter: brightness(0.38) saturate(0.5) contrast(0.92);
+  filter: brightness(0.55) saturate(0.6) contrast(0.92);
   transform: scale(1.1);
   transition: filter 0.75s var(--ease), transform 0.9s var(--ease);
 }
