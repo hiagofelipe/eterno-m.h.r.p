@@ -1035,8 +1035,8 @@
       .wl-float-logo { top: 1rem; left: auto; right: 1.2rem; }
       .wl-float-logo img { height: 44px; }
 
-      /* Hero — compacto no mobile, form aparece mais cedo */
-      .wl-hero { padding: 4rem 1.2rem 2.5rem; min-height: 0; }
+      /* Hero — compacto no mobile, tudo visível sem scroll */
+      .wl-hero { padding: 1.6rem 1.2rem 1.2rem; min-height: 0; }
 
       /* Cavaleiro como fundo no mobile — colado na esquerda */
       .wl-figure {
@@ -1054,22 +1054,24 @@
       .wl-fullname { display: none; }
       .wl-trust { display: none; }
 
-      /* Badge de preço — ocupa largura total no mobile */
-      .wl-price-badge { max-width: 100%; margin: 1.4rem 0 1.6rem; grid-template-columns: 56px 1fr; gap: 1rem; }
-      .wl-price-badge-seal { width: 54px; height: 54px; }
-      .wl-price-badge-heading { font-size: 0.85rem; }
+      /* Badge de preço — compacto no mobile */
+      .wl-price-badge { max-width: 100%; margin: 0.7rem 0 0.8rem; grid-template-columns: 48px 1fr; gap: 0.8rem; padding: 0.9rem 1rem 0.9rem 0.9rem; }
+      .wl-price-badge-seal { width: 46px; height: 46px; }
+      .wl-price-badge-heading { font-size: 0.8rem; }
+      .wl-price-badge-eyebrow { font-size: 0.48rem; }
+      .wl-price-badge-text { font-size: 0.78rem; }
 
-      /* Centralizar hero content */
-      .wl-hero-mark { margin: 0 auto 0.6rem; }
-      .wl-eyebrow { display: flex; width: fit-content; margin-left: auto; margin-right: auto; }
-      .wl-heading { text-align: center; }
-      .wl-sub { text-align: center; max-width: none; font-size: 0.98rem; margin-bottom: 0.5rem; }
+      /* Centralizar e compactar hero content */
+      .wl-hero-mark { margin: 0 auto 0.35rem; max-width: min(200px, 60%); }
+      .wl-eyebrow { display: flex; width: fit-content; margin-left: auto; margin-right: auto; margin-bottom: 0.6rem; }
+      .wl-heading { text-align: center; font-size: 1.65rem; margin-bottom: 0.7rem; }
+      .wl-sub { text-align: center; max-width: none; font-size: 0.88rem; line-height: 1.6; margin-bottom: 0.4rem; }
 
       /* CTA mobile na hero */
       .wl-hero-cta-mobile {
         display: block;
         width: 100%;
-        padding: 1.1rem 1.4rem;
+        padding: 0.9rem 1.4rem;
         background: linear-gradient(135deg, var(--c-red) 0%, #6b0815 100%);
         border: 1px solid var(--c-gold-deep);
         border-radius: var(--radius);
