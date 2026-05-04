@@ -961,6 +961,27 @@ ul,ol { list-style: none; }
   gap: 0 2rem;
 }
 
+.parts.parts-pills { gap: 0; }
+.parts.parts-pills li {
+  grid-template-columns: 2.4rem 1fr;
+  align-items: flex-start;
+  padding: 0.7rem 0;
+  border-bottom: 1px solid var(--c-line-soft);
+}
+.parts.parts-pills li:last-child { border-bottom: none; }
+.parts.parts-pills li:hover { padding-left: 0; color: inherit; }
+.parts.parts-pills li strong {
+  display: block;
+  font-family: var(--f-body); font-size: 0.88rem; font-weight: 600;
+  color: var(--c-ink); line-height: 1.3; margin-bottom: 0.18rem;
+  transition: color var(--d-fast) var(--ease);
+}
+.parts.parts-pills li:hover strong { color: var(--c-gold); }
+.parts.parts-pills li p {
+  font-size: 0.78rem; color: var(--c-ink-mute);
+  line-height: 1.5; margin: 0; padding-left: 0;
+}
+
 .pilares-cta { text-align: center; margin-top: 3rem; }
 
 /* ----------------------- AUDIENCE ----------------------- */
