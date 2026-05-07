@@ -1,400 +1,573 @@
 <!DOCTYPE html>
-<html lang="pt-BR" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:v="urn:schemas-microsoft-com:vml"
+      xmlns:o="urn:schemas-microsoft-com:office:office"
+      lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="x-apple-disable-message-reformatting" />
+  <meta name="format-detection" content="telephone=no, date=no, address=no, email=no, url=no" />
   <title>Compra Aprovada — O Eterno MHRP</title>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Cormorant+Garamond:ital,wght@0,400;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" type="text/css" />
-  <!--[if mso]>
-  <noscript>
-    <xml><o:OfficeDocumentSettings><o:PixelsPerInch>96</o:PixelsPerInch></o:OfficeDocumentSettings></xml>
-  </noscript>
-  <![endif]-->
-  <style>
 
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+  <!--[if mso]>
+  <xml>
+    <o:OfficeDocumentSettings>
+      <o:AllowPNG/>
+      <o:PixelsPerInch>96</o:PixelsPerInch>
+    </o:OfficeDocumentSettings>
+  </xml>
+  <![endif]-->
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Cormorant+Garamond:ital,wght@1,400;1,600&family=Inter:wght@300;400;500;600;700&display=swap');
 
     body, table, td, a { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
     table, td { mso-table-lspace: 0pt; mso-table-rspace: 0pt; }
-    img { -ms-interpolation-mode: bicubic; border: 0; outline: none; text-decoration: none; display: block; }
+    img { -ms-interpolation-mode: bicubic; border: 0; height: auto;
+          line-height: 100%; outline: none; text-decoration: none; display: block; }
     a { color: inherit; text-decoration: none; }
 
     body {
+      margin: 0 !important;
+      padding: 0 !important;
       background-color: #0e0406;
-      font-family: 'Inter', Arial, sans-serif;
-      margin: 0;
-      padding: 0;
+      width: 100% !important;
+      min-width: 100%;
     }
 
-    .email-wrapper {
-      background-color: #0e0406;
-      padding: 40px 16px;
-    }
-
-    .email-container {
-      max-width: 580px;
-      margin: 0 auto;
-      background-color: #150608;
-      border: 1px solid rgba(201,169,97,0.2);
-      border-radius: 6px;
-      overflow: hidden;
-    }
-
-    /* Header */
-    .email-header {
-      background: linear-gradient(180deg, #270a11 0%, #150608 100%);
-      padding: 36px 40px 28px;
-      text-align: center;
-      border-bottom: 1px solid rgba(201,169,97,0.15);
-    }
-
-    .email-logo {
-      max-width: 130px;
-      margin: 0 auto 20px;
-    }
-
-    .email-ornament {
-      color: #c9a961;
-      font-size: 14px;
-      letter-spacing: 0.4em;
-      opacity: 0.6;
-      margin-bottom: 12px;
-      font-family: 'Cinzel', Georgia, serif;
-    }
-
-    .email-status-badge {
-      display: inline-block;
-      background: rgba(201,169,97,0.08);
-      border: 1px solid rgba(201,169,97,0.3);
-      border-radius: 3px;
-      padding: 6px 20px;
-      font-family: 'Cinzel', Georgia, serif;
-      font-size: 10px;
-      letter-spacing: 0.3em;
-      text-transform: uppercase;
-      color: #c9a961;
-    }
-
-    /* Body */
-    .email-body {
-      padding: 40px 40px 36px;
-    }
-
-    .email-greeting {
-      font-family: 'Cinzel', Georgia, serif;
-      font-size: 22px;
-      font-weight: 400;
-      color: #f4e8d4;
-      line-height: 1.35;
-      margin-bottom: 8px;
-      letter-spacing: 0.04em;
-    }
-
-    .email-greeting em {
-      font-family: 'Cormorant Garamond', Georgia, serif;
-      font-style: italic;
-      color: #d4b574;
-    }
-
-    .email-divider {
-      width: 48px;
-      height: 1px;
-      background: linear-gradient(to right, #c9a961, rgba(201,169,97,0.1));
-      margin: 18px 0;
-    }
-
-    .email-text {
-      font-family: 'Inter', Arial, sans-serif;
-      font-size: 15px;
-      color: #d9c9ab;
-      line-height: 1.7;
-      margin-bottom: 14px;
-    }
-
-    /* Order box */
-    .order-box {
-      background: rgba(255,255,255,0.03);
-      border: 1px solid rgba(201,169,97,0.18);
-      border-radius: 4px;
-      padding: 24px 28px;
-      margin: 28px 0;
-    }
-
-    .order-box-label {
-      font-family: 'Cinzel', Georgia, serif;
-      font-size: 9px;
-      letter-spacing: 0.35em;
-      text-transform: uppercase;
-      color: rgba(201,169,97,0.65);
-      margin-bottom: 16px;
-    }
-
-    .order-row {
-      display: flex;
-      justify-content: space-between;
-      font-size: 14px;
-      color: #d9c9ab;
-      padding: 8px 0;
-      border-bottom: 1px solid rgba(201,169,97,0.08);
-    }
-
-    .order-row:last-child {
-      border-bottom: none;
-      padding-top: 12px;
-      margin-top: 4px;
-    }
-
-    .order-row-label {
-      color: #a89475;
-      font-size: 13px;
-    }
-
-    .order-row-value {
-      font-weight: 600;
-      color: #f4e8d4;
-      text-align: right;
-    }
-
-    .order-row-total .order-row-label {
-      font-family: 'Cinzel', Georgia, serif;
-      font-size: 11px;
-      letter-spacing: 0.1em;
-      color: #c9a961;
-    }
-
-    .order-row-total .order-row-value {
-      font-family: 'Cinzel', Georgia, serif;
-      font-size: 15px;
-      color: #c9a961;
-    }
-
-    /* CTA Button */
-    .email-cta-wrap {
-      text-align: center;
-      margin: 32px 0 8px;
-    }
-
-    .email-cta {
-      display: inline-block;
-      background: linear-gradient(135deg, #8b0a1a 0%, #3a0e16 100%);
-      border: 1px solid rgba(201,169,97,0.35);
-      border-radius: 4px;
-      padding: 14px 36px;
-      font-family: 'Cinzel', Georgia, serif;
-      font-size: 11px;
-      font-weight: 600;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: #f4e8d4;
-      text-decoration: none;
-      mso-padding-alt: 14px 36px;
-    }
-
-    .email-cta-note {
-      font-size: 12px;
-      color: #7a6a55;
-      text-align: center;
-      margin-top: 10px;
-    }
-
-    /* Divider section */
-    .section-divider {
-      border: none;
-      border-top: 1px solid rgba(201,169,97,0.1);
-      margin: 32px 0;
-    }
-
-    .email-small {
-      font-size: 13px;
-      color: #7a6a55;
-      line-height: 1.65;
-    }
-
-    /* Footer */
-    .email-footer {
-      background: #0e0406;
-      border-top: 1px solid rgba(201,169,97,0.1);
-      padding: 24px 40px;
-      text-align: center;
-    }
-
-    .footer-logo {
-      max-width: 80px;
-      margin: 0 auto 14px;
-      opacity: 0.5;
-    }
-
-    .footer-text {
-      font-size: 11px;
-      color: #7a6a55;
-      line-height: 1.7;
-    }
-
-    .footer-text a {
-      color: #a89475;
-      text-decoration: underline;
-    }
-
-    @media only screen and (max-width: 480px) {
-      .email-body { padding: 28px 24px 24px; }
-      .email-header { padding: 28px 24px 22px; }
-      .email-footer { padding: 20px 24px; }
-      .order-box { padding: 18px 18px; }
-      .email-greeting { font-size: 18px; }
+    @media only screen and (max-width: 640px) {
+      .email-container { width: 100% !important; max-width: 100% !important; }
+      .hero-headline   { font-size: 32px !important; line-height: 1.26 !important; }
+      .hero-sub        { font-size: 22px !important; }
+      .pad             { padding-left: 24px !important; padding-right: 24px !important; }
+      .pad-v           { padding-top: 40px !important; padding-bottom: 40px !important; }
+      .cta-cell        { padding: 44px 24px !important; }
     }
   </style>
 </head>
-<body>
 
-<div class="email-wrapper">
-  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+<body style="margin:0; padding:0; background-color:#0e0406; width:100%;">
+
+  <div style="display:none; max-height:0; overflow:hidden; mso-hide:all;
+              font-size:1px; color:#0e0406; line-height:1px;">
+    Sua compra foi aprovada — acesse agora o Eterno MHRP e comece sua jornada. &nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;
+  </div>
+
+  <table role="presentation" cellpadding="0" cellspacing="0" border="0"
+         width="100%" style="background-color:#0e0406;">
     <tr>
-      <td align="center">
+      <td align="center" style="padding: 28px 16px 48px;">
 
-        <table class="email-container" width="580" cellpadding="0" cellspacing="0" border="0" style="max-width:580px;width:100%;background-color:#150608;border:1px solid rgba(201,169,97,0.2);border-radius:6px;overflow:hidden;">
+        <table class="email-container" role="presentation" cellpadding="0" cellspacing="0"
+               border="0" width="600" style="max-width:600px; width:100%;">
+
+          <!-- Borda superior dupla -->
+          <tr>
+            <td style="height:1px; background-color:rgba(201,169,97,0.18);
+                       mso-line-height-rule:exactly; line-height:1px; font-size:0;">&nbsp;</td>
+          </tr>
+          <tr>
+            <td style="height:3px; background: linear-gradient(90deg, transparent 0%, #8a6d3b 15%, #c9a961 40%, #d4b574 50%, #c9a961 60%, #8a6d3b 85%, transparent 100%);
+                       mso-line-height-rule:exactly; line-height:3px; font-size:0;">&nbsp;</td>
+          </tr>
 
           <!-- HEADER -->
           <tr>
-            <td class="email-header" style="background:linear-gradient(180deg,#270a11 0%,#150608 100%);padding:36px 40px 28px;text-align:center;border-bottom:1px solid rgba(201,169,97,0.15);">
+            <td bgcolor="#150608" style="background-color:#150608; padding: 32px 40px 24px; text-align:center;
+                border-left:1px solid rgba(201,169,97,0.15); border-right:1px solid rgba(201,169,97,0.15);">
               <img src="https://raw.githubusercontent.com/hiagofelipe/eterno-m.h.r.p/main/logopequena.PNG"
-                   alt="O Eterno MHRP" width="100" class="email-logo"
-                   style="max-width:100px;margin:0 auto 20px;display:block;" />
-              <p class="email-ornament" style="font-family:'Cinzel',Georgia,serif;font-size:10px;letter-spacing:0.4em;color:rgba(201,169,97,0.6);margin-bottom:14px;">✦ &nbsp; ✦ &nbsp; ✦</p>
-              <!--[if mso]>
-              <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word"
-                style="height:28px;v-text-anchor:middle;width:180px;" arcsize="8%"
-                strokecolor="#8a6d3b" fillcolor="#1d0a0d">
-                <w:anchorlock/>
-                <center style="font-family:'Cinzel',Georgia,serif;font-size:10px;letter-spacing:0.3em;color:#c9a961;">COMPRA APROVADA</center>
-              </v:roundrect>
-              <![endif]-->
-              <!--[if !mso]><!-->
-              <span class="email-status-badge" style="display:inline-block;background:rgba(201,169,97,0.08);border:1px solid rgba(201,169,97,0.3);border-radius:3px;padding:6px 20px;font-family:'Cinzel',Georgia,serif;font-size:10px;letter-spacing:0.3em;text-transform:uppercase;color:#c9a961;">
-                Compra Aprovada
-              </span>
-              <!--<![endif]-->
+                   alt="O Eterno MHRP" width="84"
+                   style="display:inline-block; width:84px; height:auto; opacity:0.92;" />
+              <p style="margin:14px 0 0; font-family:'Cinzel','Trajan Pro',serif;
+                         font-size:11px; letter-spacing:0.38em; text-transform:uppercase;
+                         color:#a89475; line-height:1;">
+                O ETERNO M.H.R.P.
+              </p>
             </td>
           </tr>
 
-          <!-- BODY -->
+          <!-- HERO -->
           <tr>
-            <td class="email-body" style="padding:40px 40px 36px;">
-
-              <p class="email-greeting" style="font-family:'Cinzel',Georgia,serif;font-size:22px;font-weight:400;color:#f4e8d4;line-height:1.35;margin-bottom:8px;letter-spacing:0.04em;">
-                Bem-vindo ao <em style="font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;color:#d4b574;">O Eterno MHRP</em>.
-              </p>
-
-              <div class="email-divider" style="width:48px;height:1px;background:linear-gradient(to right,#c9a961,rgba(201,169,97,0.1));margin:18px 0;"></div>
-
-              <p class="email-text" style="font-family:'Inter',Arial,sans-serif;font-size:15px;color:#d9c9ab;line-height:1.7;margin-bottom:14px;">
-                Sua compra foi confirmada. O acesso ao Manual está sendo liberado e em instantes você receberá as instruções para entrar na plataforma.
-              </p>
-
-              <p class="email-text" style="font-family:'Inter',Arial,sans-serif;font-size:15px;color:#d9c9ab;line-height:1.7;margin-bottom:0;">
-                Abaixo estão os detalhes do seu pedido:
-              </p>
-
-              <!-- ORDER BOX -->
-              <table class="order-box" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:rgba(255,255,255,0.03);border:1px solid rgba(201,169,97,0.18);border-radius:4px;padding:24px 28px;margin:28px 0;">
+            <td bgcolor="#150608" style="background-color:#150608;
+                border-left:1px solid rgba(201,169,97,0.15);
+                border-right:1px solid rgba(201,169,97,0.15);">
+              <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
                 <tr>
-                  <td style="padding:0 0 16px;">
-                    <p class="order-box-label" style="font-family:'Cinzel',Georgia,serif;font-size:9px;letter-spacing:0.35em;text-transform:uppercase;color:rgba(201,169,97,0.65);">Resumo do Pedido</p>
+                  <td class="pad pad-v" style="padding: 52px 56px 48px; text-align:center;">
+
+                    <!-- Badge Compra Confirmada -->
+                    <table role="presentation" cellpadding="0" cellspacing="0" border="0"
+                           align="center" style="margin: 0 auto 28px;">
+                      <tr>
+                        <td bgcolor="#1d0a0d" style="background-color:#1d0a0d;
+                            border:1px solid rgba(201,169,97,0.32); border-radius:3px;
+                            padding: 8px 24px;">
+                          <p style="margin:0; font-family:'Cinzel','Trajan Pro',serif;
+                                     font-size:11px; letter-spacing:0.32em; text-transform:uppercase;
+                                     color:#c9a961; line-height:1;">
+                            Compra Confirmada
+                          </p>
+                        </td>
+                      </tr>
+                    </table>
+
+                    <h1 class="hero-headline"
+                        style="margin:0 0 28px; font-family:'Cinzel','Trajan Pro',serif;
+                               font-size:44px; font-weight:400; letter-spacing:0.04em;
+                               color:#f4e8d4; line-height:1.28;
+                               mso-line-height-rule:exactly;">
+                      Bem-vindo ao<br />Eterno MHRP.<br />
+                      <span class="hero-sub"
+                            style="font-family:'Cormorant Garamond',Georgia,serif;
+                                   font-style:italic; font-weight:400; font-size:30px;
+                                   color:#c9a961; letter-spacing:0.03em; line-height:1.5;">
+                        A sua jornada começa agora.
+                      </span>
+                    </h1>
+
+                    <table role="presentation" cellpadding="0" cellspacing="0" border="0"
+                           align="center" style="margin: 0 auto;">
+                      <tr>
+                        <td style="width:72px; height:1px; border-top:1px solid rgba(201,169,97,0.32);
+                                   font-size:0; line-height:0;">&nbsp;</td>
+                        <td style="width:30px; text-align:center; font-size:9px;
+                                   color:rgba(201,169,97,0.5); padding:0 9px; line-height:1;">◆</td>
+                        <td style="width:72px; height:1px; border-top:1px solid rgba(201,169,97,0.32);
+                                   font-size:0; line-height:0;">&nbsp;</td>
+                      </tr>
+                    </table>
+
                   </td>
                 </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- ACESSO À PLATAFORMA -->
+          <tr>
+            <td bgcolor="#3a0e16" style="background-color:#3a0e16;
+                border-left:1px solid rgba(201,169,97,0.22);
+                border-right:1px solid rgba(201,169,97,0.22);">
+              <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
                 <tr>
-                  <td style="padding:8px 0;border-bottom:1px solid rgba(201,169,97,0.08);">
-                    <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                  <td class="cta-cell" style="padding: 52px 56px 48px; text-align:center;">
+
+                    <p style="margin:0 0 12px; font-family:'Cinzel','Trajan Pro',serif;
+                               font-size:9px; letter-spacing:0.38em; text-transform:uppercase;
+                               color:#c9a961; text-align:center;">
+                      Seu Acesso
+                    </p>
+
+                    <p style="margin:0 auto 36px; font-family:'Inter',system-ui,sans-serif;
+                               font-size:19px; color:#d9c9ab; line-height:1.82;
+                               max-width:44ch; text-align:center;">
+                      Clique no botão abaixo para acessar o Manual. Use o mesmo e-mail utilizado na compra para entrar na plataforma.
+                    </p>
+
+                    <!-- CTA Button — VML para Outlook -->
+                    <!--[if mso]>
+                    <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word"
+                      href="{{LINK_ACESSO}}"
+                      style="height:50px;v-text-anchor:middle;width:270px;" arcsize="4%"
+                      strokecolor="#c9a961" fillcolor="#1d0a0d">
+                      <w:anchorlock/>
+                      <center style="font-family:'Cinzel',Georgia,serif;font-size:11px;letter-spacing:0.22em;color:#f4e8d4;text-transform:uppercase;">ACESSAR O ETERNO MHRP</center>
+                    </v:roundrect>
+                    <![endif]-->
+                    <!--[if !mso]><!-->
+                    <table role="presentation" cellpadding="0" cellspacing="0" border="0" align="center">
                       <tr>
-                        <td style="font-size:13px;color:#a89475;font-family:'Inter',Arial,sans-serif;">Produto</td>
-                        <td align="right" style="font-size:14px;font-weight:600;color:#f4e8d4;font-family:'Inter',Arial,sans-serif;">O Eterno MHRP — Manual Completo</td>
+                        <td bgcolor="#1d0a0d" style="background-color:#1d0a0d;
+                            border:1px solid rgba(201,169,97,0.5); border-radius:3px;">
+                          <a href="{{LINK_ACESSO}}"
+                             style="display:inline-block; padding:17px 48px;
+                                    font-family:'Cinzel','Trajan Pro',serif;
+                                    font-size:11px; font-weight:600; letter-spacing:0.22em;
+                                    text-transform:uppercase; color:#f4e8d4; text-decoration:none;">
+                            Acessar o Eterno MHRP
+                          </a>
+                        </td>
                       </tr>
+                    </table>
+                    <!--<![endif]-->
+
+                    <p style="margin:20px 0 0; font-family:'Inter',system-ui,sans-serif;
+                               font-size:12px; color:rgba(201,169,97,0.45); text-align:center;
+                               line-height:1.7;">
+                      Se o botão não abrir, acesse diretamente:<br />
+                      <a href="{{LINK_ACESSO}}"
+                         style="color:rgba(201,169,97,0.65); text-decoration:underline; word-break:break-all;">
+                        {{LINK_ACESSO}}
+                      </a>
+                    </p>
+
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- RESUMO DO PEDIDO -->
+          <tr>
+            <td bgcolor="#1d0a0d" style="background-color:#1d0a0d;
+                border-left:1px solid rgba(201,169,97,0.15);
+                border-right:1px solid rgba(201,169,97,0.15);">
+              <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
+                <tr>
+                  <td class="pad" style="padding: 44px 56px 40px;">
+
+                    <p style="margin:0 0 22px; font-family:'Cinzel','Trajan Pro',serif;
+                               font-size:9px; letter-spacing:0.32em; text-transform:uppercase;
+                               color:#c9a961;">
+                      Resumo do Pedido
+                    </p>
+
+                    <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%"
+                           style="border:1px solid rgba(201,169,97,0.14); border-radius:3px;">
+
+                      <!-- Linha Produto -->
+                      <tr>
+                        <td style="padding:14px 20px; border-bottom:1px solid rgba(201,169,97,0.09);
+                                   font-family:'Inter',system-ui,sans-serif; font-size:15px; color:#a89475;">
+                          Produto
+                        </td>
+                        <td align="right" style="padding:14px 20px; border-bottom:1px solid rgba(201,169,97,0.09);
+                                   font-family:'Inter',system-ui,sans-serif; font-size:16px;
+                                   color:#f4e8d4; font-weight:600;">
+                          O Eterno MHRP — Manual Completo
+                        </td>
+                      </tr>
+
+                      <!-- Linha Número do pedido -->
+                      <tr>
+                        <td style="padding:14px 20px; border-bottom:1px solid rgba(201,169,97,0.09);
+                                   font-family:'Inter',system-ui,sans-serif; font-size:15px; color:#a89475;">
+                          Número do pedido
+                        </td>
+                        <td align="right" style="padding:14px 20px; border-bottom:1px solid rgba(201,169,97,0.09);
+                                   font-family:'Inter',system-ui,sans-serif; font-size:16px;
+                                   color:#f4e8d4; font-weight:600;">
+                          {{NUMERO_PEDIDO}}
+                        </td>
+                      </tr>
+
+                      <!-- Linha Data -->
+                      <tr>
+                        <td style="padding:14px 20px; border-bottom:1px solid rgba(201,169,97,0.09);
+                                   font-family:'Inter',system-ui,sans-serif; font-size:15px; color:#a89475;">
+                          Data
+                        </td>
+                        <td align="right" style="padding:14px 20px; border-bottom:1px solid rgba(201,169,97,0.09);
+                                   font-family:'Inter',system-ui,sans-serif; font-size:16px;
+                                   color:#f4e8d4; font-weight:600;">
+                          {{DATA_COMPRA}}
+                        </td>
+                      </tr>
+
+                      <!-- Linha Total -->
+                      <tr>
+                        <td bgcolor="#1a0810" style="background-color:#1a0810; padding:18px 20px;
+                                   font-family:'Cinzel','Trajan Pro',serif; font-size:11px;
+                                   letter-spacing:0.1em; color:#c9a961;">
+                          Total pago
+                        </td>
+                        <td align="right" bgcolor="#1a0810" style="background-color:#1a0810; padding:18px 20px;
+                                   font-family:'Cinzel','Trajan Pro',serif; font-size:20px;
+                                   color:#c9a961; font-weight:400;">
+                          {{VALOR_PAGO}}
+                        </td>
+                      </tr>
+
                     </table>
                   </td>
                 </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- O QUE ESTÁ INCLUÍDO -->
+          <tr>
+            <td bgcolor="#220c10" style="background-color:#220c10;
+                border-left:1px solid rgba(201,169,97,0.15);
+                border-right:1px solid rgba(201,169,97,0.15);">
+              <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
                 <tr>
-                  <td style="padding:8px 0;border-bottom:1px solid rgba(201,169,97,0.08);">
-                    <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                  <td class="pad" style="padding: 44px 56px 44px;">
+
+                    <p style="margin:0 0 10px; font-family:'Cinzel','Trajan Pro',serif;
+                               font-size:9px; letter-spacing:0.32em; text-transform:uppercase;
+                               color:#c9a961;">
+                      O que está incluído
+                    </p>
+
+                    <p style="margin:0 0 32px; font-family:'Cinzel','Trajan Pro',serif;
+                               font-size:22px; font-weight:400; letter-spacing:0.03em;
+                               color:#f4e8d4; line-height:1.45;
+                               mso-line-height-rule:exactly;">
+                      Mais de 12 horas gravadas divididas em 5 pilares e Pílulas de Construção para dores específicas.
+                    </p>
+
+                    <!-- Pilar I -->
+                    <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%"
+                           style="margin-bottom:16px;">
                       <tr>
-                        <td style="font-size:13px;color:#a89475;font-family:'Inter',Arial,sans-serif;">Número do pedido</td>
-                        <td align="right" style="font-size:14px;font-weight:600;color:#f4e8d4;font-family:'Inter',Arial,sans-serif;">{{NUMERO_PEDIDO}}</td>
+                        <td style="width:32px; vertical-align:top; padding-top:1px;">
+                          <div style="width:28px; height:28px; border-radius:50%;
+                                      border:1px solid rgba(201,169,97,0.38);
+                                      text-align:center; line-height:28px;
+                                      font-family:'Cinzel','Trajan Pro',serif;
+                                      font-size:9px; color:#c9a961; letter-spacing:0.04em;">I</div>
+                        </td>
+                        <td style="padding-left:16px; vertical-align:top;">
+                          <p style="margin:0; font-family:'Inter',system-ui,sans-serif;
+                                     font-size:17px; color:#d9c9ab; line-height:1.65;">
+                            <strong style="color:#d4b574; font-weight:600;">Primeiro pilar:</strong> estrutura do homem — disciplina, estabilidade e liderança.
+                          </p>
+                        </td>
                       </tr>
                     </table>
-                  </td>
-                </tr>
-                <tr>
-                  <td style="padding:8px 0;border-bottom:1px solid rgba(201,169,97,0.08);">
-                    <table width="100%" cellpadding="0" cellspacing="0" border="0">
+
+                    <!-- Pilar II -->
+                    <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%"
+                           style="margin-bottom:16px;">
                       <tr>
-                        <td style="font-size:13px;color:#a89475;font-family:'Inter',Arial,sans-serif;">Data</td>
-                        <td align="right" style="font-size:14px;font-weight:600;color:#f4e8d4;font-family:'Inter',Arial,sans-serif;">{{DATA_COMPRA}}</td>
+                        <td style="width:32px; vertical-align:top; padding-top:1px;">
+                          <div style="width:28px; height:28px; border-radius:50%;
+                                      border:1px solid rgba(201,169,97,0.38);
+                                      text-align:center; line-height:28px;
+                                      font-family:'Cinzel','Trajan Pro',serif;
+                                      font-size:9px; color:#c9a961; letter-spacing:0.04em;">II</div>
+                        </td>
+                        <td style="padding-left:16px; vertical-align:top;">
+                          <p style="margin:0; font-family:'Inter',system-ui,sans-serif;
+                                     font-size:17px; color:#d9c9ab; line-height:1.65;">
+                            <strong style="color:#d4b574; font-weight:600;">Segundo pilar:</strong> como escolher uma mulher de valores.
+                          </p>
+                        </td>
                       </tr>
                     </table>
+
+                    <!-- Pilar III -->
+                    <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%"
+                           style="margin-bottom:16px;">
+                      <tr>
+                        <td style="width:32px; vertical-align:top; padding-top:1px;">
+                          <div style="width:28px; height:28px; border-radius:50%;
+                                      border:1px solid rgba(201,169,97,0.38);
+                                      text-align:center; line-height:28px;
+                                      font-family:'Cinzel','Trajan Pro',serif;
+                                      font-size:9px; color:#c9a961; letter-spacing:0.04em;">III</div>
+                        </td>
+                        <td style="padding-left:16px; vertical-align:top;">
+                          <p style="margin:0; font-family:'Inter',system-ui,sans-serif;
+                                     font-size:17px; color:#d9c9ab; line-height:1.65;">
+                            <strong style="color:#d4b574; font-weight:600;">Terceiro pilar:</strong> limites, sonhos, rotina e visão de futuro.
+                          </p>
+                        </td>
+                      </tr>
+                    </table>
+
+                    <!-- Pilar IV -->
+                    <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%"
+                           style="margin-bottom:16px;">
+                      <tr>
+                        <td style="width:32px; vertical-align:top; padding-top:1px;">
+                          <div style="width:28px; height:28px; border-radius:50%;
+                                      border:1px solid rgba(201,169,97,0.38);
+                                      text-align:center; line-height:28px;
+                                      font-family:'Cinzel','Trajan Pro',serif;
+                                      font-size:9px; color:#c9a961; letter-spacing:0.04em;">IV</div>
+                        </td>
+                        <td style="padding-left:16px; vertical-align:top;">
+                          <p style="margin:0; font-family:'Inter',system-ui,sans-serif;
+                                     font-size:17px; color:#d9c9ab; line-height:1.65;">
+                            <strong style="color:#d4b574; font-weight:600;">Quarto pilar:</strong> conflitos, inseguranças e desgaste no relacionamento.
+                          </p>
+                        </td>
+                      </tr>
+                    </table>
+
+                    <!-- Pilar V -->
+                    <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%"
+                           style="margin-bottom:16px;">
+                      <tr>
+                        <td style="width:32px; vertical-align:top; padding-top:1px;">
+                          <div style="width:28px; height:28px; border-radius:50%;
+                                      border:1px solid rgba(201,169,97,0.38);
+                                      text-align:center; line-height:28px;
+                                      font-family:'Cinzel','Trajan Pro',serif;
+                                      font-size:9px; color:#c9a961; letter-spacing:0.04em;">V</div>
+                        </td>
+                        <td style="padding-left:16px; vertical-align:top;">
+                          <p style="margin:0; font-family:'Inter',system-ui,sans-serif;
+                                     font-size:17px; color:#d9c9ab; line-height:1.65;">
+                            <strong style="color:#d4b574; font-weight:600;">Quinto pilar:</strong> casamento, família, estabilidade e legado.
+                          </p>
+                        </td>
+                      </tr>
+                    </table>
+
+                    <!-- Pílulas -->
+                    <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%"
+                           style="background-color:rgba(201,169,97,0.05); border:1px solid rgba(201,169,97,0.22); border-radius:3px; margin-top:8px;">
+                      <tr>
+                        <td style="padding:18px 22px;">
+                          <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
+                            <tr>
+                              <td style="width:32px; vertical-align:top; padding-top:1px;">
+                                <div style="width:28px; height:28px; border-radius:50%;
+                                            border:1px solid rgba(201,169,97,0.5);
+                                            background-color:rgba(201,169,97,0.08);
+                                            text-align:center; line-height:26px;
+                                            font-family:'Cinzel','Trajan Pro',serif;
+                                            font-size:14px; color:#d4b574; letter-spacing:0;">+</div>
+                              </td>
+                              <td style="padding-left:16px; vertical-align:top;">
+                                <p style="margin:0; font-family:'Inter',system-ui,sans-serif;
+                                           font-size:17px; color:#d9c9ab; line-height:1.65;">
+                                  <strong style="color:#d4b574; font-weight:600;">Pílulas de Construção:</strong> aulas independentes para dores específicas — traição, ciúmes, falta de desejo, término, relacionamento à distância e muito mais.
+                                </p>
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                    </table>
+
                   </td>
                 </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- STATS BAR -->
+          <tr>
+            <td bgcolor="#1d0a0d" style="background-color:#1d0a0d;
+                border-left:1px solid rgba(201,169,97,0.15);
+                border-right:1px solid rgba(201,169,97,0.15);">
+              <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
                 <tr>
-                  <td style="padding:14px 0 0;">
-                    <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                  <td class="pad" style="padding: 24px 40px; border-top:1px solid rgba(201,169,97,0.12);">
+                    <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
                       <tr>
-                        <td style="font-family:'Cinzel',Georgia,serif;font-size:11px;letter-spacing:0.1em;color:#c9a961;">Total pago</td>
-                        <td align="right" style="font-family:'Cinzel',Georgia,serif;font-size:16px;color:#c9a961;font-weight:600;">{{VALOR_PAGO}}</td>
+                        <td style="width:25%; text-align:center; padding:8px; vertical-align:middle;">
+                          <p style="margin:0; font-family:'Cinzel','Trajan Pro',serif;
+                                     font-size:12px; letter-spacing:0.14em; text-transform:uppercase;
+                                     color:#a89475; line-height:1.5;">42 Partes</p>
+                        </td>
+                        <td style="width:25%; text-align:center; padding:8px; vertical-align:middle;
+                            border-left:1px solid rgba(201,169,97,0.12);">
+                          <p style="margin:0; font-family:'Cinzel','Trajan Pro',serif;
+                                     font-size:12px; letter-spacing:0.14em; text-transform:uppercase;
+                                     color:#a89475; line-height:1.5;">+12h de Conteúdo</p>
+                        </td>
+                        <td style="width:25%; text-align:center; padding:8px; vertical-align:middle;
+                            border-left:1px solid rgba(201,169,97,0.12);">
+                          <p style="margin:0; font-family:'Cinzel','Trajan Pro',serif;
+                                     font-size:12px; letter-spacing:0.14em; text-transform:uppercase;
+                                     color:#a89475; line-height:1.5;">4 PDFs</p>
+                        </td>
+                        <td style="width:25%; text-align:center; padding:8px; vertical-align:middle;
+                            border-left:1px solid rgba(201,169,97,0.12);">
+                          <p style="margin:0; font-family:'Cinzel','Trajan Pro',serif;
+                                     font-size:12px; letter-spacing:0.14em; text-transform:uppercase;
+                                     color:#a89475; line-height:1.5;">1 Ano de Acesso</p>
+                        </td>
                       </tr>
                     </table>
                   </td>
                 </tr>
               </table>
-
-              <!-- CTA -->
-              <div class="email-cta-wrap" style="text-align:center;margin:32px 0 8px;">
-                <!--[if mso]>
-                <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word"
-                  href="{{LINK_ACESSO}}"
-                  style="height:44px;v-text-anchor:middle;width:240px;" arcsize="5%"
-                  strokecolor="rgba(201,169,97,0.35)" fillcolor="#8b0a1a">
-                  <w:anchorlock/>
-                  <center style="font-family:'Cinzel',Georgia,serif;font-size:11px;letter-spacing:0.2em;color:#f4e8d4;text-transform:uppercase;">Acessar o Manual</center>
-                </v:roundrect>
-                <![endif]-->
-                <!--[if !mso]><!-->
-                <a href="{{LINK_ACESSO}}" class="email-cta"
-                   style="display:inline-block;background:linear-gradient(135deg,#8b0a1a 0%,#3a0e16 100%);border:1px solid rgba(201,169,97,0.35);border-radius:4px;padding:14px 36px;font-family:'Cinzel',Georgia,serif;font-size:11px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:#f4e8d4;text-decoration:none;">
-                  Acessar o Manual
-                </a>
-                <!--<![endif]-->
-              </div>
-              <p class="email-cta-note" style="font-size:12px;color:#7a6a55;text-align:center;margin-top:10px;">
-                Se o botão não funcionar, copie e cole o link: <a href="{{LINK_ACESSO}}" style="color:#a89475;">{{LINK_ACESSO}}</a>
-              </p>
-
-              <hr class="section-divider" style="border:none;border-top:1px solid rgba(201,169,97,0.1);margin:32px 0;" />
-
-              <p class="email-small" style="font-size:13px;color:#7a6a55;line-height:1.65;">
-                Dúvidas? Responda este e-mail e entraremos em contato. Guarde este e-mail como comprovante da sua compra.
-              </p>
-
             </td>
+          </tr>
+
+          <!-- SUPORTE -->
+          <tr>
+            <td bgcolor="#150608" style="background-color:#150608;
+                border-left:1px solid rgba(201,169,97,0.15);
+                border-right:1px solid rgba(201,169,97,0.15);">
+              <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
+                <tr>
+                  <td class="pad" style="padding: 44px 56px; border-top:1px solid rgba(201,169,97,0.1);">
+
+                    <p style="margin:0 0 10px; font-family:'Cinzel','Trajan Pro',serif;
+                               font-size:9px; letter-spacing:0.32em; text-transform:uppercase;
+                               color:#c9a961;">
+                      Precisa de ajuda?
+                    </p>
+
+                    <p style="margin:0 0 20px; font-family:'Inter',system-ui,sans-serif;
+                               font-size:19px; color:#d9c9ab; line-height:1.82;">
+                      Se tiver qualquer dúvida sobre o acesso ou o conteúdo, responda este e-mail ou entre em contato pelos canais abaixo. Guarde este e-mail como comprovante da sua compra.
+                    </p>
+
+                    <table role="presentation" cellpadding="0" cellspacing="0" border="0">
+                      <tr>
+                        <!-- E-mail -->
+                        <td bgcolor="#1d0a0d" style="background-color:#1d0a0d;
+                            border:1px solid rgba(201,169,97,0.28); border-radius:3px;">
+                          <a href="mailto:fale@eternomhrp.com.br"
+                             style="display:inline-block; padding:12px 22px;
+                                    font-family:'Inter',system-ui,sans-serif;
+                                    font-size:13px; font-weight:400; letter-spacing:0.03em;
+                                    color:#c9a961; text-decoration:none;">
+                            fale@eternomhrp.com.br
+                          </a>
+                        </td>
+
+                        <td style="width:14px;">&nbsp;</td>
+
+                        <!-- WhatsApp -->
+                        <td bgcolor="#1d0a0d" style="background-color:#1d0a0d;
+                            border:1px solid rgba(201,169,97,0.28); border-radius:3px;">
+                          <a href="https://wa.me/5511911912868"
+                             style="display:inline-block; padding:12px 22px;
+                                    font-family:'Inter',system-ui,sans-serif;
+                                    font-size:13px; font-weight:400; letter-spacing:0.03em;
+                                    color:#c9a961; text-decoration:none;">
+                            WhatsApp
+                          </a>
+                        </td>
+                      </tr>
+                    </table>
+
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- Borda inferior dupla -->
+          <tr>
+            <td style="height:3px; background: linear-gradient(90deg, transparent 0%, #8a6d3b 15%, #c9a961 40%, #d4b574 50%, #c9a961 60%, #8a6d3b 85%, transparent 100%);
+                       mso-line-height-rule:exactly; line-height:3px; font-size:0;">&nbsp;</td>
+          </tr>
+          <tr>
+            <td style="height:1px; background-color:rgba(201,169,97,0.18);
+                       mso-line-height-rule:exactly; line-height:1px; font-size:0;">&nbsp;</td>
           </tr>
 
           <!-- FOOTER -->
           <tr>
-            <td class="email-footer" style="background:#0e0406;border-top:1px solid rgba(201,169,97,0.1);padding:24px 40px;text-align:center;">
-              <img src="https://raw.githubusercontent.com/hiagofelipe/eterno-m.h.r.p/main/logopequena.PNG"
-                   alt="O Eterno MHRP" width="60"
-                   style="max-width:60px;margin:0 auto 14px;display:block;opacity:0.4;" />
-              <p class="footer-text" style="font-size:11px;color:#7a6a55;line-height:1.7;">
-                &copy; 2025 O Eterno M.H.R.P. Todos os direitos reservados.<br />
-                Você está recebendo este e-mail porque realizou uma compra.<br />
-                <a href="$[UNSUBSCRIBE_LINK]" style="color:#a89475;text-decoration:underline;">Cancelar recebimento</a>
+            <td style="padding: 28px 40px 24px; text-align:center;">
+              <p style="margin:0 0 14px; font-family:'Cinzel','Trajan Pro',serif;
+                         font-size:8px; letter-spacing:0.44em; text-transform:uppercase;
+                         color:#7a6a55;">
+                O ETERNO M.H.R.P.
+              </p>
+              <p style="margin:0; font-family:'Inter',system-ui,sans-serif;
+                         font-size:11px; color:#3d2f22; line-height:1.65;">
+                Você recebe este e-mail porque realizou uma compra em O Eterno MHRP.
               </p>
             </td>
           </tr>
 
         </table>
+
       </td>
     </tr>
   </table>
-</div>
 
 </body>
 </html>
