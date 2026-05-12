@@ -2539,7 +2539,7 @@ ul,ol { list-style: none; }
   .founder-subtitle   { order: 3; padding: 0 1.5rem; margin-bottom: 0; }
   .offer-price        { order: 4; padding: 1.2rem 1.5rem 0; text-align: center; }
   .offer-countdown    { order: 5; margin: 1rem 1.5rem 0; width: auto; border-radius: 3px; }
-  .offer-card-cta .btn { order: 6; margin: 1.2rem 1.5rem 0; }
+  .offer-card-cta .btn { order: 6; margin: 1.2rem 1.5rem 0; font-size: 0.72rem; padding: 1.1rem 1.6rem; white-space: normal; text-align: center; }
   .offer-methods      { order: 7; padding: 1rem 1.5rem 1.5rem; justify-content: center; }
   .offer-col-divider  { order: 8; width: auto; height: 1px; margin: 0 1.5rem; }
   .offer-includes-col { order: 9; padding: 1.5rem 1.5rem 1rem; }
