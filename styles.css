@@ -1815,6 +1815,126 @@ ul,ol { list-style: none; }
   border-radius: 2px;
 }
 
+/* ---- Founder pricing ---- */
+.founder-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  font-family: var(--f-inscription);
+  font-size: 0.65rem;
+  letter-spacing: 0.38em;
+  text-transform: uppercase;
+  color: var(--c-gold);
+  border: 1px solid rgba(201,169,97,0.32);
+  border-radius: 2px;
+  padding: 0.38rem 0.9rem;
+  background: rgba(201,169,97,0.05);
+  margin-bottom: 0.5rem;
+}
+.founder-tag svg { color: var(--c-gold); opacity: 0.55; }
+.founder-subtitle {
+  font-family: var(--f-inscription);
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  color: var(--c-ink-mute);
+  text-align: center;
+  margin: 0 0 1.4rem;
+}
+.savings-badge {
+  display: inline-block;
+  margin-top: 0.65rem;
+  padding: 0.3rem 0.85rem;
+  background: rgba(201,169,97,0.09);
+  border: 1px solid rgba(201,169,97,0.28);
+  border-radius: 100px;
+  font-family: var(--f-inscription);
+  font-size: 0.66rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--c-gold);
+}
+.price-after {
+  margin: 0.45rem 0 0;
+  font-family: var(--f-inscription);
+  font-size: 0.7rem;
+  letter-spacing: 0.06em;
+  color: var(--c-ink-faint);
+  opacity: 0.6;
+}
+
+/* ---- Countdown ---- */
+.offer-countdown {
+  width: 100%;
+  border-top: 1px solid var(--c-line-soft);
+  border-bottom: 1px solid var(--c-line-soft);
+  padding: 1.3rem 0;
+  margin: 1rem 0 0.25rem;
+}
+.countdown-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  font-family: var(--f-inscription);
+  font-size: 0.58rem;
+  letter-spacing: 0.38em;
+  text-transform: uppercase;
+  color: rgba(201,169,97,0.5);
+  margin-bottom: 1rem;
+}
+.countdown-label svg { color: rgba(201,169,97,0.35); }
+.countdown-display {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+}
+.countdown-unit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+  background: rgba(0,0,0,0.38);
+  border: 1px solid var(--c-line);
+  border-radius: 3px;
+  padding: 0.65rem 0.8rem;
+  min-width: 54px;
+  transition: border-color 0.3s;
+}
+.countdown-unit:has(.countdown-num[data-tick]) { border-color: rgba(201,169,97,0.35); }
+.countdown-num {
+  font-family: var(--f-inscription);
+  font-size: clamp(1.55rem, 3vw, 2.1rem);
+  font-weight: 600;
+  color: var(--c-gold);
+  line-height: 1;
+  letter-spacing: 0.05em;
+  transition: color 0.15s;
+}
+.countdown-lbl {
+  font-family: var(--f-inscription);
+  font-size: 0.52rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--c-ink-faint);
+}
+.countdown-sep {
+  font-family: var(--f-inscription);
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: rgba(201,169,97,0.35);
+  line-height: 1;
+  padding-bottom: 1.2rem;
+  user-select: none;
+}
+@keyframes cd-tick {
+  0%   { opacity: 0.4; transform: translateY(-4px); }
+  100% { opacity: 1;   transform: translateY(0); }
+}
+.countdown-num.tick {
+  animation: cd-tick 0.22s var(--ease) forwards;
+}
+
 /* ---- Guarantee ---- */
 .offer-guarantee {
   display: flex;
@@ -2415,11 +2535,18 @@ ul,ol { list-style: none; }
   .offer-card-cta     { display: contents; }
 
   .offer-card-header  { order: 1; }
-  .offer-price        { order: 2; padding: 2rem 1.5rem 0; text-align: center; }
-  .offer-card-cta .btn { order: 3; margin: 1.2rem 1.5rem 0; }
-  .offer-methods      { order: 4; padding: 1rem 1.5rem 1.5rem; justify-content: center; }
-  .offer-col-divider  { order: 5; width: auto; height: 1px; margin: 0 1.5rem; }
-  .offer-includes-col { order: 6; padding: 1.5rem 1.5rem 1rem; }
+  .founder-tag        { order: 2; margin: 1.5rem 1.5rem 0.4rem; }
+  .founder-subtitle   { order: 3; padding: 0 1.5rem; margin-bottom: 0; }
+  .offer-price        { order: 4; padding: 1.2rem 1.5rem 0; text-align: center; }
+  .offer-countdown    { order: 5; margin: 1rem 1.5rem 0; width: auto; border-radius: 3px; }
+  .offer-card-cta .btn { order: 6; margin: 1.2rem 1.5rem 0; }
+  .offer-methods      { order: 7; padding: 1rem 1.5rem 1.5rem; justify-content: center; }
+  .offer-col-divider  { order: 8; width: auto; height: 1px; margin: 0 1.5rem; }
+  .offer-includes-col { order: 9; padding: 1.5rem 1.5rem 1rem; }
+
+  .countdown-unit { min-width: 46px; padding: 0.55rem 0.6rem; }
+  .countdown-num  { font-size: 1.45rem; }
+  .countdown-sep  { font-size: 1.2rem; }
 
   /* ---- Grids ---- */
   .audience-grid { grid-template-columns: 1fr; }

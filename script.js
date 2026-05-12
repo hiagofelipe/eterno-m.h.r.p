@@ -155,6 +155,37 @@
     });
   });
 
+  // --------------------- Founder countdown (encerra 10/06/2026) ---------------------
+  const cdDeadline = new Date('2026-06-10T23:59:59-03:00');
+  const cdDays  = document.getElementById('cd-days');
+  const cdHours = document.getElementById('cd-hours');
+  const cdMins  = document.getElementById('cd-mins');
+  const cdSecs  = document.getElementById('cd-secs');
+
+  if (cdDays && cdHours && cdMins && cdSecs) {
+    const pad = n => String(Math.max(0, n)).padStart(2, '0');
+    const updateCountdown = () => {
+      const diff = cdDeadline - Date.now();
+      if (diff <= 0) {
+        [cdDays, cdHours, cdMins, cdSecs].forEach(el => { el.textContent = '00'; });
+        return;
+      }
+      cdDays.textContent  = pad(Math.floor(diff / 86400000));
+      cdHours.textContent = pad(Math.floor(diff % 86400000 / 3600000));
+      cdMins.textContent  = pad(Math.floor(diff % 3600000  / 60000));
+
+      const newSec = pad(Math.floor(diff % 60000 / 1000));
+      if (cdSecs.textContent !== newSec) {
+        cdSecs.classList.remove('tick');
+        void cdSecs.offsetWidth; // reflow para reiniciar animação
+        cdSecs.classList.add('tick');
+        cdSecs.textContent = newSec;
+      }
+    };
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+  }
+
   // --------------------- Subtle parallax on hero mark ---------------------
   const mark = document.querySelector('.hero-mark img');
   if (mark && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
