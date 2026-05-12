@@ -2535,7 +2535,7 @@ ul,ol { list-style: none; }
   .offer-card-cta     { display: contents; }
 
   .offer-card-header  { order: 1; }
-  .founder-tag        { order: 2; margin: 1.5rem 1.5rem 0.4rem; }
+  .founder-tag        { order: 2; margin: 1.5rem 1.5rem 0.4rem; align-self: center; }
   .founder-subtitle   { order: 3; padding: 0 1.5rem; margin-bottom: 0; }
   .offer-price        { order: 4; padding: 1.2rem 1.5rem 0; text-align: center; }
   .offer-countdown    { order: 5; margin: 1rem 1.5rem 0; width: auto; border-radius: 3px; }
