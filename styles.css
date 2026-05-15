@@ -1790,12 +1790,22 @@ ul,ol { list-style: none; }
   padding-top: 0.6rem;
   color: var(--c-ink);
 }
+.price-avista-tag {
+  font-family: var(--f-inscription);
+  font-size: 0.82rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--c-ink-mute);
+  align-self: flex-end;
+  padding-bottom: 0.65rem;
+  margin-left: 0.2rem;
+}
 .price-total {
   font-size: 0.95rem;
   color: var(--c-ink-mute);
   margin-top: 0.4rem;
 }
-.price-total strong { color: var(--c-ink); font-weight: 500; }
+.price-total strong { color: var(--c-ink-soft); font-weight: 500; }
 
 /* ---- Payment methods ---- */
 .offer-methods {
