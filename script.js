@@ -149,9 +149,13 @@
       const target = document.querySelector(href);
       if (!target) return;
       e.preventDefault();
-      const navH = nav ? nav.offsetHeight : 0;
-      const top = target.getBoundingClientRect().top + window.scrollY - navH - 10;
-      window.scrollTo({ top, behavior: 'smooth' });
+      if (href === '#oferta-btn') {
+        target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      } else {
+        const navH = nav ? nav.offsetHeight : 0;
+        const top = target.getBoundingClientRect().top + window.scrollY - navH - 10;
+        window.scrollTo({ top, behavior: 'smooth' });
+      }
     });
   });
 
