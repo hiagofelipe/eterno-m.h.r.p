@@ -151,7 +151,7 @@
       e.preventDefault();
       if (href === '#oferta-btn') {
         const rect = target.getBoundingClientRect();
-        const top = rect.top + window.scrollY - window.innerHeight * 0.72;
+        const top = rect.top + window.scrollY - window.innerHeight * 0.67;
         window.scrollTo({ top: Math.max(0, top), behavior: 'smooth' });
       } else {
         const navH = nav ? nav.offsetHeight : 0;
