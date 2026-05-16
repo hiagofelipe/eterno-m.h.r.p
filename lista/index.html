@@ -1310,6 +1310,13 @@
             </div>
 
             <div class="wl-field">
+              <label class="wl-field-label" for="instagram">Instagram</label>
+              <input class="wl-input" type="text" id="instagram" name="instagram"
+                     autocomplete="off"
+                     placeholder="@seu.perfil" />
+            </div>
+
+            <div class="wl-field">
               <span class="wl-profiles-label">Qual é o seu momento?</span>
               <div class="wl-profiles" role="radiogroup" aria-required="true">
 
@@ -1772,6 +1779,7 @@
         nome,
         email,
         telefone,
+        instagram: form.instagram.value.trim(),
         perfil:    perfil.value
       };
 
