@@ -150,7 +150,9 @@
       if (!target) return;
       e.preventDefault();
       if (href === '#oferta-btn') {
-        target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        const rect = target.getBoundingClientRect();
+        const top = rect.top + window.scrollY - window.innerHeight * 0.72;
+        window.scrollTo({ top: Math.max(0, top), behavior: 'smooth' });
       } else {
         const navH = nav ? nav.offsetHeight : 0;
         const top = target.getBoundingClientRect().top + window.scrollY - navH - 10;
