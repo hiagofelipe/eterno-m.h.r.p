@@ -1312,7 +1312,7 @@
             <div class="wl-field">
               <label class="wl-field-label" for="instagram">Instagram</label>
               <input class="wl-input" type="text" id="instagram" name="instagram"
-                     autocomplete="off"
+                     required autocomplete="off"
                      placeholder="@seu.perfil" />
             </div>
 
@@ -1763,10 +1763,11 @@
         return;
       }
 
-      const nome     = form.nome.value.trim();
-      const email    = form.email.value.trim();
-      const telefone = form.telefone.value.trim();
-      if (!nome || !email || !telefone) {
+      const nome      = form.nome.value.trim();
+      const email     = form.email.value.trim();
+      const telefone  = form.telefone.value.trim();
+      const instagram = form.instagram.value.trim();
+      if (!nome || !email || !telefone || !instagram) {
         form.reportValidity();
         return;
       }
@@ -1779,7 +1780,7 @@
         nome,
         email,
         telefone,
-        instagram: form.instagram.value.trim(),
+        instagram,
         perfil:    perfil.value
       };
 
