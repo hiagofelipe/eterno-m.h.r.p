@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pilar IV — A Condução do Relacionamento · O Eterno MHRP</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500;1,600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    /* ============================================================
+       O ETERNO MHRP · EXERCÍCIO PRÁTICO
+       Pilar IV — A Condução do Relacionamento
+       Otimizado para impressão A4 via CTRL+P
+    ============================================================ */
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0; padding: 0;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    :root {
+      --bg:         #150608;
+      --bg-soft:    #1d0a0d;
+      --bg-elev:    #220c10;
+      --wine:       #3a0e16;
+      --wine-deep:  #270a11;
+      --gold:       #c9a961;
+      --gold-soft:  #d4b574;
+      --gold-deep:  #8a6d3b;
+      --bronze:     #a47e4a;
+      --ink:        #f4e8d4;
+      --ink-soft:   #d9c9ab;
+      --ink-mute:   #a89475;
+      --ink-faint:  #7a6a55;
+      --line:       rgba(201,169,97,0.18);
+      --line-s:     rgba(201,169,97,0.08);
+      --line-str:   rgba(201,169,97,0.35);
+      --f-d: "Cormorant Garamond", "Times New Roman", serif;
+      --f-h: "Cinzel", "Trajan Pro", serif;
+      --f-b: "Inter", system-ui, sans-serif;
+    }
+
+    html, body {
+      font-family: var(--f-b);
+      background: #0a0203;
+      color: var(--ink-soft);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    .wrap {
+      display: flex; flex-direction: column; align-items: center;
+      gap: 18px; padding: 32px 0 56px;
+    }
+
+    .sheet {
+      width: 210mm; min-height: 297mm;
+      background: var(--bg); position: relative; overflow: hidden;
+      box-shadow: 0 8px 48px rgba(0,0,0,0.75), 0 0 0 1px rgba(201,169,97,0.07);
+    }
+
+    @media print {
+      html, body { background: var(--bg); }
+      .wrap { display: block; padding: 0; gap: 0; background: transparent; }
+      .sheet {
+        width: 100%; min-height: 0; height: 297mm;
+        overflow: hidden; box-shadow: none;
+        page-break-after: always; break-after: page;
+      }
+      .sheet:last-child { page-break-after: avoid; break-after: avoid; }
+      @page { size: A4; margin: 0; }
+    }
+
+    /* ================================================================
+       CAPA
+    ================================================================ */
+
+    .cover {
+      display: flex; flex-direction: column;
+      justify-content: flex-end;
+      padding: 14mm 18mm 17mm; min-height: 297mm;
+      background:
+        radial-gradient(ellipse 58% 50% at 90% 40%, rgba(139,10,26,0.30) 0%, transparent 100%),
+        radial-gradient(ellipse 78% 62% at 6%  88%, rgba(58,14,22,0.95) 0%, transparent 100%),
+        linear-gradient(156deg, #1c0709 0%, #0e0304 55%, #150507 100%);
+    }
+
+    .corners span {
+      position: absolute; width: 14mm; height: 14mm;
+      border-color: rgba(201,169,97,0.25); border-style: solid;
+    }
+    .corners span:nth-child(1) { top: 10mm;    left: 10mm;  border-width: 1px 0 0 1px; }
+    .corners span:nth-child(2) { top: 10mm;    right: 10mm; border-width: 1px 1px 0 0; }
+    .corners span:nth-child(3) { bottom: 10mm; left: 10mm;  border-width: 0 0 1px 1px; }
+    .corners span:nth-child(4) { bottom: 10mm; right: 10mm; border-width: 0 1px 1px 0; }
+
+    .cover-img {
+      position: absolute; right: -8mm; bottom: 0;
+      height: 258mm; width: auto; opacity: 0.18; pointer-events: none;
+    }
+    .cover-logo {
+      position: absolute; top: 18mm; left: 50%;
+      transform: translateX(-50%);
+      width: 68mm; height: auto;
+      mix-blend-mode: screen; opacity: 0.88; pointer-events: none;
+    }
+    .cover-body { position: relative; z-index: 2; }
+
+    .cover-eyebrow {
+      font-family: var(--f-b); font-size: 7pt; font-weight: 400;
+      letter-spacing: 0.45em; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 5mm;
+    }
+    .cover-accent-line {
+      width: 30mm; height: 1px;
+      background: linear-gradient(90deg, var(--gold-deep), transparent); margin-bottom: 5.5mm;
+    }
+    .cover-pilar-num {
+      font-family: var(--f-h); font-size: 9pt; font-weight: 500;
+      letter-spacing: 0.58em; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 3mm;
+    }
+    .cover-title {
+      font-family: var(--f-h); font-size: 28pt; font-weight: 700;
+      line-height: 1.10; letter-spacing: 0.04em;
+      text-transform: uppercase; color: var(--ink); margin-bottom: 5mm;
+    }
+    .cover-subtitle {
+      font-family: var(--f-d); font-style: italic; font-size: 14pt;
+      font-weight: 400; color: var(--gold-soft);
+      line-height: 1.4; margin-bottom: 8mm;
+    }
+    .gold-sep {
+      display: flex; align-items: center; gap: 6px; margin-bottom: 6mm;
+    }
+    .gold-sep::before, .gold-sep::after {
+      content: ''; flex: 1; height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold-deep), transparent);
+    }
+    .gold-sep-dot { width: 4px; height: 4px; background: var(--gold); border-radius: 50%; flex-shrink: 0; }
+    .cover-tagline {
+      font-family: var(--f-b); font-size: 9pt; font-weight: 300;
+      line-height: 1.88; color: var(--ink-mute); max-width: 108mm;
+    }
+
+    /* ================================================================
+       PÁGINAS DE CONTEÚDO
+    ================================================================ */
+
+    .sheet-inner {
+      padding: 13mm 17mm 12mm; min-height: 297mm;
+      display: flex; flex-direction: column;
+    }
+    .sheet-bg {
+      position: absolute; right: -6mm; bottom: 0;
+      height: 210mm; width: auto; opacity: 0.04; pointer-events: none;
+    }
+    .sheet-content { flex: 1; position: relative; z-index: 1; }
+
+    .pg-head {
+      display: flex; justify-content: space-between; align-items: center;
+      padding-bottom: 3mm; border-bottom: 1px solid var(--line);
+      margin-bottom: 6.5mm; flex-shrink: 0;
+    }
+    .pg-head-logo { height: 7mm; width: auto; mix-blend-mode: screen; opacity: 0.80; }
+    .pg-head-r {
+      font-family: var(--f-b); font-size: 7pt; font-weight: 300;
+      letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink-faint);
+    }
+    .pg-foot {
+      margin-top: auto; padding-top: 3mm;
+      border-top: 1px solid var(--line-s); text-align: center; flex-shrink: 0;
+    }
+    .pg-foot span {
+      font-family: var(--f-b); font-size: 6.5pt; font-weight: 300;
+      letter-spacing: 0.26em; text-transform: uppercase; color: var(--ink-faint);
+    }
+
+    /* ---- Texto corrido ---- */
+    .body-p {
+      font-family: var(--f-b); font-size: 10.5pt; font-weight: 300;
+      line-height: 1.82; color: var(--ink-mute); margin-bottom: 3mm;
+    }
+    .body-p:last-of-type { margin-bottom: 0; }
+
+    .section-eyebrow {
+      font-family: var(--f-h); font-size: 7pt; font-weight: 600;
+      letter-spacing: 0.46em; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 2mm;
+    }
+    .section-title {
+      font-family: var(--f-h); font-size: 12pt; font-weight: 600;
+      letter-spacing: 0.14em; text-transform: uppercase;
+      color: var(--ink); margin-bottom: 1.5mm;
+    }
+    .section-rule {
+      height: 1px; background: linear-gradient(90deg, var(--gold-deep) 0%, transparent 70%);
+      margin-bottom: 4mm;
+    }
+
+    .instruction {
+      background: rgba(201,169,97,0.025);
+      border: 1px solid var(--line); border-left: 2.5px solid var(--gold-deep);
+      padding: 4mm 5mm; margin: 3.5mm 0;
+    }
+    .instruction p {
+      font-family: var(--f-b); font-size: 9.5pt; font-weight: 300;
+      line-height: 1.75; color: var(--ink-mute);
+    }
+    .instruction p + p { margin-top: 2mm; }
+
+    /* ---- Separador ---- */
+    .sep {
+      display: flex; align-items: center; gap: 5px; margin: 5mm 0;
+    }
+    .sep::before, .sep::after { content: ''; flex: 1; height: 1px; background: var(--line); }
+    .sep-dia {
+      width: 5px; height: 5px; background: var(--gold-deep);
+      transform: rotate(45deg); flex-shrink: 0;
+    }
+
+    /* ---- Layout dual (Verdades / Desafios) ---- */
+    .dual-section {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 5mm; margin-top: 3mm;
+    }
+
+    .col-header {
+      padding: 3.5mm 4.5mm; margin-bottom: 3.5mm;
+    }
+    .col-header-verdade {
+      background: rgba(58,14,22,0.55);
+      border: 1px solid rgba(201,169,97,0.22);
+      border-top: 2px solid var(--gold-deep);
+    }
+    .col-header-desafio {
+      background: rgba(30,8,12,0.70);
+      border: 1px solid rgba(201,169,97,0.15);
+      border-top: 2px solid rgba(201,169,97,0.45);
+    }
+    .col-type {
+      font-family: var(--f-h); font-size: 8pt; font-weight: 600;
+      letter-spacing: 0.40em; text-transform: uppercase;
+      color: var(--gold); display: block; margin-bottom: 1mm;
+    }
+    .col-desc {
+      font-family: var(--f-b); font-size: 7pt; font-weight: 300;
+      color: var(--ink-faint); letter-spacing: 0.08em;
+    }
+
+    .card-item {
+      display: flex; gap: 3mm; margin-bottom: 3.5mm; align-items: flex-start;
+    }
+    .card-num {
+      font-family: var(--f-h); font-size: 7pt; font-weight: 600;
+      color: var(--gold-deep); flex-shrink: 0;
+      width: 4.5mm; text-align: right; padding-top: 0.5mm;
+    }
+    .card-text-verdade {
+      font-family: var(--f-d); font-style: italic;
+      font-size: 10pt; font-weight: 400;
+      color: var(--ink-soft); line-height: 1.5;
+      border-left: 1.5px solid rgba(201,169,97,0.28); padding-left: 3mm;
+    }
+    .card-text-desafio {
+      font-family: var(--f-b); font-size: 9pt; font-weight: 300;
+      color: var(--ink-mute); line-height: 1.6;
+      border-left: 1.5px solid rgba(201,169,97,0.18); padding-left: 3mm;
+    }
+
+    /* ---- Provérbios ---- */
+    .proverb-pair {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 4mm; margin: 4mm 0;
+    }
+    .proverb-item { text-align: center; padding: 4mm; border: 1px solid var(--line-s); }
+    .proverb-text {
+      font-family: var(--f-d); font-style: italic;
+      font-size: 11pt; color: var(--ink-soft); line-height: 1.5;
+    }
+
+    /* ---- Destaque ---- */
+    .highlight {
+      background: rgba(58,14,22,0.28); border: 1px solid var(--line);
+      padding: 5mm 6mm; position: relative; margin: 4mm 0;
+    }
+    .highlight::before {
+      content: ''; position: absolute; top: -1px; left: 8mm; right: 8mm;
+      height: 2px; background: linear-gradient(90deg, transparent, var(--gold-deep), transparent);
+    }
+    .highlight-label {
+      font-family: var(--f-h); font-size: 6.5pt; font-weight: 600;
+      letter-spacing: 0.46em; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 3mm;
+    }
+    .highlight p {
+      font-family: var(--f-b); font-size: 10.5pt; font-weight: 300;
+      line-height: 1.82; color: var(--ink-mute); margin-bottom: 2.5mm;
+    }
+    .highlight p:last-of-type { margin-bottom: 0; }
+
+    /* ---- Conclusão ---- */
+    .conclusion {
+      padding: 5.5mm 6.5mm;
+      background: rgba(58,14,22,0.30);
+      border: 1px solid var(--line); position: relative; margin-top: 4mm;
+    }
+    .conclusion::before {
+      content: ''; position: absolute; top: -1px; left: 8mm; right: 8mm;
+      height: 2px; background: linear-gradient(90deg, transparent, var(--gold-deep), transparent);
+    }
+    .conclusion-label {
+      font-family: var(--f-h); font-size: 6.5pt; font-weight: 600;
+      letter-spacing: 0.50em; text-transform: uppercase;
+      color: var(--gold); text-align: center; margin-bottom: 4mm;
+    }
+    .conclusion p {
+      font-family: var(--f-b); font-size: 10.5pt; font-weight: 300;
+      line-height: 1.82; color: var(--ink-mute); margin-bottom: 2.5mm;
+    }
+    .conclusion p:last-of-type { margin-bottom: 0; }
+    .conclusion-close {
+      font-family: var(--f-d); font-size: 14pt; font-weight: 400;
+      color: var(--ink); text-align: center; line-height: 1.55;
+      margin-top: 4.5mm; padding-top: 4.5mm; border-top: 1px solid var(--line);
+    }
+  </style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- ==============================================================
+       PÁGINA 1 — CAPA
+  =============================================================== -->
+  <div class="sheet cover">
+    <div class="corners"><span></span><span></span><span></span><span></span></div>
+    <img class="cover-img" src="ChatGPT Image 24 de mai. de 2026, 19_28_42-Photoroom.png" alt="">
+    <img class="cover-logo" src="../logogrande.PNG" alt="O Eterno MHRP">
+
+    <div class="cover-body">
+      <p class="cover-eyebrow">Exercício Prático</p>
+      <div class="cover-accent-line"></div>
+      <p class="cover-pilar-num">Pilar  IV</p>
+      <h1 class="cover-title">A Condução do<br>Relacionamento</h1>
+      <p class="cover-subtitle">Conexão construída com intenção, dia após dia</p>
+      <div class="gold-sep"><span class="gold-sep-dot"></span></div>
+      <p class="cover-tagline">
+        Relacionamentos não se fortalecem apenas com grandes momentos.<br>
+        Na maioria das vezes, a conexão é construída<br>
+        em pequenas atitudes repetidas diariamente.
+      </p>
+    </div>
+  </div>
+
+
+  <!-- ==============================================================
+       PÁGINA 2 — INTRODUÇÃO + COMO FUNCIONA
+  =============================================================== -->
+  <div class="sheet">
+    <img class="sheet-bg" src="ChatGPT Image 24 de mai. de 2026, 19_28_42-Photoroom.png" alt="">
+    <div class="sheet-inner">
+      <div class="pg-head">
+        <img class="pg-head-logo" src="../logogrande.PNG" alt="MHRP">
+        <span class="pg-head-r">Pilar IV — A Condução do Relacionamento</span>
+      </div>
+      <div class="sheet-content">
+
+        <p class="body-p">Relacionamentos não se fortalecem apenas com grandes momentos. Na maioria das vezes, a conexão entre duas pessoas é construída em pequenas atitudes repetidas diariamente.</p>
+        <p class="body-p">Com o tempo, muitos casais começam a conversar menos, se elogiar menos, se observar menos e demonstrar menos cuidado um com o outro. E normalmente isso não acontece porque o amor acabou. Acontece porque a rotina começa a engolir a relação silenciosamente.</p>
+        <p class="body-p">Este exercício foi criado justamente para quebrar isso. A proposta não é resolver todos os problemas do relacionamento em um único momento. A proposta é criar conexão, aumentar a presença emocional entre vocês e fazer com que o relacionamento volte a receber atenção consciente.</p>
+        <p class="body-p">Para isso, vocês vão utilizar uma dinâmica simples que praticamente todo mundo já brincou um dia: verdade ou desafio — agora aplicada de forma madura dentro da relação.</p>
+
+        <div class="sep"><span class="sep-dia"></span></div>
+
+        <p class="section-eyebrow">A Dinâmica</p>
+        <h2 class="section-title">Como Funciona o Exercício</h2>
+        <div class="section-rule"></div>
+
+        <div class="instruction">
+          <p>Vocês deverão pegar 10 pedaços de papel — sendo 5 papéis de VERDADE e 5 papéis de DESAFIO. Escrevam em cada papel uma das propostas da página seguinte.</p>
+          <p>Durante 10 dias, vocês irão pegar um papel de forma aleatória e realizar a dinâmica proposta naquele dia. O objetivo não é fazer tudo rapidamente — é criar constância de conexão.</p>
+        </div>
+
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:4mm; margin-top:4mm;">
+          <div style="border:1px solid var(--line); padding:4.5mm; background:rgba(58,14,22,0.3);">
+            <p style="font-family:var(--f-h); font-size:7pt; font-weight:600; letter-spacing:0.38em; text-transform:uppercase; color:var(--gold); margin-bottom:2.5mm;">Verdade</p>
+            <p style="font-family:var(--f-d); font-style:italic; font-size:10.5pt; color:var(--ink-mute); line-height:1.5;">Perguntas abertas que geram conversa profunda e sincera entre vocês dois.</p>
+          </div>
+          <div style="border:1px solid var(--line); padding:4.5mm; background:rgba(20,5,8,0.5);">
+            <p style="font-family:var(--f-h); font-size:7pt; font-weight:600; letter-spacing:0.38em; text-transform:uppercase; color:var(--gold); margin-bottom:2.5mm;">Desafio</p>
+            <p style="font-family:var(--f-d); font-style:italic; font-size:10.5pt; color:var(--ink-mute); line-height:1.5;">Ações práticas do dia a dia que reconstroem proximidade e cuidado entre vocês.</p>
+          </div>
+        </div>
+
+      </div>
+      <div class="pg-foot"><span>O Eterno MHRP — Material do Método · Uso Exclusivo do Aluno</span></div>
+    </div>
+  </div>
+
+
+  <!-- ==============================================================
+       PÁGINA 3 — VERDADES E DESAFIOS
+  =============================================================== -->
+  <div class="sheet">
+    <div class="sheet-inner">
+      <div class="pg-head">
+        <img class="pg-head-logo" src="../logogrande.PNG" alt="MHRP">
+        <span class="pg-head-r">Pilar IV — A Condução do Relacionamento</span>
+      </div>
+      <div class="sheet-content">
+
+        <div class="dual-section">
+          <!-- VERDADES -->
+          <div>
+            <div class="col-header col-header-verdade">
+              <span class="col-type">Verdades</span>
+              <span class="col-desc">5 papéis · perguntas</span>
+            </div>
+            <div class="card-item"><span class="card-num">1.</span><span class="card-text-verdade">Em qual momento do nosso relacionamento você sente que eu te transmito mais segurança e em quais momentos você sente o contrário?</span></div>
+            <div class="card-item"><span class="card-num">2.</span><span class="card-text-verdade">Existe alguma atitude minha que faz você se sentir desrespeitado(a) ou desvalorizado(a) na relação?</span></div>
+            <div class="card-item"><span class="card-num">3.</span><span class="card-text-verdade">Em quais situações você sente que nós discutimos ou brigamos sempre pelo mesmo motivo?</span></div>
+            <div class="card-item"><span class="card-num">4.</span><span class="card-text-verdade">O que eu poderia fazer no dia a dia que faria você se sentir mais próximo de mim?</span></div>
+            <div class="card-item"><span class="card-num">5.</span><span class="card-text-verdade">Quando você pensa no nosso futuro juntos, o que você espera de mim?</span></div>
+          </div>
+
+          <!-- DESAFIOS -->
+          <div>
+            <div class="col-header col-header-desafio">
+              <span class="col-type">Desafios</span>
+              <span class="col-desc">5 papéis · ações</span>
+            </div>
+            <div class="card-item"><span class="card-num">1.</span><span class="card-text-desafio">Durante o dia de hoje, demonstre 3 atitudes claras de cuidado um com o outro que vocês normalmente não fazem.</span></div>
+            <div class="card-item"><span class="card-num">2.</span><span class="card-text-desafio">Planeje um momento simples para vocês conversarem sem celular ou distrações.</span></div>
+            <div class="card-item"><span class="card-num">3.</span><span class="card-text-desafio">Faça um elogio sobre alguma coisa que você admira no outro e talvez nunca tenha dito.</span></div>
+            <div class="card-item"><span class="card-num">4.</span><span class="card-text-desafio">Converse sobre um objetivo ou sonho que vocês gostariam de construir juntos no futuro.</span></div>
+            <div class="card-item"><span class="card-num">5.</span><span class="card-text-desafio">Durante o dia, observe algo que o outro faz pela relação e reconheça isso com palavras.</span></div>
+          </div>
+        </div>
+
+        <div class="sep"><span class="sep-dia"></span></div>
+
+        <div class="proverb-pair">
+          <div class="proverb-item"><p class="proverb-text">Pequenas atitudes constroem proximidade.</p></div>
+          <div class="proverb-item"><p class="proverb-text">Pequenos descuidos também constroem distância.</p></div>
+        </div>
+
+      </div>
+      <div class="pg-foot"><span>O Eterno MHRP — Material do Método · Uso Exclusivo do Aluno</span></div>
+    </div>
+  </div>
+
+
+  <!-- ==============================================================
+       PÁGINA 4 — O MAIS IMPORTANTE + CONCLUSÃO
+  =============================================================== -->
+  <div class="sheet">
+    <div class="sheet-inner">
+      <div class="pg-head">
+        <img class="pg-head-logo" src="../logogrande.PNG" alt="MHRP">
+        <span class="pg-head-r">Pilar IV — A Condução do Relacionamento</span>
+      </div>
+      <div class="sheet-content">
+
+        <p class="section-eyebrow">Atenção</p>
+        <h2 class="section-title">O Mais Importante Sobre Este Exercício</h2>
+        <div class="section-rule"></div>
+
+        <div class="highlight">
+          <p class="highlight-label">Como conduzir a dinâmica</p>
+          <p>Não transformem essa dinâmica em interrogatório, cobrança ou disputa emocional. O propósito do exercício é gerar aproximação.</p>
+          <p>Escutem um ao outro com calma. Falem com sinceridade. Prestem atenção em detalhes que talvez tenham deixado de perceber na rotina. Muitas vezes o relacionamento começa a melhorar não porque um grande problema foi resolvido, mas porque o casal voltou a se enxergar emocionalmente.</p>
+        </div>
+
+        <div class="sep"><span class="sep-dia"></span></div>
+
+        <div class="conclusion">
+          <p class="conclusion-label">Conclusão</p>
+          <p>Conduzir um relacionamento exige intenção.</p>
+          <p>A maioria dos casais acredita que conexão emocional deve acontecer naturalmente para sempre. Mas a verdade é que relacionamentos fortes normalmente possuem pessoas que continuam escolhendo cuidar da relação mesmo depois da fase inicial da paixão.</p>
+          <p>Este exercício existe para lembrar vocês disso.</p>
+          <p>Esperamos que esses próximos 10 dias aproximem ainda mais vocês dois e fortaleçam a construção do relacionamento que desejam viver no longo prazo.</p>
+          <div class="conclusion-close"><em>Até o próximo pilar.</em></div>
+        </div>
+
+      </div>
+      <div class="pg-foot"><span>O Eterno MHRP — Material do Método · Uso Exclusivo do Aluno</span></div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
