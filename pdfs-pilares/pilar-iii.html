@@ -98,7 +98,7 @@
     .corners span:nth-child(4) { bottom: 10mm; right: 10mm; border-width: 0 1px 1px 0; }
 
     .cover-img {
-      position: absolute; right: -16mm; bottom: 0;
+      position: absolute; right: -16mm; bottom: -18mm;
       height: 265mm; width: auto; opacity: 0.18; pointer-events: none;
     }
     .cover-logo {
@@ -152,7 +152,7 @@
     ================================================================ */
 
     .sheet-inner {
-      padding: 13mm 17mm 12mm; min-height: 297mm;
+      padding: 11mm 16mm 10mm; min-height: 297mm;
       display: flex; flex-direction: column;
     }
     .sheet-bg {
@@ -183,8 +183,9 @@
 
     /* ---- Texto corrido ---- */
     .body-p {
-      font-family: var(--f-b); font-size: 10.5pt; font-weight: 300;
-      line-height: 1.82; color: var(--ink-mute); margin-bottom: 3mm;
+      font-family: var(--f-b); font-size: 12pt; font-weight: 300;
+      line-height: 1.70; color: var(--ink-mute); margin-bottom: 3mm;
+      text-align: justify;
     }
     .body-p:last-of-type { margin-bottom: 0; }
 
@@ -194,7 +195,7 @@
       color: var(--gold); margin-bottom: 2mm;
     }
     .section-title {
-      font-family: var(--f-h); font-size: 12pt; font-weight: 600;
+      font-family: var(--f-h); font-size: 13.5pt; font-weight: 600;
       letter-spacing: 0.14em; text-transform: uppercase;
       color: var(--ink); margin-bottom: 1.5mm;
     }
@@ -210,8 +211,9 @@
       padding: 4mm 5mm; margin: 3.5mm 0;
     }
     .instruction p {
-      font-family: var(--f-b); font-size: 9.5pt; font-weight: 300;
-      line-height: 1.75; color: var(--ink-mute);
+      font-family: var(--f-b); font-size: 11pt; font-weight: 300;
+      line-height: 1.68; color: var(--ink-mute);
+      text-align: justify;
     }
     .instruction p + p { margin-top: 2mm; }
 
@@ -245,8 +247,9 @@
     .af-text {
       font-family: "Lora", Georgia, serif;
       font-style: italic;
-      font-size: 10pt; font-weight: 400;
+      font-size: 11pt; font-weight: 400;
       color: var(--ink-soft); line-height: 1.5;
+      text-align: justify;
     }
     .af-scale {
       display: flex; align-items: center; padding-left: 8mm;
@@ -281,8 +284,9 @@
       color: var(--gold); margin-bottom: 3mm;
     }
     .highlight p {
-      font-family: var(--f-b); font-size: 10.5pt; font-weight: 300;
-      line-height: 1.82; color: var(--ink-mute); margin-bottom: 2.5mm;
+      font-family: var(--f-b); font-size: 12pt; font-weight: 300;
+      line-height: 1.70; color: var(--ink-mute); margin-bottom: 2.5mm;
+      text-align: justify;
     }
     .highlight p:last-of-type { margin-bottom: 0; }
 
@@ -291,8 +295,9 @@
     .clarity-item { display: flex; align-items: baseline; gap: 3.5mm; }
     .clarity-dot { width: 3px; height: 3px; background: var(--gold-deep); border-radius: 50%; flex-shrink: 0; margin-top: 0.5mm; }
     .clarity-text {
-      font-family: var(--f-d); font-style: italic;
-      font-size: 11pt; color: var(--ink-soft); line-height: 1.5;
+      font-family: "Lora", Georgia, serif;
+      font-style: italic;
+      font-size: 12pt; color: var(--ink-soft); line-height: 1.52;
     }
 
     /* ---- Conclusão ---- */
@@ -312,13 +317,14 @@
       color: var(--gold); text-align: center; margin-bottom: 4mm;
     }
     .conclusion p {
-      font-family: var(--f-b); font-size: 10.5pt; font-weight: 300;
-      line-height: 1.82; color: var(--ink-mute); margin-bottom: 2.5mm;
+      font-family: var(--f-b); font-size: 12pt; font-weight: 300;
+      line-height: 1.70; color: var(--ink-mute); margin-bottom: 2.5mm;
+      text-align: justify;
     }
     .conclusion p:last-of-type { margin-bottom: 0; }
     .conclusion-close {
-      font-family: var(--f-d); font-size: 14pt; font-weight: 400;
-      color: var(--ink); text-align: center; line-height: 1.55;
+      font-family: var(--f-d); font-size: 15.5pt; font-weight: 400;
+      color: var(--ink); text-align: center; line-height: 1.50;
       margin-top: 4.5mm; padding-top: 4.5mm; border-top: 1px solid var(--line);
     }
   </style>
