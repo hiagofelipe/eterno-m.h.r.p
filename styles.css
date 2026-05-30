@@ -1785,10 +1785,12 @@ ul,ol { list-style: none; }
   font-weight: 600;
 }
 .price-cents {
-  font-family: var(--f-display);
-  font-size: 1.6rem;
-  padding-top: 0.6rem;
-  color: var(--c-ink);
+  font-family: var(--f-inscription);
+  font-size: 1.8rem;
+  font-weight: 600;
+  align-self: flex-end;
+  padding-bottom: 0.65rem;
+  color: var(--c-gold);
 }
 .price-avista-tag {
   font-family: var(--f-inscription);
