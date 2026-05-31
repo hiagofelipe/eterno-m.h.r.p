@@ -1941,19 +1941,19 @@ ul,ol { list-style: none; }
 }
 .countdown-warning {
   font-family: var(--f-body);
-  font-size: 0.78rem;
+  font-size: 0.92rem;
   color: var(--c-ink-mute);
   text-align: center;
-  line-height: 1.6;
+  line-height: 1.65;
   margin-top: 1.1rem;
   padding: 0 0.5rem;
 }
 .countdown-warning em {
   font-style: italic;
-  font-family: var(--f-display);
-  font-size: 0.92rem;
+  font-family: var(--f-body);
+  font-size: inherit;
+  font-weight: 500;
   color: var(--c-gold);
-  font-weight: 400;
 }
 
 @keyframes cd-tick {
