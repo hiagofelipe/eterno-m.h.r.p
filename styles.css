@@ -1673,11 +1673,10 @@ ul,ol { list-style: none; }
   margin: 0 auto;
 }
 
-/* ---- Card body: two-column ---- */
+/* ---- Card body ---- */
 .offer-card-body {
-  display: grid;
-  grid-template-columns: 1fr auto 1fr;
-  gap: 0;
+  display: flex;
+  justify-content: center;
 }
 .offer-price-col {
   padding: 2.5rem 3rem;
@@ -1736,6 +1735,57 @@ ul,ol { list-style: none; }
   font-size: 0.82rem;
   color: var(--c-ink-mute);
   line-height: 1.45;
+}
+
+/* ---- Includes standalone section ---- */
+.includes-grid {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 740px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border: 1px solid var(--c-line-soft);
+  border-radius: 3px;
+  overflow: hidden;
+}
+.includes-grid > li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.85rem;
+  padding: 1.5rem 2rem;
+  border-bottom: 1px solid var(--c-line-soft);
+}
+.includes-grid > li:nth-child(odd) {
+  border-right: 1px solid var(--c-line-soft);
+}
+.includes-grid > li:last-child {
+  grid-column: 1 / -1;
+  border-bottom: none;
+  border-right: none;
+}
+.includes-grid > li:nth-last-child(2) { border-bottom: none; }
+.includes-grid > li svg {
+  color: var(--c-gold);
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+.includes-grid > li div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+.includes-grid > li strong {
+  font-family: var(--f-inscription);
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--c-ink);
+  letter-spacing: 0.04em;
+}
+.includes-grid > li span {
+  font-size: 0.82rem;
+  color: var(--c-ink-mute);
+  line-height: 1.5;
 }
 
 /* ---- CTA block (full-width bottom) ---- */
@@ -2555,9 +2605,6 @@ ul,ol { list-style: none; }
   /* ---- Oferta ---- */
   .offer-card { padding: 0; }
   .offer-card-header { padding: 2rem 1.5rem 1.5rem; }
-  .offer-card-body { grid-template-columns: 1fr; }
-  .offer-col-divider { width: auto; height: 1px; margin: 0 1.5rem; }
-  /* Reordenamento mobile: preço → botão → métodos → inclusos → garantia */
   .offer-card         { display: flex; flex-direction: column; }
   .offer-card-body    { display: contents; }
   .offer-price-col    { display: contents; }
@@ -2570,8 +2617,15 @@ ul,ol { list-style: none; }
   .offer-countdown    { order: 5; margin: 1rem 1.5rem 0; width: auto; border-radius: 3px; }
   .offer-card-cta .btn { order: 6; margin: 1.2rem 1.5rem 0; font-size: 0.72rem; padding: 1.1rem 1.6rem; white-space: normal; text-align: center; }
   .offer-methods      { order: 7; padding: 1rem 1.5rem 1.5rem; justify-content: center; }
-  .offer-col-divider  { order: 8; width: auto; height: 1px; margin: 0 1.5rem; }
-  .offer-includes-col { order: 9; padding: 1.5rem 1.5rem 1rem; }
+
+  /* ---- Includes section (mobile) ---- */
+  .includes-grid {
+    grid-template-columns: 1fr;
+    max-width: 100%;
+  }
+  .includes-grid > li:nth-child(odd) { border-right: none; }
+  .includes-grid > li:last-child { grid-column: auto; border-bottom: none; }
+  .includes-grid > li:nth-last-child(2) { border-bottom: 1px solid var(--c-line-soft); }
 
   .countdown-unit { min-width: 46px; padding: 0.55rem 0.6rem; }
   .countdown-num  { font-size: 1.45rem; }
