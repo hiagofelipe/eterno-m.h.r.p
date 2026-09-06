@@ -3,6 +3,9 @@
    Extends ../styles.css (tokens, reset, nav, buttons, faq, footer)
    ========================================================================== */
 
+/* Safety net: prevent any long word from overflowing narrow viewports */
+h1, h2, h3, .heading { overflow-wrap: break-word; }
+
 /* ---- Hero ---- */
 .ebk-hero { min-height: auto; padding: 6.5rem 1.2rem 3.5rem; }
 .ebk-hero-inner { max-width: min(760px, 94vw); }
