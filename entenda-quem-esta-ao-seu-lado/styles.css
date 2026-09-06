@@ -192,7 +192,7 @@
   .ebk-book-grid-rev .ebk-book-cover img { margin-left: auto; }
   .ebk-book-grid-rev .ebk-book-content { order: 1; }
   .ebk-last-ctas { flex-direction: row; max-width: none; justify-content: center; }
-  .ebk-last-ctas .btn { flex: 1; max-width: 360px; }
+  .ebk-last-ctas .btn { flex: 1 1 auto; max-width: 440px; white-space: normal; text-align: center; }
 }
 @media (max-width: 640px) {
   .ebk-hero { padding: 5.5rem 0.9rem 3rem; }

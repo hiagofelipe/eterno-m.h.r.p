@@ -27,6 +27,11 @@
   margin-bottom: 1.6rem;
 }
 
+/* Flex items with overflow:hidden get an automatic min-width of 0, so long
+   CTA labels can shrink below their text width and clip. Force natural size. */
+.hero-cta { flex-wrap: wrap; }
+.hero-cta .btn { flex-shrink: 0; white-space: normal; text-align: center; }
+
 /* ---- Advice grid ---- */
 .csr-section-advice { padding-top: 2rem; }
 .advice-grid {
