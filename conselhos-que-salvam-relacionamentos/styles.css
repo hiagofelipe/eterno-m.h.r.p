@@ -1,0 +1,146 @@
+/* ==========================================================================
+   CONSELHOS QUE SALVAM RELACIONAMENTOS — page-specific styles
+   Extends ../styles.css (tokens, reset, nav, buttons, offer-card, faq, footer)
+   ========================================================================== */
+
+/* ---- Hero compacto ---- */
+.csr-hero { min-height: auto; padding: 6.5rem 1.2rem 3rem; }
+.csr-hero-inner { max-width: min(640px, 92vw); }
+.csr-hero-mark { width: 132px; margin: 0 auto 1.2rem; }
+.csr-hero-mark img { width: 100%; height: auto; border-radius: 50%; border: 1px solid var(--c-gold-deep); box-shadow: 0 20px 50px -12px rgba(0,0,0,0.8), 0 0 0 6px rgba(201,169,97,0.06); }
+.csr-hero-title {
+  font-family: var(--f-inscription);
+  font-weight: 600;
+  font-size: clamp(1.7rem, 5.5vw, 2.7rem);
+  letter-spacing: 0.03em;
+  line-height: 1.15;
+  color: var(--c-ink);
+  margin-bottom: 0.9rem;
+}
+.csr-hero-title em { color: var(--c-gold); font-style: italic; font-weight: 500; }
+.csr-hero-lede { margin-bottom: 0.8rem; }
+.csr-hero-note {
+  font-family: var(--f-display);
+  font-style: italic;
+  font-size: 1.05rem;
+  color: var(--c-gold-soft);
+  margin-bottom: 1.6rem;
+}
+
+/* ---- Advice grid ---- */
+.csr-section-advice { padding-top: 2rem; }
+.advice-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-top: 2.5rem;
+}
+.advice-card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--c-line);
+  border-radius: var(--radius);
+  background: linear-gradient(180deg, rgba(29,10,13,0.6) 0%, rgba(20,6,9,0.8) 100%);
+  overflow: hidden;
+  transition: border-color 320ms var(--ease), transform 320ms var(--ease), background 320ms var(--ease);
+}
+.advice-card:hover { border-color: var(--c-gold-deep); background: rgba(58,14,22,0.4); transform: translateY(-3px); }
+.advice-card img { width: 100%; aspect-ratio: 16/9; object-fit: cover; object-position: center 40%; border-bottom: 1px solid var(--c-line); }
+.advice-body { padding: 1rem 1.2rem 1.3rem; display: flex; flex-direction: column; gap: 0.3rem; }
+.advice-num {
+  font-family: var(--f-inscription);
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  color: var(--c-gold);
+  opacity: 0.75;
+}
+.advice-body h3 {
+  font-family: var(--f-inscription);
+  font-size: 0.98rem;
+  font-weight: 500;
+  color: var(--c-ink);
+  line-height: 1.25;
+}
+.advice-body p {
+  font-size: 0.84rem;
+  line-height: 1.45;
+  color: var(--c-ink-mute);
+}
+
+/* ---- Format explanation stats ---- */
+.csr-section-format { padding-top: 0; }
+.section-lede.center-lede { margin-left: auto; margin-right: auto; }
+.format-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 3rem;
+  padding: 2.2rem 1rem;
+  border-top: 1px solid var(--c-line);
+  border-bottom: 1px solid var(--c-line);
+}
+.format-stats .numstat-num { font-size: clamp(2.2rem, 5vw, 3rem); }
+.format-stats .numstat-label { font-size: 0.62rem; }
+
+/* ---- Proof / testimonials ---- */
+.proof-shots {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-top: 2.5rem;
+}
+.proof-shots img {
+  width: 100%;
+  border-radius: var(--radius);
+  border: 1px solid var(--c-line);
+}
+
+/* ---- Second CTA block ---- */
+.csr-section-cta2 { padding-top: 2rem; }
+.csr-cta2-price {
+  font-family: var(--f-inscription);
+  font-size: 1.15rem;
+  color: var(--c-gold);
+  margin: 1.6rem 0 1.8rem;
+  letter-spacing: 0.03em;
+}
+.csr-cta2-price span { display: block; font-size: 0.78rem; color: var(--c-ink-mute); letter-spacing: 0.08em; margin-top: 0.3rem; }
+
+/* ---- MHRP cross-sell block (secondary) ---- */
+.csr-section-mhrp {
+  padding: clamp(3rem, 7vw, 5rem) 0;
+  background: rgba(10,3,4,0.6);
+  border-top: 1px solid var(--c-line);
+}
+.center-eyebrow { justify-content: center; }
+.csr-mhrp-title {
+  font-family: var(--f-inscription);
+  font-size: clamp(1.1rem, 2vw, 1.5rem);
+  font-weight: 500;
+  color: var(--c-ink-mute);
+  margin-bottom: 1rem;
+}
+.csr-mhrp-title em { color: var(--c-gold-deep); font-style: italic; }
+.csr-mhrp-text {
+  font-size: 0.9rem;
+  color: var(--c-ink-faint);
+  line-height: 1.6;
+  max-width: 56ch;
+  margin: 0 auto 1.5rem;
+}
+
+/* ---- Responsive ---- */
+@media (min-width: 640px) {
+  .advice-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (min-width: 961px) {
+  .advice-grid { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 640px) {
+  .csr-hero { padding: 5.5rem 0.9rem 2.5rem; }
+  .format-stats { grid-template-columns: repeat(3, 1fr); gap: 0.6rem; padding: 1.6rem 0.4rem; }
+  .proof-shots { grid-template-columns: 1fr; }
+
+  /* Keep the guarantee note last in the mobile offer-card flex reorder */
+  .offer-card-cta .offer-guarantee { order: 10; margin: 1.2rem 1.5rem 1.5rem; }
+}
