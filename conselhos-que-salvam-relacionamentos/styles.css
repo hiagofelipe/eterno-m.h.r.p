@@ -6,8 +6,6 @@
 /* ---- Hero compacto ---- */
 .csr-hero { min-height: auto; padding: 6.5rem 1.2rem 3rem; }
 .csr-hero-inner { max-width: min(640px, 92vw); }
-.csr-hero-mark { width: 132px; margin: 0 auto 1.2rem; }
-.csr-hero-mark img { width: 100%; height: auto; border-radius: 50%; border: 1px solid var(--c-gold-deep); box-shadow: 0 20px 50px -12px rgba(0,0,0,0.8), 0 0 0 6px rgba(201,169,97,0.06); }
 .csr-hero-title {
   font-family: var(--f-inscription);
   font-weight: 600;
