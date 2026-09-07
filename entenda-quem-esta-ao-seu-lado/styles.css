@@ -19,28 +19,7 @@ h1, h2, h3, .heading { overflow-wrap: break-word; }
   margin-bottom: 0.9rem;
 }
 .ebk-hero-title em { color: var(--c-gold); font-style: italic; font-weight: 500; }
-.ebk-hero-lede { font-size: 0.9rem; line-height: 1.5; margin-bottom: 0.9rem; }
-
-/* Duas linhas separadas, cada uma com ícone próprio, para deixar
-   imediatamente claro que são dois livros distintos. */
-.ebk-hero-split {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.35rem;
-  margin-bottom: 1.6rem;
-}
-.ebk-split-line {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-family: var(--f-inscription);
-  font-size: 0.82rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--c-gold);
-}
-.ebk-split-line svg { color: var(--c-gold); opacity: 0.85; flex-shrink: 0; }
+.ebk-hero-lede { font-size: 0.9rem; line-height: 1.5; margin-bottom: 2rem; }
 
 /* ---- Cards (homens / mulheres) ---- */
 .ebk-cards {
