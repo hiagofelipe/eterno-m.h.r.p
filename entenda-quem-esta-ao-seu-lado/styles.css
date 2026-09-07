@@ -7,19 +7,18 @@
 h1, h2, h3, .heading { overflow-wrap: break-word; }
 
 /* ---- Hero ---- */
-.ebk-hero { min-height: auto; padding: 6.5rem 1.2rem 3.5rem; }
+.ebk-hero { min-height: auto; padding: 4.75rem 1.2rem 1.75rem; }
 .ebk-hero-inner { max-width: min(760px, 94vw); }
 .ebk-hero-title {
   font-family: var(--f-inscription);
   font-weight: 600;
-  font-size: clamp(1.5rem, 4.6vw, 2.5rem);
-  letter-spacing: 0.02em;
-  line-height: 1.2;
+  font-size: clamp(1.15rem, 3.8vw, 2.1rem);
+  letter-spacing: 0.01em;
+  line-height: 1.28;
   color: var(--c-ink);
-  margin-bottom: 0.9rem;
+  margin-bottom: 1.1rem;
 }
 .ebk-hero-title em { color: var(--c-gold); font-style: italic; font-weight: 500; }
-.ebk-hero-lede { font-size: 0.9rem; line-height: 1.5; margin-bottom: 2rem; }
 
 /* ---- Cards (homens / mulheres) ---- */
 .ebk-cards {
@@ -34,7 +33,7 @@ h1, h2, h3, .heading { overflow-wrap: break-word; }
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: 2rem 1.5rem 1.8rem;
+  padding: 1.4rem 1.5rem 1.3rem;
   border: 1px solid var(--c-gold-deep);
   border-radius: var(--radius);
   background: linear-gradient(180deg, rgba(58,14,22,0.4), rgba(20,6,9,0.85));
@@ -42,25 +41,32 @@ h1, h2, h3, .heading { overflow-wrap: break-word; }
 }
 .ebk-card:hover { border-color: var(--c-gold); transform: translateY(-6px); box-shadow: 0 30px 60px -20px rgba(0,0,0,0.7); }
 
-/* Fundos distintos para deixar claro que são dois produtos diferentes */
-.ebk-card-men { background: linear-gradient(180deg, rgba(58,14,22,0.55), rgba(20,6,9,0.9)); }
-.ebk-card-women { background: linear-gradient(180deg, rgba(91,42,26,0.5), rgba(30,12,8,0.9)); border-color: var(--c-bronze); }
-.ebk-card-women:hover { border-color: var(--c-gold-soft); }
-.ebk-card img { width: 130px; height: auto; margin-bottom: 1.1rem; box-shadow: 0 20px 40px -10px rgba(0,0,0,0.8); border-radius: 2px; }
+/* Fundos claramente distintos: vinho escuro para homens, rosado para mulheres */
+.ebk-card-men {
+  background: linear-gradient(165deg, rgba(96,14,24,0.75), rgba(10,3,4,0.95));
+  border-color: var(--c-red);
+}
+.ebk-card-men:hover { border-color: #c23347; }
+.ebk-card-women {
+  background: linear-gradient(165deg, rgba(150,58,82,0.55), rgba(38,13,20,0.94));
+  border-color: #c98a9c;
+}
+.ebk-card-women:hover { border-color: #e0a8b8; }
+.ebk-card img { width: 110px; height: auto; margin-bottom: 0.8rem; box-shadow: 0 20px 40px -10px rgba(0,0,0,0.8); border-radius: 2px; }
 .ebk-card h3 {
   font-family: var(--f-inscription);
-  font-size: 1.05rem;
+  font-size: 1.02rem;
   font-weight: 500;
   color: var(--c-ink);
-  margin-bottom: 0.6rem;
+  margin-bottom: 0.5rem;
   line-height: 1.25;
 }
-.ebk-card p { font-size: 0.86rem; color: var(--c-ink-mute); line-height: 1.5; margin-bottom: 1.3rem; }
+.ebk-card p { font-size: 0.82rem; color: var(--c-ink-mute); line-height: 1.42; margin-bottom: 0.9rem; }
 .ebk-card-cta { width: 100%; }
 
 /* ---- Book section (cover + content grid) ---- */
-.ebk-section { padding-top: 3rem; }
-.ebk-section-alt { background: linear-gradient(180deg, rgba(20,6,9,0.5), transparent); }
+.ebk-section { padding-top: 3rem; background: radial-gradient(ellipse at 50% 0%, rgba(139,10,26,0.16), transparent 60%); }
+.ebk-section-alt { background: radial-gradient(ellipse at 50% 0%, rgba(150,58,82,0.16), transparent 60%); }
 .ebk-book-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -100,6 +106,10 @@ h1, h2, h3, .heading { overflow-wrap: break-word; }
   border: 1px solid var(--c-gold-deep);
   border-radius: var(--radius);
   background: radial-gradient(ellipse at 50% 0%, rgba(139,10,26,0.2), transparent 55%), linear-gradient(180deg, rgba(58,14,22,0.5), rgba(14,4,6,0.9));
+}
+#livro-mulheres .ebk-offer {
+  border-color: #c98a9c;
+  background: radial-gradient(ellipse at 50% 0%, rgba(150,58,82,0.28), transparent 55%), linear-gradient(180deg, rgba(91,32,45,0.5), rgba(20,7,10,0.92));
 }
 .ebk-offer-top { margin: 2.2rem 0 2.8rem; }
 .ebk-offer-eyebrow {
@@ -187,6 +197,34 @@ h1, h2, h3, .heading { overflow-wrap: break-word; }
   .ebk-last-ctas .btn { flex: 1 1 auto; max-width: 440px; white-space: normal; text-align: center; }
 }
 @media (max-width: 640px) {
-  .ebk-hero { padding: 5.5rem 0.9rem 3rem; }
+  .ebk-hero { padding: 4.25rem 0.9rem 1.25rem; }
+  .ebk-hero-title { font-size: clamp(1.05rem, 5.2vw, 1.4rem); margin-bottom: 0.8rem; }
+  .ebk-card { padding: 1.1rem 1.2rem 1rem; }
+  .ebk-card img { width: 88px; margin-bottom: 0.6rem; }
+  .ebk-card h3 { font-size: 0.96rem; margin-bottom: 0.35rem; }
+  .ebk-card p { font-size: 0.78rem; line-height: 1.35; margin-bottom: 0.7rem; }
+  .ebk-card-cta { padding: 0.65rem 0.9rem; font-size: 0.72rem; }
   .ebk-common-list { grid-template-columns: 1fr; }
+
+  /* Pulso dourado nos CTAs principais, igual ao usado no Eterno MHRP */
+  .ebk-card-cta,
+  .ebk-offer .btn-primary {
+    position: relative;
+    overflow: visible;
+    animation: cta-mobile-glow 3.2s ease-in-out infinite;
+  }
+  .ebk-card-cta::before,
+  .ebk-offer .btn-primary::before {
+    content: '';
+    position: absolute;
+    inset: -5px;
+    border: 1.5px solid rgba(201,169,97,0.6);
+    border-radius: 6px;
+    animation: cta-mobile-ring 3.2s linear infinite;
+    pointer-events: none;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .ebk-card-cta, .ebk-offer .btn-primary { animation: none; }
+    .ebk-card-cta::before, .ebk-offer .btn-primary::before { animation: none; opacity: 0; }
+  }
 }

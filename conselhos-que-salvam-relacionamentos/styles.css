@@ -152,9 +152,23 @@ h1, h2, h3, .heading { overflow-wrap: break-word; }
   .advice-grid { grid-template-columns: repeat(3, 1fr); }
 }
 @media (max-width: 640px) {
-  .csr-hero { padding: 5.5rem 0.9rem 2.5rem; }
+  .csr-hero { padding: 4.5rem 0.9rem 1.25rem; }
+  .csr-hero-kicker { margin-bottom: 0.7rem; }
+  .csr-hero-title { margin-bottom: 0.6rem; }
+  .csr-hero-lede { margin-bottom: 1rem; }
+  .hero-cta { margin-bottom: 0; }
+  .hero-cta .btn { padding: 0.8rem 1rem; font-size: 0.8rem; }
   .format-stats { grid-template-columns: repeat(3, 1fr); gap: 0.6rem; padding: 1.6rem 0.4rem; }
   .proof-shots { grid-template-columns: 1fr; }
+
+  /* Cabeçalho da seção de conselhos bem enxuto, para o primeiro card
+     realmente espiar na primeira dobra */
+  .csr-section-advice { padding-top: 0.9rem; }
+  .csr-section-advice .eyebrow { margin-bottom: 0.3rem; }
+  .csr-advice-heading { margin-bottom: 0.2rem; }
+  .csr-section-advice .heading-rule { display: none; }
+  .csr-advice-lede { margin-top: 0; }
+  .advice-grid { margin-top: 0.8rem; }
 
   /* Keep the guarantee note last in the mobile offer-card flex reorder */
   .offer-card-cta .offer-guarantee { order: 10; margin: 1.2rem 1.5rem 1.5rem; }
