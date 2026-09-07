@@ -46,14 +46,6 @@ h1, h2, h3, .heading { overflow-wrap: break-word; }
 .ebk-card-men { background: linear-gradient(180deg, rgba(58,14,22,0.55), rgba(20,6,9,0.9)); }
 .ebk-card-women { background: linear-gradient(180deg, rgba(91,42,26,0.5), rgba(30,12,8,0.9)); border-color: var(--c-bronze); }
 .ebk-card-women:hover { border-color: var(--c-gold-soft); }
-.ebk-card-tag {
-  font-family: var(--f-inscription);
-  font-size: 0.62rem;
-  letter-spacing: 0.28em;
-  text-transform: uppercase;
-  color: var(--c-gold);
-  margin-bottom: 1rem;
-}
 .ebk-card img { width: 130px; height: auto; margin-bottom: 1.1rem; box-shadow: 0 20px 40px -10px rgba(0,0,0,0.8); border-radius: 2px; }
 .ebk-card h3 {
   font-family: var(--f-inscription);
