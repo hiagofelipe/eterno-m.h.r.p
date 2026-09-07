@@ -20,7 +20,22 @@ h1, h2, h3, .heading { overflow-wrap: break-word; }
   overflow-wrap: break-word;
 }
 .csr-hero-title em { color: var(--c-gold); font-style: italic; font-weight: 500; }
-.csr-hero-lede { margin-bottom: 1.8rem; }
+.csr-hero-lede { font-size: 0.92rem; line-height: 1.5; margin-bottom: 1.5rem; }
+
+/* Kicker ampliado: "para homens e mulheres" é o principal gancho de identificação */
+.csr-hero-kicker {
+  font-size: clamp(0.82rem, 2.6vw, 1rem);
+  letter-spacing: 0.08em;
+  font-weight: 600;
+  gap: 0.55rem;
+  margin-bottom: 1.1rem;
+  text-transform: none;
+}
+
+/* Cabeçalho da seção de conselhos mais compacto, para o primeiro card já
+   aparecer no fim da primeira dobra e sugerir que dá para rolar mais. */
+.csr-advice-heading { font-size: clamp(1.05rem, 3.6vw, 1.6rem); margin-bottom: 0.5rem; }
+.csr-advice-lede { font-size: 0.8rem; max-width: 46ch; margin-top: 0.4rem; }
 
 /* Flex items with overflow:hidden get an automatic min-width of 0, so long
    CTA labels can shrink below their text width and clip. Force natural size. */
