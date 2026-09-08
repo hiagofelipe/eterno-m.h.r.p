@@ -8,6 +8,9 @@ h1, h2, h3, .heading { overflow-wrap: break-word; }
 
 /* ---- Hero compacto ---- */
 .csr-hero { min-height: auto; padding: 6.5rem 1.2rem 3rem; }
+/* Hero compacto (não tela cheia): cantos decorativos de baixo ficam
+   colados no CTA e quebram a moldura do botão — remove-los. */
+.csr-hero .corner-bl, .csr-hero .corner-br { display: none; }
 .csr-hero-inner { max-width: min(640px, 92vw); }
 .csr-hero-title {
   font-family: var(--f-inscription);
