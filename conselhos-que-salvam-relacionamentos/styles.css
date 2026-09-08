@@ -24,18 +24,21 @@ h1, h2, h3, .heading { overflow-wrap: break-word; }
 
 /* Kicker ampliado: "para homens e mulheres" é o principal gancho de identificação */
 .csr-hero-kicker {
-  font-size: clamp(0.82rem, 2.6vw, 1rem);
-  letter-spacing: 0.08em;
+  font-size: clamp(0.92rem, 3.4vw, 1.15rem);
+  letter-spacing: 0.06em;
   font-weight: 600;
   gap: 0.55rem;
   margin-bottom: 1.1rem;
   text-transform: none;
+  text-align: center;
+  line-height: 1.35;
 }
+.csr-hero-kicker span { display: inline-block; }
 
 /* Cabeçalho da seção de conselhos mais compacto, para o primeiro card já
    aparecer no fim da primeira dobra e sugerir que dá para rolar mais. */
 .csr-advice-heading { font-size: clamp(1.05rem, 3.6vw, 1.6rem); margin-bottom: 0.5rem; }
-.csr-advice-lede { font-size: 0.8rem; max-width: 46ch; margin-top: 0.4rem; }
+.csr-advice-lede { font-size: 0.72rem; max-width: 46ch; margin-top: 0.4rem; }
 
 /* Flex items with overflow:hidden get an automatic min-width of 0, so long
    CTA labels can shrink below their text width and clip. Force natural size. */
@@ -167,8 +170,8 @@ h1, h2, h3, .heading { overflow-wrap: break-word; }
   .csr-section-advice .eyebrow { margin-bottom: 0.3rem; }
   .csr-advice-heading { margin-bottom: 0.2rem; }
   .csr-section-advice .heading-rule { display: none; }
-  .csr-advice-lede { margin-top: 0; }
-  .advice-grid { margin-top: 0.8rem; }
+  .csr-advice-lede { display: none; }
+  .advice-grid { margin-top: 0.9rem; }
 
   /* Keep the guarantee note last in the mobile offer-card flex reorder */
   .offer-card-cta .offer-guarantee { order: 10; margin: 1.2rem 1.5rem 1.5rem; }

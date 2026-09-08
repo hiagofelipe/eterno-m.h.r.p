@@ -197,13 +197,14 @@ h1, h2, h3, .heading { overflow-wrap: break-word; }
   .ebk-last-ctas .btn { flex: 1 1 auto; max-width: 440px; white-space: normal; text-align: center; }
 }
 @media (max-width: 640px) {
-  .ebk-hero { padding: 4.25rem 0.9rem 1.25rem; }
-  .ebk-hero-title { font-size: clamp(1.05rem, 5.2vw, 1.4rem); margin-bottom: 0.8rem; }
-  .ebk-card { padding: 1.1rem 1.2rem 1rem; }
-  .ebk-card img { width: 88px; margin-bottom: 0.6rem; }
-  .ebk-card h3 { font-size: 0.96rem; margin-bottom: 0.35rem; }
-  .ebk-card p { font-size: 0.78rem; line-height: 1.35; margin-bottom: 0.7rem; }
-  .ebk-card-cta { padding: 0.65rem 0.9rem; font-size: 0.72rem; }
+  .ebk-hero { padding: 3.75rem 0.9rem 0.9rem; }
+  .ebk-hero-title { font-size: clamp(1rem, 5vw, 1.3rem); line-height: 1.18; margin-bottom: 0.6rem; }
+  .ebk-cards { gap: 0.9rem; }
+  .ebk-card { padding: 1rem 1.1rem 0.9rem; }
+  .ebk-card img { width: 76px; margin-bottom: 0.5rem; }
+  .ebk-card h3 { font-size: 0.94rem; margin-bottom: 0.3rem; }
+  .ebk-card p { font-size: 0.76rem; line-height: 1.32; margin-bottom: 0.6rem; }
+  .ebk-card-cta { padding: 0.6rem 0.85rem; font-size: 0.7rem; }
   .ebk-common-list { grid-template-columns: 1fr; }
 
   /* Pulso dourado nos CTAs principais, igual ao usado no Eterno MHRP */
