@@ -158,11 +158,11 @@ h1, h2, h3, .heading { overflow-wrap: break-word; }
   .advice-grid { grid-template-columns: repeat(3, 1fr); }
 }
 @media (max-width: 640px) {
-  .csr-hero { padding: 4.5rem 0.9rem 1.25rem; }
-  .csr-hero-kicker { margin-bottom: 0.7rem; }
-  .csr-hero-title { margin-bottom: 0.6rem; }
-  .csr-hero-lede { margin-bottom: 1rem; }
-  .hero-cta { margin-bottom: 0; }
+  .csr-hero { padding: 5rem 0.9rem 2rem; }
+  .csr-hero-kicker { margin-bottom: 1rem; }
+  .csr-hero-title { margin-bottom: 1rem; }
+  .csr-hero-lede { margin-bottom: 1.5rem; }
+  .hero-cta { margin-bottom: 0.5rem; }
   .hero-cta .btn { padding: 0.8rem 1rem; font-size: 0.8rem; }
   .format-stats { grid-template-columns: repeat(3, 1fr); gap: 0.6rem; padding: 1.6rem 0.4rem; }
   .proof-shots { grid-template-columns: 1fr; }
@@ -178,4 +178,14 @@ h1, h2, h3, .heading { overflow-wrap: break-word; }
 
   /* Keep the guarantee note last in the mobile offer-card flex reorder */
   .offer-card-cta .offer-guarantee { order: 10; margin: 1.2rem 1.5rem 1.5rem; }
+}
+
+/* Em telas baixas (celulares mais antigos/compactos), volta a um hero mais
+   enxuto para o primeiro card de conselho continuar espiando na dobra. */
+@media (max-width: 640px) and (max-height: 620px) {
+  .csr-hero { padding: 4.5rem 0.9rem 1.25rem; }
+  .csr-hero-kicker { margin-bottom: 0.7rem; }
+  .csr-hero-title { margin-bottom: 0.6rem; }
+  .csr-hero-lede { margin-bottom: 1rem; }
+  .hero-cta { margin-bottom: 0; }
 }
