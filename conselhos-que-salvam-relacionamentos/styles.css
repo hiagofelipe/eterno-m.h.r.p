@@ -158,11 +158,11 @@ h1, h2, h3, .heading { overflow-wrap: break-word; }
   .advice-grid { grid-template-columns: repeat(3, 1fr); }
 }
 @media (max-width: 640px) {
-  .csr-hero { padding: 5rem 0.9rem 2rem; }
-  .csr-hero-kicker { margin-bottom: 1rem; }
-  .csr-hero-title { margin-bottom: 1rem; }
-  .csr-hero-lede { margin-bottom: 1.5rem; }
-  .hero-cta { margin-bottom: 0.5rem; }
+  .csr-hero { padding: 5rem 0.9rem 2.25rem; }
+  .csr-hero-kicker { margin-bottom: 1.15rem; }
+  .csr-hero-title { margin-bottom: 1.15rem; }
+  .csr-hero-lede { margin-bottom: 1.75rem; }
+  .hero-cta { margin-bottom: 0.75rem; }
   .hero-cta .btn { padding: 0.8rem 1rem; font-size: 0.8rem; }
   .format-stats { grid-template-columns: repeat(3, 1fr); gap: 0.6rem; padding: 1.6rem 0.4rem; }
   .proof-shots { grid-template-columns: 1fr; }
