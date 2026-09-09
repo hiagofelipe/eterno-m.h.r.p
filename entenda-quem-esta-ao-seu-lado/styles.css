@@ -22,6 +22,11 @@ h1, h2, h3, .heading { overflow-wrap: break-word; }
   margin-bottom: 1.1rem;
 }
 .ebk-hero-title em { color: var(--c-gold); font-style: italic; font-weight: 500; }
+.ebk-hero-title-sub {
+  display: block;
+  font-size: clamp(0.8rem, 4.4vw, 1.6rem);
+  white-space: nowrap;
+}
 
 /* ---- Cards (homens / mulheres) ---- */
 .ebk-cards {
@@ -109,6 +114,7 @@ h1, h2, h3, .heading { overflow-wrap: break-word; }
   border: 1px solid var(--c-gold-deep);
   border-radius: var(--radius);
   background: radial-gradient(ellipse at 50% 0%, rgba(139,10,26,0.2), transparent 55%), linear-gradient(180deg, rgba(58,14,22,0.5), rgba(14,4,6,0.9));
+  scroll-margin-top: 90px;
 }
 #livro-mulheres .ebk-offer {
   border-color: #c98a9c;
