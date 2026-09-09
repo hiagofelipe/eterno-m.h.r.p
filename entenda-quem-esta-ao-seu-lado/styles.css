@@ -27,6 +27,7 @@ h1, h2, h3, .heading { overflow-wrap: break-word; }
   font-size: clamp(0.8rem, 4.4vw, 1.6rem);
   white-space: nowrap;
 }
+.ebk-hero-title-sub:first-of-type { margin-top: 0.6rem; }
 
 /* ---- Cards (homens / mulheres) ---- */
 .ebk-cards {
